@@ -1,0 +1,37 @@
+\begin{thebibliography}{1}
+
+\bibitem{ComputingPower}
+W.~Garside.
+\newblock Computing power: capacity on demand.
+\newblock
+  \url{www.computerweekly.com/feature/Computing-power-capacity-on-demand}.
+\newblock Navštívené: 22.6.2014.
+
+\bibitem{Sochor}
+J.~Sochor.
+\newblock {ÚVT MU} zpravodaj.
+\newblock \url{www.ics.muni.cz/bulletin/articles/61.html}.
+\newblock Navštívené: 22.6.2014.
+
+\bibitem{Art}
+Ian Molyneaux.
+\newblock {\em The Art of Application Performance Testing}.
+\newblock O’Reilly Media, Inc., Sebastopol, first edition edition, 2009.
+
+\bibitem{Apache}
+Apache~Software Foundation.
+\newblock Apache jmeter.
+\newblock \url{http://jmeter.apache.org/index.html}.
+\newblock Navštívené: 19.12.2014.
+
+\bibitem{Faban}
+Faban.
+\newblock \url{http://faban.org/about.html}.
+\newblock Navštívené: 19.12.2014.
+
+\bibitem{Gatling}
+Gatling.
+\newblock \url{http://gatling.io/docs/2.1.1/}.
+\newblock Navštívené: 19.12.2014.
+
+\end{thebibliography}

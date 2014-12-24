@@ -1,0 +1,1198 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.1)  24 DEC 2014 14:48
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**bp.tex
+(./bp.tex
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 78 languages loaded.
+(./fithesis-utf8.cls
+Document Class: fithesis-utf8 2006/06/12 version 0.2.10 (FI) MU thesis class
+(/usr/share/texlive/texmf-dist/tex/latex/ntgclass/rapport3.cls
+Document Class: rapport3 2004/06/07 v2.1a NTG LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/ntgclass/ntg10.clo
+File: ntg10.clo 2004/06/07 v2.1a NTG LaTeX file (size option)
+)
+\unitindent=\dimen102
+\othermargin=\dimen103
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+LaTeX Info: Redefining \em on input line 826.
+\bibindent=\dimen104
+)
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/palatino.sty
+Package: palatino 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen105
+\Gin@req@width=\dimen106
+)
+(./fit12.clo
+File: fit12.clo 1998/03/30 fithesis (size option)
+)) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen107
+\Hy@linkcounter=\count89
+\Hy@pagecounter=\count90
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count91
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Option `final' set `true' on input line 4319.
+Package hyperref Info: Option `colorlinks' set `true' on input line 4319.
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count92
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen108
+\Fld@menulength=\count93
+\Field@Width=\dimen109
+\Fld@charsize=\dimen110
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring ON on input line 6313.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count94
+\c@Item=\count95
+\c@Hfootnote=\count96
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count97
+\c@bookmark@seq@number=\count98
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip43
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2013/12/03 3.9h The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel-czech/czech.ldf
+Language: czech 2008/07/06 v3.1a Czech support from the babel system
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2013/12/03 3.9h Babel common definitions
+\babel@savecnt=\count99
+\U@D=\dimen111
+)
+Package babel Info: Making " an active character on input line 172.
+\cs@wordlen=\count100
+Package babel Info: Making - an active character on input line 226.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel-slovak/slovak.ldf
+Language: slovak 2008/07/06 v3.1a Slovak support from the babel system
+Package babel Info: Making ^ an active character on input line 123.
+Package babel Info: Making ' an active character on input line 129.
+LaTeX Info: Redefining \uv on input line 278.
+\cs@wordlen=\count101
+))
+(/usr/share/texlive/texmf-dist/tex/latex/a4wide/a4wide.sty
+Package: a4wide 1994/08/30
+
+(/usr/share/texlive/texmf-dist/tex/latex/ntgclass/a4.sty
+Package: a4 2004/04/15 v1.2g A4 based page layout
+)) (./bp.aux)
+\openout1 = `bp.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 24.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ppl.fd
+File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
+)
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count102
+\scratchdimen=\dimen112
+\scratchbox=\box26
+\nofMPsegments=\count103
+\nofMParguments=\count104
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count105
+\MPscratchDim=\dimen113
+\MPnumerator=\count106
+\makeMPintoPDFobject=\count107
+\everyMPtoPDFconversion=\toks18
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\AtBeginShipoutBox=\box27
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+Package hyperref Info: Link coloring ON on input line 24.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count108
+)
+LaTeX Info: Redefining \ref on input line 24.
+LaTeX Info: Redefining \pageref on input line 24.
+LaTeX Info: Redefining \nameref on input line 24.
+
+(./bp.out) (./bp.out)
+\@outlinefile=\write3
+\openout3 = `bp.out'.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.88> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 28.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 28.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 32.
+
+[2
+
+] [3
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 41--44
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 46.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsppl.fd
+File: omsppl.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 46.
+ [4
+
+] [5
+
+] (./bp.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 2.
+
+[6
+
+])
+\tf@toc=\write4
+\openout4 = `bp.toc'.
+
+ [7] (./bp.lof)
+\tf@lof=\write5
+\openout5 = `bp.lof'.
+
+ [8
+
+]
+Kapitola 1.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 62.
+
+Overfull \hbox (9.21805pt too wide) in paragraph at lines 63--75
+\OT1/ppl/m/n/12 v[]ypo[]ctov[]y v[]ykon [[]]. Tento probl[]em sa d[]a rie[]sit[
+] dvoma sp[]osobmi. Jed-no-duch[]ym rie[]sen[]^^Pm
+ []
+
+
+Overfull \hbox (2.95332pt too wide) in paragraph at lines 63--75
+\OT1/ppl/m/n/12 vlast-nost[]^^P syst[]emu, ako roz[]s[]^^Pritel[]nost[] a efekt
+[]^^Pvnost[] vyu[]z[]^^Pvania pros-tried-kov. Naj[]castej[]sie
+ []
+
+
+Overfull \hbox (0.79343pt too wide) in paragraph at lines 63--75
+\OT1/ppl/m/n/12 pou[]z[]^^Pvan[]ymi tes-tami v[]ykonu s[]u z[]at[]a[]zov[]e tes
+ty, []unavov[]e testy, testy v[]ydr[]ze, kul-mina[]cn[]e
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--75
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--78
+
+ []
+
+[1
+
+
+]
+Kapitola 2.
+
+Overfull \hbox (26.84525pt too wide) in paragraph at lines 87--88
+\OT1/ppl/m/n/12 Z[]akladn[]e testy ur[]cuj[]u []cas po-trebn[]y na vy-ko-na-nie
+ jed-not-liv[]ych trans-akci[]^^P jedn[]ym u[]z[]^^Pvatel[]om.
+ []
+
+
+Package hyperref Warning: Composite letter `\textasciicaron+t'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textasciicaron' on input line 89.
+
+
+Overfull \hbox (2.45033pt too wide) in paragraph at lines 90--91
+\OT1/ppl/m/n/12 Najpou[]z[]^^Pvanej[]s[]^^Pm a naj-jed-no-duch[]s[]^^Pm tes-tom
+ je z[]at[]a[]zov[]y test. Po[]cas tohto testu je syst[]em
+ []
+
+[2
+
+]
+
+Package hyperref Warning: Composite letter `\textasciicaron+c'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textasciicaron' on input line 98.
+
+
+Package hyperref Warning: Composite letter `\textasciicaron+c'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textasciicaron' on input line 101.
+
+
+Package hyperref Warning: Composite letter `\textasciicaron+c'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textasciicaron' on input line 104.
+
+
+Overfull \hbox (20.18562pt too wide) in paragraph at lines 105--106
+\OT1/ppl/m/n/12 Izola[]cn[]e testy pom[]ahaj[]u od-ha-lit[] chybn[]e kom-po-nen
+ty opa-ko-van[]ym sp[]u[]st[]an[]^^Pm ne[]uspe[]sn[]ych
+ []
+
+[3]
+Kapitola 3.
+
+Overfull \hbox (5.20851pt too wide) in paragraph at lines 112--113
+[]\OT1/ppl/m/n/12 Ur[]cenie a po-pis hod-no-tia-cich krit[]eri[]^^P jed-not-liv
+[]ych n[]astrojov. Z hl[]adiska pou[]z[]^^Pvatel[]a
+ []
+
+
+Overfull \hbox (4.94609pt too wide) in paragraph at lines 112--113
+\OT1/ppl/m/n/12 vitu syst[]emu je d[]ole[]zit[]e vyu[]zitie zdro-jov. Sem patr[
+]^^P aj ur[]cenie ob-me-dzen[]^^P a n[]ajdenie
+ []
+
+
+Overfull \hbox (19.1654pt too wide) in paragraph at lines 114--115
+\OT1/ppl/m/n/12 Dobr[]a zna-lost[] syst[]emu a jeho []cast[]^^P je kl[][]u[]cov
+[]a pri iden-ti-fik[]acii probl[]emov v po[]ciato[]cnej
+ []
+
+[4
+
+]
+Kapitola 4.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 133.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+Overfull \hbox (3.69734pt too wide) in paragraph at lines 136--137
+\OT1/ppl/m/n/12 s nain[]stalovan[]ym Java be-hov[]ym pro-stred[]^^Pm JRE[][][][
+][] ver-zie 6 a vy[]s[]sej. V opera[]cnom syst[]eme
+ []
+
+
+Underfull \hbox (badness 2435) in paragraph at lines 145--145
+[]\OT1/ppl/m/n/12 Zobrazenie in-form[]aci[]^^P o spus-ten[]^^P prog-
+ []
+
+
+Underfull \hbox (badness 1087) in paragraph at lines 148--148
+[]\OT1/ppl/m/n/12 ./jmeter.sh -q su-bor1 su-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
+[]\OT1/ppl/m/n/12 ./jmeter.sh -N lo-cal-host
+ []
+
+
+Underfull \hbox (badness 7814) in paragraph at lines 162--162
+[]\OT1/ppl/m/n/12 ./jmeter.sh -S pro-perty1
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--163
+[]\OT1/ppl/m/n/12 ./jmeter.sh -L jme-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--166
+[]\OT1/ppl/m/n/12 ./jmeter.sh -d
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5
+
+]
+Overfull \hbox (0.50601pt too wide) in paragraph at lines 177--178
+\OT1/ppl/m/n/12 na ktor[]e m[]o[]ze u[]z[]^^Pvatel[] pri pou[]z[]^^Pvan[]^^P Ap
+a-che JMetra na-ra-zit[]. Do-ku-ment[]acia je na-vzdory
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6]
+
+Package hyperref Warning: Composite letter `\textasciicaron+l'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textasciicaron' on input line 179.
+
+
+Package hyperref Warning: Composite letter `\textasciicaron+t'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textasciicaron' on input line 179.
+
+
+Overfull \hbox (27.02925pt too wide) in paragraph at lines 180--184
+\OT1/ppl/m/n/12 Tutori[]al [][]$\OT1/pcr/m/n/12 http : / / wiki . apache . org 
+/ jmeter / JMeterAndEclipseHowTo$[][] \OT1/ppl/m/n/12 z wiki str[]anky
+ []
+
+
+Overfull \hbox (27.79582pt too wide) in paragraph at lines 180--184
+[]\OT1/ppl/m/n/12 citatel[]a hned[] v []uvode pre-sme-ruje na str[]anku [][]$\O
+T1/pcr/m/n/12 http : / / people . apache . org / []mkostrze /
+ []
+
+
+Overfull \hbox (12.81297pt too wide) in paragraph at lines 180--184
+\OT1/pcr/m/n/12 jmeter-[]eclipse / jmeter-[]eclipse . html$[][]\OT1/ppl/m/n/12 
+, ktor[]a bola na-po-sledy upra-ven[]a 10.03.2004.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 180--184
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--189
+
+ []
+
+
+Overfull \hbox (12.61403pt too wide) in paragraph at lines 190--194
+\OT1/ppl/m/n/12 Doplnok pre In-tel-liJ IDEA je nutn[]e stia-hnut[] zo str[]anky
+ [][]$\OT1/pcr/m/n/12 https : / / plugins . jetbrains .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 190--194
+
+ []
+
+[7] [8]
+Overfull \hbox (43.82901pt too wide) in paragraph at lines 205--206
+\OT1/ppl/m/n/12 na 23.9.2014. Str[]anka pro-jektu: [][]$\OT1/pcr/m/n/12 www . p
+erfcake . org/$[][]\OT1/ppl/m/n/12 . Git-hub: [][]$\OT1/pcr/m/n/12 www . github
+ . com / PerfCake /
+ []
+
+
+Overfull \hbox (11.21152pt too wide) in paragraph at lines 208--209
+\OT1/ppl/m/n/12 menn[]u pro-stre-dia. Pre opera[]cn[]e syst[]emy Win-dows a Li-
+nux je na str[]anke [][]$\OT1/pcr/m/n/12 www . perfcake .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--219
+[]\OT1/ppl/m/n/12 N[]azov sp[]u[]st[]an[]eho scen[]ara. Scen[]ar je
+ []
+
+
+Underfull \hbox (badness 1769) in paragraph at lines 220--220
+[]\OT1/ppl/m/n/12 N[]azov vlast-nosti a jej hod-nota. P[]^^P[]seme
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--230
+
+ []
+
+
+Overfull \hbox (2.08981pt too wide) in paragraph at lines 232--233
+\OT1/ppl/m/n/12 U[]z[]^^Pvatel[]sk[]a do-ku-ment[]aciahttp://faban.org/docs/Qui
+ckStartTutorial.html sa nach[]adza
+ []
+
+
+Overfull \hbox (7.45418pt too wide) in paragraph at lines 232--233
+\OT1/ppl/m/n/12 z[]at[]a[]ze, po-sie-la-nie spr[]av, ge-ne-ro-va-nie re-por-tov
+, va-lid[]aciu a roz[]s[]^^Prenia Perf-Cake. Pre ka[]zd[]u
+ []
+
+[9]
+
+Package hyperref Warning: Composite letter `\textasciicaron+l'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textasciicaron' on input line 234.
+
+
+Package hyperref Warning: Composite letter `\textasciicaron+t'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textasciicaron' on input line 234.
+
+[10]
+Overfull \hbox (7.21486pt too wide) in paragraph at lines 242--243
+\OT1/ppl/m/n/12 Faban je nap[]^^Psan[]y v ja-zyku Java a jeho li-cen-cia je ope
+n-source. Sklad[]a sa z dvoch hlavn[]ych
+ []
+
+
+Overfull \hbox (11.30548pt too wide) in paragraph at lines 245--246
+\OT1/ppl/m/n/12 Faban na roz-diel od predch[]adzaj[]ucich tes-to-vac[]^^Pch n[]
+astrojov vy[]zaduje pln[]u JDK[][][][][] in[]stal[]aciu
+ []
+
+
+Overfull \hbox (42.88477pt too wide) in paragraph at lines 248--249
+\OT1/ppl/m/n/12 v[]ysledk[]y tes-tov. Syn-tax pre sp[]u[]st[]anie tes-tov z pr[
+]^^Pkazov[]eho riadku je \OT1/ppl/m/it/12 FABAN$[]$HOME/bin/fabancli
+ []
+
+
+Overfull \hbox (1.60492pt too wide) in paragraph at lines 248--249
+\OT1/ppl/m/it/12 sub-mit bench-mark pro-file /con-fi-gu-ra-tion/run.xml\OT1/ppl
+/m/n/12 , kde FABAN$[]$HOME je ad-res[]ar ob-sa-huj[]uci
+ []
+
+
+Overfull \hbox (20.82161pt too wide) in paragraph at lines 248--249
+\OT1/ppl/m/n/12 Fa-ban, fa-bancli je skript umo[]z[]nuj[]uci in-te-rak-ciu s Fa
+-ban Har-ness. Prv[]y ar-gu-ment sp[]u[]st[]an[]eho
+ []
+
+
+Overfull \hbox (22.5167pt too wide) in paragraph at lines 251--252
+[][]$\OT1/pcr/m/n/12 http : / / faban . org / docs / QuickStartTutorial . html$
+[][]\OT1/ppl/m/n/12 . N[]avod po-pi-suj[]uci vytv[]aranie
+ []
+
+
+Overfull \hbox (44.3811pt too wide) in paragraph at lines 251--252
+\OT1/ppl/m/n/12 z[]at[]a[]ze je k dis-poz[]^^Pcii na str[]anke [][]$\OT1/pcr/m/
+n/12 http : / / faban . org / docs / CreatingWorkloadTutorial .
+ []
+
+
+Overfull \hbox (15.70076pt too wide) in paragraph at lines 251--252
+\OT1/pcr/m/n/12 html$[][]\OT1/ppl/m/n/12 . []Dal[]sie n[]avody s[]u k dis-poz[]
+^^Pcii na str[]anke [][]$\OT1/pcr/m/n/12 http : / / faban . org / 1 . 2 / docs 
+/ index .
+ []
+
+
+Package hyperref Warning: Composite letter `\textasciicaron+l'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textasciicaron' on input line 253.
+
+
+Package hyperref Warning: Composite letter `\textasciicaron+t'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textasciicaron' on input line 253.
+
+
+Overfull \vbox (0.60545pt too high) has occurred while \output is active []
+
+
+[11] [12]
+Overfull \hbox (14.89418pt too wide) in paragraph at lines 260--261
+\OT1/ppl/m/n/12 Gatling je open-source, po-dobne ako v[]setky predch[]adzaj[]uc
+e n[]astroje. K[]ym predch[]adzaj[]uce
+ []
+
+
+Overfull \hbox (15.06462pt too wide) in paragraph at lines 263--264
+\OT1/ppl/m/n/12 Star[]e ver-zie prog-ramu sa nach[]adzaj[]u na str[]anke [][]$\
+OT1/pcr/m/n/12 www . github . com / excilys / gatling /
+ []
+
+
+Overfull \hbox (8.38028pt too wide) in paragraph at lines 263--264
+\OT1/pcr/m/n/12 gatling . io / download/$[][]\OT1/ppl/m/n/12 . Nach[]adza sa tu
+ aj ver-zia 2.2.0-SNAPSHOT, ktor[]a je vo v[]yvoji.
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 275--275
+[]\OT1/ppl/m/n/12 Generovanie re-por-tov do za-dan[]eho ad-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 275--275
+[]\OT1/ppl/m/n/12 ./gatling.sh -ro
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 276--276
+[]\OT1/ppl/m/n/12 ./gatling.sh -df
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 277--277
+[]\OT1/ppl/m/n/12 ./gatling.sh -rf
+ []
+
+
+Underfull \hbox (badness 1571) in paragraph at lines 278--278
+[]\OT1/ppl/m/n/12 Adres[]ar pre re-qu-esty. Cesta k ad-res[]aru
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 278--278
+[]\OT1/ppl/m/n/12 ./gatling -bf
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 279--279
+[]\OT1/ppl/m/n/12 ./gatling.sh -sf
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--280
+[]\OT1/ppl/m/n/12 ./gatling.sh -sbf
+ []
+
+
+Overfull \hbox (7.4105pt too wide) in paragraph at lines 280--280
+\OT1/ppl/m/n/12 /home/user/skompilovane| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 282--282
+[]\OT1/ppl/m/n/12 Zadan[]y ar-gu-ment sa pou[]zije ako
+ []
+
+
+Underfull \hbox (badness 3271) in paragraph at lines 282--282
+\OT1/ppl/m/n/12 v[]ychodiskov[]y n[]azov pre v[]ystupn[]y ad-
+ []
+
+
+Overfull \hbox (12.75839pt too wide) in paragraph at lines 266--289
+\OT1/ppl/m/n/12 Program je mo[]zn[]e spus-tit[] v pr[]^^Pkazovom riadku pr[]^^P
+kazom \OT1/ppl/m/it/12 ./gat-ling.sh \OT1/ppl/m/n/12 pre Li-nux a pr[]^^Pkazom
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 266--289
+
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[13]
+
+Package hyperref Warning: Composite letter `\textasciicaron+l'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textasciicaron' on input line 295.
+
+
+Package hyperref Warning: Composite letter `\textasciicaron+t'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textasciicaron' on input line 295.
+
+
+Overfull \hbox (2.3172pt too wide) in paragraph at lines 296--299
+\OT1/ppl/m/n/12 Gatling ne-pos-ky-tuje pod-poru po-mo-cou sa-mos-tatn[]ych do-p
+l-n-kov pre jed-not-liv[]e v[]yvojov[]e
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 301--309
+
+ []
+
+
+Overfull \hbox (6.74568pt too wide) in paragraph at lines 301--309
+\OT1/ppl/m/n/12 Gatling je mo[]zn[]e po-mo-cou Ma-ven Ar-che-type iba do v[]yvo
+jov[]ych pro-stred[]^^P pod-po-ruj[]ucich
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--309
+
+ []
+
+[15]
+Kapitola 5.
+
+Overfull \hbox (35.78445pt too wide) in paragraph at lines 315--316
+\OT1/ppl/m/n/12 pire 4830TG s pro-ce-so-rom In-tel Core i5-2410 a 8GB RAM pam[]
+at[]ou. Na po[]c[]^^Pta[]ci je nain[]stalovan[]a
+ []
+
+[16
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 319--321
+
+ []
+
+
+Overfull \hbox (2.55789pt too wide) in paragraph at lines 324--328
+\OT1/ppl/m/n/12 mo[]zn[]e sle-do-vat[] efek-ti-vitu ge-ne-ro-va-nia ma-xim[]aln
+ej z[]at[]a[]ze, ge-ne-ro-va-nie v[]ysledkov
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 324--328
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 329--333
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--338
+
+ []
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 340--344
+
+ []
+
+
+Overfull \hbox (27.51817pt too wide) in paragraph at lines 345--349
+\OT1/ppl/m/n/12 ktor[]e ne-pod-po-ruj[]u pro-to-kol JMS. Vd[]aka tomu je mo[]zn
+[]e po-rov-nat[] v[]ysledky z[]akladn[]ych
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 345--349
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 350--354
+
+ []
+
+
+Overfull \hbox (1.88623pt too wide) in paragraph at lines 355--358
+\OT1/ppl/m/n/12 Teoretick[]a prie-pust-nost[] n[]astroja ur[]cuje, ako r[]ychlo
+ dok[]a[]ze n[]astroj ge-ne-ro-vat[] z[]at[]a[]z.
+ []
+
+
+Overfull \hbox (11.3062pt too wide) in paragraph at lines 355--358
+\OT1/ppl/m/n/12 Vy-sok[]a prie-pust-nost[] n[]astroja umo[]z[]nuje ge-ne-ro-vat
+[] vy[]s[]siu z[]at[]a[]z tes-to-van[]eho n[]astroja
+ []
+
+
+Overfull \hbox (16.33449pt too wide) in paragraph at lines 355--358
+\OT1/ppl/m/n/12 za vyu[]zitia men[]sieho ob-jemu zdro-jov. Test pre-bieha ge-ne
+-ro-van[]^^Pm ma-xim[]alnej mo[]znej
+ []
+
+[18]
+Overfull \hbox (2.25743pt too wide) in paragraph at lines 366--367
+\OT1/ppl/m/n/12 ktor[]y riadi sp[]u[]stanie testu. V ad-res[]aroch druh[]eho, t
+re-tieho a []siesteho testu sa nach[]adzaj[]u
+ []
+
+[19]
+Overfull \hbox (2.52184pt too wide) in paragraph at lines 386--389
+\OT1/ppl/m/n/12 s[]ubory. V pr[]^^Ppade n[]astroja Apa-che JMe-ter s[]u to s[]u
+bory s pr[]^^Pponou ".jtl" a v pr[]^^Ppade
+ []
+
+
+Overfull \hbox (4.02245pt too wide) in paragraph at lines 386--389
+\OT1/ppl/m/n/12 n[]astroja Gat-ling s[]ubory "si-mu-la-tion.log". Tieto s[]ubor
+y ob-sa-huj[]u z[]aznam pre ka[]zd[]u
+ []
+
+
+Overfull \hbox (16.61015pt too wide) in paragraph at lines 386--389
+\OT1/ppl/m/n/12 hod-no-te-nie a po-rov-na-nie tes-tov, preto je []ziad[]uce ich
+ zma-za-nie po []uspe[]snom ukon[]cen[]^^P
+ []
+
+[20]
+Overfull \hbox (13.45775pt too wide) in paragraph at lines 406--409
+\OT1/ppl/m/n/12 spus-ten[]^^Pm testu. K tomu doch[]adza spus-ten[]^^Pm skriptu 
+ssh$[]$restart$[]$jboss.sh pr[]^^Pkazom
+ []
+
+[21]
+Kapitola 6.
+
+Underfull \hbox (badness 10000) in paragraph at lines 417--420
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 423--424
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 429--430
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 432--435
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 438--439
+
+ []
+
+[22
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 446--447
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 449--452
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 462--463
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 466--469
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 478--479
+
+ []
+
+(./bp.bbl [23]
+Underfull \hbox (badness 10000) in paragraph at lines 4--9
+\OT1/pcr/m/n/12 com / feature / Computing-[]power-[]capacity-[]on-[]demand$[][]
+\OT1/ppl/m/n/12 .  Nav[]st[]^^Pven[]e:
+ []
+
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 488.
+ [24
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 488.
+ (./bp.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 488.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 488.
+Package rerunfilecheck Info: File `bp.out' has not changed.
+(rerunfilecheck)             Checksum: 9E4254256F5123EE07637F4513B30A94;2746.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 488.
+ ) 
+Here is how much of TeX's memory you used:
+ 6366 strings out of 493304
+ 91325 string characters out of 6139871
+ 192473 words of memory out of 5000000
+ 9612 multiletter control sequences out of 15000+600000
+ 19688 words of font info for 50 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 34i,12n,31p,1403b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} <./fi-logo.514pk>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino
+/uplri8a.pfb>
+Output written on bp.pdf (32 pages, 199468 bytes).
+PDF statistics:
+ 560 PDF objects out of 1000 (max. 8388607)
+ 463 compressed objects within 5 object streams
+ 112 named destinations out of 1000 (max. 500000)
+ 329 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,42 @@
+\select@language {slovak}
+\contentsline {chapter}{\numberline {1}\bfseries \IeC {\'U}vod}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}\bfseries Testy v\IeC {\'y}konu}{2}{chapter.2}
+\contentsline {section}{\numberline {2.1}\slshape Z\IeC {\'a}kladn\IeC {\'e} testy}{2}{section.2.1}
+\contentsline {section}{\numberline {2.2}\slshape Z\IeC {\'a}\IeC {\v t}a\IeC {\v z}ov\IeC {\'e} testy}{2}{section.2.2}
+\contentsline {section}{\numberline {2.3}\slshape Stresov\IeC {\'e} testy}{2}{section.2.3}
+\contentsline {section}{\numberline {2.4}\slshape Testy vytrvalosti}{3}{section.2.4}
+\contentsline {section}{\numberline {2.5}\slshape Testy \IeC {\v s}pi\IeC {\v c}ky}{3}{section.2.5}
+\contentsline {section}{\numberline {2.6}\slshape Konfigura\IeC {\v c}n\IeC {\'e} testy}{3}{section.2.6}
+\contentsline {section}{\numberline {2.7}\slshape Izola\IeC {\v c}n\IeC {\'e} testy}{3}{section.2.7}
+\contentsline {chapter}{\numberline {3}\bfseries Metodika porovn\IeC {\'a}vania n\IeC {\'a}strojov}{4}{chapter.3}
+\contentsline {chapter}{\numberline {4}\bfseries N\IeC {\'a}stroje}{5}{chapter.4}
+\contentsline {section}{\numberline {4.1}\slshape Apache JMeter}{5}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}\rmfamily In\IeC {\v s}tal\IeC {\'a}cia}{5}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}\rmfamily Pou\IeC {\v z}\IeC {\'\i }vanie}{5}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}\rmfamily Dokument\IeC {\'a}cia}{7}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}\rmfamily Pou\IeC {\v z}ite\IeC {\v l}nos\IeC {\v t} vo v\IeC {\'y}vojovom prostred\IeC {\'\i }}{7}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.5}\rmfamily Generovanie reportov}{8}{subsection.4.1.5}
+\contentsline {section}{\numberline {4.2}\slshape Perfcake}{9}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}\rmfamily In\IeC {\v s}tal\IeC {\'a}cia}{9}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}\rmfamily Pou\IeC {\v z}\IeC {\'\i }vanie}{9}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}\rmfamily Dokument\IeC {\'a}cia}{10}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}\rmfamily Pou\IeC {\v z}ite\IeC {\v l}nos\IeC {\v t} vo v\IeC {\'y}vojovom prostred\IeC {\'\i }}{10}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}\rmfamily Generovanie reportov}{10}{subsection.4.2.5}
+\contentsline {section}{\numberline {4.3}\slshape Faban}{11}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}\rmfamily In\IeC {\v s}tal\IeC {\'a}cia}{11}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}\rmfamily Pou\IeC {\v z}\IeC {\'\i }vanie}{11}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}\rmfamily Dokument\IeC {\'a}cia}{11}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}\rmfamily Pou\IeC {\v z}ite\IeC {\v l}nos\IeC {\v t} vo v\IeC {\'y}vojovom prostred\IeC {\'\i }}{12}{subsection.4.3.4}
+\contentsline {section}{\numberline {4.4}\slshape Gatling}{13}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}\rmfamily In\IeC {\v s}tal\IeC {\'a}cia}{13}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}\rmfamily Pou\IeC {\v z}\IeC {\'\i }vanie}{13}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}\rmfamily Dokument\IeC {\'a}cia}{14}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.4}\rmfamily Pou\IeC {\v z}ite\IeC {\v l}nos\IeC {\v t} vo v\IeC {\'y}vojovom prostred\IeC {\'\i }}{14}{subsection.4.4.4}
+\contentsline {chapter}{\numberline {5}\bfseries Testy}{16}{chapter.5}
+\contentsline {section}{\numberline {5.1}\slshape Testovacie prostredie}{16}{section.5.1}
+\contentsline {section}{\numberline {5.2}\slshape Testy}{17}{section.5.2}
+\contentsline {section}{\numberline {5.3}\slshape Automatiz\IeC {\'a}cia testov}{19}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}\rmfamily Klient}{19}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}\rmfamily Server}{21}{subsection.5.3.2}
+\contentsline {chapter}{\numberline {6}\bfseries Z\IeC {\'a}ver}{22}{chapter.6}
+\contentsline {section}{\numberline {6.1}\slshape Zhrnutie}{22}{section.6.1}

@@ -1,0 +1,62 @@
+@BOOK{PerfTestGuide,
+	    AUTHOR = "Meier, J.D. and Farre, C. and Bansode, P. and Barber, S. and Rea, D.",
+	    TITLE = "Performance Testing Guidance for Web Applications",
+	    PUBLISHER = "Microsoft Press",
+	    YEAR = 2007}
+
+@MISC{JmeterTutorial,
+      	AUTHOR = "TUTORIALS POINT",
+      	TITLE = "Tutorials Point",
+      	HOWPUBLISHED = {\url{www.tutorialspoint.com/jmeter/jmeter_tutorial.pdf}},
+  		NOTE = {Navštívené: 22.6.2014}
+}
+
+@BOOK{IntegratedApproach,
+	    AUTHOR = "Subraya, B.M.",
+	    TITLE = "Integrated Approach to Web Performance Testing: A Practitioneres Guide",
+	    PUBLISHER = "IRM Press",
+	    YEAR = 2006,
+	    ADDRESS = "Hershey"}
+	   
+@misc{ComputingPower,
+		AUTHOR = "Garside, W.",
+  		title = {Computing power: capacity on demand},
+  		howpublished = {\url{www.computerweekly.com/feature/Computing-power-capacity-on-demand}},
+  		note = {Navštívené: 22.6.2014}
+}	   
+	    
+@misc{Sochor,
+		AUTHOR = "Sochor, J.",
+  		title = "{ÚVT MU} zpravodaj",
+  		howpublished = {\url{www.ics.muni.cz/bulletin/articles/61.html}},
+  		note = {Navštívené: 22.6.2014}
+}
+
+@misc{Apache,
+		AUTHOR = "Apache Software Foundation",
+  		title = "Apache JMeter",
+  		howpublished = {\url{http://jmeter.apache.org/index.html}},
+  		note = {Navštívené: 19.12.2014}
+}	    
+
+@misc{Faban,
+  		title = "Faban",
+  		howpublished = {\url{http://faban.org/about.html}},
+  		note = {Navštívené: 19.12.2014}
+}
+
+@misc{Gatling,
+		AUTHOR = "Sochor, J.",
+  		title = "{ÚVT MU} zpravodaj",
+  		howpublished = {\url{www.ics.muni.cz/bulletin/articles/61.html}},
+  		note = {Navštívené: 22.6.2014}
+}
+	    
+@Book{Art,
+		AUTHOR    = "Ian Molyneaux",
+		TITLE     = "The Art of Application Performance Testing",
+		PUBLISHER = "O’Reilly Media, Inc.",
+		YEAR      =  2009,
+		ADDRESS   = "Sebastopol",
+		EDITION   = "first edition"
+}
