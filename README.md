@@ -1,2 +1,2 @@
-bachelor-thesis
+my bachelor-thesis
 ===============
