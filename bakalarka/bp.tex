@@ -4,14 +4,14 @@
 \usepackage[czech, slovak]{babel}
 %balíček na A4
 \usepackage{a4wide}
-
+\usepackage{dirtree}
 %\usepackage{color}
 %\usepackage{url}
+%\sloppy
 
 \newcommand\todo[1]{\textcolor{red}{#1}}
 \newcommand\underscore[1]{\underline{\hspace{8pt}}}
 
-\baselineskip=25pt
 
 \thesistitle{Moderní nástroje pro měření výkonu v praxi}
 \thesissubtitle{Bakalárska práca}
@@ -34,6 +34,7 @@
 
 \begin{ThesisThanks}
 
+Rád by som sa poďakoval Mgr. Marekovi Grácovi, Ph.D.	za vedenie a rady poskytnuté pri písaní tejto práce. Veľká vďaka patrí aj Mgr. Martinovi Večeřovi a Ing. Pavlovi Macíkovi. V neposlednej rade ďakujem mojej rodine, hlavne mojim rodičom, Emílii a Ladislavovi za ich podporu pri štúdiu.
 
 \end{ThesisThanks}
 
@@ -52,7 +53,7 @@ Nástroje pro porovnání:
 \end{ThesisAbstract}
 
 \begin{ThesisKeyWords}
-performance testy, testovanie, ladenie výkonu, JMeter, PerfCake, Faban, Gatling
+performance testy, testovanie, porovnanie nástrojov, Apache JMeter, PerfCake, Faban, Gatling
 \end{ThesisKeyWords}
 
 \tableofcontents
@@ -111,7 +112,7 @@ Izolačné testy pomáhajú odhaliť chybné komponenty opakovaným spúšťaní
 
 \item Určenie a popis hodnotiacich kritérií jednotlivých nástrojov. Z hľadiska používateľa je dôležitý čas odozvy, obchodné záujmy reprezentuje priepustnosť a pre efektivitu systému je dôležité využitie zdrojov. Sem patrí aj určenie obmedzení a nájdenie optimálneho nastavenia systému.
 
-\item Určenie testovacieho prostredia, zdrojov a nástrojov dostupných pre testovanie. Dobrá znalosť systému a jeho častí je kľúčová pri identifikácii problémov v počiatočnej fáze testovania a taktiež výrazne zvyšuje efektivitu testov. %V neposlednej rade je nutné uistiť sa, že sa v testovacom tíme nachádza užívateľ a vývojár. Užívateľ by mal byť schopný zodpovedať na otázky týkajúce sa používania systému a vývojár poskytuje informácie týkajúce sa aplikačnej architektúry.
+\item Určenie testovacieho prostredia, zdrojov a nástrojov dostupných pre testovanie. Dobrá znalosť systému a jeho častí je kľúčová pri identifikácii problémov v počiatočnej fáze testovania a taktiež výrazne zvyšuje efektivitu testov.
 
 \item Naplánovanie a navrhnutie testov, identifikácia vzorových užívateľov, simulácia ich rozmanitosti v testoch, definovanie testovacích dát.
 
@@ -235,7 +236,7 @@ Užívateľská dokumentáciahttp://faban.org/docs/QuickStartTutorial.html sa na
 \todo{je mozne pouzit v Eclipse Kepler a je tam aj GUI}
 
 \subsection{Generovanie reportov}
-V prípade nástroja Perfcake 
+V prípade nástroja Perfcake sú všetky informácie vypisované do príkazového riadku v časových intervaloch, ktoré sa nastavujú v testovacích scenároch. Reporty som vytvoril presmerovaním výstupu z terminálu do súboru. Všetky informácie sú prehľadne umiestnené v jednom súbore.
 
 \newpage
 \section{Faban}
@@ -253,7 +254,8 @@ Stručný tutoriál popisujúci inštaláciu a spustenie prvých testov je dostu
 \subsection{Použiteľnosť vo vývojovom prostredí}
 Žiadne doplnky pre vývojové prostredia Eclipse, Netbeans, IntelliJ IDEA a nástroj Maven neboli nájdené. Faban je možné spúšťať len v príkazovom riadku.
 
-
+\subsection{Generovanie reportov}
+Vytváranie reportov a logovacích súborov prebieha automaticky. Pri štarte testu dostane každý test identifikačný reťazec, ktorý sa skladá z názvu profilu použitého pri testovaní, bodky, čísla a velkého písmena. Číslo a písmeno slúži ako jednoznačný identifikátor testu a Faban ho generuje automaticky. Výsledky testu je možné zobraziť v grafickom prostredí Faban Harness. V menu View Results je nutné vybrať test identifikovaný identifikačným reťazcom, čím sa zobrazí stručný report. Detailnejšie výsledky sú k dispozícii v hornom menu v záložkách Detailed Results, Run Log a Statistics. Výsledky testov sa ukladajú do adresára output, ktorý sa nachádza v adresári Fabanu. Pre každý test Faban vytvára adresár, ktorého názov je zhodný s identifikačným reťazcom testu a do tohto adresára ukladá všetky reporty a logy, ktoré patria k danému testu. Faban automaticky zaznamenáva využitie procesora počas testu, ale záznam využitia operačnej pamäte chýba a popis nastavenia chýba aj v dokumentácii.
 
 \newpage
 \section{Gatling}
@@ -307,9 +309,17 @@ Dokumentácia obsahuje sekciu Extensions, ktorá popisuje nastavenie Maven Plugi
 Gatling je možné pomocou Maven Archetype iba do vývojových prostredí podporujúcich jazyk Scala a obsahujúcich Maven. Aj keď testované vývojové prostredia neobsahujú natívnu podporu jazyka Scala je možné túto funkcionalitu implementovať pomocou doplnkov dostupných pre každé vývojové prostredie. Manuál popisujúci integráciu Gatling do vývojového prostredia pomocou Maven Archetype sa nachádza na stránke \url{http://gatling.io/docs/2.0.2/extensions/maven_archetype.html}.
 \newline
 
+\subsection{Generovanie reportov}
+Po spustení testu sú výsledky priebežne vypisované do terminálu a zároveň sa vytvorí adresár, ktorý umožňuje zobraziť výsledky v prehľadnej grafickej podobe. Adresár obsahuje aj logovací súbor, ktorý zaznamenáva výsledok každej pre každý vykonaný dotaz. Výsledky som z terminálu presmeroval do súboru a pri spúšťaní testu nastavujem umiestnenie adresára s výsledkami na adresár, v ktorom sa spúšťa daný test. Dokumentácia obsahuje návod, pomocou ktorého je možné nastaviť zaznamenávanie využitia operačnej pamäte. Napriek veľkej snahe sa mi podľa tohto návodu nepodarilo nastaviť zaznamenávanie využitia pamäte. Nastavenie vyžadovalo zmenu konfiguračného súboru Gatlingu a inštaláciu programov tretích strán. Po zmene konfiguračného súboru sa stal nástroj nepoužiteľným a nástroj som musel inštalovať odznova. V dokumentácii navyše chýbal návod k inštalácii programov tretích strán. Návod je k dispozícii na stránke: \url{http://gatling.io/docs/2.1.1/realtime_monitoring/index.html}.
 
 \chapter{Testy}
-Testovaná aplikácia pozostáva z piatich webových služieb. Pri testovaní používam dve webové služby a to službu main a webovú službu echo. Webová služba main prijíma na vstupe reťazec znakov a za použitia zvyšných webových služieb vypíše na výstup pôvodný reťazec, otočený reťazec, dĺžku reťazca, počet samohlások, spoluhlások, číslic a nakoniec počet znakov nespadajúcich do ani jednej z predchádzajúcich kategórií. Pre účely testov bola služba upravená tak, aby po zadaní reťazca "{}generate: x" vygenerovala reťazec o dĺžke x znakov, pričom každý vygenerovaný znak má veľkosť jeden bajt. Pre účely testu veľkosťou správy rozumieme veľkosť vygenerovaného reťazca. Webová služba echo je použitá pri testovaní teoretickej priepustnosti jednotlivých nástrojov. Táto služba iba vracia reťazec "{}echo", vďaka čomu dokáže server veľmi rýchlo vrátiť odpoveď a tým sa hrdlo fľaše\footnote{Hrdlo fľaše v softvérovom inžinierstve označuje tú časť systému, ktorá výrazne limituje priepustnosť celého systému.} presunie od služby k testovaným nástrojom. Webové služby sú naprogramované podľa rozhrania JAX-RS\footnote{Rozhranie pre jazyk Java poskytujúce podporu pre tvorbu webových služieb spĺňajúcich REST architektúrny vzor.}.
+
+\section{Testovaná aplikácia}
+K vytvoreniu testovanej aplikácie som použil programovací jazyk Java vo verzii 7 a ako vývojové prostredie NetBeans 8.0.1. Aplikácia sa skladá z dvoch častí: webových služieb a triedy obsluhujúcej Java Message Services (ďalej len JMS). Webové služby som naimplementoval pomocou Java aplikačného programovacieho rozhrania pre REST\footnote{Representational state transfer je abstraktný architektúrny vzor pre distribuované prostredie.} webové služby, ktoré sa v skratke označuje ako JAX-RS. Aplikácia pozostáva zo siedmich webových služieb, ktoré sú volané pomocou HyperText Transfer Protocol (ďalej len HTTP) protokolu. HTTP je protokol umožňujúci prenos dokumentov vo formáte značkovacieho jazyka HyperText Markup Language (HTML).
+\par Druhá časť aplikácie implementuje JMS rozhranie pre posielanie správ medzi dvomi klientami. Testovacie nástroje posielajú správy do fronty a tieto správy sú preposielané do druhej fronty, odkiaľ správu vyberie testovací nástroj.
+\par Webová služba main prijíma na vstupe reťazec znakov a za použitia zvyšných webových služieb vypíše na výstup pôvodný reťazec, otočený reťazec, dĺžku reťazca, počet samohlások, spoluhlások, číslic a nakoniec veľkosť pôvodného reťazca v bytoch. Pre účely testov som službu upravil tak, aby po zadaní reťazca "{}generate: x" vygenerovala reťazec o dĺžke x znakov, pričom každý vygenerovaný znak má veľkosť jeden bajt. Veľkosťou správy rozumieme veľkosť vygenerovaného reťazca.
+\par Služba memoryLeak sa od služby main líši len v tom, že simuluje únik pamäte. Simuláciu som naprogramoval pomocou mapy, ktorá nemá naimplementované metódy equals a hashCode. Správne naprogramovaná mapa musí mať tieto metódy korektne naimplementované, pretože pomocou nich rozhoduje, či sa vkladaná hodnota v mape už nachádza. Bez týchto metód moja mapa nedokáže detekovať duplicity a preto do mapy vkladá stále nové a nové hodnoty, a tým sa vytvorí únik pamäte. Službu používam len pri vytrvalostných testoch, ktoré sa skladajú z dvoch častí: Bez memory leaku a S memory leakom. Pri testovaní Bez memory leaku používajú testy službu main a pri testovaní S memory leakom volajú službu memoryLeak.
+\par Poslednou priamo volanou službou je echo, ktorú používam pri testovaní teoretickej priepustnosti jednotlivých nástrojov. Táto služba vracia jednoduchý reťazec "{}echo", vďaka čomu dokáže server veľmi rýchlo vrátiť odpoveď a tým sa teoretické hrdlo fľaše presunie od služby k testovaným nástrojom. Hrdlo fľaše v softvérovom inžinierstve označuje tú časť systému, ktorá výrazne limituje priepustnosť celého systému.
 
 \section{Testovacie prostredie}
 K testovniu sú použité dva samostatné počítače. Aplikácia je nasadená na aplikačnom serveri JBoss Application Server 7.1.1.Final "{}Brontes". Server beží na počítači Acer Aspire 4830TG s procesorom Intel Core i5-2410 a 8GB RAM pamäťou. Na počítači je nainštalovaná 64-bitová verzia operačného systému Ubuntu 14.04 LTS. Generovanie záťaže prebieha na počítači \todo{RED HAT PC, alebo moj PC}.
@@ -371,14 +381,14 @@ Slúži na nastavenie dĺžky testov. Prijíma dva prepínače: "{}-b"{} a "{}-t
 \textbf{Použitie:} \textit{./change\underscore{}runtime.sh -b 10 -t 120}
 
 \item \textbf{change\underscore{}server\underscore{}and\underscore{}port.sh}\\
-Skript nastavuje adresu servera a portu, na ktorom beží aplikácia. Na vstupe berie dva prepínače: "{}-s"{} a "{}-p"{}. Argumentom prepínača -s je adresa servera, ktorá môže byť reprezentovaná IP\footnote{IP adresa je číslo, ktoré jednoznačne identifikuje sieťové rozhranie v počítačovej sieti.} adresou. Prepínač -p prijíma ako argument číslo portu, pomocou ktorého je možné komunikovať s aplikáciou. V prípade, že nie sú pri spustení skriptu použité argumenty, použije sa pre server implicitná hodnota "{}localhost"{} a pre port hodnota "{}8080"{}.\\
-\textbf{Použitie:} \textit{./change\underscore{}server\underscore{}and\underscore{}port.sh -s 192.168.0.2 -p 18080}
+Skript nastavuje adresu servera, číslo portu pre webové služby a číslo JMS portu. Na vstupe berie tri prepínače: "{}-s"{}, "{}-p"{} a "{}-m"{}. Argumentom prepínača -s je adresa servera, ktorá môže byť reprezentovaná IP adresou. IP adresa môže byť reprezentovaná číslom, pomocou ktorého je možné jednoznačne identifikovať server v počítačovej sieti alebo aliasom, ktorý je k danej IP adrese pridelený. Prepínač -p prijíma ako argument číslo portu, pomocou ktorého je možné komunikovať s webovými službami aplikácie. A nakoniec prepínač -m, ktorý nastavuje port pre JMS. V prípade, že nie sú pri spustení skriptu použité argumenty, použije sa pre server implicitná hodnota "{}localhost"{}, pre port webových služieb hodnota "{}8080"{} a port JMS sa nastaví na hodnotu "{}4447"{}. Použité čísla portov sú východiskovými portmi JBoss AS servera pre dané komunikačné technológie.\\
+\textbf{Použitie:} \textit{./change\underscore{}server\underscore{}and\underscore{}port.sh -s 192.168.0.2 -p 18080 -p 14447}
 
 \item \textbf{open\underscore{}scenarios.sh}\\
 Po spustení skriptu sa otvoria všetky testovacie scenáre v textovom editore gedit. Skript často používam pri kontrole správneho nastavenia scenárov.\\
 \textbf{Použitie:} \textit{./open\underscore{}scenarios.sh}
 
-\newpage
+
 \item \textbf{remove\underscore{}all\underscore{}logs.sh}\\
 Tento skript slúži na vymazanie všetkých záznamov a logovacích súborov, ktoré vznikli pri testovaní. Vygenerované záznamy a logovacie súbory majú značnú veľkosť, čo spôsobuje problémy pri kopírovaní testov.\\
 \textbf{Použitie:} \textit{remove\underscore{}all\underscore{}logs.sh}
@@ -392,8 +402,8 @@ Nástroj Faban sa skladá z dvoch hlavných komponent: Faban Driver Framework a 
 \textbf{Použitie:} \textit{restart\underscore{}faban.sh}
 
 \item \textbf{run\underscore{}all.sh}\\
-K spusteniu všetkých testov slúži tento skript, ktorý prijíma 6 prepínačov: "{}-s"{}, "{}-p"{}, "{}-t"{}, "{}-b"{}, "{}-u"{} a "{}-d"{}. Pred samotným sputstením všetkých testov sú spustené skripty \textit{change\underscore{}runtime.sh} a \textit{change\underscore{}server\underscore{}and\underscore{}port.sh}, ktorým sú predané argumenty prepínačov pre nastavenie dĺžky trvania testov, adresy servera a čísla portu. Prepínač -u prijíma ako argument meno užívateľa, cez ktorého klient pomocou príkazu \textit{ssh} reštartuje JBoss AS server, ktorý beží na inom stroji. Pokiaľ tento atribút nie je definovaný, skript skončí s chybou. Argument posledného prepínača reprezentuje adresár, v ktorom je umiestnený koreňový adresár obsahujúci server JBoss AS a skript potrebný na jeho obsluhu. V prípade, že adresár nie je definovaný, použije sa implicitná hodnota "{/home/user}"{}, kde user je meno užívateľa nastavené prepínačom -u.\\
-\textbf{Použitie:} \textit{run\underscore{}all.sh -s 192.168.0.2 -p 18080 -b 10 -t 120 -u tomas -d /home/tomas/server}
+K spusteniu všetkých testov slúži tento skript, ktorý prijíma 7 prepínačov: "{}-s"{}, "{}-p"{}, "{}-m"{}, "{}-t"{}, "{}-b"{}, "{}-u"{} a "{}-d"{}. Pred samotným sputstením všetkých testov sú spustené skripty \textit{change\underscore{}runtime.sh} a \textit{change\underscore{}server\underscore{}and\underscore{}port.sh}, ktorým sú predané argumenty prepínačov pre nastavenie dĺžky trvania testov, adresy servera, čísla portu webových služieb a čísla portu pre JMS. Prepínač -u prijíma ako argument meno užívateľa, cez ktorého klient pomocou príkazu \textit{ssh} reštartuje JBoss AS server, ktorý beží na inom stroji. Pokiaľ tento atribút nie je definovaný, skript skončí s chybou. Argument posledného prepínača reprezentuje adresár, v ktorom je umiestnený koreňový adresár obsahujúci server JBoss AS a skript potrebný na jeho obsluhu. V prípade, že adresár nie je definovaný, použije sa implicitná hodnota "{/home/user}"{}, kde user je meno užívateľa nastavené prepínačom -u.\\
+\textbf{Použitie:} \textit{run\underscore{}all.sh -s 192.168.0.2 -p 18080 -m 14447 -b 10 -t 120 -u tomas -d /home/to-mas/server}
 
 \end{itemize}
 
@@ -481,8 +491,45 @@ Plusy
 \bibliographystyle{unsrt}
 \bibliography{bibliography}
 
-%\appendix
-%\chapter{Obsah priloženého CD}
+\appendix
+\chapter{Obsah priloženého CD}
+Súčasťou tejto práce je aj CD obsahujúce všetky materiály, ktoré boli vytvorené v rámci písania práce. Adresárová štruktúra CD vyzerá nasledovne:
 
+\bigskip
+
+\dirtree{%
+.1 /.
+.2 Bakalárska práca.
+.3 img\DTcomment{Adresár s obrázkami použitými v práci}.
+.3 bibliografie.bib\DTcomment{Bibliografická databáza práce}.
+.3 bp.tex\DTcomment{Zdrojový kód práce}.
+.3 bp.pdf\DTcomment{Hotová práca}.
+.2 klient.zip\DTcomment{Archív obsahujúci klientskú časť testov}.
+.3 1, 2, 3, 4, 5, 6, 7\DTcomment{Symbolické odkazy k adresárom}.
+.3 1.Zakladny\ test\ s\ jednym\ klientom\DTcomment{Adresár s testom}.
+.3 2.Rastuce\ mnozstvo\ klientov\DTcomment{Adresár s testom}.
+.3 3.Rastuca\ velkost\ spravy\DTcomment{Adresár s testom}.
+.3 4.JMS zakladny test so 100 klientmi\DTcomment{Adresár s testom}.
+.3 5.Zakladny\ test\ so 100 klientmi\DTcomment{Adresár s testom}.
+.3 6.Vytrvalostny\ test\DTcomment{Adresár s testom}.
+.3 7.Test\ teoretickej priepustnosti nastrojov\DTcomment{Adresár s testom}.
+.3 Nastroje\DTcomment{Adresár obsahujúci nástroje}.
+.4 apache-jmeter-2.11\DTcomment{Nástroj Apache JMeter}.
+.4 faban\DTcomment{Nástroj Faban}.
+.4 gatling-charts-highcharts-2.0.1\DTcomment{Nástroj Gatling}.
+.4 change\underscore{}runtime.sh\DTcomment{Skript meniaci čas testov}.
+.4 change\underscore{}server\underscore{}and\underscore{}port.sh\DTcomment{Skript meniaci server a port}.
+.4 open\underscore{}scenarios.sh\DTcomment{Skript otvárajúci scenáre}.
+.4 remove\underscore{}all\underscore{}logs.sh\DTcomment{Skript odstraňujúci všetky logy a reporty}.
+.4 remove\underscore{}big\underscore{}logs.sh\DTcomment{Skript odstraňujúci velké logy a reporty}.
+.4 restart\underscore{}faban.sh\DTcomment{Skript reštartujúci Faban server}.
+.4 run\underscore{}all.sh\DTcomment{Skript spúšťajúci testy}.
+.2 server.zip\DTcomment{Archív obsahujúci serverovú časť testov}.
+.3 Nastroje\DTcomment{Adresár obsahujúci JBoss AS server}.
+.4 jboss-as-7.1.1.Final\DTcomment{JBoss AS server}.
+.3 ssh\underscore{}restart\underscore{}jboss.sh\DTcomment{Skript reštartujúci JBoss AS server}.
+}
+
+\bigskip
 
 \end{document}
