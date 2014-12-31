@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.1)  29 DEC 2014 02:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.1)  31 DEC 2014 02:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -430,6 +430,14 @@ Package: a4wide 1994/08/30
 (/usr/share/texlive/texmf-dist/tex/latex/ntgclass/a4.sty
 Package: a4 2004/04/15 v1.2g A4 based page layout
 ))
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count102
+\float@exts=\toks17
+\float@box=\box26
+\@float@everytoks=\toks18
+\@floatcapt=\box27
+)
 (/usr/share/texlive/texmf-dist/tex/latex/dirtree/dirtree.sty
 Package: dirtree 2012/12/11 v0.32 package wrapper for dirtree
 
@@ -442,10 +450,10 @@ Package: dirtree 2012/12/11 v0.32 package wrapper for dirtree
 \DT@rulewidth=\dimen116
 \DT@dotwidth=\dimen117
 \DTbaselineskip=\dimen118
-\DT@counti=\count102
-\DT@countii=\count103
-\DT@countiii=\count104
-\DT@countiv=\count105
+\DT@counti=\count103
+\DT@countii=\count104
+\DT@countiii=\count105
+\DT@countiv=\count106
 \DT@indent=\dimen119
 \DT@parskip=\dimen120
 \DT@baselineskip=\dimen121
@@ -454,38 +462,38 @@ File: dirtree.tex 2012/12/11 v0.32 `dirtree' (jcc)
 ) (./bp.aux)
 \openout1 = `bp.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Try loading font information for OT1+ppl on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 27.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count106
+\scratchcounter=\count107
 \scratchdimen=\dimen122
-\scratchbox=\box26
-\nofMPsegments=\count107
-\nofMParguments=\count108
-\everyMPshowfont=\toks17
-\MPscratchCnt=\count109
+\scratchbox=\box28
+\nofMPsegments=\count108
+\nofMParguments=\count109
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count110
 \MPscratchDim=\dimen123
-\MPnumerator=\count110
-\makeMPintoPDFobject=\count111
-\everyMPtoPDFconversion=\toks18
+\MPnumerator=\count111
+\makeMPintoPDFobject=\count112
+\everyMPtoPDFconversion=\toks20
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -501,7 +509,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box27
+\AtBeginShipoutBox=\box29
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
@@ -511,7 +519,7 @@ File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 130.
 )
-Package hyperref Info: Link coloring ON on input line 24.
+Package hyperref Info: Link coloring ON on input line 27.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -519,41 +527,41 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count112
+\c@section@level=\count113
 )
-LaTeX Info: Redefining \ref on input line 24.
-LaTeX Info: Redefining \pageref on input line 24.
-LaTeX Info: Redefining \nameref on input line 24.
+LaTeX Info: Redefining \ref on input line 27.
+LaTeX Info: Redefining \pageref on input line 27.
+LaTeX Info: Redefining \nameref on input line 27.
 
 (./bp.out) (./bp.out)
 \@outlinefile=\write3
 \openout3 = `bp.out'.
 
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 28.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 31.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 28.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 31.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 32.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 35.
 
 [2
 
 ] [3
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 42--45
+Underfull \hbox (badness 10000) in paragraph at lines 45--48
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 47.
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 50.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 47.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 50.
  [4
 
 ] [5
@@ -581,32 +589,32 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 ]
 Kapitola 1.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 63.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 66.
 
-Overfull \hbox (9.21805pt too wide) in paragraph at lines 64--76
+Overfull \hbox (9.21805pt too wide) in paragraph at lines 67--79
 \OT1/ppl/m/n/12 v[]ypo[]ctov[]y v[]ykon [[]]. Tento probl[]em sa d[]a rie[]sit[
 ] dvoma sp[]osobmi. Jed-no-duch[]ym rie[]sen[]^^Pm
  []
 
 
-Overfull \hbox (2.95332pt too wide) in paragraph at lines 64--76
+Overfull \hbox (2.95332pt too wide) in paragraph at lines 67--79
 \OT1/ppl/m/n/12 vlast-nost[]^^P syst[]emu, ako roz[]s[]^^Pritel[]nost[] a efekt
 []^^Pvnost[] vyu[]z[]^^Pvania pros-tried-kov. Naj[]castej[]sie
  []
 
 
-Overfull \hbox (0.79343pt too wide) in paragraph at lines 64--76
+Overfull \hbox (0.79343pt too wide) in paragraph at lines 67--79
 \OT1/ppl/m/n/12 pou[]z[]^^Pvan[]ymi tes-tami v[]ykonu s[]u z[]at[]a[]zov[]e tes
 ty, []unavov[]e testy, testy v[]ydr[]ze, kul-mina[]cn[]e
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--76
+Underfull \hbox (badness 10000) in paragraph at lines 67--79
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--79
+Underfull \hbox (badness 10000) in paragraph at lines 80--82
 
  []
 
@@ -616,7 +624,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--79
 ]
 Kapitola 2.
 
-Overfull \hbox (26.84525pt too wide) in paragraph at lines 88--89
+Overfull \hbox (26.84525pt too wide) in paragraph at lines 91--92
 \OT1/ppl/m/n/12 Z[]akladn[]e testy ur[]cuj[]u []cas po-trebn[]y na vy-ko-na-nie
  jed-not-liv[]ych trans-akci[]^^P jedn[]ym u[]z[]^^Pvatel[]om.
  []
@@ -624,10 +632,10 @@ Overfull \hbox (26.84525pt too wide) in paragraph at lines 88--89
 
 Package hyperref Warning: Composite letter `\textasciicaron+t'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 90.
+(hyperref)                removing `\textasciicaron' on input line 93.
 
 
-Overfull \hbox (2.45033pt too wide) in paragraph at lines 91--92
+Overfull \hbox (2.45033pt too wide) in paragraph at lines 94--95
 \OT1/ppl/m/n/12 Najpou[]z[]^^Pvanej[]s[]^^Pm a naj-jed-no-duch[]s[]^^Pm tes-tom
  je z[]at[]a[]zov[]y test. Po[]cas tohto testu je syst[]em
  []
@@ -635,11 +643,6 @@ Overfull \hbox (2.45033pt too wide) in paragraph at lines 91--92
 [2
 
 ]
-
-Package hyperref Warning: Composite letter `\textasciicaron+c'
-(hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 99.
-
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
@@ -651,7 +654,12 @@ Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                removing `\textasciicaron' on input line 105.
 
 
-Overfull \hbox (20.18562pt too wide) in paragraph at lines 106--107
+Package hyperref Warning: Composite letter `\textasciicaron+c'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textasciicaron' on input line 108.
+
+
+Overfull \hbox (20.18562pt too wide) in paragraph at lines 109--110
 \OT1/ppl/m/n/12 Izola[]cn[]e testy pom[]ahaj[]u od-ha-lit[] chybn[]e kom-po-nen
 ty opa-ko-van[]ym sp[]u[]st[]an[]^^Pm ne[]uspe[]sn[]ych
  []
@@ -659,19 +667,19 @@ ty opa-ko-van[]ym sp[]u[]st[]an[]^^Pm ne[]uspe[]sn[]ych
 [3]
 Kapitola 3.
 
-Overfull \hbox (5.20851pt too wide) in paragraph at lines 113--114
+Overfull \hbox (5.20851pt too wide) in paragraph at lines 116--117
 []\OT1/ppl/m/n/12 Ur[]cenie a po-pis hod-no-tia-cich krit[]eri[]^^P jed-not-liv
 []ych n[]astrojov. Z hl[]adiska pou[]z[]^^Pvatel[]a
  []
 
 
-Overfull \hbox (4.94609pt too wide) in paragraph at lines 113--114
+Overfull \hbox (4.94609pt too wide) in paragraph at lines 116--117
 \OT1/ppl/m/n/12 vitu syst[]emu je d[]ole[]zit[]e vyu[]zitie zdro-jov. Sem patr[
 ]^^P aj ur[]cenie ob-me-dzen[]^^P a n[]ajdenie
  []
 
 
-Overfull \hbox (19.1654pt too wide) in paragraph at lines 115--116
+Overfull \hbox (19.1654pt too wide) in paragraph at lines 118--119
 \OT1/ppl/m/n/12 Dobr[]a zna-lost[] syst[]emu a jeho []cast[]^^P je kl[][]u[]cov
 []a pri iden-ti-fik[]acii probl[]emov v po[]ciato[]cnej
  []
@@ -680,43 +688,43 @@ Overfull \hbox (19.1654pt too wide) in paragraph at lines 115--116
 
 ]
 Kapitola 4.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 134.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 137.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Overfull \hbox (3.69734pt too wide) in paragraph at lines 137--138
+Overfull \hbox (3.69734pt too wide) in paragraph at lines 140--141
 \OT1/ppl/m/n/12 s nain[]stalovan[]ym Java be-hov[]ym pro-stred[]^^Pm JRE[][][][
 ][] ver-zie 6 a vy[]s[]sej. V opera[]cnom syst[]eme
  []
 
 
-Underfull \hbox (badness 2435) in paragraph at lines 146--146
+Underfull \hbox (badness 2435) in paragraph at lines 149--149
 []\OT1/ppl/m/n/12 Zobrazenie in-form[]aci[]^^P o spus-ten[]^^P prog-
  []
 
 
-Underfull \hbox (badness 1087) in paragraph at lines 149--149
+Underfull \hbox (badness 1087) in paragraph at lines 152--152
 []\OT1/ppl/m/n/12 ./jmeter.sh -q su-bor1 su-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--157
+Underfull \hbox (badness 10000) in paragraph at lines 160--160
 []\OT1/ppl/m/n/12 ./jmeter.sh -N lo-cal-host
  []
 
 
-Underfull \hbox (badness 7814) in paragraph at lines 163--163
+Underfull \hbox (badness 7814) in paragraph at lines 166--166
 []\OT1/ppl/m/n/12 ./jmeter.sh -S pro-perty1
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--164
+Underfull \hbox (badness 10000) in paragraph at lines 167--167
 []\OT1/ppl/m/n/12 ./jmeter.sh -L jme-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--167
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
 []\OT1/ppl/m/n/12 ./jmeter.sh -d
  []
 
@@ -726,7 +734,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [5
 
 ]
-Overfull \hbox (0.50601pt too wide) in paragraph at lines 178--179
+Overfull \hbox (0.50601pt too wide) in paragraph at lines 181--182
 \OT1/ppl/m/n/12 na ktor[]e m[]o[]ze u[]z[]^^Pvatel[] pri pou[]z[]^^Pvan[]^^P Ap
 a-che JMetra na-ra-zit[]. Do-ku-ment[]acia je na-vzdory
  []
@@ -734,151 +742,163 @@ a-che JMetra na-ra-zit[]. Do-ku-ment[]acia je na-vzdory
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6]
+ [6pdfTeX warning (ext4): destination with the same identifier (name{table.4.1}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.182 
+      ]
 
 Package hyperref Warning: Composite letter `\textasciicaron+l'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 180.
+(hyperref)                removing `\textasciicaron' on input line 183.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+t'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 180.
+(hyperref)                removing `\textasciicaron' on input line 183.
 
 
-Overfull \hbox (27.02925pt too wide) in paragraph at lines 181--185
+Overfull \hbox (27.02925pt too wide) in paragraph at lines 184--188
 \OT1/ppl/m/n/12 Tutori[]al [][]$\OT1/pcr/m/n/12 http : / / wiki . apache . org 
 / jmeter / JMeterAndEclipseHowTo$[][] \OT1/ppl/m/n/12 z wiki str[]anky
  []
 
 
-Overfull \hbox (27.79582pt too wide) in paragraph at lines 181--185
+Overfull \hbox (27.79582pt too wide) in paragraph at lines 184--188
 []\OT1/ppl/m/n/12 citatel[]a hned[] v []uvode pre-sme-ruje na str[]anku [][]$\O
 T1/pcr/m/n/12 http : / / people . apache . org / []mkostrze /
  []
 
 
-Overfull \hbox (12.81297pt too wide) in paragraph at lines 181--185
+Overfull \hbox (12.81297pt too wide) in paragraph at lines 184--188
 \OT1/pcr/m/n/12 jmeter-[]eclipse / jmeter-[]eclipse . html$[][]\OT1/ppl/m/n/12 
 , ktor[]a bola na-po-sledy upra-ven[]a 10.03.2004.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--185
+Underfull \hbox (badness 10000) in paragraph at lines 184--188
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 186--190
+Underfull \hbox (badness 10000) in paragraph at lines 189--193
 
  []
 
 
-Overfull \hbox (12.61403pt too wide) in paragraph at lines 191--195
+Overfull \hbox (12.61403pt too wide) in paragraph at lines 194--198
 \OT1/ppl/m/n/12 Doplnok pre In-tel-liJ IDEA je nutn[]e stia-hnut[] zo str[]anky
  [][]$\OT1/pcr/m/n/12 https : / / plugins . jetbrains .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--195
+Underfull \hbox (badness 10000) in paragraph at lines 194--198
 
  []
 
 [7] [8]
-Overfull \hbox (43.82901pt too wide) in paragraph at lines 206--207
+Overfull \hbox (43.82901pt too wide) in paragraph at lines 209--210
 \OT1/ppl/m/n/12 na 23.9.2014. Str[]anka pro-jektu: [][]$\OT1/pcr/m/n/12 www . p
 erfcake . org/$[][]\OT1/ppl/m/n/12 . Git-hub: [][]$\OT1/pcr/m/n/12 www . github
  . com / PerfCake /
  []
 
 
-Overfull \hbox (11.21152pt too wide) in paragraph at lines 209--210
+Overfull \hbox (11.21152pt too wide) in paragraph at lines 212--213
 \OT1/ppl/m/n/12 menn[]u pro-stre-dia. Pre opera[]cn[]e syst[]emy Win-dows a Li-
 nux je na str[]anke [][]$\OT1/pcr/m/n/12 www . perfcake .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 220--220
+Underfull \hbox (badness 10000) in paragraph at lines 223--223
 []\OT1/ppl/m/n/12 N[]azov sp[]u[]st[]an[]eho scen[]ara. Scen[]ar je
  []
 
 
-Underfull \hbox (badness 1769) in paragraph at lines 221--221
+Underfull \hbox (badness 1769) in paragraph at lines 224--224
 []\OT1/ppl/m/n/12 N[]azov vlast-nosti a jej hod-nota. P[]^^P[]seme
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--231
+Underfull \hbox (badness 10000) in paragraph at lines 215--234
 
  []
 
 
-Overfull \hbox (2.08981pt too wide) in paragraph at lines 233--234
+Overfull \hbox (2.08981pt too wide) in paragraph at lines 236--237
 \OT1/ppl/m/n/12 U[]z[]^^Pvatel[]sk[]a do-ku-ment[]aciahttp://faban.org/docs/Qui
 ckStartTutorial.html sa nach[]adza
  []
 
 
-Overfull \hbox (7.45418pt too wide) in paragraph at lines 233--234
+Overfull \hbox (7.45418pt too wide) in paragraph at lines 236--237
 \OT1/ppl/m/n/12 z[]at[]a[]ze, po-sie-la-nie spr[]av, ge-ne-ro-va-nie re-por-tov
 , va-lid[]aciu a roz[]s[]^^Prenia Perf-Cake. Pre ka[]zd[]u
  []
 
-[9]
+[9pdfTeX warning (ext4): destination with the same identifier (name{table.4.2})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.237 
+      ]
 
 Package hyperref Warning: Composite letter `\textasciicaron+l'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 235.
+(hyperref)                removing `\textasciicaron' on input line 238.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+t'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 235.
+(hyperref)                removing `\textasciicaron' on input line 238.
 
 [10]
-Overfull \hbox (7.21486pt too wide) in paragraph at lines 243--244
+Overfull \hbox (7.21486pt too wide) in paragraph at lines 246--247
 \OT1/ppl/m/n/12 Faban je nap[]^^Psan[]y v ja-zyku Java a jeho li-cen-cia je ope
 n-source. Sklad[]a sa z dvoch hlavn[]ych
  []
 
 
-Overfull \hbox (11.30548pt too wide) in paragraph at lines 246--247
+Overfull \hbox (11.30548pt too wide) in paragraph at lines 249--250
 \OT1/ppl/m/n/12 Faban na roz-diel od predch[]adzaj[]ucich tes-to-vac[]^^Pch n[]
 astrojov vy[]zaduje pln[]u JDK[][][][][] in[]stal[]aciu
  []
 
 
-Overfull \hbox (42.88477pt too wide) in paragraph at lines 249--250
+Overfull \hbox (42.88477pt too wide) in paragraph at lines 252--253
 \OT1/ppl/m/n/12 v[]ysledk[]y tes-tov. Syn-tax pre sp[]u[]st[]anie tes-tov z pr[
 ]^^Pkazov[]eho riadku je \OT1/ppl/m/it/12 FABAN$[]$HOME/bin/fabancli
  []
 
 
-Overfull \hbox (1.60492pt too wide) in paragraph at lines 249--250
+Overfull \hbox (1.60492pt too wide) in paragraph at lines 252--253
 \OT1/ppl/m/it/12 sub-mit bench-mark pro-file /con-fi-gu-ra-tion/run.xml\OT1/ppl
 /m/n/12 , kde FABAN$[]$HOME je ad-res[]ar ob-sa-huj[]uci
  []
 
 
-Overfull \hbox (20.82161pt too wide) in paragraph at lines 249--250
+Overfull \hbox (20.82161pt too wide) in paragraph at lines 252--253
 \OT1/ppl/m/n/12 Fa-ban, fa-bancli je skript umo[]z[]nuj[]uci in-te-rak-ciu s Fa
 -ban Har-ness. Prv[]y ar-gu-ment sp[]u[]st[]an[]eho
  []
 
 
-Overfull \hbox (22.5167pt too wide) in paragraph at lines 252--253
+Overfull \hbox (22.5167pt too wide) in paragraph at lines 255--256
 [][]$\OT1/pcr/m/n/12 http : / / faban . org / docs / QuickStartTutorial . html$
 [][]\OT1/ppl/m/n/12 . N[]avod po-pi-suj[]uci vytv[]aranie
  []
 
 
-Overfull \hbox (44.3811pt too wide) in paragraph at lines 252--253
+Overfull \hbox (44.3811pt too wide) in paragraph at lines 255--256
 \OT1/ppl/m/n/12 z[]at[]a[]ze je k dis-poz[]^^Pcii na str[]anke [][]$\OT1/pcr/m/
 n/12 http : / / faban . org / docs / CreatingWorkloadTutorial .
  []
 
 
-Overfull \hbox (15.70076pt too wide) in paragraph at lines 252--253
+Overfull \hbox (15.70076pt too wide) in paragraph at lines 255--256
 \OT1/pcr/m/n/12 html$[][]\OT1/ppl/m/n/12 . []Dal[]sie n[]avody s[]u k dis-poz[]
 ^^Pcii na str[]anke [][]$\OT1/pcr/m/n/12 http : / / faban . org / 1 . 2 / docs 
 / index .
@@ -887,98 +907,98 @@ Overfull \hbox (15.70076pt too wide) in paragraph at lines 252--253
 
 Package hyperref Warning: Composite letter `\textasciicaron+l'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 254.
+(hyperref)                removing `\textasciicaron' on input line 257.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+t'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 254.
+(hyperref)                removing `\textasciicaron' on input line 257.
 
 
 Overfull \vbox (0.60545pt too high) has occurred while \output is active []
 
 
 [11] [12]
-Overfull \hbox (14.89418pt too wide) in paragraph at lines 262--263
+Overfull \hbox (14.89418pt too wide) in paragraph at lines 265--266
 \OT1/ppl/m/n/12 Gatling je open-source, po-dobne ako v[]setky predch[]adzaj[]uc
 e n[]astroje. K[]ym predch[]adzaj[]uce
  []
 
 
-Overfull \hbox (15.06462pt too wide) in paragraph at lines 265--266
+Overfull \hbox (15.06462pt too wide) in paragraph at lines 268--269
 \OT1/ppl/m/n/12 Star[]e ver-zie prog-ramu sa nach[]adzaj[]u na str[]anke [][]$\
 OT1/pcr/m/n/12 www . github . com / excilys / gatling /
  []
 
 
-Overfull \hbox (8.38028pt too wide) in paragraph at lines 265--266
+Overfull \hbox (8.38028pt too wide) in paragraph at lines 268--269
 \OT1/pcr/m/n/12 gatling . io / download/$[][]\OT1/ppl/m/n/12 . Nach[]adza sa tu
  aj ver-zia 2.2.0-SNAPSHOT, ktor[]a je vo v[]yvoji.
  []
 
 
-Underfull \hbox (badness 1852) in paragraph at lines 277--277
+Underfull \hbox (badness 1852) in paragraph at lines 280--280
 []\OT1/ppl/m/n/12 Generovanie re-por-tov do za-dan[]eho ad-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 277--277
+Underfull \hbox (badness 10000) in paragraph at lines 280--280
 []\OT1/ppl/m/n/12 ./gatling.sh -ro
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 278--278
+Underfull \hbox (badness 10000) in paragraph at lines 281--281
 []\OT1/ppl/m/n/12 ./gatling.sh -df
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 279--279
+Underfull \hbox (badness 10000) in paragraph at lines 282--282
 []\OT1/ppl/m/n/12 ./gatling.sh -rf
  []
 
 
-Underfull \hbox (badness 1571) in paragraph at lines 280--280
+Underfull \hbox (badness 1571) in paragraph at lines 283--283
 []\OT1/ppl/m/n/12 Adres[]ar pre re-qu-esty. Cesta k ad-res[]aru
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 280--280
+Underfull \hbox (badness 10000) in paragraph at lines 283--283
 []\OT1/ppl/m/n/12 ./gatling -bf
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--281
+Underfull \hbox (badness 10000) in paragraph at lines 284--284
 []\OT1/ppl/m/n/12 ./gatling.sh -sf
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 282--282
+Underfull \hbox (badness 10000) in paragraph at lines 285--285
 []\OT1/ppl/m/n/12 ./gatling.sh -sbf
  []
 
 
-Overfull \hbox (7.4105pt too wide) in paragraph at lines 282--282
+Overfull \hbox (7.4105pt too wide) in paragraph at lines 285--285
 \OT1/ppl/m/n/12 /home/user/skompilovane| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--284
+Underfull \hbox (badness 10000) in paragraph at lines 287--287
 []\OT1/ppl/m/n/12 Zadan[]y ar-gu-ment sa pou[]zije ako
  []
 
 
-Underfull \hbox (badness 3271) in paragraph at lines 284--284
+Underfull \hbox (badness 3271) in paragraph at lines 287--287
 \OT1/ppl/m/n/12 v[]ychodiskov[]y n[]azov pre v[]ystupn[]y ad-
  []
 
 
-Overfull \hbox (12.75839pt too wide) in paragraph at lines 268--291
+Overfull \hbox (12.75839pt too wide) in paragraph at lines 271--294
 \OT1/ppl/m/n/12 Program je mo[]zn[]e spus-tit[] v pr[]^^Pkazovom riadku pr[]^^P
 kazom \OT1/ppl/m/it/12 ./gat-ling.sh \OT1/ppl/m/n/12 pre Li-nux a pr[]^^Pkazom
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--291
+Underfull \hbox (badness 10000) in paragraph at lines 271--294
 
  []
 
@@ -989,51 +1009,45 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Package hyperref Warning: Composite letter `\textasciicaron+l'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 297.
+(hyperref)                removing `\textasciicaron' on input line 300.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+t'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 297.
+(hyperref)                removing `\textasciicaron' on input line 300.
 
 
-Overfull \hbox (2.3172pt too wide) in paragraph at lines 298--301
+Overfull \hbox (2.3172pt too wide) in paragraph at lines 301--304
 \OT1/ppl/m/n/12 Gatling ne-pos-ky-tuje pod-poru po-mo-cou sa-mos-tatn[]ych do-p
 l-n-kov pre jed-not-liv[]e v[]yvojov[]e
  []
 
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 303--311
+[14pdfTeX warning (ext4): destination with the same identifier (name{table.4.3}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.305 \newpage
+              ]
+Underfull \hbox (badness 10000) in paragraph at lines 306--314
 
  []
 
 
-Overfull \hbox (6.74568pt too wide) in paragraph at lines 303--311
+Overfull \hbox (6.74568pt too wide) in paragraph at lines 306--314
 \OT1/ppl/m/n/12 Gatling je mo[]zn[]e po-mo-cou Ma-ven Ar-che-type iba do v[]yvo
 jov[]ych pro-stred[]^^P pod-po-ruj[]ucich
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--311
+Underfull \hbox (badness 10000) in paragraph at lines 306--314
 
- []
-
-
-Overfull \hbox (1.50154pt too wide) in paragraph at lines 313--314
-\OT1/ppl/m/n/12 znova. V do-ku-ment[]acii navy[]se ch[]ybal n[]avod k in[]stal[
-]acii prog-ra-mov tret[]^^Pch str[]an. N[]avod
- []
-
-
-Overfull \hbox (25.26537pt too wide) in paragraph at lines 313--314
-\OT1/ppl/m/n/12 je k dis-poz[]^^Pcii na str[]anke: [][]$\OT1/pcr/m/n/12 http : 
-/ / gatling . io / docs / 2 . 1 . 1 / realtime _ monitoring /
  []
 
 [15]
 Kapitola 5.
 
-Overfull \hbox (1.69434pt too wide) in paragraph at lines 321--322
+Overfull \hbox (1.69434pt too wide) in paragraph at lines 324--325
 \OT1/ppl/m/n/12 mapy vklad[]a st[]ale nov[]e a nov[]e hod-noty, a t[]ym sa vy-t
 vor[]^^P []unik pam[]ate. Slu[]zbu pou[]z[]^^Pvam
  []
@@ -1041,190 +1055,440 @@ vor[]^^P []unik pam[]ate. Slu[]zbu pou[]z[]^^Pvam
 [16
 
 ]
-Overfull \hbox (35.78445pt too wide) in paragraph at lines 325--326
+Overfull \hbox (35.78445pt too wide) in paragraph at lines 328--329
 \OT1/ppl/m/n/12 pire 4830TG s pro-ce-so-rom In-tel Core i5-2410 a 8GB RAM pam[]
 at[]ou. Na po[]c[]^^Pta[]ci je nain[]stalovan[]a
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 329--331
+Underfull \hbox (badness 10000) in paragraph at lines 332--334
 
  []
 
 
-Overfull \hbox (2.55789pt too wide) in paragraph at lines 334--338
+Overfull \hbox (2.55789pt too wide) in paragraph at lines 337--341
 \OT1/ppl/m/n/12 mo[]zn[]e sle-do-vat[] efek-ti-vitu ge-ne-ro-va-nia ma-xim[]aln
 ej z[]at[]a[]ze, ge-ne-ro-va-nie v[]ysledkov
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--338
+Underfull \hbox (badness 10000) in paragraph at lines 337--341
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--343
+Underfull \hbox (badness 10000) in paragraph at lines 342--346
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 344--348
+Underfull \hbox (badness 10000) in paragraph at lines 347--351
 
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 350--354
+Underfull \hbox (badness 10000) in paragraph at lines 353--357
 
  []
 
 
-Overfull \hbox (27.51817pt too wide) in paragraph at lines 355--359
+Overfull \hbox (27.51817pt too wide) in paragraph at lines 358--362
 \OT1/ppl/m/n/12 ktor[]e ne-pod-po-ruj[]u pro-to-kol JMS. Vd[]aka tomu je mo[]zn
 []e po-rov-nat[] v[]ysledky z[]akladn[]ych
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 355--359
+Underfull \hbox (badness 10000) in paragraph at lines 358--362
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--364
+Underfull \hbox (badness 10000) in paragraph at lines 363--367
 
  []
 
 
-Overfull \hbox (1.88623pt too wide) in paragraph at lines 365--368
+Overfull \hbox (1.88623pt too wide) in paragraph at lines 368--371
 \OT1/ppl/m/n/12 Teoretick[]a prie-pust-nost[] n[]astroja ur[]cuje, ako r[]ychlo
  dok[]a[]ze n[]astroj ge-ne-ro-vat[] z[]at[]a[]z.
  []
 
 
-Overfull \hbox (11.3062pt too wide) in paragraph at lines 365--368
+Overfull \hbox (11.3062pt too wide) in paragraph at lines 368--371
 \OT1/ppl/m/n/12 Vy-sok[]a prie-pust-nost[] n[]astroja umo[]z[]nuje ge-ne-ro-vat
 [] vy[]s[]siu z[]at[]a[]z tes-to-van[]eho n[]astroja
  []
 
 
-Overfull \hbox (16.33449pt too wide) in paragraph at lines 365--368
+Overfull \hbox (16.33449pt too wide) in paragraph at lines 368--371
 \OT1/ppl/m/n/12 za vyu[]zitia men[]sieho ob-jemu zdro-jov. Test pre-bieha ge-ne
 -ro-van[]^^Pm ma-xim[]alnej mo[]znej
  []
 
 [19]
-Overfull \hbox (2.25743pt too wide) in paragraph at lines 376--377
+Overfull \hbox (2.25743pt too wide) in paragraph at lines 379--380
 \OT1/ppl/m/n/12 ktor[]y riadi sp[]u[]stanie testu. V ad-res[]aroch druh[]eho, t
 re-tieho a []siesteho testu sa nach[]adzaj[]u
  []
 
 [20]
-Overfull \hbox (2.52184pt too wide) in paragraph at lines 396--399
+Overfull \hbox (2.52184pt too wide) in paragraph at lines 399--402
 \OT1/ppl/m/n/12 s[]ubory. V pr[]^^Ppade n[]astroja Apa-che JMe-ter s[]u to s[]u
 bory s pr[]^^Pponou ".jtl" a v pr[]^^Ppade
  []
 
 
-Overfull \hbox (4.02245pt too wide) in paragraph at lines 396--399
+Overfull \hbox (4.02245pt too wide) in paragraph at lines 399--402
 \OT1/ppl/m/n/12 n[]astroja Gat-ling s[]ubory "si-mu-la-tion.log". Tieto s[]ubor
 y ob-sa-huj[]u z[]aznam pre ka[]zd[]u
  []
 
 
-Overfull \hbox (16.61015pt too wide) in paragraph at lines 396--399
+Overfull \hbox (16.61015pt too wide) in paragraph at lines 399--402
 \OT1/ppl/m/n/12 hod-no-te-nie a po-rov-na-nie tes-tov, preto je []ziad[]uce ich
  zma-za-nie po []uspe[]snom ukon[]cen[]^^P
  []
 
 [21]
-Overfull \hbox (13.45775pt too wide) in paragraph at lines 416--419
+Overfull \hbox (13.45775pt too wide) in paragraph at lines 419--422
 \OT1/ppl/m/n/12 spus-ten[]^^Pm testu. K tomu doch[]adza spus-ten[]^^Pm skriptu 
 ssh$[]$restart$[]$jboss.sh pr[]^^Pkazom
  []
 
+
+Overfull \hbox (5.10176pt too wide) in paragraph at lines 431--433
+\OT1/ppl/m/n/12 dobu po-trebn[]u pre vy-ko-na-nie testu a vy-ge-ne-ro-va-nie re
+-por-tov a lo-go-vac[]^^Pch s[]uborov
+ []
+
+
+Overfull \hbox (10.56252pt too wide) in paragraph at lines 434--436
+\OT1/ppl/m/n/12 banu je re-pre-zen-to-van[]a ser-ve-rom, ktor[]y som mu-sel pre
+d ka[]zd[]ym tes-tom re[]startovat[],
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 434--436
+
+ []
+
 [22]
+Underfull \hbox (badness 10000) in paragraph at lines 440--442
+
+ []
+
+
+Overfull \hbox (16.23816pt too wide) in paragraph at lines 449--451
+\OT1/ppl/m/n/12 "User NULL" nazna[]cuj[]uca, []ze nie je mo[]zn[]e iden-ti-fi-k
+o-vat[] u[]z[]^^Pvatel[]a, po-mo-cou ktor[]eho
+ []
+
+
+Overfull \hbox (16.70653pt too wide) in paragraph at lines 452--454
+\OT1/ppl/m/n/12 Dokument[]acia ob-sa-huje n[]avod, po-mo-cou ktor[]eho je mo[]z
+n[]e na-sta-vit[] za-zna-men[]avanie
+ []
+
+
+Overfull \hbox (8.76202pt too wide) in paragraph at lines 452--454
+\OT1/ppl/m/n/12 kon-fi-gura[]cn[]eho s[]uboru sa stal n[]astroj ne-pou[]zitel[]
+n[]ym a n[]astroj som mu-sel in[]stalovat[]
+ []
+
+[23] <./img/faban1.jpg, id=555, 867.24pt x 385.44pt>
+File: ./img/faban1.jpg Graphic file (type jpg)
+ <use ./img/faban1.jpg>
+Package pdftex.def Info: ./img/faban1.jpg used on input line 499.
+(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
+
+<./img/faban1_distr.jpg, id=556, 867.24pt x 385.44pt>
+File: ./img/faban1_distr.jpg Graphic file (type jpg)
+
+<use ./img/faban1_distr.jpg>
+Package pdftex.def Info: ./img/faban1_distr.jpg used on input line 505.
+(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
+
+Underfull \vbox (badness 1112) has occurred while \output is active []
+
+ [24pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.508 
+       <./img/faban1.jpg>] <./img/gatling1.jpg, id=561, 867.24pt x 385.44pt>
+File: ./img/gatling1.jpg Graphic file (type jpg)
+
+<use ./img/gatling1.jpg>
+Package pdftex.def Info: ./img/gatling1.jpg used on input line 541.
+(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
+
+Underfull \vbox (badness 3158) has occurred while \output is active []
+
+ [25pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.544 
+       <./img/faban1_distr.jpg>]
+<./img/gatling1_distr.jpg, id=566, 867.24pt x 385.44pt>
+File: ./img/gatling1_distr.jpg Graphic file (type jpg)
+
+<use ./img/gatling1_distr.jpg>
+Package pdftex.def Info: ./img/gatling1_distr.jpg used on input line 547.
+(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
+
+
+Package hyperref Warning: Composite letter `\textasciicaron+c'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textasciicaron' on input line 555.
+
+[26pdfTeX warning (ext4): destination with the same identifier (name{figure.5.3
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.570 \item[\textbf{2. iterácia}]
+                                  \ \\pdfTeX warning (ext4): destination with t
+he same identifier (name{figure.5.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.570 \item[\textbf{2. iterácia}]
+                                  \ \\ <./img/gatling1.jpg> <./img/gatling1_dis
+tr.jpg>] <./img/faban2_1.jpg, id=571, 867.24pt x 385.44pt>
+File: ./img/faban2_1.jpg Graphic file (type jpg)
+
+<use ./img/faban2_1.jpg>
+Package pdftex.def Info: ./img/faban2_1.jpg used on input line 594.
+(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
+
+<./img/faban2_1_distr.jpg, id=572, 867.24pt x 385.44pt>
+File: ./img/faban2_1_distr.jpg Graphic file (type jpg)
+
+<use ./img/faban2_1_distr.jpg>
+Package pdftex.def Info: ./img/faban2_1_distr.jpg used on input line 600.
+(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.603 
+       <./img/faban2_1.jpg>] <./img/faban2_2.jpg, id=577, 867.24pt x 385.44pt>
+File: ./img/faban2_2.jpg Graphic file (type jpg)
+
+<use ./img/faban2_2.jpg>
+Package pdftex.def Info: ./img/faban2_2.jpg used on input line 635.
+(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
+
+Underfull \vbox (badness 4647) has occurred while \output is active []
+
+ [28pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.638 
+       <./img/faban2_1_distr.jpg>]
+<./img/faban2_2_distr.jpg, id=582, 867.24pt x 385.44pt>
+File: ./img/faban2_2_distr.jpg Graphic file (type jpg)
+
+<use ./img/faban2_2_distr.jpg>
+Package pdftex.def Info: ./img/faban2_2_distr.jpg used on input line 641.
+(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
+ [29pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+7}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.663 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+5.8}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.663 
+       <./img/faban2_2.jpg> <./img/faban2_2_distr.jpg>]
+<./img/faban2_3.jpg, id=588, 867.24pt x 385.44pt>
+File: ./img/faban2_3.jpg Graphic file (type jpg)
+ <use ./img/faban2_3.jpg>
+Package pdftex.def Info: ./img/faban2_3.jpg used on input line 675.
+(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
+
+<./img/faban2_3_distr.jpg, id=589, 867.24pt x 385.44pt>
+File: ./img/faban2_3_distr.jpg Graphic file (type jpg)
+
+<use ./img/faban2_3_distr.jpg>
+Package pdftex.def Info: ./img/faban2_3_distr.jpg used on input line 681.
+(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [30pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+9}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.684 
+       <./img/faban2_3.jpg>] <./img/faban2_4.jpg, id=595, 867.24pt x 385.44pt>
+File: ./img/faban2_4.jpg Graphic file (type jpg)
+
+<use ./img/faban2_4.jpg>
+Package pdftex.def Info: ./img/faban2_4.jpg used on input line 716.
+(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
+
+Underfull \vbox (badness 4647) has occurred while \output is active []
+
+ [31pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+10}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.719 
+       <./img/faban2_3_distr.jpg>]
+<./img/faban2_4_distr.jpg, id=600, 867.24pt x 385.44pt>
+File: ./img/faban2_4_distr.jpg Graphic file (type jpg)
+
+<use ./img/faban2_4_distr.jpg>
+Package pdftex.def Info: ./img/faban2_4_distr.jpg used on input line 722.
+(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
+ [32pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+11}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.743 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+5.12}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.743 
+       <./img/faban2_4.jpg> <./img/faban2_4_distr.jpg>]
+<./img/faban2_5.jpg, id=606, 867.24pt x 385.44pt>
+File: ./img/faban2_5.jpg Graphic file (type jpg)
+ <use ./img/faban2_5.jpg>
+Package pdftex.def Info: ./img/faban2_5.jpg used on input line 756.
+(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
+
+<./img/faban2_5_distr.jpg, id=607, 867.24pt x 385.44pt>
+File: ./img/faban2_5_distr.jpg Graphic file (type jpg)
+
+<use ./img/faban2_5_distr.jpg>
+Package pdftex.def Info: ./img/faban2_5_distr.jpg used on input line 762.
+(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
+ [33pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+13}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.768 \item P
+             erfcakepdfTeX warning (ext4): destination with the same identifier
+ (name{figure.5.14}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.768 \item P
+             erfcake <./img/faban2_5.jpg> <./img/faban2_5_distr.jpg>]
+
+Package hyperref Warning: Composite letter `\textasciicaron+l'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textasciicaron' on input line 772.
+
+
+Package hyperref Warning: Composite letter `\textasciicaron+t'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textasciicaron' on input line 772.
+
+[34] [35]
 Kapitola 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 427--430
+Underfull \hbox (badness 10000) in paragraph at lines 848--851
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 433--434
+Underfull \hbox (badness 10000) in paragraph at lines 854--855
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 439--440
+Underfull \hbox (badness 10000) in paragraph at lines 860--861
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 442--445
+Underfull \hbox (badness 10000) in paragraph at lines 863--866
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 448--449
+Underfull \hbox (badness 10000) in paragraph at lines 869--870
 
  []
 
-[23
+[36
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 456--457
+Underfull \hbox (badness 10000) in paragraph at lines 877--878
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 459--462
+Underfull \hbox (badness 10000) in paragraph at lines 880--883
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 472--473
+Underfull \hbox (badness 10000) in paragraph at lines 893--894
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 476--479
+Underfull \hbox (badness 10000) in paragraph at lines 897--900
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 488--489
+Underfull \hbox (badness 10000) in paragraph at lines 909--910
 
  []
 
-(./bp.bbl [24]
+(./bp.bbl [37]
 Underfull \hbox (badness 10000) in paragraph at lines 4--9
 \OT1/pcr/m/n/12 com / feature / Computing-[]power-[]capacity-[]on-[]demand$[][]
 \OT1/ppl/m/n/12 .  Nav[]st[]^^Pven[]e:
  []
 
-) [25
+) [38
 
 ]
 Dodatok A.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 535.
-[26
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 956.
+[39
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 535.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 956.
  (./bp.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 535.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 535.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 956.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 956.
 Package rerunfilecheck Info: File `bp.out' has not changed.
-(rerunfilecheck)             Checksum: 00A1BD57F1D2CB5CCE7BAB563886BCB8;3032.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 535.
+(rerunfilecheck)             Checksum: 700316AD1237C2BF7C8BBA4012D25CE0;3955.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 956.
  ) 
 Here is how much of TeX's memory you used:
- 6505 strings out of 493304
- 93130 string characters out of 6139871
- 193387 words of memory out of 5000000
- 9741 multiletter control sequences out of 15000+600000
+ 6688 strings out of 493304
+ 96158 string characters out of 6139871
+ 195771 words of memory out of 5000000
+ 9864 multiletter control sequences out of 15000+600000
  19688 words of font info for 50 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 34i,12n,31p,1403b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,12n,31p,1403b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} <./fi-logo.514pk>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive
@@ -1232,10 +1496,10 @@ share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive
 fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino
 /uplri8a.pfb>
-Output written on bp.pdf (34 pages, 211198 bytes).
+Output written on bp.pdf (47 pages, 584234 bytes).
 PDF statistics:
- 587 PDF objects out of 1000 (max. 8388607)
- 488 compressed objects within 5 object streams
- 116 named destinations out of 1000 (max. 500000)
- 361 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 763 PDF objects out of 1000 (max. 8388607)
+ 635 compressed objects within 7 object streams
+ 156 named destinations out of 1000 (max. 500000)
+ 519 words of extra memory for PDF output out of 10000 (max. 10000000)
 

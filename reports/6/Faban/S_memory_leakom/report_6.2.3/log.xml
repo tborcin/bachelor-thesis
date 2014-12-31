@@ -1,0 +1,985 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<log>
+<record>
+  <date>2014-12-22T20:24:52</date>
+  <millis>1419297892973</millis>
+  <sequence>21</sequence>
+  <logger>com.sun.faban.harness.engine.RunDaemon</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.harness.engine.RunDaemon</class>
+  <method>run</method>
+  <thread>44</thread>
+  <message>Starting test run using /opt/pmacik/bak/testy/Nastroje/faban/output/test.9O/</message>
+</record>
+<record>
+  <date>2014-12-22T20:24:53</date>
+  <millis>1419297893000</millis>
+  <sequence>22</sequence>
+  <logger>com.sun.faban.harness.engine.GenericBenchmark</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.harness.engine.GenericBenchmark</class>
+  <method>start</method>
+  <thread>44</thread>
+  <message>START TIME : Mon Dec 22 20:24:53 EST 2014</message>
+</record>
+<record>
+  <date>2014-12-22T20:24:53</date>
+  <millis>1419297893210</millis>
+  <sequence>23</sequence>
+  <logger>com.sun.faban.harness.engine.CmdService</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.harness.engine.CmdService</class>
+  <method>setup</method>
+  <thread>44</thread>
+  <message>Starting Registry.</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:24:53</date>
+  <millis>1419297893485</millis>
+  <sequence>0</sequence>
+  <logger>com.sun.faban.common.RegistryImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.common.RegistryImpl</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Registry started.</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:25:04</date>
+  <millis>1419297904359</millis>
+  <sequence>1</sequence>
+  <logger>com.sun.faban.common.RegistryImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.common.RegistryImpl</class>
+  <method>getService</method>
+  <thread>18</thread>
+  <message>Get service by name: CmdAgent@jawa07</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:25:04</date>
+  <millis>1419297904455</millis>
+  <sequence>2</sequence>
+  <logger>com.sun.faban.common.RegistryImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.common.RegistryImpl</class>
+  <method>register</method>
+  <thread>18</thread>
+  <message>Registering CmdAgent@jawa07 on 10.34.32.228</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:25:04</date>
+  <millis>1419297904496</millis>
+  <sequence>3</sequence>
+  <logger>com.sun.faban.common.RegistryImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.common.RegistryImpl</class>
+  <method>reregister</method>
+  <thread>18</thread>
+  <message>Registering CmdAgent on 10.34.32.228</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:25:04</date>
+  <millis>1419297904561</millis>
+  <sequence>4</sequence>
+  <logger>com.sun.faban.common.RegistryImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.common.RegistryImpl</class>
+  <method>reregister</method>
+  <thread>18</thread>
+  <message>Registering FileAgent@jawa07 on 10.34.32.228</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:25:04</date>
+  <millis>1419297904564</millis>
+  <sequence>5</sequence>
+  <logger>com.sun.faban.common.RegistryImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.common.RegistryImpl</class>
+  <method>reregister</method>
+  <thread>18</thread>
+  <message>Registering FileAgent on 10.34.32.228</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:25:04</date>
+  <millis>1419297904567</millis>
+  <sequence>6</sequence>
+  <logger>com.sun.faban.common.RegistryImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.common.RegistryImpl</class>
+  <method>reregister</method>
+  <thread>18</thread>
+  <message>Registering CmdAgent@jawa07.englab.brq.redhat.com on 10.34.32.228</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:25:04</date>
+  <millis>1419297904569</millis>
+  <sequence>7</sequence>
+  <logger>com.sun.faban.common.RegistryImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.common.RegistryImpl</class>
+  <method>getService</method>
+  <thread>18</thread>
+  <message>Get service by name: FileAgent@jawa07</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:25:04</date>
+  <millis>1419297904609</millis>
+  <sequence>8</sequence>
+  <logger>com.sun.faban.common.RegistryImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.common.RegistryImpl</class>
+  <method>reregister</method>
+  <thread>18</thread>
+  <message>Registering FileAgent@jawa07.englab.brq.redhat.com on 10.34.32.228</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:25:23</date>
+  <millis>1419297923443</millis>
+  <sequence>9</sequence>
+  <logger>com.sun.faban.common.RegistryImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.common.RegistryImpl</class>
+  <method>getService</method>
+  <thread>16</thread>
+  <message>Get service by name: CmdAgent@jawa07.englab.brq.redhat.com</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:25:23</date>
+  <millis>1419297923479</millis>
+  <sequence>10</sequence>
+  <logger>com.sun.faban.common.RegistryImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.common.RegistryImpl</class>
+  <method>getService</method>
+  <thread>16</thread>
+  <message>Get service by name: FileAgent@jawa07.englab.brq.redhat.com</message>
+</record>
+<record>
+  <date>2014-12-22T20:25:23</date>
+  <millis>1419297923508</millis>
+  <sequence>24</sequence>
+  <logger>com.sun.faban.harness.engine.CmdService</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.harness.engine.CmdService</class>
+  <method>getCmdAgent</method>
+  <thread>44</thread>
+  <message>CmdService: Configured FileAgent@jawa07.englab.brq.redhat.com on server jawa07</message>
+</record>
+<record>
+  <date>2014-12-22T20:25:23</date>
+  <millis>1419297923552</millis>
+  <sequence>25</sequence>
+  <logger>com.sun.faban.harness.engine.GenericBenchmark</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.harness.engine.GenericBenchmark</class>
+  <method>start</method>
+  <thread>44</thread>
+  <message>Gathering system configuration</message>
+</record>
+<record>
+  <date>2014-12-22T20:25:23</date>
+  <millis>1419297923661</millis>
+  <sequence>26</sequence>
+  <logger>com.sun.faban.harness.engine.ToolService</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.harness.engine.ToolService</class>
+  <method>setup</method>
+  <thread>44</thread>
+  <message>Setting up tools on machine jawa07.englab.brq.redhat.com</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:25:23</date>
+  <millis>1419297923721</millis>
+  <sequence>11</sequence>
+  <logger>com.sun.faban.common.RegistryImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.common.RegistryImpl</class>
+  <method>reregister</method>
+  <thread>18</thread>
+  <message>Registering ToolAgent@jawa07.englab.brq.redhat.com on 10.34.32.228</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:25:28</date>
+  <millis>1419297928724</millis>
+  <sequence>12</sequence>
+  <logger>com.sun.faban.common.RegistryImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.common.RegistryImpl</class>
+  <method>getService</method>
+  <thread>16</thread>
+  <message>Get service by name: ToolAgent@jawa07.englab.brq.redhat.com</message>
+</record>
+<record>
+  <date>2014-12-22T20:25:28</date>
+  <millis>1419297928851</millis>
+  <sequence>27</sequence>
+  <logger>com.sun.faban.harness.DefaultFabanBenchmark2</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.harness.DefaultFabanBenchmark2</class>
+  <method>start</method>
+  <thread>44</thread>
+  <message>Starting TestAgent[0] on host jawa07.englab.brq.redhat.com.</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:25:29</date>
+  <millis>1419297929240</millis>
+  <sequence>13</sequence>
+  <logger>com.sun.faban.common.RegistryImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.common.RegistryImpl</class>
+  <method>reregister</method>
+  <thread>21</thread>
+  <message>Registering Test.0 (type: TestAgent) on 10.34.32.228</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:25:34</date>
+  <millis>1419297934712</millis>
+  <sequence>14</sequence>
+  <logger>com.sun.faban.common.RegistryImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.common.RegistryImpl</class>
+  <method>getService</method>
+  <thread>23</thread>
+  <message>Get service by name: Master</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:25:34</date>
+  <millis>1419297934718</millis>
+  <sequence>15</sequence>
+  <logger>com.sun.faban.common.RegistryImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.common.RegistryImpl</class>
+  <method>getService</method>
+  <thread>23</thread>
+  <message>Get service by name: Master</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:25:34</date>
+  <millis>1419297934758</millis>
+  <sequence>16</sequence>
+  <logger>com.sun.faban.common.RegistryImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.common.RegistryImpl</class>
+  <method>reregister</method>
+  <thread>24</thread>
+  <message>Registering Master on 10.34.32.228</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:25:34</date>
+  <millis>1419297934985</millis>
+  <sequence>0</sequence>
+  <logger>com.sun.faban.driver.engine.MasterImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.driver.engine.MasterImpl</class>
+  <method>runBenchmark</method>
+  <thread>1</thread>
+  <message>RunID for this run is : test.9O</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:25:35</date>
+  <millis>1419297935011</millis>
+  <sequence>1</sequence>
+  <logger>com.sun.faban.driver.engine.MasterImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.driver.engine.MasterImpl</class>
+  <method>runBenchmark</method>
+  <thread>1</thread>
+  <message>Output directory for this run is : /opt/pmacik/bak/testy/Nastroje/faban/output/test.9O</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:25:35</date>
+  <millis>1419297935224</millis>
+  <sequence>17</sequence>
+  <logger>com.sun.faban.common.RegistryImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.common.RegistryImpl</class>
+  <method>getService</method>
+  <thread>23</thread>
+  <message>Get service by name: Master</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:25:35</date>
+  <millis>1419297935216</millis>
+  <sequence>2</sequence>
+  <logger>com.sun.faban.driver.util.Timer</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.driver.util.Timer</class>
+  <method>idleTimerCheck</method>
+  <thread>1</thread>
+  <message>TestAgent[0]: Performing idle timer check</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:25:36</date>
+  <millis>1419297936604</millis>
+  <sequence>3</sequence>
+  <logger>com.sun.faban.driver.util.Timer</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.driver.util.Timer</class>
+  <method>idleTimerCheck</method>
+  <thread>1</thread>
+  <message>TestAgent[0]: Idle timer characteristics:
+Accuracy=3,
+min. invocation cost=96,
+med. invocation cost (math)=97.0,
+med. invocation cost (phys)=97,
+avg. invocation cost=97.4004,
+max. invocation cost=586,
+variance of invocation cost=36.43927984000008.</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:25:56</date>
+  <millis>1419297956602</millis>
+  <sequence>4</sequence>
+  <logger>com.sun.faban.driver.engine.AgentImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.driver.engine.AgentImpl</class>
+  <method>run</method>
+  <thread>1</thread>
+  <message>TestAgent[0]: Successfully started 100 driver threads.</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:25:56</date>
+  <millis>1419297956608</millis>
+  <sequence>5</sequence>
+  <logger>com.sun.faban.driver.util.Timer</logger>
+  <level>WARNING</level>
+  <class>com.sun.faban.driver.util.Timer</class>
+  <method>calibrate</method>
+  <thread>1</thread>
+  <message>TestAgent[0]: Rampup too short. Could not run calibration. Please increase rampup by at least 5 seconds</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:25:56</date>
+  <millis>1419297956611</millis>
+  <sequence>6</sequence>
+  <logger>com.sun.faban.driver</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.driver.engine.MasterImpl</class>
+  <method>executeRun</method>
+  <thread>1</thread>
+  <message>Started all threads; run commences in 2994 ms</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:25:59</date>
+  <millis>1419297959600</millis>
+  <sequence>7</sequence>
+  <logger>com.sun.faban.driver.util.Timer</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.driver.util.Timer$BusyTimerMeter</class>
+  <method>run</method>
+  <thread>117</thread>
+  <message>TestAgent[0]: Performing busy timer check</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:25:59</date>
+  <millis>1419297959609</millis>
+  <sequence>8</sequence>
+  <logger>com.sun.faban.driver</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.driver.engine.MasterImpl</class>
+  <method>executeRun</method>
+  <thread>1</thread>
+  <message>Ramp up completed</message>
+</record>
+<record>
+  <date>2014-12-22T20:25:59</date>
+  <millis>1419297959640</millis>
+  <sequence>28</sequence>
+  <logger>com.sun.faban.harness.DefaultFabanBenchmark2</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.harness.DefaultFabanBenchmark2</class>
+  <method>start</method>
+  <thread>44</thread>
+  <message>Ramp up started</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:25:59</date>
+  <millis>1419297959651</millis>
+  <sequence>0</sequence>
+  <logger>com.sun.faban.harness.tools.ToolWrapper</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.harness.tools.ToolWrapper</class>
+  <method>start</method>
+  <thread>21</thread>
+  <message>Started tool vmstat</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:25:59</date>
+  <millis>1419297959673</millis>
+  <sequence>1</sequence>
+  <logger>com.sun.faban.harness.tools.ToolWrapper</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.harness.tools.ToolWrapper</class>
+  <method>start</method>
+  <thread>21</thread>
+  <message>Started tool mpstat</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:26:00</date>
+  <millis>1419297960738</millis>
+  <sequence>9</sequence>
+  <logger>com.sun.faban.driver.util.Timer</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.driver.util.Timer$BusyTimerMeter</class>
+  <method>run</method>
+  <thread>117</thread>
+  <message>TestAgent[0]: Busy timer characteristics:
+Accuracy=3,
+min. invocation cost=98,
+med. invocation cost (math)=100.0,
+med. invocation cost (phys)=100,
+avg. invocation cost=100.5473,
+max. invocation cost=544,
+variance of invocation cost=55.31636271000018.</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:26:00</date>
+  <millis>1419297960740</millis>
+  <sequence>10</sequence>
+  <logger>com.sun.faban.driver.util.Timer</logger>
+  <level>WARNING</level>
+  <class>com.sun.faban.driver.util.Timer$BusyTimerMeter</class>
+  <method>run</method>
+  <thread>117</thread>
+  <message>TestAgent[0]: Rampup too short. Could not run calibration. Please increase rampup by at least 3 seconds</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:39:29</date>
+  <millis>1419298769728</millis>
+  <sequence>2</sequence>
+  <logger>com.sun.faban.common.CommandHandleImpl$ReaderThread</logger>
+  <level>WARNING</level>
+  <class>com.sun.faban.common.CommandHandleImpl$ReaderThread</class>
+  <method>run</method>
+  <thread>28</thread>
+  <message>Error reading from log stream from command [/opt/pmacik/bak/testy/Nastroje/faban/bin/Linux/vmstat, 10].</message>
+  <exception>
+    <message>java.io.FileNotFoundException: /tmp/vmstat.out.260017126 (Operace zamítnuta)</message>
+    <frame>
+      <class>java.io.FileOutputStream</class>
+      <method>open</method>
+    </frame>
+    <frame>
+      <class>java.io.FileOutputStream</class>
+      <method>&lt;init&gt;</method>
+      <line>221</line>
+    </frame>
+    <frame>
+      <class>java.io.FileOutputStream</class>
+      <method>&lt;init&gt;</method>
+      <line>142</line>
+    </frame>
+    <frame>
+      <class>com.sun.faban.common.CommandHandleImpl$ReaderThread</class>
+      <method>capture</method>
+      <line>390</line>
+    </frame>
+    <frame>
+      <class>com.sun.faban.common.CommandHandleImpl$ReaderThread</class>
+      <method>run</method>
+      <line>283</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T20:40:59</date>
+  <millis>1419298859679</millis>
+  <sequence>3</sequence>
+  <logger>com.sun.faban.common.CommandHandleImpl$ReaderThread</logger>
+  <level>WARNING</level>
+  <class>com.sun.faban.common.CommandHandleImpl$ReaderThread</class>
+  <method>run</method>
+  <thread>31</thread>
+  <message>Error reading from log stream from command [mpstat, 10].</message>
+  <exception>
+    <message>java.io.FileNotFoundException: /tmp/mpstat.out.995416626 (Operace zamítnuta)</message>
+    <frame>
+      <class>java.io.FileOutputStream</class>
+      <method>open</method>
+    </frame>
+    <frame>
+      <class>java.io.FileOutputStream</class>
+      <method>&lt;init&gt;</method>
+      <line>221</line>
+    </frame>
+    <frame>
+      <class>java.io.FileOutputStream</class>
+      <method>&lt;init&gt;</method>
+      <line>142</line>
+    </frame>
+    <frame>
+      <class>com.sun.faban.common.CommandHandleImpl$ReaderThread</class>
+      <method>capture</method>
+      <line>390</line>
+    </frame>
+    <frame>
+      <class>com.sun.faban.common.CommandHandleImpl$ReaderThread</class>
+      <method>run</method>
+      <line>283</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T21:25:59</date>
+  <millis>1419301559613</millis>
+  <sequence>11</sequence>
+  <logger>com.sun.faban.driver</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.driver.engine.MasterImpl</class>
+  <method>executeRun</method>
+  <thread>1</thread>
+  <message>Steady state completed</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T21:25:59</date>
+  <millis>1419301559646</millis>
+  <sequence>4</sequence>
+  <logger>com.sun.faban.harness.tools.ToolWrapper</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.harness.tools.ToolWrapper</class>
+  <method>stop</method>
+  <thread>21</thread>
+  <message>Stopped tool mpstat</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T21:25:59</date>
+  <millis>1419301559877</millis>
+  <sequence>12</sequence>
+  <logger>com.sun.faban.driver</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.driver.engine.MasterImpl</class>
+  <method>executeRun</method>
+  <thread>1</thread>
+  <message>Ramp down completed</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T21:25:59</date>
+  <millis>1419301559881</millis>
+  <sequence>13</sequence>
+  <logger>com.sun.faban.driver</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.driver.engine.MasterImpl</class>
+  <method>getDriverMetrics</method>
+  <thread>1</thread>
+  <message>Gathering TestStats ...</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T21:25:59</date>
+  <millis>1419301559927</millis>
+  <sequence>14</sequence>
+  <logger>com.sun.faban.driver</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.driver.engine.MasterImpl</class>
+  <method>generateReports</method>
+  <thread>1</thread>
+  <message>Printing Summary report ...</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T21:25:59</date>
+  <millis>1419301559929</millis>
+  <sequence>15</sequence>
+  <logger>com.sun.faban.driver</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.driver.engine.MasterImpl</class>
+  <method>generateReports</method>
+  <thread>1</thread>
+  <message>Summary finished. Now printing detail ...</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T21:25:59</date>
+  <millis>1419301559959</millis>
+  <sequence>5</sequence>
+  <logger>com.sun.faban.harness.tools.ToolWrapper</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.harness.tools.ToolWrapper</class>
+  <method>stop</method>
+  <thread>21</thread>
+  <message>Stopped tool vmstat</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T21:26:00</date>
+  <millis>1419301560155</millis>
+  <sequence>18</sequence>
+  <logger>com.sun.faban.common.RegistryImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.common.RegistryImpl</class>
+  <method>getService</method>
+  <thread>49</thread>
+  <message>Get service by name: FileAgent</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T21:26:00</date>
+  <millis>1419301560187</millis>
+  <sequence>16</sequence>
+  <logger>com.sun.faban.driver</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.driver.engine.MasterImpl</class>
+  <method>generateReports</method>
+  <thread>1</thread>
+  <message>Detail finished. Results written to /opt/pmacik/bak/testy/Nastroje/faban/output/test.9O.</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T21:26:00</date>
+  <millis>1419301560201</millis>
+  <sequence>6</sequence>
+  <logger>com.sun.faban.harness.tools.ToolWrapper</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.harness.tools.ToolWrapper</class>
+  <method>postprocess</method>
+  <thread>21</thread>
+  <message>mpstat Done </message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T21:26:00</date>
+  <millis>1419301560470</millis>
+  <sequence>7</sequence>
+  <logger>com.sun.faban.common.CommandHandleImpl$ReaderThread</logger>
+  <level>WARNING</level>
+  <class>com.sun.faban.common.CommandHandleImpl$ReaderThread</class>
+  <method>run</method>
+  <thread>31</thread>
+  <message>Error reading from log stream from command [/opt/pmacik/bak/testy/Nastroje/faban/bin/Linux/vmstat-post, /tmp/vmstat.out.260017126].</message>
+  <exception>
+    <message>java.io.FileNotFoundException: /tmp/vmstat.xan.260017126 (Operace zamítnuta)</message>
+    <frame>
+      <class>java.io.FileOutputStream</class>
+      <method>open</method>
+    </frame>
+    <frame>
+      <class>java.io.FileOutputStream</class>
+      <method>&lt;init&gt;</method>
+      <line>221</line>
+    </frame>
+    <frame>
+      <class>java.io.FileOutputStream</class>
+      <method>&lt;init&gt;</method>
+      <line>142</line>
+    </frame>
+    <frame>
+      <class>com.sun.faban.common.CommandHandleImpl$ReaderThread</class>
+      <method>capture</method>
+      <line>408</line>
+    </frame>
+    <frame>
+      <class>com.sun.faban.common.CommandHandleImpl$ReaderThread</class>
+      <method>run</method>
+      <line>283</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T21:26:00</date>
+  <millis>1419301560475</millis>
+  <sequence>19</sequence>
+  <logger>com.sun.faban.common.RegistryImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.common.RegistryImpl</class>
+  <method>getService</method>
+  <thread>49</thread>
+  <message>Get service by name: FileAgent</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T21:26:00</date>
+  <millis>1419301560489</millis>
+  <sequence>8</sequence>
+  <logger>com.sun.faban.harness.tools.ToolWrapper</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.harness.tools.ToolWrapper</class>
+  <method>postprocess</method>
+  <thread>21</thread>
+  <message>vmstat Done </message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T21:26:00</date>
+  <millis>1419301560517</millis>
+  <sequence>9</sequence>
+  <logger>com.sun.faban.common.CommandHandleImpl$ReaderThread</logger>
+  <level>WARNING</level>
+  <class>com.sun.faban.common.CommandHandleImpl$ReaderThread</class>
+  <method>run</method>
+  <thread>24</thread>
+  <message>[/mnt/jqa/sw/jdk/sun/jdk1.7.0_71-x86_64/bin/java, -Dfaban.home=/opt/pmacik/bak/testy/Nastroje/faban/, -Djava.security.policy=/opt/pmacik/bak/testy/Nastroje/faban/config/faban.policy, -Djava.util.logging.config.file=/opt/pmacik/bak/testy/Nastroje/faban/config/logging.jawa07.englab.brq.redhat.com.properties, -Dfaban.registry.port=9998, -Dfaban.logging.port=9999, -Xmx2048m, -Xms2048m, -XX:+DisableExplicitGC, -cp, /opt/pmacik/bak/testy/Nastroje/faban/benchmarks/test/lib/test.jar:/opt/pmacik/bak/testy/Nastroje/faban/lib/fabanagents.jar:/opt/pmacik/bak/testy/Nastroje/faban/lib/fabancommon.jar:/opt/pmacik/bak/testy/Nastroje/faban/lib/commons-logging.jar:/opt/pmacik/bak/testy/Nastroje/faban/lib/commons-httpclient-3.1.jar:/opt/pmacik/bak/testy/Nastroje/faban/lib/commons-codec-1.2.jar:/opt/pmacik/bak/testy/Nastroje/faban/lib/fabandriver.jar, -Dbenchmark.config=/opt/pmacik/bak/testy/Nastroje/faban/output/test.9O/run.xml, -Dfaban.outputdir.unique=true, com.sun.faban.driver.engine.MasterImpl]
+stderr:
+Can't load log handler "java.util.logging.FileHandler"
+java.io.FileNotFoundException: /tmp/fabanagent1.log (Operace zamítnuta)
+java.io.FileNotFoundException: /tmp/fabanagent1.log (Operace zamítnuta)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:221)
+	at java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:142)
+	at java.util.logging.FileHandler.open(FileHandler.java:173)
+	at java.util.logging.FileHandler.rotate(FileHandler.java:555)
+	at java.util.logging.FileHandler.openFiles(FileHandler.java:443)
+	at java.util.logging.FileHandler.&lt;init&gt;(FileHandler.java:225)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at java.lang.Class.newInstance(Class.java:379)
+	at java.util.logging.LogManager$4.run(LogManager.java:809)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.util.logging.LogManager.loadLoggerHandlers(LogManager.java:802)
+	at java.util.logging.LogManager.initializeGlobalHandlers(LogManager.java:1406)
+	at java.util.logging.LogManager.access$1500(LogManager.java:148)
+	at java.util.logging.LogManager$RootLogger.accessCheckedHandlers(LogManager.java:1493)
+	at java.util.logging.Logger.getHandlers(Logger.java:1350)
+	at java.util.logging.Logger.log(Logger.java:612)
+	at java.util.logging.Logger.doLog(Logger.java:641)
+	at java.util.logging.Logger.log(Logger.java:664)
+	at java.util.logging.Logger.info(Logger.java:1182)
+	at com.sun.faban.driver.engine.MasterImpl.runBenchmark(MasterImpl.java:220)
+	at com.sun.faban.driver.engine.MasterImpl.main(MasterImpl.java:1566)
+</message>
+</record>
+<record>
+  <date>2014-12-22T21:26:00</date>
+  <millis>1419301560527</millis>
+  <sequence>29</sequence>
+  <logger>com.sun.faban.harness.engine.GenericBenchmark</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.harness.engine.GenericBenchmark</class>
+  <method>start</method>
+  <thread>44</thread>
+  <message>Benchmark Complete</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T21:26:00</date>
+  <millis>1419301560571</millis>
+  <sequence>10</sequence>
+  <logger>com.sun.faban.common.CommandHandleImpl$ReaderThread</logger>
+  <level>WARNING</level>
+  <class>com.sun.faban.common.CommandHandleImpl$ReaderThread</class>
+  <method>run</method>
+  <thread>27</thread>
+  <message>[/opt/pmacik/bak/testy/Nastroje/faban/bin/Linux/messages, "Dec 22 8:24:52", "Dec 22 9:26:00"]
+stderr:
+cat: /var/log/messages: Operace zamítnuta
+</message>
+</record>
+<record>
+  <date>2014-12-22T21:26:00</date>
+  <millis>1419301560597</millis>
+  <sequence>30</sequence>
+  <logger>com.sun.faban.harness.engine.GenericBenchmark</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.harness.engine.GenericBenchmark</class>
+  <method>start</method>
+  <thread>44</thread>
+  <message>END TIME : Mon Dec 22 21:26:00 EST 2014</message>
+</record>
+<record>
+  <date>2014-12-22T21:26:00</date>
+  <millis>1419301560599</millis>
+  <sequence>31</sequence>
+  <logger>com.sun.faban.harness.engine.GenericBenchmark</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.harness.engine.GenericBenchmark</class>
+  <method>_kill</method>
+  <thread>44</thread>
+  <message>Killing benchmark</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T21:26:00</date>
+  <millis>1419301560600</millis>
+  <sequence>11</sequence>
+  <logger>com.sun.faban.harness.agent.ToolAgentImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.harness.agent.ToolAgentImpl</class>
+  <method>kill</method>
+  <thread>16</thread>
+  <message>Killing tools</message>
+</record>
+<record>
+  <date>2014-12-22T21:26:00</date>
+  <millis>1419301560602</millis>
+  <sequence>32</sequence>
+  <logger>com.sun.faban.harness.engine.CmdService</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.harness.engine.CmdService</class>
+  <method>kill</method>
+  <thread>44</thread>
+  <message>killing CmdAgent@jawa07.englab.brq.redhat.com</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T21:26:01</date>
+  <millis>1419301561606</millis>
+  <sequence>20</sequence>
+  <logger>com.sun.faban.common.RegistryImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.common.RegistryImpl</class>
+  <method>unregister</method>
+  <thread>49</thread>
+  <message>Unregistering FileAgent@jawa07.englab.brq.redhat.com</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T21:26:01</date>
+  <millis>1419301561609</millis>
+  <sequence>21</sequence>
+  <logger>com.sun.faban.common.RegistryImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.common.RegistryImpl</class>
+  <method>unregister</method>
+  <thread>49</thread>
+  <message>Unregistering FileAgent</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T21:26:01</date>
+  <millis>1419301561611</millis>
+  <sequence>22</sequence>
+  <logger>com.sun.faban.common.RegistryImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.common.RegistryImpl</class>
+  <method>unregister</method>
+  <thread>49</thread>
+  <message>Unregistering CmdAgent@jawa07</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T21:26:01</date>
+  <millis>1419301561613</millis>
+  <sequence>23</sequence>
+  <logger>com.sun.faban.common.RegistryImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.common.RegistryImpl</class>
+  <method>unregister</method>
+  <thread>49</thread>
+  <message>Unregistering CmdAgent</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T21:26:01</date>
+  <millis>1419301561614</millis>
+  <sequence>24</sequence>
+  <logger>com.sun.faban.common.RegistryImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.common.RegistryImpl</class>
+  <method>unregister</method>
+  <thread>49</thread>
+  <message>Unregistering FileAgent@jawa07</message>
+</record>
+<record>
+  <host>jawa07.englab.brq.redhat.com</host>
+  <date>2014-12-22T21:26:01</date>
+  <millis>1419301561616</millis>
+  <sequence>25</sequence>
+  <logger>com.sun.faban.common.RegistryImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.common.RegistryImpl</class>
+  <method>unregister</method>
+  <thread>49</thread>
+  <message>Unregistering CmdAgent@jawa07.englab.brq.redhat.com</message>
+</record>
+<record>
+  <date>2014-12-22T21:26:01</date>
+  <millis>1419301561619</millis>
+  <sequence>33</sequence>
+  <logger>com.sun.faban.harness.engine.CmdService</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.harness.engine.CmdService</class>
+  <method>kill</method>
+  <thread>44</thread>
+  <message>killing CmdAgent@jawa07</message>
+</record>
+<record>
+  <date>2014-12-22T21:26:01</date>
+  <millis>1419301561942</millis>
+  <sequence>34</sequence>
+  <logger>com.sun.faban.common.CommandHandleImpl$ReaderThread</logger>
+  <level>WARNING</level>
+  <class>com.sun.faban.common.CommandHandleImpl$ReaderThread</class>
+  <method>run</method>
+  <thread>49</thread>
+  <message>[/mnt/jqa/sw/jdk/sun/jdk1.7.0_71-x86_64/bin/java, -Dfaban.home=/opt/pmacik/bak/testy/Nastroje/faban/, -Djava.security.policy=/opt/pmacik/bak/testy/Nastroje/faban/config/faban.policy, -Djava.util.logging.config.file=/opt/pmacik/bak/testy/Nastroje/faban/config/logging.properties, -Dfaban.registry.port=9998, -Dfaban.logging.port=9999, -Xms32m, -Xmx1024m, -cp, /opt/pmacik/bak/testy/Nastroje/faban/lib/fabanagents.jar:/opt/pmacik/bak/testy/Nastroje/faban/lib/fabancommon.jar:/opt/pmacik/bak/testy/Nastroje/faban/lib/commons-logging.jar:/opt/pmacik/bak/testy/Nastroje/faban/lib/commons-httpclient-3.1.jar:/opt/pmacik/bak/testy/Nastroje/faban/lib/commons-codec-1.2.jar:/opt/pmacik/bak/testy/Nastroje/faban/lib/fabandriver.jar, com.sun.faban.common.RegistryImpl]
+stderr:
+Can't load log handler "java.util.logging.FileHandler"
+java.io.FileNotFoundException: /tmp/fabanagent0.log (Operace zamítnuta)
+java.io.FileNotFoundException: /tmp/fabanagent0.log (Operace zamítnuta)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:221)
+	at java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:142)
+	at java.util.logging.FileHandler.open(FileHandler.java:173)
+	at java.util.logging.FileHandler.rotate(FileHandler.java:555)
+	at java.util.logging.FileHandler.openFiles(FileHandler.java:443)
+	at java.util.logging.FileHandler.&lt;init&gt;(FileHandler.java:225)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at java.lang.Class.newInstance(Class.java:379)
+	at java.util.logging.LogManager$4.run(LogManager.java:809)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.util.logging.LogManager.loadLoggerHandlers(LogManager.java:802)
+	at java.util.logging.LogManager.initializeGlobalHandlers(LogManager.java:1406)
+	at java.util.logging.LogManager.access$1500(LogManager.java:148)
+	at java.util.logging.LogManager$RootLogger.accessCheckedHandlers(LogManager.java:1493)
+	at java.util.logging.Logger.getHandlers(Logger.java:1350)
+	at java.util.logging.Logger.log(Logger.java:612)
+	at java.util.logging.Logger.doLog(Logger.java:641)
+	at java.util.logging.Logger.log(Logger.java:664)
+	at java.util.logging.Logger.info(Logger.java:1182)
+	at com.sun.faban.common.RegistryImpl.main(RegistryImpl.java:433)
+</message>
+</record>
+<record>
+  <date>2014-12-22T21:26:02</date>
+  <millis>1419301562621</millis>
+  <sequence>35</sequence>
+  <logger>com.sun.faban.harness.engine.RunDaemon</logger>
+  <level>INFO</level>
+  <class>com.sun.faban.harness.engine.RunDaemon</class>
+  <method>run</method>
+  <thread>44</thread>
+  <message>test Completed/Terminated</message>
+</record>
+</log>

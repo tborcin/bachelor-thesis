@@ -1,0 +1,44 @@
+XII 22, 2014 2:31:07 ODP. com.sun.faban.driver.util.Timer idleTimerCheck
+INFO: TestAgent[0]: Performing idle timer check
+XII 22, 2014 2:31:09 ODP. com.sun.faban.driver.util.Timer idleTimerCheck
+INFO: TestAgent[0]: Idle timer characteristics:
+Accuracy=3,
+min. invocation cost=93,
+med. invocation cost (math)=97.0,
+med. invocation cost (phys)=97,
+avg. invocation cost=97.3049,
+max. invocation cost=3075,
+variance of invocation cost=969.0763359899997.
+XII 22, 2014 2:31:19 ODP. com.sun.faban.driver.engine.AgentImpl run
+INFO: TestAgent[0]: Successfully started 50 driver threads.
+XII 22, 2014 2:31:19 ODP. com.sun.faban.driver.util.Timer calibrate
+WARNING: TestAgent[0]: Rampup too short. Could not run calibration. Please increase rampup by at least 5 seconds
+XII 22, 2014 2:31:19 ODP. com.sun.faban.driver.engine.MasterImpl executeRun
+INFO: Started all threads; run commences in 2994 ms
+XII 22, 2014 2:31:22 ODP. com.sun.faban.driver.util.Timer$BusyTimerMeter run
+INFO: TestAgent[0]: Performing busy timer check
+XII 22, 2014 2:31:22 ODP. com.sun.faban.driver.engine.MasterImpl executeRun
+INFO: Ramp up completed
+XII 22, 2014 2:31:23 ODP. com.sun.faban.driver.util.Timer$BusyTimerMeter run
+INFO: TestAgent[0]: Busy timer characteristics:
+Accuracy=3,
+min. invocation cost=106,
+med. invocation cost (math)=108.0,
+med. invocation cost (phys)=108,
+avg. invocation cost=107.9356,
+max. invocation cost=257,
+variance of invocation cost=14.067852640000154.
+XII 22, 2014 2:31:23 ODP. com.sun.faban.driver.util.Timer$BusyTimerMeter run
+WARNING: TestAgent[0]: Rampup too short. Could not run calibration. Please increase rampup by at least 3 seconds
+XII 22, 2014 2:36:22 ODP. com.sun.faban.driver.engine.MasterImpl executeRun
+INFO: Steady state completed
+XII 22, 2014 2:36:33 ODP. com.sun.faban.driver.engine.MasterImpl executeRun
+INFO: Ramp down completed
+XII 22, 2014 2:36:33 ODP. com.sun.faban.driver.engine.MasterImpl getDriverMetrics
+INFO: Gathering TestStats ...
+XII 22, 2014 2:36:33 ODP. com.sun.faban.driver.engine.MasterImpl generateReports
+INFO: Printing Summary report ...
+XII 22, 2014 2:36:33 ODP. com.sun.faban.driver.engine.MasterImpl generateReports
+INFO: Summary finished. Now printing detail ...
+XII 22, 2014 2:36:33 ODP. com.sun.faban.driver.engine.MasterImpl generateReports
+INFO: Detail finished. Results written to /opt/pmacik/bak/testy/Nastroje/faban/output/test.9D.

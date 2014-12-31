@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coreHttp>
+    <jvmConfig xmlns="http://faban.sunsource.net/ns/fabanharness">
+        <javaHome>/home/brq/pmacik/jdk1.7-x86_64-latest</javaHome>
+        <jvmOptions>-Xmx2048m -Xms2048m -XX:+DisableExplicitGC</jvmOptions>
+    </jvmConfig>
+    <!-- The definition binds the config file with the benchmark class -->
+    <!-- We declare the driver as the default namespace 'cause it is most common here -->
+    <fa:runConfig definition="com.testnscale.test.Test" xmlns="http://faban.sunsource.net/ns/fabandriver" xmlns:fa="http://faban.sunsource.net/ns/faban" xmlns:fh="http://faban.sunsource.net/ns/fabanharness">
+        <fh:description>Write the run description here.</fh:description>
+        <!-- The hostConfig section is used by the harness to control hosts -->
+        <fa:hostConfig>
+            <fa:host>jawa07.englab.brq.redhat.com</fa:host>
+            <fh:tools/>
+        </fa:hostConfig>
+        <!-- The scale of the benchmark run, the driver definition
+        defines the number of threads for each driver scale
+        and each driver type. -->
+        <fa:scale>50</fa:scale>
+        <!-- The rampup, steadystate, and rampdown of the driver -->
+        <fa:runControl unit="time">
+            <fa:rampUp>0</fa:rampUp>
+            <fa:steadyState>300</fa:steadyState>
+            <fa:rampDown>0</fa:rampDown>
+        </fa:runControl>
+        <!-- The driver-specific config.  -->
+        <driverConfig name="Test">
+            <properties>
+                <property>
+                    <name>contextPath</name>
+                    <value>/Bakalarka_last_version/webresources/webservice/generate:%20512000</value>
+                </property>
+                <property>
+                    <name>secure</name>
+                    <value>false</value>
+                </property>
+            </properties>
+        </driverConfig>
+    <outputDir>/opt/pmacik/bak/testy/Nastroje/faban/output/test.8Z/</outputDir></fa:runConfig>
+    <webServer>
+        <fa:hostConfig xmlns="http://faban.sunsource.net/ns/fabanharness" xmlns:fa="http://faban.sunsource.net/ns/faban"><fa:host>jawa09</fa:host>
+            <fa:hostPorts>jawa09:8080</fa:hostPorts>
+            <enabled>false</enabled>
+            <tools>NONE</tools>
+        </fa:hostConfig>
+    </webServer>
+</coreHttp>

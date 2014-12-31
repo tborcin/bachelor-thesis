@@ -1,0 +1,30 @@
+XII 22, 2014 10:18:26 DOP. com.sun.faban.driver.util.Timer idleTimerCheck
+INFO: TestAgent[0]: Performing idle timer check
+XII 22, 2014 10:18:27 DOP. com.sun.faban.driver.util.Timer idleTimerCheck
+INFO: TestAgent[0]: Idle timer characteristics:
+Accuracy=3,
+min. invocation cost=96,
+med. invocation cost (math)=97.0,
+med. invocation cost (phys)=97,
+avg. invocation cost=97.6793,
+max. invocation cost=2851,
+variance of invocation cost=771.0290515100003.
+XII 22, 2014 10:18:30 DOP. com.sun.faban.driver.engine.TimeThread doRun
+SEVERE: TestAgent[0].5: Error initializing driver object.
+com.sun.faban.driver.ConfigurationException: Only single host:port currently supported.
+	at com.testnscale.test.Test.<init>(Test.java:88)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at java.lang.Class.newInstance(Class.java:379)
+	at com.sun.faban.driver.engine.TimeThread.doRun(TimeThread.java:73)
+	at com.sun.faban.driver.engine.AgentThread.run(AgentThread.java:202)
+
+XII 22, 2014 10:18:30 DOP. com.sun.faban.driver.engine.AgentImpl run
+WARNING: TestAgent[0]: Run aborted before starting 100 driver threads.
+7 threads were started.
+XII 22, 2014 10:18:31 DOP. com.sun.faban.driver.engine.AgentImpl kill
+WARNING: TestAgent[0]: Killing benchmark run
+XII 22, 2014 10:18:31 DOP. com.sun.faban.driver.engine.MasterImpl$2 run
+SEVERE: Run aborted. Master terminating!

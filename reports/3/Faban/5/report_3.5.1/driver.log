@@ -1,0 +1,47 @@
+XII 22, 2014 2:02:14 ODP. com.sun.faban.driver.util.Timer idleTimerCheck
+INFO: TestAgent[0]: Performing idle timer check
+XII 22, 2014 2:02:15 ODP. com.sun.faban.driver.util.Timer idleTimerCheck
+INFO: TestAgent[0]: Idle timer characteristics:
+Accuracy=3,
+min. invocation cost=97,
+med. invocation cost (math)=108.0,
+med. invocation cost (phys)=108,
+avg. invocation cost=105.5987,
+max. invocation cost=357,
+variance of invocation cost=50.98305830999921.
+XII 22, 2014 2:02:18 ODP. com.sun.faban.driver.engine.TimeThread doRun
+SEVERE: TestAgent[0].1: Error initializing driver object.
+java.lang.NullPointerException
+	at com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl.synchronizeData(DeferredElementNSImpl.java:108)
+	at com.sun.org.apache.xerces.internal.dom.ElementNSImpl.getNamespaceURI(ElementNSImpl.java:250)
+	at com.sun.org.apache.xml.internal.dtm.ref.dom2dtm.DOM2DTM.addNode(DOM2DTM.java:263)
+	at com.sun.org.apache.xml.internal.dtm.ref.dom2dtm.DOM2DTM.nextNode(DOM2DTM.java:524)
+	at com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBase._firstch(DTMDefaultBase.java:535)
+	at com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBase.getFirstChild(DTMDefaultBase.java:973)
+	at com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseTraversers$ChildTraverser.first(DTMDefaultBaseTraversers.java:413)
+	at com.sun.org.apache.xpath.internal.axes.AxesWalker.getNextNode(AxesWalker.java:329)
+	at com.sun.org.apache.xpath.internal.axes.AxesWalker.nextNode(AxesWalker.java:365)
+	at com.sun.org.apache.xpath.internal.axes.WalkingIterator.nextNode(WalkingIterator.java:197)
+	at com.sun.org.apache.xpath.internal.axes.NodeSequence.nextNode(NodeSequence.java:344)
+	at com.sun.org.apache.xpath.internal.axes.NodeSequence.item(NodeSequence.java:539)
+	at com.sun.org.apache.xpath.internal.objects.XNodeSet.str(XNodeSet.java:281)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathImpl.getResultAsType(XPathImpl.java:309)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathImpl.evaluate(XPathImpl.java:274)
+	at com.sun.org.apache.xpath.internal.jaxp.XPathImpl.evaluate(XPathImpl.java:363)
+	at com.sun.faban.driver.engine.DriverContext.getXPathValue(DriverContext.java:411)
+	at com.testnscale.test.Test.<init>(Test.java:83)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at java.lang.Class.newInstance(Class.java:379)
+	at com.sun.faban.driver.engine.TimeThread.doRun(TimeThread.java:73)
+	at com.sun.faban.driver.engine.AgentThread.run(AgentThread.java:202)
+
+XII 22, 2014 2:02:18 ODP. com.sun.faban.driver.engine.AgentImpl run
+WARNING: TestAgent[0]: Run aborted before starting 50 driver threads.
+7 threads were started.
+XII 22, 2014 2:02:19 ODP. com.sun.faban.driver.engine.AgentImpl kill
+WARNING: TestAgent[0]: Killing benchmark run
+XII 22, 2014 2:02:21 ODP. com.sun.faban.driver.engine.MasterImpl$2 run
+SEVERE: Run aborted. Master terminating!

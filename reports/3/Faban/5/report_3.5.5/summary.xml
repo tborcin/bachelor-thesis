@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../xslt/summary_report.xsl"?>
+<benchResults>
+    <benchSummary name="Test Workload" version="0.1">
+        <runId>test.9D</runId>
+        <startTime>Mon Dec 22 14:31:22 EST 2014</startTime>
+        <endTime>Mon Dec 22 14:36:33 EST 2014</endTime>
+        <metric unit="req/s">2,050</metric>
+        <passed>false</passed>
+    </benchSummary>
+    <driverSummary name="Test">
+        <metric unit="req/s">2,050</metric>
+        <startTime>Mon Dec 22 14:31:22 EST 2014</startTime>
+        <endTime>Mon Dec 22 14:36:33 EST 2014</endTime>
+        <totalOps unit="requests">615</totalOps>
+        <users>50</users>
+        <rtXtps>45,3995</rtXtps>
+        <passed>false</passed>
+        <mix allowedDeviation="0,0200">
+            <operation name="Request">
+                <successes>615</successes>
+                <failures>0</failures>
+                <mix>1,0000</mix>
+                <requiredMix>1,0000</requiredMix>
+                <passed>true</passed>
+            </operation>
+        </mix>
+        <responseTimes unit="milliseconds">
+            <operation name="Request" r90th="250,000">
+                <avg>22143,836</avg>
+                <max>60981,080</max>
+                <sd>9600,506</sd>
+                <p90th>&gt; 1237,500</p90th>
+                <passed>false</passed>
+                <p99th>&gt; 1237,500</p99th>
+            </operation>
+        </responseTimes>
+        <delayTimes>
+            <operation name="Request" type="thinkTime">
+                <targetedAvg>0,000</targetedAvg>
+                <actualAvg>0,002</actualAvg>
+                <min>0,002</min>
+                <max>0,006</max>
+                <passed>true</passed>
+            </operation>
+        </delayTimes>
+        <customStats name="Miscellaneous Statistics">
+            <stat>
+                <description>Average Content Size for Request</description>
+                <result>1024310,00</result>
+            </stat>
+        </customStats>
+    </driverSummary>
+</benchResults>

@@ -4,7 +4,10 @@
 \usepackage[czech, slovak]{babel}
 %balíček na A4
 \usepackage{a4wide}
+\usepackage{float}
 \usepackage{dirtree}
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
 %\usepackage{color}
 %\usepackage{url}
 %\sloppy
@@ -255,7 +258,7 @@ Stručný tutoriál popisujúci inštaláciu a spustenie prvých testov je dostu
 Žiadne doplnky pre vývojové prostredia Eclipse, Netbeans, IntelliJ IDEA a nástroj Maven neboli nájdené. Faban je možné spúšťať len v príkazovom riadku.
 
 \subsection{Generovanie reportov}
-Vytváranie reportov a logovacích súborov prebieha automaticky. Pri štarte testu dostane každý test identifikačný reťazec, ktorý sa skladá z názvu profilu použitého pri testovaní, bodky, čísla a velkého písmena. Číslo a písmeno slúži ako jednoznačný identifikátor testu a Faban ho generuje automaticky. Výsledky testu je možné zobraziť v grafickom prostredí Faban Harness. V menu View Results je nutné vybrať test identifikovaný identifikačným reťazcom, čím sa zobrazí stručný report. Detailnejšie výsledky sú k dispozícii v hornom menu v záložkách Detailed Results, Run Log a Statistics. Výsledky testov sa ukladajú do adresára output, ktorý sa nachádza v adresári Fabanu. Pre každý test Faban vytvára adresár, ktorého názov je zhodný s identifikačným reťazcom testu a do tohto adresára ukladá všetky reporty a logy, ktoré patria k danému testu. Faban automaticky zaznamenáva využitie procesora počas testu, ale záznam využitia operačnej pamäte chýba a popis nastavenia chýba aj v dokumentácii.
+Vytváranie reportov a logovacích súborov prebieha automaticky. Pri štarte testu dostane každý test identifikačný reťazec, ktorý sa skladá z názvu profilu použitého pri testovaní, bodky, čísla a velkého písmena. Číslo a písmeno slúži ako jednoznačný identifikátor testu a Faban ho generuje automaticky. Výsledky testu je možné zobraziť v grafickom prostredí Faban Harness. V menu View Results je nutné vybrať test identifikovaný identifikačným reťazcom, čím sa zobrazí stručný report. Detailnejšie výsledky sú k dispozícii v hornom menu v záložkách Detailed Results, Run Log a Statistics. Výsledky testov sa ukladajú do adresára output, ktorý sa nachádza v adresári Fabanu. Pre každý test Faban vytvára adresár, ktorého názov je zhodný s identifikačným reťazcom testu a do tohto adresára ukladá všetky reporty a logy, ktoré patria k danému testu. Sada 
 
 \newpage
 \section{Gatling}
@@ -310,7 +313,7 @@ Gatling je možné pomocou Maven Archetype iba do vývojových prostredí podpor
 \newline
 
 \subsection{Generovanie reportov}
-Po spustení testu sú výsledky priebežne vypisované do terminálu a zároveň sa vytvorí adresár, ktorý umožňuje zobraziť výsledky v prehľadnej grafickej podobe. Adresár obsahuje aj logovací súbor, ktorý zaznamenáva výsledok každej pre každý vykonaný dotaz. Výsledky som z terminálu presmeroval do súboru a pri spúšťaní testu nastavujem umiestnenie adresára s výsledkami na adresár, v ktorom sa spúšťa daný test. Dokumentácia obsahuje návod, pomocou ktorého je možné nastaviť zaznamenávanie využitia operačnej pamäte. Napriek veľkej snahe sa mi podľa tohto návodu nepodarilo nastaviť zaznamenávanie využitia pamäte. Nastavenie vyžadovalo zmenu konfiguračného súboru Gatlingu a inštaláciu programov tretích strán. Po zmene konfiguračného súboru sa stal nástroj nepoužiteľným a nástroj som musel inštalovať odznova. V dokumentácii navyše chýbal návod k inštalácii programov tretích strán. Návod je k dispozícii na stránke: \url{http://gatling.io/docs/2.1.1/realtime_monitoring/index.html}.
+Po spustení testu sú výsledky priebežne vypisované do terminálu a zároveň sa vytvorí adresár, ktorý umožňuje zobraziť výsledky v prehľadnej grafickej podobe. Adresár obsahuje aj logovací súbor, ktorý zaznamenáva výsledok každej pre každý vykonaný dotaz. Výsledky som z terminálu presmeroval do súboru a pri spúšťaní testu nastavujem umiestnenie adresára s výsledkami na adresár, v ktorom sa spúšťa daný test.
 
 \chapter{Testy}
 
@@ -359,7 +362,7 @@ Test je identický s predchádzajúcim testom. Jediný rozdiel je v spôsobe zas
 
 \item \textbf{Vytrvalostný test}
 \newline
-Dlhodobé monitorovanie systému je realizované pomocou vytrvalostných testov. Systém je vystavený záťaži generovanej sto klientmi po dobu jednej hodiny. Test sa skladá z dvoch častí. V prvej časti je testovaná služba použitá v predchádzajúcich testoch a v druhej časti upravená služba simulujúca únik pamäte. Druhá časť testu ukáže rastúcu spotrebu pamäte a v porovnaní s prvou časťou tak bude možné odhaliť vzniknutý únik pamäte.
+Dlhodobé monitorovanie systému je realizované pomocou vytrvalostných testov. Systém je vystavený záťaži generovanej sto klientmi po dobu jednej hodiny. Test sa skladá z dvoch častí. V prvej časti je testovaná služba použitá v predchádzajúcich testoch a v druhej časti upravená služba simulujúca únik pamäte. Druhá časť testu ukáže rastúcu spotrebu pamäte a v porovnaní s prvou časťou tak bude možné odhaliť vzniknutý únik pamäte. Pre tento test som musel nastaviť v nástrojoch monitorovanie operačnej pamäte na serveri.
 \newline
 
 \item \textbf{Test teoretickej priepustnosti nástroja}
@@ -416,6 +419,424 @@ Na strane servera sa nachádza adresár obsahujúci server JBoss AS, skript potr
 \item \textbf{ssh\underscore{}restart\underscore{}jboss.sh}\\
 Skripty spúšťajúce testy na strane klienta reštartujú JBoss AS server pred každým spustením testu. K tomu dochádza spustením skriptu ssh\underscore{}restart\underscore{}jboss.sh príkazom ssh na strane klienta. Tento skript prijíma dva argumenty. Prvým argumentom je adresár, v ktorom je umiestnený koreňový adresár. Ako druhý argument je potrebné uviesť IP adresu servera. Adresa sa používa pri spustení servera a server pomocou nej komunikuje s klientom. Server sa vždy spúšťa na porte 8080.\\
 \textbf{Použitie:} \textit{ssh user@192.168.0.2 "/user/dir/ssh\underscore{}restart\underscore{}jboss.sh /user/dir 192.168.0.2"}
+\end{itemize}
+
+\section{Problémy pri vytváraní testov a testovaní}
+Táto sekcia popisuje problémy, s ktorými som sa stretol pri vytváraní testov a testovaní.
+
+\subsection{Faban}
+
+\begin{itemize}
+
+\item \textbf{Generovanie výsledkov testov}\\
+Problém vytvárania reportov spočíva v tom, že Faban ukladá výsledky do adresára output, ktorý sa nachádza v domovskom adresári nástroja. Dokumentácia nepopisuje spôsob, ktorým by som mohol zmeniť tento implicitný adresár pre ukladanie výslekov. Preto som po každom teste musel adresár pomocou skriptu presunúť do adresára daného testu a zmeniť jeho meno v súlade s číslom testu a iteráciou testu. Ďalší problém, ktorý som musel riešiť je spojený so spôsobom spúšťania testov. Faban testy ukladá do fronty a testy spúšťa postupne. Do skriptu, ktorý spúšťa testy som preto musel pridať príkaz, ktorý zastavil beh skriptu na dobu potrebnú pre vykonanie testu a vygenerovanie reportov a logovacích súborov z testu. Až potom som mohol presunúť adresár s výsledkami a zmeniť jeho meno. Doba, počas ktorej skript čaká je nastavená na dĺžku testu plus 100 sekúnd, ktoré sú potrebné na naštartovanie testu a vygenerovanie výsledkov. Z tohto dôvodu musím dobu čakania upravovať pri každej zmene dĺžky trvania testu. Pri veľkom počte krátkych testov spôsobí toto čakanie značné predĺženie doby testovania.
+
+\item \textbf{Faban Harness}\\
+K spúšťaniu testov je nutné najskôr spustiť Faban Harness. Táto komponenta Fabanu je reprezentovaná serverom, ktorý som musel pred každým testom reštartovať, aby som tak zabezpečil rovnaké vstupné podmienky pre každý test. K tomu som musel vytvoriť skript \textit{restart\underscore{}faban.sh}, ktorý som spúšťal pred každým testom.\\
+
+\item \textbf{JMS testy}\\
+Dokumentácia Fabanu neobsahovala žiadne informácie o testovaní JMS. S vynaložením nemalého úsilia sa mi podarilo nájsť na internete blog, ktorý popisoval nastavenie Fabanu, tak aby s ním bolo možné testovať JMS. Článok neobsahoval informácie o nastavení atribútov potrebných pre testovanie JMS. Nadpis článku naznačoval, že existuje pokračovanie, ktoré sa mi nepodarilo nájsť. Z toho usudzujem, že Faban nepodporuje testovanie JMS. Článok bol publikovaný 21.4.2009\cite{FabanBlog}.
+
+\item \textbf{Monitorovanie využitia operačnej pamäte}\\
+Faban implicitne monitoruje využitie procesora počas testu. Pre potreby Vytrvalostného testu som potreboval monitorovať využitie operačnej pamäte na serveri. Dokumentácia neobsahuje žiadne informácie o monitorovaní operačnej pamäte. Nepodarilo sa mi vyhľadať žiadne informácie, ako toto monitorovanie nastaviť a preto usudzujem, že to nie je možné.\\
+
+\end{itemize}
+
+\subsection{Gatling}
+
+\begin{itemize}
+
+\item \textbf{JMS testy}\\
+Gatling dokumentácia obsahuje nastavenie testovacieho scenára pre testovanie JMS. Po nastavení všetkých parametrov testu sa pri testovaní objavuje výnimka "{}User NULL"{} naznačujúca, že nie je možné identifikovať užívateľa, pomocou ktorého je možné pristupovať k JMS frontám JBoss AS servera. Meno a heslo užívateľa som nastavil v súlade s návodom a tieto údaje sú rovnaké, ako pri nástrojoch Apache JMeter a Perfcake, u ktorých testy fungujú. Návod je k dispozícii na stránke \url{http://gatling.io/docs/2.1.1/jms.html}.
+
+\item \textbf{Monitorovanie využitia operačnej pamäte}\\
+Dokumentácia obsahuje návod, pomocou ktorého je možné nastaviť zaznamenávanie využitia operačnej pamäte. Napriek veľkej snahe sa mi podľa tohto návodu nepodarilo nastaviť zaznamenávanie využitia pamäte. Nastavenie vyžadovalo zmenu konfiguračného súboru Gatlingu a inštaláciu programov tretích strán. Po zmene konfiguračného súboru sa stal nástroj nepoužiteľným a nástroj som musel inštalovať odznova. V dokumentácii navyše chýbal návod k inštalácii programov tretích strán. Návod je k dispozícii na stránke: \url{http://gatling.io/docs/2.1.1/realtime_monitoring/index.html}.
+
+\end{itemize}
+
+\section{Výsledky testov}
+
+\subsection{Základný test s jedným klientom}
+
+\begin{itemize}
+
+\item Apache JMeter
+
+\item Faban
+
+Všetých päť iterácií prvého testu prebehlo bez problémov a poskytlo relevantné informácie o priebehu testu.
+
+\begin{itemize}
+
+\item[\textbf{1. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 166362\\
+Priemerný počet vykonaných dotazov za sekundu: 554,540
+
+\item[\textbf{2. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 167141\\
+Priemerný počet vykonaných dotazov za sekundu: 557,137
+
+\item[\textbf{3. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 167346\\
+Priemerný počet vykonaných dotazov za sekundu: 557,820
+
+\item[\textbf{4. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 166108\\
+Priemerný počet vykonaných dotazov za sekundu: 553,693
+
+\item[\textbf{5. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 168210\\
+Priemerný počet vykonaných dotazov za sekundu: 560,700
+
+\item[\textbf{Priemer}]\ \\
+Celkový počet vykonaných dotazov: 167033,4\\
+Priemerný počet vykonaných dotazov za sekundu: 556,778
+
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{faban1.jpg}
+  \caption{Celkový počet vykonaných dotazov}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{faban1_distr.jpg}
+  \caption{Časový priebeh vykonaných dotazov - aritmetický priemer všetkých iterácií}
+\end{figure}
+
+\item Gatling
+
+\begin{itemize}
+
+\item[\textbf{1. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 302827\\
+Priemerný počet vykonaných dotazov za sekundu: 1009,423
+
+\item[\textbf{2. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 296602\\
+Priemerný počet vykonaných dotazov za sekundu: 988,673
+
+\item[\textbf{3. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 311472\\
+Priemerný počet vykonaných dotazov za sekundu: 1038,24
+
+\item[\textbf{4. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 303419\\
+Priemerný počet vykonaných dotazov za sekundu: 1011,397
+
+\item[\textbf{5. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 307912\\
+Priemerný počet vykonaných dotazov za sekundu: 1026,373
+
+\item[\textbf{Priemer}]\ \\
+Celkový počet vykonaných dotazov: 304446,4\\
+Priemerný počet vykonaných dotazov za sekundu: 1014,821
+
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{gatling1.jpg}
+  \caption{Celkový počet vykonaných dotazov}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{gatling1_distr.jpg}
+  \caption{Časový priebeh vykonaných dotazov - aritmetický priemer všetkých iterácií}
+\end{figure}
+
+\item Perfcake
+
+\end{itemize}
+
+\subsection{Testy s rastúcim počtom klientov}
+
+\begin{itemize}
+
+\item Apache JMeter
+
+\item Faban
+
+\textbf{Prvý test - 10 klientov}
+\begin{itemize}
+
+\item[\textbf{1. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 1608896\\
+Priemerný počet vykonaných dotazov za sekundu: 5362,987
+
+\item[\textbf{2. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 1614361\\
+Priemerný počet vykonaných dotazov za sekundu: 5381,203
+
+\item[\textbf{3. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 1614381\\
+Priemerný počet vykonaných dotazov za sekundu: 5381,270
+
+\item[\textbf{4. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 1616067\\
+Priemerný počet vykonaných dotazov za sekundu: 5386,890
+
+\item[\textbf{5. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 1612970\\
+Priemerný počet vykonaných dotazov za sekundu: 5376,567
+
+\item[\textbf{Priemer}]\ \\
+Celkový počet vykonaných dotazov: 1613335\\
+Priemerný počet vykonaných dotazov za sekundu: 5377,783
+
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{faban2_1.jpg}
+  \caption{Celkový počet vykonaných dotazov}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{faban2_1_distr.jpg}
+  \caption{Časový priebeh vykonaných dotazov - aritmetický priemer všetkých iterácií}
+\end{figure}
+
+\textbf{Druhý test - 50 klientov}
+\begin{itemize}
+
+\item[\textbf{1. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 3300257\\
+Priemerný počet vykonaných dotazov za sekundu: 11000,857
+
+\item[\textbf{2. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 3304396\\
+Priemerný počet vykonaných dotazov za sekundu: 11014,653
+
+\item[\textbf{3. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 3286365\\
+Priemerný počet vykonaných dotazov za sekundu: 10954,550
+
+\item[\textbf{4. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 3280246\\
+Priemerný počet vykonaných dotazov za sekundu: 10934,153
+
+\item[\textbf{5. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 3303527\\
+Priemerný počet vykonaných dotazov za sekundu: 11011,757
+
+\item[\textbf{Priemer}]\ \\
+Celkový počet vykonaných dotazov: 3294958,2\\
+Priemerný počet vykonaných dotazov za sekundu: 10983,194
+
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{faban2_2.jpg}
+  \caption{Celkový počet vykonaných dotazov}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{faban2_2_distr.jpg}
+  \caption{Časový priebeh vykonaných dotazov - aritmetický priemer všetkých iterácií}
+\end{figure}
+
+\textbf{Tretí test - 100 klientov}
+\begin{itemize}
+
+\item[\textbf{1. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 3208731\\
+Priemerný počet vykonaných dotazov za sekundu: 10695,770
+
+\item[\textbf{2. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 3232719\\
+Priemerný počet vykonaných dotazov za sekundu: 10775,730
+
+\item[\textbf{3. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 3220658\\
+Priemerný počet vykonaných dotazov za sekundu: 10735,527
+
+\item[\textbf{4. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 3225564\\
+Priemerný počet vykonaných dotazov za sekundu: 10751,880
+
+\item[\textbf{5. iterácia}]\ \\
+Test zlyhal, objavila sa chyba: Error initializing driver object. com.sun.fa-ban.driver.ConfigurationException: Only single host:port currently supported.\\ Chyba sa vyskytla len pri jednej iterácii a týka sa inicializácie testu Fabanom. Chyba nie je spôsobená užívateľom. \hypertarget{label}{}
+
+\item[\textbf{Priemer}]\ \\
+Celkový počet vykonaných dotazov: 3221918\\
+Priemerný počet vykonaných dotazov za sekundu: 10739,727
+
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{faban2_3.jpg}
+  \caption{Celkový počet vykonaných dotazov}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{faban2_3_distr.jpg}
+  \caption{Časový priebeh vykonaných dotazov - aritmetický priemer všetkých iterácií}
+\end{figure}
+
+\textbf{Štvrtý test - 150 klientov}
+\begin{itemize}
+
+\item[\textbf{1. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 3189387\\
+Priemerný počet vykonaných dotazov za sekundu: 10631,290
+
+\item[\textbf{2. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 3186480\\
+Priemerný počet vykonaných dotazov za sekundu: 10621,600
+
+\item[\textbf{3. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 3184917\\
+Priemerný počet vykonaných dotazov za sekundu: 10616,390
+
+\item[\textbf{4. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 3187227\\
+Priemerný počet vykonaných dotazov za sekundu: 10624,090
+
+\item[\textbf{5. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 3192963\\
+Priemerný počet vykonaných dotazov za sekundu: 10643,210
+
+\item[\textbf{Priemer}]\ \\
+Celkový počet vykonaných dotazov: 3188194,8\\
+Priemerný počet vykonaných dotazov za sekundu: 10627,316
+
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{faban2_4.jpg}
+  \caption{Celkový počet vykonaných dotazov}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{faban2_4_distr.jpg}
+  \caption{Časový priebeh vykonaných dotazov - aritmetický priemer všetkých iterácií}
+\end{figure}
+
+\textbf{Piaty test - 200 klientov}
+\begin{itemize}
+
+\item[\textbf{1. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 3186355\\
+Priemerný počet vykonaných dotazov za sekundu: 10621,183
+
+\item[\textbf{2. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 3206037\\
+Priemerný počet vykonaných dotazov za sekundu: 10686,790
+
+\item[\textbf{3. iterácia}]\ \\
+Rovnaká chyba ako v \hyperlink{label}{piatej iterácii tretieho testu}.
+
+\item[\textbf{4. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 3187980\\
+Priemerný počet vykonaných dotazov za sekundu: 10626,600
+
+\item[\textbf{5. iterácia}]\ \\
+Celkový počet vykonaných dotazov: 3217781\\
+Priemerný počet vykonaných dotazov za sekundu: 10725,937
+
+\item[\textbf{Priemer}]\ \\
+Celkový počet vykonaných dotazov: 3199538,25\\
+Priemerný počet vykonaných dotazov za sekundu: 10665,128
+
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{faban2_5.jpg}
+  \caption{Celkový počet vykonaných dotazov}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{faban2_5_distr.jpg}
+  \caption{Časový priebeh vykonaných dotazov - aritmetický priemer všetkých iterácií}
+\end{figure}
+
+\item Gatling
+
+\item Perfcake
+
+\end{itemize}
+
+\subsection{Testy s rastúcou veľkosťou správ}
+
+\begin{itemize}
+
+\item Apache JMeter
+
+\item Faban
+
+\item Gatling
+
+\item Perfcake
+
+\end{itemize}
+
+\subsection{Základný JMS test so 100 klientmi}
+
+\begin{itemize}
+
+\item Apache JMeter
+
+\item Faban
+
+\item Gatling
+
+\item Perfcake
+
+\end{itemize}
+
+\subsection{Základný test so 100 klientmi}
+
+\begin{itemize}
+
+\item Apache JMeter
+
+\item Faban
+
+\item Gatling
+
+\item Perfcake
+
+\end{itemize}
+
+\subsection{Vytrvalostný test}
+
+\begin{itemize}
+
+\item Apache JMeter
+
+\item Faban
+
+\item Gatling
+
+\item Perfcake
+
+\end{itemize}
+
+\subsection{Test teoretickej priepustnosti nástroja}
+
+\begin{itemize}
+
+\item Apache JMeter
+
+\item Faban
+
+\item Gatling
+
+\item Perfcake
+
 \end{itemize}
 
 

@@ -34,4 +34,11 @@ Gatling.
 \newblock \url{http://gatling.io/docs/2.1.1/}.
 \newblock Navštívené: 19.12.2014.
 
+\bibitem{FabanBlog}
+Kim LiChong.
+\newblock How to write a jms faban driver (part one).
+\newblock
+  \url{https://blogs.oracle.com/klc/entry/using_faban_as_an_asynchronous}.
+\newblock Navštívené: 22.6.2014.
+
 \end{thebibliography}
