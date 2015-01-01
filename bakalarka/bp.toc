@@ -13,45 +13,45 @@
 \contentsline {section}{\numberline {4.1}\slshape Apache JMeter}{5}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}\rmfamily In\IeC {\v s}tal\IeC {\'a}cia}{5}{subsection.4.1.1}
 \contentsline {subsection}{\numberline {4.1.2}\rmfamily Pou\IeC {\v z}\IeC {\'\i }vanie}{5}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}\rmfamily Dokument\IeC {\'a}cia}{7}{subsection.4.1.3}
-\contentsline {subsection}{\numberline {4.1.4}\rmfamily Pou\IeC {\v z}ite\IeC {\v l}nos\IeC {\v t} vo v\IeC {\'y}vojovom prostred\IeC {\'\i }}{7}{subsection.4.1.4}
-\contentsline {subsection}{\numberline {4.1.5}\rmfamily Generovanie reportov}{8}{subsection.4.1.5}
-\contentsline {section}{\numberline {4.2}\slshape Perfcake}{9}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}\rmfamily In\IeC {\v s}tal\IeC {\'a}cia}{9}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}\rmfamily Pou\IeC {\v z}\IeC {\'\i }vanie}{9}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}\rmfamily Dokument\IeC {\'a}cia}{10}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}\rmfamily Pou\IeC {\v z}ite\IeC {\v l}nos\IeC {\v t} vo v\IeC {\'y}vojovom prostred\IeC {\'\i }}{10}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}\rmfamily Generovanie reportov}{10}{subsection.4.2.5}
-\contentsline {section}{\numberline {4.3}\slshape Faban}{11}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}\rmfamily In\IeC {\v s}tal\IeC {\'a}cia}{11}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}\rmfamily Pou\IeC {\v z}\IeC {\'\i }vanie}{11}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}\rmfamily Dokument\IeC {\'a}cia}{11}{subsection.4.3.3}
-\contentsline {subsection}{\numberline {4.3.4}\rmfamily Pou\IeC {\v z}ite\IeC {\v l}nos\IeC {\v t} vo v\IeC {\'y}vojovom prostred\IeC {\'\i }}{12}{subsection.4.3.4}
-\contentsline {subsection}{\numberline {4.3.5}\rmfamily Generovanie reportov}{12}{subsection.4.3.5}
-\contentsline {section}{\numberline {4.4}\slshape Gatling}{13}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}\rmfamily In\IeC {\v s}tal\IeC {\'a}cia}{13}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}\rmfamily Pou\IeC {\v z}\IeC {\'\i }vanie}{13}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}\rmfamily Dokument\IeC {\'a}cia}{14}{subsection.4.4.3}
-\contentsline {subsection}{\numberline {4.4.4}\rmfamily Pou\IeC {\v z}ite\IeC {\v l}nos\IeC {\v t} vo v\IeC {\'y}vojovom prostred\IeC {\'\i }}{14}{subsection.4.4.4}
-\contentsline {subsection}{\numberline {4.4.5}\rmfamily Generovanie reportov}{15}{subsection.4.4.5}
-\contentsline {chapter}{\numberline {5}\bfseries Testy}{16}{chapter.5}
-\contentsline {section}{\numberline {5.1}\slshape Testovan\IeC {\'a} aplik\IeC {\'a}cia}{16}{section.5.1}
-\contentsline {section}{\numberline {5.2}\slshape Testovacie prostredie}{17}{section.5.2}
-\contentsline {section}{\numberline {5.3}\slshape Testy}{18}{section.5.3}
-\contentsline {section}{\numberline {5.4}\slshape Automatiz\IeC {\'a}cia testov}{20}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}\rmfamily Klient}{20}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}\rmfamily Server}{22}{subsection.5.4.2}
-\contentsline {section}{\numberline {5.5}\slshape Probl\IeC {\'e}my pri vytv\IeC {\'a}ran\IeC {\'\i } testov a testovan\IeC {\'\i }}{22}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}\rmfamily Faban}{22}{subsection.5.5.1}
-\contentsline {subsection}{\numberline {5.5.2}\rmfamily Gatling}{23}{subsection.5.5.2}
-\contentsline {section}{\numberline {5.6}\slshape V\IeC {\'y}sledky testov}{23}{section.5.6}
-\contentsline {subsection}{\numberline {5.6.1}\rmfamily Z\IeC {\'a}kladn\IeC {\'y} test s jedn\IeC {\'y}m klientom}{23}{subsection.5.6.1}
-\contentsline {subsection}{\numberline {5.6.2}\rmfamily Testy s rast\IeC {\'u}cim po\IeC {\v c}tom klientov}{26}{subsection.5.6.2}
-\contentsline {subsection}{\numberline {5.6.3}\rmfamily Testy s rast\IeC {\'u}cou ve\IeC {\v l}kos\IeC {\v t}ou spr\IeC {\'a}v}{41}{subsection.5.6.3}
-\contentsline {subsection}{\numberline {5.6.4}\rmfamily Z\IeC {\'a}kladn\IeC {\'y} JMS test so 100 klientmi}{56}{subsection.5.6.4}
-\contentsline {subsection}{\numberline {5.6.5}\rmfamily Z\IeC {\'a}kladn\IeC {\'y} test so 100 klientmi}{58}{subsection.5.6.5}
-\contentsline {subsection}{\numberline {5.6.6}\rmfamily Vytrvalostn\IeC {\'y} test}{61}{subsection.5.6.6}
-\contentsline {subsection}{\numberline {5.6.7}\rmfamily Test teoretickej priepustnosti n\IeC {\'a}stroja}{63}{subsection.5.6.7}
-\contentsline {chapter}{\numberline {6}\bfseries Z\IeC {\'a}ver}{67}{chapter.6}
-\contentsline {section}{\numberline {6.1}\slshape Zhrnutie}{67}{section.6.1}
+\contentsline {subsection}{\numberline {4.1.3}\rmfamily Dokument\IeC {\'a}cia}{5}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}\rmfamily Pou\IeC {\v z}ite\IeC {\v l}nos\IeC {\v t} vo v\IeC {\'y}vojovom prostred\IeC {\'\i }}{6}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.5}\rmfamily Generovanie reportov}{7}{subsection.4.1.5}
+\contentsline {section}{\numberline {4.2}\slshape Faban}{8}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}\rmfamily In\IeC {\v s}tal\IeC {\'a}cia}{8}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}\rmfamily Pou\IeC {\v z}\IeC {\'\i }vanie}{8}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}\rmfamily Dokument\IeC {\'a}cia}{8}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}\rmfamily Pou\IeC {\v z}ite\IeC {\v l}nos\IeC {\v t} vo v\IeC {\'y}vojovom prostred\IeC {\'\i }}{9}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}\rmfamily Generovanie reportov}{9}{subsection.4.2.5}
+\contentsline {section}{\numberline {4.3}\slshape Gatling}{10}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}\rmfamily In\IeC {\v s}tal\IeC {\'a}cia}{10}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}\rmfamily Pou\IeC {\v z}\IeC {\'\i }vanie}{10}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}\rmfamily Dokument\IeC {\'a}cia}{10}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}\rmfamily Pou\IeC {\v z}ite\IeC {\v l}nos\IeC {\v t} vo v\IeC {\'y}vojovom prostred\IeC {\'\i }}{10}{subsection.4.3.4}
+\contentsline {subsection}{\numberline {4.3.5}\rmfamily Generovanie reportov}{11}{subsection.4.3.5}
+\contentsline {section}{\numberline {4.4}\slshape Perfcake}{12}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}\rmfamily In\IeC {\v s}tal\IeC {\'a}cia}{12}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}\rmfamily Pou\IeC {\v z}\IeC {\'\i }vanie}{12}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}\rmfamily Dokument\IeC {\'a}cia}{12}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.4}\rmfamily Pou\IeC {\v z}ite\IeC {\v l}nos\IeC {\v t} vo v\IeC {\'y}vojovom prostred\IeC {\'\i }}{12}{subsection.4.4.4}
+\contentsline {subsection}{\numberline {4.4.5}\rmfamily Generovanie reportov}{13}{subsection.4.4.5}
+\contentsline {chapter}{\numberline {5}\bfseries Testy}{14}{chapter.5}
+\contentsline {section}{\numberline {5.1}\slshape Testovan\IeC {\'a} aplik\IeC {\'a}cia}{14}{section.5.1}
+\contentsline {section}{\numberline {5.2}\slshape Testovacie prostredie}{15}{section.5.2}
+\contentsline {section}{\numberline {5.3}\slshape Testy}{16}{section.5.3}
+\contentsline {section}{\numberline {5.4}\slshape Automatiz\IeC {\'a}cia testov}{18}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}\rmfamily Klient}{18}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}\rmfamily Server}{20}{subsection.5.4.2}
+\contentsline {section}{\numberline {5.5}\slshape Probl\IeC {\'e}my pri vytv\IeC {\'a}ran\IeC {\'\i } testov a testovan\IeC {\'\i }}{20}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}\rmfamily Faban}{20}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}\rmfamily Gatling}{21}{subsection.5.5.2}
+\contentsline {section}{\numberline {5.6}\slshape V\IeC {\'y}sledky testov}{21}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}\rmfamily Z\IeC {\'a}kladn\IeC {\'y} test s jedn\IeC {\'y}m klientom}{21}{subsection.5.6.1}
+\contentsline {subsection}{\numberline {5.6.2}\rmfamily Testy s rast\IeC {\'u}cim po\IeC {\v c}tom klientov}{24}{subsection.5.6.2}
+\contentsline {subsection}{\numberline {5.6.3}\rmfamily Testy s rast\IeC {\'u}cou ve\IeC {\v l}kos\IeC {\v t}ou spr\IeC {\'a}v}{39}{subsection.5.6.3}
+\contentsline {subsection}{\numberline {5.6.4}\rmfamily Z\IeC {\'a}kladn\IeC {\'y} JMS test so 100 klientmi}{54}{subsection.5.6.4}
+\contentsline {subsection}{\numberline {5.6.5}\rmfamily Z\IeC {\'a}kladn\IeC {\'y} test so 100 klientmi}{56}{subsection.5.6.5}
+\contentsline {subsection}{\numberline {5.6.6}\rmfamily Vytrvalostn\IeC {\'y} test}{59}{subsection.5.6.6}
+\contentsline {subsection}{\numberline {5.6.7}\rmfamily Test teoretickej priepustnosti n\IeC {\'a}stroja}{61}{subsection.5.6.7}
+\contentsline {chapter}{\numberline {6}\bfseries Z\IeC {\'a}ver}{65}{chapter.6}
+\contentsline {section}{\numberline {6.1}\slshape Zhrnutie}{65}{section.6.1}
 \contentsline {chapter}{\numberline {A}\bfseries Obsah prilo\IeC {\v z}en\IeC {\'e}ho CD}{70}{appendix.A}

@@ -66,7 +66,7 @@ performance testy, testovanie, porovnanie nástrojov, Apache JMeter, PerfCake, F
 \chapter{Úvod}
 Obrovský rozvoj informačných technológií so sebou prináša zvyšovanie nárokov na
 výpočtový výkon \cite{ComputingPower}. Tento problém sa dá riešiť dvoma spôsobmi. Jednoduchým riešením 
-by bolo neustále zvyšovanie systémových zdrojov spolu s rastúcimi požiadavkami. Treba 
+je neustále zvyšovanie systémových zdrojov spolu s rastúcimi požiadavkami. Treba 
 podotknúť, že toto riešenie je z dlhodobého hľadiska neefektívne, pretože investície do 
 systémových zdrojov budú s ďalším vývojom a údržbou systému rásť, kým neprekročia 
 únosnú hranicu a systém sa stane neudržateľným \cite{Sochor}. Prácnejším, ale o to efektívnejším 
@@ -80,27 +80,27 @@ výkonu sú záťažové testy, únavové testy, testy výdrže, kulminačné te
 Výber správneho nástroja na testovanie je často náročnou úlohou, pričom kriticky dôležitá funkcionalita závisí od rôznych faktorov. Testovací nástroj určený na občasné testovanie jednoduchej aplikácie nemusí  poskytovať detailné informácie o priebehu testov, avšak jednoduchosť používania a rýchlosť prípravy testov môže byť kritická. Toto zadanie môže spĺnať aj nástroj, ktorý nepodporuje najnovšie technológie a jeho vývoj prebieha oproti iným nástrojom veľmi pomaly. Naopak tomu môže byť vo firme s desiatkami zamestnancov, ktorá vyvíja nové aplikácie s použitím najmodernejších technológií. Tím skúsených testerov denne vykonávajúci množstvo testov kladie vysoké požiadavky na automatizáciu, dobrú organizáciu a presnosť testov. Výsledky testov generované v užívateľsky čitateľnej forme môžu byť prezentované vedeniu firmy bez nutnosti ďalšej úpravy. Pravidelná aktualizácia, aktívny vývoj a poskytovaná užívateľská podpora zohráva nemenej dôležitú rolu.
 \newline
 \par
-Úlohou tejto práce je porovnať nástroje používané k testovaniu výkonu aplikácii v praxi a poksytnúť tak čitateľovi prehľad. V práci sú popísané klady a zápory jednotlivých nástrojov a čitateľ si na základe svojich kritérií može zvoliť nástroj, ktorý mu najviac vyhovuje.
+Úlohou tejto práce je porovnať nástroje používané k testovaniu výkonu aplikácii v praxi a poskytnúť tak čitateľovi prehľad pri výbere nástroja. V práci sú popísané klady a zápory jednotlivých nástrojov a čitateľ si na základe svojich kritérií može zvoliť nástroj, ktorý mu najviac vyhovuje.
 
 \chapter{Testy výkonu}
 
-Testovanie je nevyhnutnou súčasťou vývoja softvéru. Existuje mnoho testov, ktoré majú za účel odhaliť rôzne typy chýb. Spoločnosti vyvíjajúce softvér si veľmi dobre uvedomujú dôležitosť testovania a preto sú testy nedeliteľnou súčasťou životného cyklu vývoja softvéru. Napriek tomu sú testy výkonu softvéru podceňované a nie je im prikladaný dostatočný dôraz \cite{Art}.
-Testy výkonu sa delia na základné testy, záťažové testy,  stresové testy, testy vytrvalosti, testy špičky, konfiguračné testy a izolačné testy.
+Testovanie je dôležitou súčasťou vývoja softvéru. Existuje mnoho testov, ktoré majú za účel odhaliť rôzne typy chýb. Spoločnosti vyvíjajúce softvér si veľmi dobre uvedomujú dôležitosť testovania a preto sú testy nedeliteľnou súčasťou životného cyklu vývoja softvéru. Napriek tomu sú testy výkonu softvéru podceňované a nie je im prikladaný dostatočný dôraz \cite{Art}.
+Testy výkonu sa delia na základné testy, záťažové testy, stresové testy, testy vytrvalosti, testy špičky, konfiguračné testy a izolačné testy.	
 
 \section{Základné testy}
-Základné testy určujú čas potrebný na vykonanie jednotlivých transakcií jedným užívateľom. Za účelom získania čo najpresnejších údajov je nutné, aby počas vykonávania testov systém nevykonával žiadne iné aktivity. Pomocou týchto informácií bude možné zistiť, v akej miere klesol výkon systému s ohľadom na záťaž systému a počet užívateľov pracujúcich so systémom.
+Základné testy určujú čas potrebný na vykonanie jednotlivých transakcií jedným klientom. Za účelom získania čo najpresnejších údajov je nutné, aby počas vykonávania testov systém nevykonával žiadne iné aktivity. Pomocou týchto informácií je možné zistiť, v akej miere klesol výkon systému s ohľadom na záťaž systému a počet klientov pracujúcich so systémom.
 
 \section{Záťažové testy}
 Najpoužívanejším a najjednoduchším testom je záťažový test. Počas tohto testu je systém vystavený stálej záťaži, pričom je monitorovaná dostupnosť služieb, priepustnosť a čas odozvy. Tento test je najvernejšou reprezentáciou reálneho používania systému. Vkladanie a čítanie dát musí byť oneskorené tak, ako je tomu pri práci užívateľa.
 
 \section{Stresové testy}
-Stresové testy vystavujú aplikáciu rastúcej záťaži a tým spôsobia, že celá aplikácia, alebo jej časť zlyhajú. Zlyhaním systému môže byť nedostupnosť celej aplikácie, jej služby, alebo veľmi dlhý čas odozvy. Následne je možné určiť maximálnu únosnú záťaž systému. Znalosť limít systému je dôležitá pre budúci vývoj aplikácie. Maximálna záťaž systému by mala poskytovať dostatočnú rezervu v závislosti na spôsobe používania aplikácie1. 
+Stresové testy vystavujú aplikáciu rastúcej záťaži a tým spôsobia, že celá aplikácia alebo jej časť zlyhajú. Zlyhaním systému môže byť nedostupnosť celej aplikácie, jej služby alebo veľmi dlhý čas odozvy. Následne je možné určiť maximálnu únosnú záťaž systému. Znalosť limít systému je dôležitá pre budúci vývoj aplikácie. Maximálna záťaž systému by mala poskytovať dostatočnú rezervu v závislosti na spôsobe používania aplikácie a množstvo klientov, ktoré ju používa. 
 
 \section{Testy vytrvalosti}
-Testy vytrvalosti podrobujú systém stálej očakávanej záťaži, pričom sú monitorované rôzne časti systému. Vďaka tomu je možné odhaliť problémy s pamäťou, neuvoľnené zdroje a celkovú degradáciu výkonu. Je potrebné zabezpečiť, aby výkon časom neklesal, ale bol rovnaký ako pri spustení, prípadne sa zvyšoval. Cieľom testu je zistiť, ako sa systém správa pri stálom používaní, tak ako tomu bude po jeho nasadení. 
+Testy vytrvalosti podrobujú systém stálej očakávanej záťaži, pričom sú monitorované rôzne časti systému. Vďaka tomu je možné odhaliť problémy s pamäťou, neuvoľnené zdroje a celkovú degradáciu výkonu v čase. Je potrebné zabezpečiť, aby výkon časom neklesal, ale bol rovnaký ako pri spustení, prípadne sa zvyšoval. Cieľom testu je zistiť, ako sa systém správa pri stálom používaní, tak ako tomu bude po jeho nasadení do praxe. 
 
 \section{Testy špičky}
-Počas testu špičky dochádza k náhlemu zvýšeniu záťaže. Úlohou tohto testu je zistiť ako systém reaguje na náhle zmeny záťaže. 
+Počas testu špičky dochádza k náhlemu zvýšeniu záťaže. Úlohou tohto testu je zistiť ako systém reaguje na náhle zmeny záťaže.
 
 \section{Konfiguračné testy}
 Konfiguračné testy pozorujú, ako zmeny konfigurácie ovplyvňujú výkon, jednotlivé komponenty a celkové správanie systému. Zmeny konfigurácie môžu systému pomôcť lepšie zvládať zmeny záťaže.
@@ -113,82 +113,43 @@ Izolačné testy pomáhajú odhaliť chybné komponenty opakovaným spúšťaní
 
 \begin{enumerate}
 
-\item Určenie a popis hodnotiacich kritérií jednotlivých nástrojov. Z hľadiska používateľa je dôležitý čas odozvy, obchodné záujmy reprezentuje priepustnosť a pre efektivitu systému je dôležité využitie zdrojov. Sem patrí aj určenie obmedzení a nájdenie optimálneho nastavenia systému.
+\item Inštalácia, oboznámenie sa s nástrojmi, študovanie dokumentácie, inštalácia nástrojov do vývojových prostredí IntelliJ IDEA, NetBeans Eclipse, nástroja Apache Maven a nastavovanie generovania reportov, pričom sa kladie dôraz na jednoduchosť používania nástroja.
 
-\item Určenie testovacieho prostredia, zdrojov a nástrojov dostupných pre testovanie. Dobrá znalosť systému a jeho častí je kľúčová pri identifikácii problémov v počiatočnej fáze testovania a taktiež výrazne zvyšuje efektivitu testov.
+\item Návrh a vytvorenie testov, nastavenie generovania výsledkov. Dôraz sa kladie na jednoduchosť a rýchlosť vytvorenia testovacích scenárov, ako aj prínos dokumentácie pri ich tvorbe a riešení vzniknutých problémov.
 
-\item Naplánovanie a navrhnutie testov, identifikácia vzorových užívateľov, simulácia ich rozmanitosti v testoch, definovanie testovacích dát.
+\item Vytvorenie testovacej architektúry, ktorá spúšťa a riadi priebeh testov. Tu je dôležité si všímať, nakoľko nástroje podporujú automatizáciu testov a problémy, ktoré pri jej vytváraní vznikli pri jednotlivých nástrojoch.
 
-\item Konfigurácia testovacieho prostredia. Sem patrí príprava nástrojov, zdrojov potrebných k vykonaniu testovacích scenárov a monitorovacích prostriedkov.
+\item Spustenie testov. Sem patrí monitorovanie testov a sledovanie chýb, ktoré sa pri testovaní vyskytli. 
 
-\item Implementácia testov v súlade s testovacím dizajnom.
+\item Vyhodnotenie výsledkov. Tu je dôležité si všímať nie len výkon nástrojov, ale aj spoľahlivosť výsledkov. Veľký rozptyl vo výsledkoch znamená nie veľmi relevantné výsledky.
 
-\item Spustenie testov. Sem patrí vykonanie a monitorovanie testov, overenie testov a zbieranie výsledkov.
-
-\item Analýza výsledkov, opätovné spúšťanie testov. Posledný bod zahŕňa opakovanú analýzu, vylepšovanie a spúšťanie testov. To vedie k zlepšovaniu výsledkov až po určitý konečný bod, ktorý určuje úzke miesto ďalšieho vývoja aplikácie.
-
-\item Zhodnotenie a porovnanie nástrojov na základe hodnotiacich kritérií.
+\item Konečné zhodnotenie nástrojov na základe hodnotiacich kritérií.
 
 \end{enumerate}
 
 \chapter{Nástroje}
 
 \section{Apache JMeter}
-Apache JMeter je písaný v jazyku Java a dostupný pod open-source licenciou. Nástroj poskytuje podporu pre testovanie statických, ako aj dynamických zdrojov a podporuje širokú škálu protokolov \cite{Apache}. Najnovšia verzia 2.11 je dostupná na stránke \url{www.jmeter.apache.org/download_jmeter.cgi}.
+Apache JMeter je písaný v jazyku Java a dostupný pod open-source licenciou. Nástroj poskytuje podporu pre testovanie statických, ako aj dynamických zdrojov a podporuje širokú škálu protokolov \cite{Apache}. Najnovšia verzia 2.12 je dostupná na stránke \url{www.jmeter.apache.org/download_jmeter.cgi}. Ja som používal verziu 2.11.
 
 \subsection{Inštalácia}
-Keďže je Apache JMeter aplikácia písaná v jazyku Java, vyžaduje k svojmu behu systém s nainštalovaným Java behovým prostredím JRE\footnote{Java Runtime Environment(JRE) je prostredie umožnujúce spúšťať Java aplikácie. Aplikácia je skompilovaná do štandardizovaného a prenosného binárneho formátu. Vo výsledku je možné túto aplikáciu spusťiť v akomkoľvek systéme, ktorý obsahuje JRE.} verzie 6 a vyššej. V operačnom systéme Ubuntu je možné Apache JMeter nainštalovať aj cez softvérové centrum, alebo pomocou príkazu \textit{sudo apt-get install jmeter}. Inštalácia cez softvérové centrum, alebo pomocou príkazu \textit{sudo apt-get install jmeter} je jednoduchšia, ale obsahuje dva roky starú verziu 2.8.1.
+Keďže je Apache JMeter aplikácia písaná v jazyku Java, vyžaduje k svojmu behu systém s nainštalovaným Java behovým prostredím JRE\footnote{Java Runtime Environment(JRE) je prostredie umožnujúce spúšťať Java aplikácie.} verzie 6 a vyššej. V operačnom systéme Ubuntu je možné Apache JMeter nainštalovať aj cez softvérové centrum alebov termináli pomocou príkazu \textit{sudo apt-get install jmeter}. Inštalácia cez softvérové centrum alebo pomocou príkazu \textit{sudo apt-get install jmeter} je jednoduchšia, ale obsahuje dva roky starú verziu 2.8.1.
 
 \subsection{Používanie}
-Spustenie programu je možné z príkazového riadka pomocou príkazu \textit{jmeter.bat} pre Windows a \textit{./jmeter.sh} pre Linux a MacOS, prípadne univerzálnym príkazom \textit{java -jar ApacheJMeter.jar}. V nasledujúcej tabuľke je zoznam argumentov, ktoré sa dajú použiť pri spúšťaní programu.
-\begin{table}[h!]
-\begin{center}
-\begin{tabular}{| c | p{8cm} | p{5cm} |}
-	\hline
-	Argument & Popis & Príklad \\ \hline
-	-h & Zobrazenie informácií o spustení programu. & ./jmeter.sh -h \\ \hline
-	-v & Zobrazenie verzie aplikácie. & ./jmeter.sh -v \\ \hline
-	-p & Použije sa zadaný property súbor. & ./jmeter.sh -p subor \\ \hline
-	-q & Doplnkové property súbory k použitiu. & ./jmeter.sh -q subor1 subor2 \\ \hline
-	-t & jMeter testovací súbor, ktorý sa má spustiť. & ./jmeter.sh -t test \\ \hline
-	-l & Logovací súbor pre vzorky. & ./jmeter.sh -l sampleLog \\ \hline
-	-j & Súbor na logovanie behu jMeter programu. & ./jmeter.sh -j jMeterLog \\ \hline
-	-n & Spustenie jMeter v textovom režime. & ./jmeter.sh -n \\ \hline
-	-s & Spustenie jMeter servera. & ./jmeter.sh -s server \\ \hline
-	-H & Nastavenie proxy servera pre jMeter. & ./jmeter -H proxy \\ \hline
-	-P & Nastavenie portu proxy servera pre jMeter. & ./jmeter.sh -P port \\ \hline
-	-N & Nastavenie zoznamu hostov bez proxy. & ./jmeter.sh -N localhost *apache.org \\ \hline
-	-u & Nastavenie loginu pre proxy server, ktorý bude používať jMeter. & ./jmeter.sh -u username \\ \hline
-	-a & Nastavenie hesla pre proxy server, ktorý bude používať jMeter. & ./jmeter.sh -a password \\ \hline
-	-J & Definuje ďalšie property. & ./jmeter.sh -J property=1 \\ \hline
-	-G & Definuje globálne property, ktoré sa posielajú serveru. & ./jmeter.sh -G port=123 \\ \hline
-	-D & Definuje systémové property. & ./jmeter.sh -D property=1 \\ \hline
-	-S & Definuje systémové property súbory. & ./jmeter.sh -S property1 property2 \\ \hline
-	-L & Určuje úroveň logovania. & ./jmeter.sh -L jmeter.util=INFO \\ \hline
-	-r & Spustenie vzdialených serverov, ktoré sú definované v remote\_{}hosts. & ./jmeter.sh -r \\ \hline
-	-R & Spustenie zadaných vzdialených serverov. Nahradzuje remote\_{}hosts. & ./jmeter.sh -R server1 server2 \\ \hline
-	-d & Nastaví domáci adresár pre jMeter. & ./jmeter.sh -d /home/user/adresar \\ \hline
-	-X & Ukončí vzdialené servery na konci testu. & ./jmeter.sh -X \\ \hline
-	
+Spustenie programu je možné z príkazového riadka pomocou príkazu \textit{jmeter.bat} pre Windows a \textit{./jmeter} pre Linux a MacOS, prípadne univerzálnym príkazom \textit{java -jar ApacheJMeter.jar}. Otvorí sa užívateľské rozhranie, v ktorom je možné vytvárať testy a nastavovať generovanie reportov. Dokumentácia nepopisuje vytváranie testov v textovom editore tak, ako pri zvyšných nástrojoch, preto je nutné k tvorbe testov používať toto rozhranie. Spúšťanie testov v prebieha spustením  príkazu \textit{./jmeter} s prepínačom "{}-n"{}, ktorý zabezpečí, aby sa test spustil bez grafického rozhrania.
 
-\end{tabular}
-\end{center}
-\caption{Apache JMeter argumenty}
-\end{table}
-
-\newpage
 \subsection{Dokumentácia}
-Užívateľská dokumentácia je dostupná na stránke \url{http://jmeter.apache.org/usermanual/index.html}. Apache JMeter je pomerne robustný nástroj, čo sa odrazilo aj na rozsahu dokumentácie. Ako pozitívum hodnotím wiki stránku \url{http://wiki.apache.org/jmeter/}, ktorá obsahuje tutoriály, popisuje rozšírenia a tiež poskytuje informácie pre vývojárov. Nachádza sa tu aj tutoriál popisujúci nastavenie Apache JMetra pre používanie v Eclipse IDE. Pozitívom je aj FAQ stránka \url{http://wiki.apache.org/jmeter/JMeterFAQ} ponúkajúca odpovede na najčastejšie problémy, na ktoré môže užívateľ pri používaní Apache JMetra naraziť. Dokumentácia je navzdory svojej rozsiahlosti prehľadná a pre každý typ testu poskytuje samostatnú kapitolu popisujúcu vytvorenie testu od úplného začiatku.
+Užívateľská dokumentácia je dostupná na stránke \url{http://jmeter.apache.org/usermanual/index.html}. Apache JMeter je pomerne robustný nástroj, čo sa odrazilo aj na rozsahu dokumentácie. Ako pozitívum hodnotím wiki stránku \url{http://wiki.apache.org/jmeter/}, ktorá obsahuje tutoriály, popisuje rozšírenia a tiež poskytuje informácie pre vývojárov. Nachádza sa tu aj tutoriál popisujúci nastavenie Apache JMetra pre používanie v Eclipse IDE. Pozitívom je aj FAQ stránka \url{http://wiki.apache.org/jmeter/JMeterFAQ} ponúkajúca odpovede na najčastejšie problémy, s ktorými  sa môže užívateľ pri používaní Apache JMetra stretnúť. Dokumentácia je napriek svojej rozsiahlosti prehľadná a pre každý typ testu poskytuje samostatnú kapitolu popisujúcu vytvorenie testu od úplného začiatku.
 
 \subsection{Použiteľnosť vo vývojovom prostredí}
 \textbf{Eclipse}
 \newline
-Tutoriál \url{http://wiki.apache.org/jmeter/JMeterAndEclipseHowTo} z wiki stránky  čitateľa hneď v úvode presmeruje na stránku \url{http://people.apache.org/~mkostrze/jmeter-eclipse/jmeter-eclipse.html}, ktorá bola naposledy upravená 10.03.2004. Stránka odkazuje na neexistujúce zdroje a nepodarilo sa mi podľa nej nastaviť Apache JMeter tak, aby sa dal jednoducho použiť v Eclipse IDE verzie 4.4.1.
+Tutoriál \url{http://wiki.apache.org/jmeter/JMeterAndEclipseHowTo} z wiki stránky čitateľa hneď v úvode presmeruje na stránku \url{http://people.apache.org/~mkostrze/jmeter-eclipse/jmeter-eclipse.html}, ktorá bola naposledy upravená 10.03.2004. Stránka odkazuje na neexistujúce zdroje a nepodarilo sa mi podľa nej nastaviť Apache JMeter tak, aby sa dal jednoducho použiť v Eclipse IDE verzie 4.4.1.
 \newline
 
 \noindent\textbf{NetBeans}
 \newline
-Apache JMeter doplnok je možné do NetBeans IDE nainštalovať v menu Nástroje (Tools) $\rightarrow$ Doplnky (Plugins). V okne doplnkov je potrebné vybrať panel Dostupných doplnkov (Available Plugins), vyhľadať JMeter doplnok a spustiť inštaláciu. Následne je možné do projektu pridať nový JMeter plán. Doplnok vytvorí v adresári projektu nový priečinok "jmeter", ktorý obsahuje jednoduchý návrh testu. V okne služieb vznikne nová služba Generátory záťaže (Load Generators) obsahujúca generátor JMeter, ktorý spustíme tak, že mu priradíme testovací plán, ktorý sa následne spustí automaticky.
+Apache JMeter doplnok je možné do NetBeans IDE nainštalovať v menu Nástroje (Tools) $\rightarrow$ Doplnky (Plugins). V okne doplnkov je potrebné vybrať panel Dostupných doplnkov (Available Plugins), vyhľadať JMeter doplnok a spustiť inštaláciu. Následne je možné do projektu pridať nový JMeter plán. Doplnok vytvorí v adresári projektu nový priečinok "jmeter", ktorý obsahuje jednoduchý návrh testu. V okne služieb vznikne nová služba Generátory záťaže (Load Generators) obsahujúca generátor JMeter, ktorému je nutné priradiť testovací plán. Testy je možné spustiť samostatne alebo automaticky pri kompilácii projektu.
 \newline
 
 \noindent\textbf{IntelliJ IDEA}
@@ -199,106 +160,46 @@ Doplnok pre IntelliJ IDEA je nutné stiahnuť zo stránky \url{https://plugins.j
 \newpage
 \noindent\textbf{Apache Maven\footnote{Apache Maven je softvér určený na automatizáciu tvorby aplikácií.}}
 \newline
-Chýbajúci doplnok pre Eclipse IDE je možné nahradiť Maven doplnkom. Návod je k dispozícii na wiki stránke Apache JMeter \url{https://wiki.apache.org/jmeter/JMeterMavenPlugin}. Po nastavení doplnku a vytvorení JMeter testovacích scenárov sa tieto testy spúšťajú automaticky pri kompilácii projektu.
+Chýbajúci doplnok pre Eclipse IDE je možné nahradiť doplnkom pre Maven. Návod je k dispozícii na wiki stránke Apache JMeter \url{https://wiki.apache.org/jmeter/JMeterMavenPlugin}. Po nastavení doplnku a vytvorení JMeter testovacích scenárov sa tieto testy spúšťajú automaticky pri kompilácii projektu.
 
 \subsection{Generovanie reportov}
 Apache JMeter poskytuje širokú škálu spôsobov, pomocou ktorých je možné monitorovať priebeh testov. Monitor zaznamenávajúci využitie procesora a pamäte RAM nie je súčasťou Apache JMeter, ale je poskytovaný zdarma ako rozšírenie. Inštalácia doplnku prebieha skopírovaním knižnice JMeterPlugins-Standard.jar do adresára lib/ext, ktorý sa nachádza v domovskom adresári nástroja. Následne je nutné nastaviť aj Apache agenta, ktorý bude na strane servera monitorovať využitie procesora a pamäte. Adresár obsahujúci agenta je nutné priložiť k serveru tak, aby bolo možné pri štarte servera spustiť aj agenta, ktorý sa štartuje spustením skriptu startAgent.sh. Agent používa na komunikáciu port číslo 4444.
 
 \newpage
-\section{Perfcake}
-PerfCake je podobne ako JMeter open-source nástroj písaný v jazyku Java. \todo{Uprav casy a verzie} V súčasnosti je k dispozícii verzia 2.0. Dátum vydania verzie 3.0 je naplánovaný na 23.9.2014. Stránka projektu: \url{www.perfcake.org/}. Github: \url{www.	github.com/PerfCake/PerfCake}. Na stránke \url{www.github.com/PerfCake} sú dostupné pluginy pre Maven, IntelliJ IDEA, Eclipse a rôzne ukážkové testovacie scenáre. 
-
-\subsection{Inštalácia}
-Základným predpokladom pre používanie PerfCake je systém s Java Runtime Environment verzie 7 alebo vyššej. Tiež je nutné mať správne nastavenú \$JAVA\_{}HOME premennú prostredia. Pre operačné systémy Windows a Linux je na stránke \url{www.perfcake.org/download/} pripravená binárna distribúcia, ktorú je možné používať hneď po stiahnutí a rozbalení archívu. Užívatelia operačného systému Mac si musia stiahnuť zdrojový kód a skompilovať ho. Týmto je program pripravený na používanie. Inštalácia je veľmi jednoduchá, prebehla bez komplikácií a zaberie len pár minút.
-
-\subsection{Používanie}
-Práca s programom prebieha prostredníctvom príkazoveho riadka. V systéme Windows spustíme PerfCake príkazom \textit{perfcake.bat}, v systémoch Linux a MacOS \textit{./perfcake.sh}. Po spustení týchto príkazov sa zobrazia argumenty, ktoré je možné používať pri spúšťaní programu.
-\newline
-\newline
-\begin{table}[h!]
-\begin{center}
-\begin{tabular}{| c | p{8cm} | p{5cm} |}
-		\hline
-		Argument & Popis & Príklad \\ \hline
-		-s & Názov spúšťaného scenára. Scenár je uložený v adresári /resources/scenarios. & ./perfcake.sh -s http-echo \\ \hline
-		-D & Názov vlastnosti a jej hodnota. Píšeme v~tvare názov=hodnota & ./perfcake.sh -s http-echo -D thread.count=100 \\ \hline
-		-sd & Adresár, z ktorého má byť spustený scenár. Cesta k adresáru musí byť absolútna. & ./perfcake.sh -s http-echo -sd /home/user/scenare \\ \hline
-		-md & Adresár pre správy. Cesta k adresáru musí byť absolútna. & ./perfcake.sh -s http-echo -md /home/user/spravy \\ \hline
-		-pd & Adresár pre pluginy. Cesta k adresáru musí byť absolútna. & ./perfcake.sh -s http-echo -pd /home/user/pluginy \\ \hline
-		-pf & Názov property súboru.& ./perfcake.sh -s http-echo -pf property \\ \hline
-	
-\end{tabular}
-\end{center}
-\caption{PerfCake argumenty}
-\end{table}
-
-\subsection{Dokumentácia}
-Užívateľská dokumentáciahttp://faban.org/docs/QuickStartTutorial.html sa nachádza na stránke \url{www.perfcake.org/docs/perfcake-user-guide.pdf}. Skladá sa zo siedmich kapitol, v ktorých popisuje architektúru, vytváranie scenárov, generovanie záťaže, posielanie správ, generovanie reportov, validáciu a rozšírenia PerfCake. Pre každú komponentu testu obsahuje jednoduchý príklad. Návod je jednoduchý, prehľadný a dobre sa v ňom orientuje.
-
-\subsection{Použiteľnosť vo vývojovom prostredí}
-\todo{je mozne pouzit v Eclipse Kepler a je tam aj GUI}
-
-\subsection{Generovanie reportov}
-V prípade nástroja Perfcake sú všetky informácie vypisované do príkazového riadku v časových intervaloch, ktoré sa nastavujú v testovacích scenároch. Reporty som vytvoril presmerovaním výstupu z terminálu do súboru. Všetky informácie sú prehľadne umiestnené v jednom súbore.
-
-\newpage
 \section{Faban}
-Faban je napísaný v jazyku Java a jeho licencia je open-source. Skladá sa z dvoch hlavných komponent: Faban Driver Framework a Faban Harness. Driver Framework slúži na definovanie záťaže, riadenie životného cyklu a nastavenie reportovania. Faban Harness poskytuje užívateľské rozhranie k spúšťaniu a kontrolovaniu testov, generovaniu výsledkov a ukladaniu naplánovaných testov do fronty \cite{Faban}. Aktuálna verzia  Fabanu je 1.2 a dá sa získať na stránke projeku \url{www.faban.org/}. Faban sa nachádza aj na GitHub-e: \url{www.github.com/akara/faban}.
+Faban je napísaný v jazyku Java a jeho licencia je open-source. Skladá sa z dvoch hlavných komponent: Faban Driver Framework a Faban Harness. Driver Framework slúži na definovanie záťaže, riadenie životného cyklu a nastavenie reportovania. Faban Harness poskytuje užívateľské rozhranie k spúšťaniu a kontrolovaniu testov, generovaniu výsledkov a ukladaniu naplánovaných testov do fronty \cite{Faban}. Aktuálna verzia  Fabanu je 1.2 a dá sa získať na stránke projeku \url{www.faban.org/}. Používam túto verziu Fabanu. Faban sa nachádza aj na GitHub-e: \url{www.github.com/akara/faban}.
 
 \subsection{Inštalácia}
-Faban na rozdiel od predchádzajúcich testovacích nástrojov vyžaduje plnú JDK\footnote{Java Development Kit(JDK) je vývojová platforma pre programovací jazyk Java. Súčasťou balíka JDK sú komponenty a nástroje umožňujúce vývoj Java aplikácií a JRE umožňujúce ich spúšťanie.} inštaláciu verzie 1.5 a vyššej. Nutnosť inštalácie JDK hodnotím ako negatívum. Najnovšia verzia programu sa nachádza na stránke \url{www.faban.org/download.html}.
+Faban vyžaduje plnú JDK\footnote{Java Development Kit (JDK) je vývojová platforma pre programovací jazyk Java. Súčasťou balíka JDK sú komponenty a nástroje umožňujúce vývoj Java aplikácií a JRE umožňujúce ich spúšťanie.} inštaláciu verzie 1.5 a vyššej. Nutnosť inštalácie JDK hodnotím ako negatívum. Najnovšia verzia programu sa nachádza na stránke \url{www.faban.org/download.html}.
 
 \subsection{Používanie}
-Práca s programom prebieha prostredníctvom prehliadača. Najskôr je nutné spustiť Faban Master, ktorý sa spúšťa v Linuxe pomocou príkazu \textit{./startup.sh}, pre Windows príkazom \textit{startup-using-launcher.bat}. Súbory sa nachádzajú v priečinku master/bin a je nutné ich spustiť cez príkazový riadok, pretože po spustení program vypíše adresu, na ktorej beží Faban server. Túto adresu je nutné zadať do prehliadača. Otvorí sa rozhranie, v ktorom je nutné nastaviť vytvorený ovládač definujúci základné parametre testu. Následne je možné upravovať, spúšťať, ukončovať testy a prezerať si vygenerované výsledký testov. Syntax pre spúšťanie testov z príkazového riadku je \textit{FABAN\underscore{}HOME/bin/fabancli submit benchmark profile /configuration/run.xml}, kde FABAN\underscore{}HOME je adresár obsahujúci Faban, fabancli je skript umožňujúci interakciu s Faban Harness. Prvý argument spúšťaného skriptu definuje príkaz, ktorý sa má vykonať. V našom prípade sa má zaregistrovať nový test. Druhý argument určuje ovládač použitý k spúšťaniu testov, nasledujúci argument určuje profil použitý k spusteniu testov a posledným argumentom je konfiguračný súbor, ktorý obsahuje základné informácie o teste, teda dĺžku testu, počet klientov a verziu Javy použitú v testoch.
+Najskôr je nutné spustiť Faban Master, ktorý sa spúšťa v Linuxe pomocou príkazu \textit{./startup.sh}, pre Windows príkazom \textit{startup-using-launcher.bat}. Súbory sa nachádzajú v priečinku master/bin a je nutné ich spustiť cez príkazový riadok, pretože po spustení program vypíše adresu, na ktorej beží Faban server. Túto adresu je nutné zadať do prehliadača. Otvorí sa rozhranie, v ktorom je nutné nastaviť vytvorený ovládač definujúci základné parametre testu. Následne je možné upravovať, spúšťať, ukončovať testy a prezerať si vygenerované výsledký testov. Syntax pre spúšťanie testov z príkazového riadku je \textit{FABAN\underscore{}HOME/bin/fabancli submit benchmark profile /configuration/run.xml}, kde FABAN\underscore{}HOME je adresár obsahujúci Faban, fabancli je skript umožňujúci interakciu s Faban Harness. Prvý argument spúšťaného skriptu definuje príkaz, ktorý sa má vykonať. V tomto prípade sa má zaregistrovať nový test. Druhý argument určuje ovládač použitý k spúšťaniu testov, nasledujúci argument určuje profil použitý k spusteniu testov a posledným argumentom je konfiguračný súbor, ktorý obsahuje základné informácie o teste, teda dĺžku testu, počet klientov a verziu Javy použitú v testoch.
 
 \subsection{Dokumentácia}
 Stručný tutoriál popisujúci inštaláciu a spustenie prvých testov je dostupný na stránke \url{http://faban.org/docs/QuickStartTutorial.html}. Návod popisujúci vytváranie záťaže je k dispozícii na stránke \url{http://faban.org/docs/CreatingWorkloadTutorial.html}. Ďalšie návody sú k dispozícii na stránke \url{http://faban.org/1.2/docs/index.html}.
 
 \subsection{Použiteľnosť vo vývojovom prostredí}
-Žiadne doplnky pre vývojové prostredia Eclipse, Netbeans, IntelliJ IDEA a nástroj Maven neboli nájdené. Faban je možné spúšťať len v príkazovom riadku.
+Žiadne doplnky pre vývojové prostredia Eclipse, NetBeans, IntelliJ IDEA a nástroj Maven som nenašiel.
 
 \subsection{Generovanie reportov}
-Vytváranie reportov a logovacích súborov prebieha automaticky. Pri štarte testu dostane každý test identifikačný reťazec, ktorý sa skladá z názvu profilu použitého pri testovaní, bodky, čísla a velkého písmena. Číslo a písmeno slúži ako jednoznačný identifikátor testu a Faban ho generuje automaticky. Výsledky testu je možné zobraziť v grafickom prostredí Faban Harness. V menu View Results je nutné vybrať test identifikovaný identifikačným reťazcom, čím sa zobrazí stručný report. Detailnejšie výsledky sú k dispozícii v hornom menu v záložkách Detailed Results, Run Log a Statistics. Výsledky testov sa ukladajú do adresára output, ktorý sa nachádza v adresári Fabanu. Pre každý test Faban vytvára adresár, ktorého názov je zhodný s identifikačným reťazcom testu a do tohto adresára ukladá všetky reporty a logy, ktoré patria k danému testu. Sada 
+Vytváranie reportov a logovacích súborov prebieha automaticky. Pri štarte testu dostane každý test identifikačný reťazec, ktorý sa skladá z názvu profilu použitého pri testovaní, bodky, čísla a velkého písmena. Číslo a písmeno slúži ako jednoznačný identifikátor testu a Faban ho generuje automaticky. Výsledky testu je možné zobraziť v grafickom prostredí Faban Harness. V menu View Results je nutné vybrať test identifikovaný identifikačným reťazcom, čím sa zobrazí stručný report. Detailnejšie výsledky sú k dispozícii v hornom menu v záložkách Detailed Results, Run Log a Statistics. Výsledky testov sa ukladajú do adresára output, ktorý sa nachádza v adresári Fabanu. Pre každý test Faban vytvára adresár, ktorého názov je zhodný s identifikačným reťazcom testu a do tohto adresára ukladá všetky reporty a logy, ktoré patria k danému testu.
 
 \newpage
 \section{Gatling}
 Gatling je open-source, podobne ako všetky predchádzajúce nástroje. Kým predchádzajúce nástroje boli písané výhradne, alebo z veľkej časti v jazyku Java, Gatling je vyvíjaný v jazyku Scala. Gatling ako jediný nástroj nepoužíva jazyk XML\footnote{Extensible Markup Language je obecný značkovací jazyk vyvinutý a štandardizovaný konzorciom W3C.} pre písanie testovacích scenárov. Scenáre sú písané v jazyku Scala. Jadro nástroja nie je závislé na konkrétnom protokole a je ľahko rozšíriteľné. V súčasnosti poskytuje podporu pre HTTP a JMS protokol \cite{Gatling}. Stránka projektu \url{www.gatling-tool.org/} je veľmi jednoduchá a obsahuje len pár odkazov, vačšinou na GitHub stránku projektu \url{www.github.com/excilys/gatling}.
 
 \subsection{Inštalácia}
-Staré verzie programu sa nachádzajú na stránke \url{www.github.com/excilys/gatling/wiki/Downloads}. Najnovšia stabilná verzia 2.1.1 je dostupná na stránke \url{http://gatling.io/download/}. Nachádza sa tu aj verzia 2.2.0-SNAPSHOT, ktorá je vo vývoji. Základným predpokladom pre používanie programu Gatling je JDK verzie 6, pričom sa odporúča mať nainštalovanú najnovšiu verziu JDK.
+Staré verzie programu sa nachádzajú na stránke \url{www.github.com/excilys/gatling/wiki/Downloads}. Najnovšia stabilná verzia 2.1.2 je dostupná na stránke \url{http://gatling.io/download/}. Nachádza sa tu aj verzia 2.2.0-SNAPSHOT, ktorá je vo vývoji. Ja používam verziu 2.0.1. Základným predpokladom pre používanie programu Gatling je JDK verzie 6, pričom sa odporúča mať nainštalovanú najnovšiu verziu JDK.
 
 \subsection{Používanie}
-Program je možné spustiť v príkazovom riadku príkazom \textit{./gatling.sh} pre Linux a príkazom \textit{gatling.bat} pre Windows. Spúšťacie skripty sa nachádzajú v priečinku bin.  Nasledujúca tabuľka popisuje zoznam argumentov, s ktorými je možné spustiť program.
-\newline
-\newline
-\begin{table}[h!]
-\begin{center}
-\begin{tabular}{| c | p{8cm} | p{5cm} |}
-		\hline
-		Argument & Popis & Príklad \\ \hline
-		-nr & Spustenie testov bez generovania reportu. & ./gatling.sh -nr \\ \hline
-		-ro & Generovanie reportov do zadaného adresára. & ./gatling.sh -ro /home/user/reporty \\ \hline
-		-df & Určuje adresár, z ktorého majú byť načítané testovacie dáta. Cesta k adresáru musí byť absolútna. & ./gatling.sh -df /home/user/data \\ \hline
-		-rf & Adresár pre ukladanie výsledkov. Cesta k adresáru musí byť absolútna. & ./gatling.sh -rf /home/user/vysledky \\ \hline
-		-bf & Adresár pre requesty. Cesta k adresáru musí byť absolútna. & ./gatling -bf /home/user/requesty \\ \hline
-		-sf & Vyhľadá spustiteľné scenáre v zadanom adresári. & ./gatling.sh -sf /home/user/scenare \\ \hline
-		-sbf & Vyhľadá skompilované scenáre v zadanom adresári. & ./gatling.sh -sbf /home/user/skompilovane \\ \hline
-		-s & Spustí zadaný scenár. & ./gatling.sh -s scenar \\ \hline
-		-on & Zadaný argument sa použije ako východiskový názov pre výstupný adresár. & ./gatling.sh -on nazov \\ \hline
-		-sd & Krátky popis spúšťaného testu, ktorý bude zahrnutý do reportu. & ./gatling.sh -sd Popis \\ \hline
-	
-\end{tabular}
-\end{center}
-\caption{Gatling argumenty}
-\end{table}
+Program je možné spustiť v príkazovom riadku príkazom \textit{./gatling.sh} pre Linux a príkazom \textit{gatling.bat} pre Windows. Spúšťacie skripty sa nachádzajú v priečinku bin. Gatling nemá grafické rozhranie, preto testy vytváram v textovom editore podľa dokumentácie. Spúšťanie prebieha
 
-\newpage
 \subsection{Dokumentácia}
-Zoznam užívateľských manuálov je k dispozícii na stránke \url{http://gatling.io/docs/2.0.2/}. Nachádza sa tu stručný a prehľadný návod popisujúci inštaláciu a spustenie prvých testov, ako aj pokročilejšie tutoriály detailne popisujúce nastavenie nástroja a vytváranie testov. Dokumentácia je prehľadná, dobre sa v nej orientuje a pozitívom je aj vzhľad, ktorý je kvalitne spracovaný.
+Zoznam užívateľských manuálov je k dispozícii na stránke \url{http://gatling.io/docs/2.0.1/}. Nachádza sa tu stručný a prehľadný návod popisujúci inštaláciu a spustenie prvých testov, ako aj pokročilejšie tutoriály detailne popisujúce nastavenie nástroja a vytváranie testov. Dokumentácia je prehľadná, dobre sa v nej orientuje a pozitívom je aj vzhľad, ktorý je kvalitne spracovaný.
 
 
 \subsection{Použiteľnosť vo vývojovom prostredí}
-\textbf{Eclipse}, \textbf{Netbeans}, \textbf{IntelliJ IDEA}
+\textbf{Eclipse}, \textbf{NetBeans}, \textbf{IntelliJ IDEA}
 \newline
 Gatling neposkytuje podporu pomocou samostatných doplnkov pre jednotlivé vývojové prostredia. Integrácia Gatlingu je realizovaná pomocou Maven buildovacieho nástroja, ktorý tieto vývojové prostredia podporujú.
 
@@ -306,14 +207,37 @@ Gatling neposkytuje podporu pomocou samostatných doplnkov pre jednotlivé vývo
 \noindent \textbf{Maven}
 \newline
 Dokumentácia obsahuje sekciu Extensions, ktorá popisuje nastavenie Maven Plugin a Maven Archetype.
-\newline Maven Plugin je možné použiť v každom projekte, ktorý využíva Maven ako buildovací nástroj. Maven je možné použiť v Eclipse, IntelliJ IDEA, ako aj Netbeans. Pri nastavovaní Maven konfiguračného súboru podľa stránky \url{http://gatling.io/docs/2.0.2/extensions/maven_plugin.html} bolo nutné zmeniť hodnotu \textit{io.gatling} v elemente \textit{groupId} na hodnotu \textit{io.gatling.highcharts}, pretože závislosť (Dependency) s hodnotou \textit{io.gatling} sa v maven repozitári nebola k dispozícii.
+\newline Maven Plugin je možné použiť v každom projekte, ktorý využíva Maven ako buildovací nástroj. Maven je možné použiť v Eclipse, IntelliJ IDEA, ako aj NetBeans. Pri nastavovaní Maven konfiguračného súboru podľa stránky \url{http://gatling.io/docs/2.0.1/extensions/maven_plugin.html} je nutné zmeniť hodnotu \textit{io.gatling} v elemente \textit{groupId} na hodnotu \textit{io.gatling.highcharts}, pretože závislosť (Dependency) s hodnotou \textit{io.gatling} v maven repozitári nebola k dispozícii.
 \newline
 \newline
-Gatling je možné pomocou Maven Archetype iba do vývojových prostredí podporujúcich jazyk Scala a obsahujúcich Maven. Aj keď testované vývojové prostredia neobsahujú natívnu podporu jazyka Scala je možné túto funkcionalitu implementovať pomocou doplnkov dostupných pre každé vývojové prostredie. Manuál popisujúci integráciu Gatling do vývojového prostredia pomocou Maven Archetype sa nachádza na stránke \url{http://gatling.io/docs/2.0.2/extensions/maven_archetype.html}.
+Gatling je možné pomocou Maven Archetype iba do vývojových prostredí podporujúcich jazyk Scala a obsahujúcich Maven. Aj keď testované vývojové prostredia neobsahujú natívnu podporu jazyka Scala je možné túto funkcionalitu implementovať pomocou doplnkov dostupných pre každé vývojové prostredie. Manuál popisujúci integráciu Gatling do vývojového prostredia pomocou Maven Archetype sa nachádza na stránke \url{http://gatling.io/docs/2.0.1/extensions/maven_archetype.html}.
 \newline
 
 \subsection{Generovanie reportov}
 Po spustení testu sú výsledky priebežne vypisované do terminálu a zároveň sa vytvorí adresár, ktorý umožňuje zobraziť výsledky v prehľadnej grafickej podobe. Adresár obsahuje aj logovací súbor, ktorý zaznamenáva výsledok každej pre každú vykonanú požiadavku. Výsledky som z terminálu presmeroval do súboru a pri spúšťaní testu nastavujem umiestnenie adresára s výsledkami na adresár, v ktorom sa spúšťa daný test.
+
+\newpage
+\section{Perfcake}
+PerfCake je open-source nástroj písaný v jazyku Java. V súčasnosti je k dispozícii verzia 3.3, ktorú aj používam. Dátum vydania verzie 4.0 je naplánovaný na 20.3.2015. Stránka projektu: \url{www.perfcake.org/}. Github: \url{www.github.com/PerfCake/PerfCake}. Na stránke \url{www.github.com/PerfCake} sú dostupné pluginy pre Maven, IntelliJ IDEA, Eclipse a rôzne ukážkové testovacie scenáre. 
+
+\subsection{Inštalácia}
+Základným predpokladom pre používanie PerfCake je systém s Java Runtime Environment verzie 7 alebo vyššej. Tiež je nutné mať správne nastavenú \$JAVA\_{}HOME premennú prostredia. Pre operačné systémy Windows a Linux je na stránke \url{www.perfcake.org/download/} pripravená binárna distribúcia, ktorú je možné používať hneď po stiahnutí a rozbalení archívu. Užívatelia operačného systému Mac si musia stiahnuť zdrojový kód a skompilovať ho. Týmto je program pripravený na používanie. Inštalácia je veľmi jednoduchá, prebehla bez komplikácií a zaberie len pár minút.
+
+\subsection{Používanie}
+Práca s programom prebieha prostredníctvom príkazoveho riadka. V systéme Windows spustíme PerfCake príkazom \textit{perfcake.bat}, v systémoch Linux a MacOS \textit{./perfcake.sh}. Po spustení týchto príkazov sa zobrazia argumenty, ktoré je možné používať pri spúšťaní programu.
+
+\subsection{Dokumentácia}
+Užívateľská dokumentácia sa nachádza na stránke \url{www.perfcake.org/docs/perfcake-user-guide.pdf}. Skladá sa zo siedmich kapitol, v ktorých popisuje architektúru, vytváranie scenárov, generovanie záťaže, posielanie správ, generovanie reportov, validáciu a rozšírenia PerfCake. Pre každú komponentu testu obsahuje jednoduchý príklad.
+
+\subsection{Použiteľnosť vo vývojovom prostredí}
+\textbf{Eclipse}\\
+Perfcake obsahuje doplnok pre vývojové prostredie Eclipse Kepler. Doplnok je možné nainštalovať cez Eclipse Marketplace v menu Help. Doplnok obsahuje aj jednoduché užívateľské prostredie, pomocou ktorého je možné vytvárať testy.
+
+\textbf{Apache Maven}
+Doplnok pre Maven a návod k jeho inštalácii je k dispozícii na stránke \url{https://github.com/PerfCake/PerfCakeMavenPlugin}. Maven doplnok nahrádza chýbajúce doplnky pre vývojové prostredia NetBeans a IntelliJ IDEA.
+
+\subsection{Generovanie reportov}
+V prípade nástroja Perfcake sú všetky informácie vypisované do príkazového riadku v časových intervaloch, ktoré sa nastavujú v testovacích scenároch. Reporty som vytvoril presmerovaním výstupu z terminálu do súboru. Všetky informácie sú prehľadne umiestnené v jednom súbore.
 
 \chapter{Testy}
 
@@ -329,45 +253,45 @@ K testovniu sú použité dva samostatné počítače. Aplikácia je nasadená n
 
 \newpage
 \section{Testy}
-Pre potreby porovnania nástrojov je navrhnutých 7 typov testov. Medzi jednotlivými testami je JBoss server reštartovaný. Výsledky testov sú zaznamenávané pomocou generátorov výsledkov, ktoré ponúkaju jednotlivé nástroje. Medzi požiadavkamimi klientov nie je nastavené oneskorenie.
+Pre potreby porovnania nástrojov som navrhol 7 typov testov. Medzi jednotlivými testami JBoss server reštartujem. Výsledky testov zaznamenávam pomocou generátorov výsledkov, ktoré ponúkaju jednotlivé nástroje. Medzi požiadavkami klientov nenastavujem oneskorenie.
 \newline
 
 \begin{enumerate}
 
 \item \textbf{Základný test s jedným klientom}
 \newline
-Prvý test má za úlohu simulovať maximálnu možnú záťaž systému jedným klientom, pričom je vykonávaný po dobu piatich minút. Na základe tohto testu je možné sledovať efektivitu generovania maximálnej záťaže, generovanie výsledkov a spotrebu zdrojov pri nízkej záťaži.
+Prvý test má za úlohu simulovať maximálnu možnú záťaž systému jedným klientom, pričom je vykonávaný po dobu piatich minút. Na základe tohto testu je možné sledovať efektivitu generovania maximálnej záťaže, generovanie výsledkov a spotrebu zdrojov jedným klientom.
 \newline
 
 \item \textbf{Testy s rastúcim počtom klientov}
 \newline
-K simulácii stresového typu testu slúži postupné zvyšovanie nárokov na systém. Test sa preto skladá zo série testov, pričom rastie množstvo klientov využívajúcich systém. Klienti zasielajú požiadavky po dobu piatich minút. Je spustených päť druhov testov, z nich každý paťkrát, celkovo je spustených dvadsaťpäť testov pre každý nástroj. Množstvo klientov v testoch je: desať, päťdesiat, sto, stopäťdesiat a dvesto. Zvyšovanie záťaže spôsobí v istom bode zlyhanie systému. Okrem toho test slúži k identifikácii optimálneho množstva klientov využívajúcich systém. Tým je určené množstvo klientov potrebné pre vytrvalostný test.
+K simulácii stresového typu testu slúži postupné zvyšovanie nárokov na systém. Test sa preto skladá zo série testov, pričom rastie množstvo klientov využívajúcich systém. Klienti zasielajú správy o veľkosti 100 znakov po dobu piatich minút. Je spustených päť druhov testov, z nich každý paťkrát, celkovo je spustených dvadsaťpäť testov pre každý nástroj. Množstvo klientov v testoch je: desať, päťdesiat, sto, stopäťdesiat a dvesto. Test slúži k identifikácii optimálneho množstva klientov využívajúcich systém a monitorovaniu efektivity nástrojov pri rôznych počtoch klientov.
 \newline
 
 \item \textbf{Testy s rastúcou veľkosťou správ}
 \newline
-Stresový typ testu je možné nasimulovať aj pomocou rastúcej veľkosti generovaných správ pri fixnom počte klientov. Podobne ako v predchazajúcom prípade sa test skladá zo série testov, pričom sa postupne zväčšuje veľkosť správ. Test je takmer totožný s predchádzajúcim testom. Namiesto počtu klientov sa v tomto teste mení veľkosť prijatej správy. Dĺžka každého testu je päť minút. Zasielaných je päť druhov správ a každá z nich päťkrát pre každý testovaný nástroj. Počet klientov v každom teste je 50 a veľkosti  správ sú: 5 znakov, 1024 znakov (1 KB), 5120 znakov (5 KB), 51200 znakov (50 KB) a 512000 znakov (500 KB). Podobne ako v predchádzajúcom prípade spôsobí zvyšovanie záťaže zlyhanie systému. Na základe testu je možné určiť optimálnu veľkosť prenášanej správy pre vytrvalostný test.
+Stresový typ testu je možné nasimulovať aj pomocou rastúcej veľkosti generovaných správ pri fixnom počte klientov. Podobne ako v predchazajúcom prípade sa test skladá zo série testov, pričom sa postupne zväčšuje veľkosť správ. Dĺžka každého testu je päť minút. Zasielaných je päť druhov správ pre každý testovaný nástroj. Počet klientov v každom teste je 50 a veľkosti  správ sú: 5 znakov, 1024 znakov (1 KB), 5120 znakov (5 KB), 51200 znakov (50 KB) a 512000 znakov (500 KB). Veľkosťou správy myslím dĺžku reťazca, ktorý generuje server.
 \newline
 
 \newpage
 \item \textbf{Základný JMS test so 100 klientmi}
 \newline
-Tento test takmer identický, ako prvý test. Líši sa od neho množstvom užívateľov využívajúcich systém a protokolom používaným pre posielanie správ. Hlavným účelom testu je overiť schopnosť nástoroja pracovať s JMS protokolom. Samozrejmosťou je sledovanie a porovnanie výkonu nástrojov.
+Počas JMS testu nástroje zasielajú správy do vstupnej JMS fronty na serveri. Server správy preposiela do výstupnej fronty, odkiaľ ich vyberajú nástroje. Test prebieha po dobu 5 minút. Hlavným účelom testu je overiť schopnosť nástrojov pracovať s JMS. Samozrejmosťou je sledovanie a porovnanie výkonu nástrojov.
 \newline
 
 \item \textbf{Základný test so 100 klientmi}
 \newline
-Test je identický s predchádzajúcim testom. Jediný rozdiel je v spôsobe zasielania správ, ktorý neprebieha pomocou JMS, ale pomocou HTTP protokolu. Úlohou tohto testu je poskytnúť testovacie dáta zo základných testov aj u tých nástrojov, ktoré nepodporujú protokol JMS. Vďaka tomu je možné porovnať výsledky základných testov u všetkých nástrojov.
+Najčastejšie používaný typ testov výkonu je reprezentovaný pomocou základného testu so 100 klientmi. Po dobu 5 minút 100 klientov zasiela správy o dĺžke 5120 znakov (5 KB).
 \newline
 
 \item \textbf{Vytrvalostný test}
 \newline
-Dlhodobé monitorovanie systému je realizované pomocou vytrvalostných testov. Systém je vystavený záťaži generovanej sto klientmi po dobu jednej hodiny. Test sa skladá z dvoch častí. V prvej časti je testovaná služba použitá v predchádzajúcich testoch a v druhej časti upravená služba simulujúca únik pamäte. Druhá časť testu ukáže rastúcu spotrebu pamäte a v porovnaní s prvou časťou tak bude možné odhaliť vzniknutý únik pamäte. Pre tento test som musel nastaviť v nástrojoch monitorovanie operačnej pamäte na serveri.
+Dlhodobé monitorovanie systému je realizované pomocou vytrvalostných testov. Systém je vystavený záťaži generovanej sto klientmi po dobu jednej hodiny. Veľkosť správy je rovnaká ako v predchádzajúcom teste, t.j. 5120 znakov. Test sa skladá z dvoch častí. V prvej časti je testovaná služba použitá v predchádzajúcich testoch a v druhej časti upravená služba simulujúca únik pamäte. Druhá časť testu ukáže rastúcu spotrebu pamäte a v porovnaní s prvou časťou tak bude možné odhaliť vzniknutý únik pamäte. Pre tento test som musel nastaviť v nástrojoch monitorovanie operačnej pamäte na serveri.
 \newline
 
 \item \textbf{Test teoretickej priepustnosti nástroja}
 \newline
-Teoretická priepustnosť nástroja určuje, ako rýchlo dokáže nástroj generovať záťaž. Vysoká priepustnosť nástroja umožňuje generovať vyššiu záťaž testovaného nástroja za využitia menšieho objemu zdrojov. Test prebieha generovaním maximálnej možnej záťaže na aplikáciu, ktorá na výstupe vracia vždy rovnaký reťazec. Aplikácia je schopná odpovedať na požiadavku v čase kratšom, ako je čas potrebný na vygenerovanie požiadavky. Celková priepustnosť systému je tak limitovaná samotným nástrojom.
+Teoretická priepustnosť nástroja určuje, ako rýchlo dokáže nástroj generovať záťaž. Vysoká priepustnosť nástroja umožňuje generovať vyššiu záťaž za využitia menšieho objemu zdrojov. Test prebieha generovaním maximálnej možnej záťaže aplikácie, ktorá ako odpoveď vracia vždy rovnaký reťazec. Server je schopný odpovedať na požiadavku v čase kratšom, ako je čas potrebný na vygenerovanie požiadavky. Celková priepustnosť systému je tak limitovaná samotným nástrojom. Na generovanie záťaže je použitých 100 klientov.
 
 \end{enumerate}
 
@@ -1722,8 +1646,73 @@ Priemerný počet vykonaných požiadaviek za sekundu: 9929,731
 
 \chapter{Záver}
 
-
 \section{Zhrnutie}
+Cieľom práce bolo porovnanie nástrojov, ich vlastností a porovnanie výsledkov testov. Vďaka tomu si čitateľ môže vybrať jemu vyhovujúci nástroj. Pre zjednodušenie výberu na záver poskytujem stručné zhrnutie a porovnanie všetkých hodnotených kategórií. Súčasťou hodnotenia je aj tabuľka, ktorá pre každú kategóriu obsahuje známku od 1 do 4 reprezentujúcu umiestnenie nástroja v danej kategórii. Nižšie číslo znamená lepšie umiestnenie a ak nástroje dosiahli rovnaké výsledky, hodnotím ich rovnakou známkou.
+
+\begin{itemize}
+
+\item \textbf{Inštalácia}\\
+V prvej kategórii hodnotím Apache JMeter a Perfcake známkou 1 a Gatling s Fabanom známkou 2. Všetky nástroje sa inštalujú veľmi jednoducho, stačí ich stiahnuť a rozbaliť. Gatling a Faban majú nižšiu známku, lebo požadujú JDK a nie JRE ako v prípade Apache JMeter a Perfcake.
+
+\item \textbf{Používanie}\\
+Víťazmi kategórie sa stávajú Apache JMeter, Gatling a Perfcake. Práca s nimi je jednoduchá a rýchla. Vytvorené testy sa spúšťajú jedným príkazom. Faban vyžaduje pred spustením testov naštartovanie servera.
+
+\item \textbf{Dokumentácia}\\
+Nebyť problému s JMS testami, víťazom by bol Gatling. Jeho dokumentácia je najprehľadnejšia a najlepšie sa v nej orientuje. Problém s nastavením JMS Gatling posunul za Apache JMeter a Perfcake, ktoré sa umiestnili na spoločnom prvom mieste. Dokumentácia oboch nástrojov dostačovala k riešeniu všetkých problémov a orientovalo sa v nej rovnako dobre. Posledný skončil Faban. Jeho dokumentácia je najmenej prehľadná. 
+
+\item \textbf{Vývojové prostredia}\\
+Kategóriu použiteľnosti vo vývojových prostrediach suverénne vyhráva Apache JMeter, ktorý poskytuje doplnok pre NetBeans, IntelliJ IDEA a Maven. Nasleduje Perfcake s podporou pre Eclipse Kepler a Maven, potom Gatling s podporou pre Maven a nakoniec Faban neposkytujúci žiadnu podporu pre vývojové prostredia.
+
+\item \textbf{Generovanie reportov}\\
+Generovanie reportov Gatlingu a Perfcake prebieha v scenároch, je jednoduché a rýchle. JMeter reporty je nutné nastaviť v grafickom užívateľskom rozhraní a dokumentácia nepopisuje nastavenie v scenároch, čo je jednoduchšia, ale hlavne rýchlejšia cesta. Najhoršie skončil Faban, v ktorom nie je možné zmeniť východiskový adresár pre ukladanie reportov a tým vzniká problém, ktorý som musel riešiť pomocou skriptov.
+
+\item \textbf{Tvorba testov}\\
+Perfcake testy sa tvoria najjednoduchšie a najrýchlejšie. Nasleduje Gatling s jazykom Scala, na ktorý som si musel chvíľu zvykať. Apache JMeter testy som musel vytvárať v grafickom užívateľskom prostredí, ktoré nie je také rýchle, ako písanie a upravovanie testov v textovom editore. Posledným je Faban, pre ktorý som musel vytvoriť Driver, profil testu a nakoniec samotný scenár.
+
+\item \textbf{JMS testy}\\
+
+
+\item \textbf{Monitorovanie pamäte}\\
+
+
+\item \textbf{Výsledky testov}\\
+
+
+\item \textbf{Spoľahlivosť výsledkov}\\
+
+
+\item \textbf{Teoretická priepustnosť}\\
+
+
+\item \textbf{Priemer}\\
+Priemer je vypočítaný ako súčet všetkých známok vydelený počtom hodnotených kategórií. Tým získam priemernú známku a na jej základe určujem najlepší nástroj.
+
+
+\end{itemize}
+
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Kategória} & \textbf{Apache JMeter} & \textbf{Faban} & \textbf{Gatling} & \textbf{Perfcake} \\ \hline
+		 Inštalácia & 1 & 2 & 2 & 1 \\ \hline
+		 Používanie & 1 & 2 & 1 & 1 \\ \hline
+		 Dokumentácia & 1 & 4 & 3 & 1 \\ \hline
+		 Vývojové prostredia & 1 & 4 & 3 & 2 \\ \hline
+		 Generovanie reportov & 2 & 3 & 1 & 1 \\ \hline
+		 Tvorba testov & 3 & 4 & 2 & 1 \\ \hline
+ 		 JMS testy &  &  &  &  \\ \hline
+		 Monitorovanie pamäte &  &  &  &  \\ \hline
+		 Výsledky testov &  &  &  & \\ \hline
+		 Spoľahlivosť výsledkov &  &  &  & \\ \hline
+		 Teoretická priepustnosť &  &  &  & \\ \hline
+		 Priemer &  &  &  & \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Gatling argumenty}
+\end{table}
 
 \textbf{Apache Jmeter}
 \newline \\
