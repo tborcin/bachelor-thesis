@@ -313,7 +313,7 @@ Gatling je možné pomocou Maven Archetype iba do vývojových prostredí podpor
 \newline
 
 \subsection{Generovanie reportov}
-Po spustení testu sú výsledky priebežne vypisované do terminálu a zároveň sa vytvorí adresár, ktorý umožňuje zobraziť výsledky v prehľadnej grafickej podobe. Adresár obsahuje aj logovací súbor, ktorý zaznamenáva výsledok každej pre každý vykonaný dotaz. Výsledky som z terminálu presmeroval do súboru a pri spúšťaní testu nastavujem umiestnenie adresára s výsledkami na adresár, v ktorom sa spúšťa daný test.
+Po spustení testu sú výsledky priebežne vypisované do terminálu a zároveň sa vytvorí adresár, ktorý umožňuje zobraziť výsledky v prehľadnej grafickej podobe. Adresár obsahuje aj logovací súbor, ktorý zaznamenáva výsledok každej pre každú vykonanú požiadavku. Výsledky som z terminálu presmeroval do súboru a pri spúšťaní testu nastavujem umiestnenie adresára s výsledkami na adresár, v ktorom sa spúšťa daný test.
 
 \chapter{Testy}
 
@@ -329,7 +329,7 @@ K testovniu sú použité dva samostatné počítače. Aplikácia je nasadená n
 
 \newpage
 \section{Testy}
-Pre potreby porovnania nástrojov je navrhnutých 7 typov testov. Medzi jednotlivými testami je JBoss server reštartovaný. Výsledky testov sú zaznamenávané pomocou generátorov výsledkov, ktoré ponúkaju jednotlivé nástroje. Medzi dotazmi klientov nie je nastavené oneskorenie.
+Pre potreby porovnania nástrojov je navrhnutých 7 typov testov. Medzi jednotlivými testami je JBoss server reštartovaný. Výsledky testov sú zaznamenávané pomocou generátorov výsledkov, ktoré ponúkaju jednotlivé nástroje. Medzi požiadavkamimi klientov nie je nastavené oneskorenie.
 \newline
 
 \begin{enumerate}
@@ -341,12 +341,12 @@ Prvý test má za úlohu simulovať maximálnu možnú záťaž systému jedným
 
 \item \textbf{Testy s rastúcim počtom klientov}
 \newline
-K simulácii stresového typu testu slúži postupné zvyšovanie nárokov na systém. Test sa preto skladá zo série testov, pričom rastie množstvo klientov využívajúcich systém. Klienti zasielajú dotazy po dobu piatich minút. Je spustených päť druhov testov, z nich každý paťkrát, celkovo je spustených dvadsaťpäť testov pre každý nástroj. Množstvo klientov v testoch je: desať, päťdesiat, sto, stopäťdesiat a dvesto. Zvyšovanie záťaže spôsobí v istom bode zlyhanie systému. Okrem toho test slúži k identifikácii optimálneho množstva klientov využívajúcich systém. Tým je určené množstvo klientov potrebné pre vytrvalostný test.
+K simulácii stresového typu testu slúži postupné zvyšovanie nárokov na systém. Test sa preto skladá zo série testov, pričom rastie množstvo klientov využívajúcich systém. Klienti zasielajú požiadavky po dobu piatich minút. Je spustených päť druhov testov, z nich každý paťkrát, celkovo je spustených dvadsaťpäť testov pre každý nástroj. Množstvo klientov v testoch je: desať, päťdesiat, sto, stopäťdesiat a dvesto. Zvyšovanie záťaže spôsobí v istom bode zlyhanie systému. Okrem toho test slúži k identifikácii optimálneho množstva klientov využívajúcich systém. Tým je určené množstvo klientov potrebné pre vytrvalostný test.
 \newline
 
 \item \textbf{Testy s rastúcou veľkosťou správ}
 \newline
-Stresový typ testu je možné nasimulovať aj pomocou rastúcej veľkosti generovaných správ pri fixnom počte klientov. Podobne ako v predchazajúcom prípade sa test skladá zo série testov, pričom sa postupne zväčšuje veľkosť správ. Test je takmer totožný s predchádzajúcim testom. Namiesto počtu klientov sa v tomto teste mení veľkosť prijatej správy. Dĺžka každého testu je päť minút. Zasielaných je päť druhov správ a každá z nich päťkrát pre každý testovaný nástroj. Počet klientov v každom teste je 50 a veľkosti  správ sú: 5 znakov, 1024 znakov, 5120 znakov, 51200 znakov a 512000 znakov. Podobne ako v predchádzajúcom prípade spôsobí zvyšovanie záťaže zlyhanie systému. Na základe testu je možné určiť optimálnu veľkosť prenášanej správy pre vytrvalostný test.
+Stresový typ testu je možné nasimulovať aj pomocou rastúcej veľkosti generovaných správ pri fixnom počte klientov. Podobne ako v predchazajúcom prípade sa test skladá zo série testov, pričom sa postupne zväčšuje veľkosť správ. Test je takmer totožný s predchádzajúcim testom. Namiesto počtu klientov sa v tomto teste mení veľkosť prijatej správy. Dĺžka každého testu je päť minút. Zasielaných je päť druhov správ a každá z nich päťkrát pre každý testovaný nástroj. Počet klientov v každom teste je 50 a veľkosti  správ sú: 5 znakov, 1024 znakov (1 KB), 5120 znakov (5 KB), 51200 znakov (50 KB) a 512000 znakov (500 KB). Podobne ako v predchádzajúcom prípade spôsobí zvyšovanie záťaže zlyhanie systému. Na základe testu je možné určiť optimálnu veľkosť prenášanej správy pre vytrvalostný test.
 \newline
 
 \newpage
@@ -367,7 +367,7 @@ Dlhodobé monitorovanie systému je realizované pomocou vytrvalostných testov.
 
 \item \textbf{Test teoretickej priepustnosti nástroja}
 \newline
-Teoretická priepustnosť nástroja určuje, ako rýchlo dokáže nástroj generovať záťaž. Vysoká priepustnosť nástroja umožňuje generovať vyššiu záťaž testovaného nástroja za využitia menšieho objemu zdrojov. Test prebieha generovaním maximálnej možnej záťaže na aplikáciu, ktorá na výstupe vracia vždy rovnaký reťazec. Aplikácia je schopná odpovedať na dotaz v čase kratšom, ako je čas potrebný na vygenerovanie dotazu. Celková priepustnosť systému je tak limitovaná samotným nástrojom.
+Teoretická priepustnosť nástroja určuje, ako rýchlo dokáže nástroj generovať záťaž. Vysoká priepustnosť nástroja umožňuje generovať vyššiu záťaž testovaného nástroja za využitia menšieho objemu zdrojov. Test prebieha generovaním maximálnej možnej záťaže na aplikáciu, ktorá na výstupe vracia vždy rovnaký reťazec. Aplikácia je schopná odpovedať na požiadavku v čase kratšom, ako je čas potrebný na vygenerovanie požiadavky. Celková priepustnosť systému je tak limitovaná samotným nástrojom.
 
 \end{enumerate}
 
@@ -434,9 +434,6 @@ Problém vytvárania reportov spočíva v tom, že Faban ukladá výsledky do ad
 \item \textbf{Faban Harness}\\
 K spúšťaniu testov je nutné najskôr spustiť Faban Harness. Táto komponenta Fabanu je reprezentovaná serverom, ktorý som musel pred každým testom reštartovať, aby som tak zabezpečil rovnaké vstupné podmienky pre každý test. K tomu som musel vytvoriť skript \textit{restart\underscore{}faban.sh}, ktorý som spúšťal pred každým testom.\\
 
-\item \textbf{JMS testy}\\
-Dokumentácia Fabanu neobsahovala žiadne informácie o testovaní JMS. S vynaložením nemalého úsilia sa mi podarilo nájsť na internete blog, ktorý popisoval nastavenie Fabanu, tak aby s ním bolo možné testovať JMS. Článok neobsahoval informácie o nastavení atribútov potrebných pre testovanie JMS. Nadpis článku naznačoval, že existuje pokračovanie, ktoré sa mi nepodarilo nájsť. Z toho usudzujem, že Faban nepodporuje testovanie JMS. Článok bol publikovaný 21.4.2009\cite{FabanBlog}.
-
 \item \textbf{Monitorovanie využitia operačnej pamäte}\\
 Faban implicitne monitoruje využitie procesora počas testu. Pre potreby Vytrvalostného testu som potreboval monitorovať využitie operačnej pamäte na serveri. Dokumentácia neobsahuje žiadne informácie o monitorovaní operačnej pamäte. Nepodarilo sa mi vyhľadať žiadne informácie, ako toto monitorovanie nastaviť a preto usudzujem, že to nie je možné.\\
 
@@ -445,9 +442,6 @@ Faban implicitne monitoruje využitie procesora počas testu. Pre potreby Vytrva
 \subsection{Gatling}
 
 \begin{itemize}
-
-\item \textbf{JMS testy}\\
-Gatling dokumentácia obsahuje nastavenie testovacieho scenára pre testovanie JMS. Po nastavení všetkých parametrov testu sa pri testovaní objavuje výnimka "{}User NULL"{} naznačujúca, že nie je možné identifikovať užívateľa, pomocou ktorého je možné pristupovať k JMS frontám JBoss AS servera. Meno a heslo užívateľa som nastavil v súlade s návodom a tieto údaje sú rovnaké, ako pri nástrojoch Apache JMeter a Perfcake, u ktorých testy fungujú. Návod je k dispozícii na stránke \url{http://gatling.io/docs/2.1.1/jms.html}.
 
 \item \textbf{Monitorovanie využitia operačnej pamäte}\\
 Dokumentácia obsahuje návod, pomocou ktorého je možné nastaviť zaznamenávanie využitia operačnej pamäte. Napriek veľkej snahe sa mi podľa tohto návodu nepodarilo nastaviť zaznamenávanie využitia pamäte. Nastavenie vyžadovalo zmenu konfiguračného súboru Gatlingu a inštaláciu programov tretích strán. Po zmene konfiguračného súboru sa stal nástroj nepoužiteľným a nástroj som musel inštalovať odznova. V dokumentácii navyše chýbal návod k inštalácii programov tretích strán. Návod je k dispozícii na stránke: \url{http://gatling.io/docs/2.1.1/realtime_monitoring/index.html}.
@@ -464,88 +458,90 @@ Dokumentácia obsahuje návod, pomocou ktorého je možné nastaviť zaznamenáv
 
 \item Faban
 
-Všetých päť iterácií prvého testu prebehlo bez problémov a poskytlo relevantné informácie o priebehu testu.
+Všetých päť iterácií prvého testu prebehlo bez problémov a poskytlo relevantné informácie o priebehu testu. Zaujímavá je spoľahlivosť výsledkov jednotlivých iterácií testu, keď medzi najlepším a najhorším výsledkom je rozdiel len 2102 vykonaných požiadaviek.
 
 \begin{itemize}
 
 \item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 166362\\
-Priemerný počet vykonaných dotazov za sekundu: 554,540
+Celkový počet vykonaných požiadaviek: 166362\\
+Priemerný počet vykonaných požiadaviek za sekundu: 554,540
 
 \item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 167141\\
-Priemerný počet vykonaných dotazov za sekundu: 557,137
+Celkový počet vykonaných požiadaviek: 167141\\
+Priemerný počet vykonaných požiadaviek za sekundu: 557,137
 
 \item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 167346\\
-Priemerný počet vykonaných dotazov za sekundu: 557,820
+Celkový počet vykonaných požiadaviek: 167346\\
+Priemerný počet vykonaných požiadaviek za sekundu: 557,820
 
 \item[\textbf{4. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 166108\\
-Priemerný počet vykonaných dotazov za sekundu: 553,693
+Celkový počet vykonaných požiadaviek: 166108\\
+Priemerný počet vykonaných požiadaviek za sekundu: 553,693
 
 \item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 168210\\
-Priemerný počet vykonaných dotazov za sekundu: 560,700
+Celkový počet vykonaných požiadaviek: 168210\\
+Priemerný počet vykonaných požiadaviek za sekundu: 560,700
 
 \item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných dotazov: 167033,4\\
-Priemerný počet vykonaných dotazov za sekundu: 556,778
+Celkový počet vykonaných požiadaviek: 167033,4\\
+Priemerný počet vykonaných požiadaviek za sekundu: 556,778
 
 \end{itemize}
 
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.9\textwidth]{faban1.jpg}
-  \caption{Celkový počet vykonaných dotazov}
+  \caption{Celkový počet vykonaných požiadaviek}
 \end{figure}
 
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.9\textwidth]{faban1_distr.jpg}
-  \caption{Časový priebeh vykonaných dotazov - aritmetický priemer všetkých iterácií}
+  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
 \end{figure}
 
 \item Gatling
 
+Podobne ako v prípade Fabanu všetkých päť iterácií prvého testu prebehlo bez problémov. Gatling vykonal viac požiadaviek, ako Faban. Negatívom je horšia spoľahlivosť výsledkov, keď medzi najlepším a najhorším výsledkom je rozdiel 14870 vykonaných požiadaviek. Gatling má slabší štart testu v porovnaní s Fabanom, keď sa na svoje maximum dostal až 50 sekúnd po štarte, čo je pri 300 sekundovom teste veľmi dlhá doba štartu.
+
 \begin{itemize}
 
 \item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 302827\\
-Priemerný počet vykonaných dotazov za sekundu: 1009,423
+Celkový počet vykonaných požiadaviek: 302827\\
+Priemerný počet vykonaných požiadaviek za sekundu: 1009,423
 
 \item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 296602\\
-Priemerný počet vykonaných dotazov za sekundu: 988,673
+Celkový počet vykonaných požiadaviek: 296602\\
+Priemerný počet vykonaných požiadaviek za sekundu: 988,673
 
 \item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 311472\\
-Priemerný počet vykonaných dotazov za sekundu: 1038,24
+Celkový počet vykonaných požiadaviek: 311472\\
+Priemerný počet vykonaných požiadaviek za sekundu: 1038,24
 
 \item[\textbf{4. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 303419\\
-Priemerný počet vykonaných dotazov za sekundu: 1011,397
+Celkový počet vykonaných požiadaviek: 303419\\
+Priemerný počet vykonaných požiadaviek za sekundu: 1011,397
 
 \item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 307912\\
-Priemerný počet vykonaných dotazov za sekundu: 1026,373
+Celkový počet vykonaných požiadaviek: 307912\\
+Priemerný počet vykonaných požiadaviek za sekundu: 1026,373
 
 \item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných dotazov: 304446,4\\
-Priemerný počet vykonaných dotazov za sekundu: 1014,821
+Celkový počet vykonaných požiadaviek: 304446,4\\
+Priemerný počet vykonaných požiadaviek za sekundu: 1014,821
 
 \end{itemize}
 
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.9\textwidth]{gatling1.jpg}
-  \caption{Celkový počet vykonaných dotazov}
+  \caption{Celkový počet vykonaných požiadaviek}
 \end{figure}
 
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.9\textwidth]{gatling1_distr.jpg}
-  \caption{Časový priebeh vykonaných dotazov - aritmetický priemer všetkých iterácií}
+  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
 \end{figure}
 
 \item Perfcake
@@ -564,206 +560,416 @@ Priemerný počet vykonaných dotazov za sekundu: 1014,821
 \begin{itemize}
 
 \item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 1608896\\
-Priemerný počet vykonaných dotazov za sekundu: 5362,987
+Celkový počet vykonaných požiadaviek: 1608896\\
+Priemerný počet vykonaných požiadaviek za sekundu: 5362,987
 
 \item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 1614361\\
-Priemerný počet vykonaných dotazov za sekundu: 5381,203
+Celkový počet vykonaných požiadaviek: 1614361\\
+Priemerný počet vykonaných požiadaviek za sekundu: 5381,203
 
 \item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 1614381\\
-Priemerný počet vykonaných dotazov za sekundu: 5381,270
+Celkový počet vykonaných požiadaviek: 1614381\\
+Priemerný počet vykonaných požiadaviek za sekundu: 5381,270
 
 \item[\textbf{4. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 1616067\\
-Priemerný počet vykonaných dotazov za sekundu: 5386,890
+Celkový počet vykonaných požiadaviek: 1616067\\
+Priemerný počet vykonaných požiadaviek za sekundu: 5386,890
 
 \item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 1612970\\
-Priemerný počet vykonaných dotazov za sekundu: 5376,567
+Celkový počet vykonaných požiadaviek: 1612970\\
+Priemerný počet vykonaných požiadaviek za sekundu: 5376,567
 
 \item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných dotazov: 1613335\\
-Priemerný počet vykonaných dotazov za sekundu: 5377,783
+Celkový počet vykonaných požiadaviek: 1613335\\
+Priemerný počet vykonaných požiadaviek za sekundu: 5377,783
 
 \end{itemize}
 
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.9\textwidth]{faban2_1.jpg}
-  \caption{Celkový počet vykonaných dotazov}
+  \caption{Celkový počet vykonaných požiadaviek}
 \end{figure}
 
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.9\textwidth]{faban2_1_distr.jpg}
-  \caption{Časový priebeh vykonaných dotazov - aritmetický priemer všetkých iterácií}
+  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
 \end{figure}
 
 \textbf{Druhý test - 50 klientov}
 \begin{itemize}
 
 \item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 3300257\\
-Priemerný počet vykonaných dotazov za sekundu: 11000,857
+Celkový počet vykonaných požiadaviek: 3300257\\
+Priemerný počet vykonaných požiadaviek za sekundu: 11000,857
 
 \item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 3304396\\
-Priemerný počet vykonaných dotazov za sekundu: 11014,653
+Celkový počet vykonaných požiadaviek: 3304396\\
+Priemerný počet vykonaných požiadaviek za sekundu: 11014,653
 
 \item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 3286365\\
-Priemerný počet vykonaných dotazov za sekundu: 10954,550
+Celkový počet vykonaných požiadaviek: 3286365\\
+Priemerný počet vykonaných požiadaviek za sekundu: 10954,550
 
 \item[\textbf{4. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 3280246\\
-Priemerný počet vykonaných dotazov za sekundu: 10934,153
+Celkový počet vykonaných požiadaviek: 3280246\\
+Priemerný počet vykonaných požiadaviek za sekundu: 10934,153
 
 \item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 3303527\\
-Priemerný počet vykonaných dotazov za sekundu: 11011,757
+Celkový počet vykonaných požiadaviek: 3303527\\
+Priemerný počet vykonaných požiadaviek za sekundu: 11011,757
 
 \item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných dotazov: 3294958,2\\
-Priemerný počet vykonaných dotazov za sekundu: 10983,194
+Celkový počet vykonaných požiadaviek: 3294958,2\\
+Priemerný počet vykonaných požiadaviek za sekundu: 10983,194
 
 \end{itemize}
 
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.9\textwidth]{faban2_2.jpg}
-  \caption{Celkový počet vykonaných dotazov}
+  \caption{Celkový počet vykonaných požiadaviek}
 \end{figure}
 
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.9\textwidth]{faban2_2_distr.jpg}
-  \caption{Časový priebeh vykonaných dotazov - aritmetický priemer všetkých iterácií}
+  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
 \end{figure}
 
 \textbf{Tretí test - 100 klientov}
 \begin{itemize}
 
 \item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 3208731\\
-Priemerný počet vykonaných dotazov za sekundu: 10695,770
+Celkový počet vykonaných požiadaviek: 3208731\\
+Priemerný počet vykonaných požiadaviek za sekundu: 10695,770
 
 \item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 3232719\\
-Priemerný počet vykonaných dotazov za sekundu: 10775,730
+Celkový počet vykonaných požiadaviek: 3232719\\
+Priemerný počet vykonaných požiadaviek za sekundu: 10775,730
 
 \item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 3220658\\
-Priemerný počet vykonaných dotazov za sekundu: 10735,527
+Celkový počet vykonaných požiadaviek: 3220658\\
+Priemerný počet vykonaných požiadaviek za sekundu: 10735,527
 
 \item[\textbf{4. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 3225564\\
-Priemerný počet vykonaných dotazov za sekundu: 10751,880
+Celkový počet vykonaných požiadaviek: 3225564\\
+Priemerný počet vykonaných požiadaviek za sekundu: 10751,880
 
 \item[\textbf{5. iterácia}]\ \\
-Test zlyhal, objavila sa chyba: Error initializing driver object. com.sun.fa-ban.driver.ConfigurationException: Only single host:port currently supported.\\ Chyba sa vyskytla len pri jednej iterácii a týka sa inicializácie testu Fabanom. Chyba nie je spôsobená užívateľom. \hypertarget{label}{}
+Test zlyhal, objavila sa chyba: Error initializing driver object. com.sun.fa-ban.driver.ConfigurationException: Only single host:port currently supported.\\ Chyba sa vyskytla len pri jednej iterácii a týka sa inicializácie testu Fabanom.\hypertarget{label}{}
 
 \item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných dotazov: 3221918\\
-Priemerný počet vykonaných dotazov za sekundu: 10739,727
+Celkový počet vykonaných požiadaviek: 3221918\\
+Priemerný počet vykonaných požiadaviek za sekundu: 10739,727
 
 \end{itemize}
 
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.9\textwidth]{faban2_3.jpg}
-  \caption{Celkový počet vykonaných dotazov}
+  \caption{Celkový počet vykonaných požiadaviek}
 \end{figure}
 
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.9\textwidth]{faban2_3_distr.jpg}
-  \caption{Časový priebeh vykonaných dotazov - aritmetický priemer všetkých iterácií}
+  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
 \end{figure}
 
 \textbf{Štvrtý test - 150 klientov}
 \begin{itemize}
 
 \item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 3189387\\
-Priemerný počet vykonaných dotazov za sekundu: 10631,290
+Celkový počet vykonaných požiadaviek: 3189387\\
+Priemerný počet vykonaných požiadaviek za sekundu: 10631,290
 
 \item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 3186480\\
-Priemerný počet vykonaných dotazov za sekundu: 10621,600
+Celkový počet vykonaných požiadaviek: 3186480\\
+Priemerný počet vykonaných požiadaviek za sekundu: 10621,600
 
 \item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 3184917\\
-Priemerný počet vykonaných dotazov za sekundu: 10616,390
+Celkový počet vykonaných požiadaviek: 3184917\\
+Priemerný počet vykonaných požiadaviek za sekundu: 10616,390
 
 \item[\textbf{4. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 3187227\\
-Priemerný počet vykonaných dotazov za sekundu: 10624,090
+Celkový počet vykonaných požiadaviek: 3187227\\
+Priemerný počet vykonaných požiadaviek za sekundu: 10624,090
 
 \item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 3192963\\
-Priemerný počet vykonaných dotazov za sekundu: 10643,210
+Celkový počet vykonaných požiadaviek: 3192963\\
+Priemerný počet vykonaných požiadaviek za sekundu: 10643,210
 
 \item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných dotazov: 3188194,8\\
-Priemerný počet vykonaných dotazov za sekundu: 10627,316
+Celkový počet vykonaných požiadaviek: 3188194,8\\
+Priemerný počet vykonaných požiadaviek za sekundu: 10627,316
 
 \end{itemize}
 
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.9\textwidth]{faban2_4.jpg}
-  \caption{Celkový počet vykonaných dotazov}
+  \caption{Celkový počet vykonaných požiadaviek}
 \end{figure}
 
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.9\textwidth]{faban2_4_distr.jpg}
-  \caption{Časový priebeh vykonaných dotazov - aritmetický priemer všetkých iterácií}
+  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
 \end{figure}
 
 \textbf{Piaty test - 200 klientov}
 \begin{itemize}
 
 \item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 3186355\\
-Priemerný počet vykonaných dotazov za sekundu: 10621,183
+Celkový počet vykonaných požiadaviek: 3186355\\
+Priemerný počet vykonaných požiadaviek za sekundu: 10621,183
 
 \item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 3206037\\
-Priemerný počet vykonaných dotazov za sekundu: 10686,790
+Celkový počet vykonaných požiadaviek: 3206037\\
+Priemerný počet vykonaných požiadaviek za sekundu: 10686,790
 
 \item[\textbf{3. iterácia}]\ \\
 Rovnaká chyba ako v \hyperlink{label}{piatej iterácii tretieho testu}.
 
 \item[\textbf{4. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 3187980\\
-Priemerný počet vykonaných dotazov za sekundu: 10626,600
+Celkový počet vykonaných požiadaviek: 3187980\\
+Priemerný počet vykonaných požiadaviek za sekundu: 10626,600
 
 \item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných dotazov: 3217781\\
-Priemerný počet vykonaných dotazov za sekundu: 10725,937
+Celkový počet vykonaných požiadaviek: 3217781\\
+Priemerný počet vykonaných požiadaviek za sekundu: 10725,937
 
 \item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných dotazov: 3199538,25\\
-Priemerný počet vykonaných dotazov za sekundu: 10665,128
+Celkový počet vykonaných požiadaviek: 3199538,25\\
+Priemerný počet vykonaných požiadaviek za sekundu: 10665,128
 
 \end{itemize}
 
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.9\textwidth]{faban2_5.jpg}
-  \caption{Celkový počet vykonaných dotazov}
+  \caption{Celkový počet vykonaných požiadaviek}
 \end{figure}
 
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.9\textwidth]{faban2_5_distr.jpg}
-  \caption{Časový priebeh vykonaných dotazov - aritmetický priemer všetkých iterácií}
+  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
 \end{figure}
 
+Z výsledkov testu je jasne vidieť, že Faban dosiahol najvyšší výkon počas testu s 50 klientmi. Testy so 100, 150 a 200 klientmi majú slabšie výsledky. Ako veľké negatívum hodnotím zlyhanie poslednej iterácie testu so 100 klientmi a zlyhanie 3. iterácie testu s 200 klientmi. Chybu som spozoroval už pri spúšťaní testov na nečisto. Vyskytuje sa úplne náhodne a nepodarilo sa mi zistiť, prečo k nej dochádza.
+\par Na druhej strane oproti základnému testu s jedným klientom klesol čas potrebný k dosiahnutiu maximálneho výkonu. V teste s 10 klientmi Faban potreboval len 10 sekúnd na dosiahnutie maximálneho výkonu, pričom rozdiel v počte požiadaviek tvoril len 8\%, kdežto v základnom teste to bolo až 20\%. Zvyšné modifikácie dokonca zaznamenali najvyšší výkon hneď pri štarte.
+
+
+
 \item Gatling
+
+\textbf{Prvý test - 10 klientov}
+\begin{itemize}
+
+\item[\textbf{1. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 1831121\\
+Priemerný počet vykonaných požiadaviek za sekundu: 6103,737
+
+\item[\textbf{2. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 1818769\\
+Priemerný počet vykonaných požiadaviek za sekundu: 6062,563
+
+\item[\textbf{3. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 1835757\\
+Priemerný počet vykonaných požiadaviek za sekundu: 6119,190
+
+\item[\textbf{4. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 1812333\\
+Priemerný počet vykonaných požiadaviek za sekundu: 6041,110
+
+\item[\textbf{5. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 1827221\\
+Priemerný počet vykonaných požiadaviek za sekundu: 6090,737
+
+\item[\textbf{Priemer}]\ \\
+Celkový počet vykonaných požiadaviek: 1822361\\
+Priemerný počet vykonaných požiadaviek za sekundu: 6074,537
+
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{gatling2_1.jpg}
+  \caption{Celkový počet vykonaných požiadaviek}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{gatling2_1_distr.jpg}
+  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
+\end{figure}
+
+\textbf{Druhý test - 50 klientov}
+\begin{itemize}
+
+\item[\textbf{1. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 1918599\\
+Priemerný počet vykonaných požiadaviek za sekundu: 6395,330
+
+\item[\textbf{2. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 1952562\\
+Priemerný počet vykonaných požiadaviek za sekundu: 6508,540
+
+\item[\textbf{3. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 1913446\\
+Priemerný počet vykonaných požiadaviek za sekundu: 6378,153
+
+\item[\textbf{4. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 1935923\\
+Priemerný počet vykonaných požiadaviek za sekundu: 6453,077
+
+\item[\textbf{5. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 1905032\\
+Priemerný počet vykonaných požiadaviek za sekundu: 6350,107
+
+\item[\textbf{Priemer}]\ \\
+Celkový počet vykonaných požiadaviek: 1928029\\
+Priemerný počet vykonaných požiadaviek za sekundu: 6426,763
+
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{gatling2_2.jpg}
+  \caption{Celkový počet vykonaných požiadaviek}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{gatling2_2_distr.jpg}
+  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
+\end{figure}
+
+\textbf{Tretí test - 100 klientov}
+\begin{itemize}
+
+\item[\textbf{1. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 2136292\\
+Priemerný počet vykonaných požiadaviek za sekundu: 7120,973
+
+\item[\textbf{2. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 2167595\\
+Priemerný počet vykonaných požiadaviek za sekundu: 7225,317
+
+\item[\textbf{3. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 2128423\\
+Priemerný počet vykonaných požiadaviek za sekundu: 7094,743
+
+\item[\textbf{4. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 2108157\\
+Priemerný počet vykonaných požiadaviek za sekundu: 7027,190
+
+\item[\textbf{5. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 2148207\\
+Priemerný počet vykonaných požiadaviek za sekundu: 7160,690
+
+\item[\textbf{Priemer}]\ \\
+Celkový počet vykonaných požiadaviek: 2140062,75\\
+Priemerný počet vykonaných požiadaviek za sekundu: 7133,543
+
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{gatling2_3.jpg}
+  \caption{Celkový počet vykonaných požiadaviek}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{gatling2_3_distr.jpg}
+  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
+\end{figure}
+
+\textbf{Štvrtý test - 150 klientov}
+\begin{itemize}
+
+\item[\textbf{1. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 2323968\\
+Priemerný počet vykonaných požiadaviek za sekundu: 7746,560
+
+\item[\textbf{2. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 2322686\\
+Priemerný počet vykonaných požiadaviek za sekundu: 7742,287
+
+\item[\textbf{3. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 2336059\\
+Priemerný počet vykonaných požiadaviek za sekundu: 7786,863
+
+\item[\textbf{4. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 2334234\\
+Priemerný počet vykonaných požiadaviek za sekundu: 7780,780
+
+\item[\textbf{5. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 2352479\\
+Priemerný počet vykonaných požiadaviek za sekundu: 7841,597
+
+\item[\textbf{Priemer}]\ \\
+Celkový počet vykonaných požiadaviek: 2333341,75\\
+Priemerný počet vykonaných požiadaviek za sekundu: 7777,806
+
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{gatling2_4.jpg}
+  \caption{Celkový počet vykonaných požiadaviek}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{gatling2_4_distr.jpg}
+  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
+\end{figure}
+
+\textbf{Piaty test - 200 klientov}
+\begin{itemize}
+
+\item[\textbf{1. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 2508025\\
+Priemerný počet vykonaných požiadaviek za sekundu: 8360,083
+
+\item[\textbf{2. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 2511472\\
+Priemerný počet vykonaných požiadaviek za sekundu: 8371,573
+
+\item[\textbf{3. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 2490477\\
+Priemerný počet vykonaných požiadaviek za sekundu: 8301,590
+
+\item[\textbf{4. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 2536607\\
+Priemerný počet vykonaných požiadaviek za sekundu: 8455,357
+
+\item[\textbf{5. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 2550135\\
+Priemerný počet vykonaných požiadaviek za sekundu: 8500,450
+
+\item[\textbf{Priemer}]\ \\
+Celkový počet vykonaných požiadaviek: 2526559,75\\
+Priemerný počet vykonaných požiadaviek za sekundu: 8421,866
+
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{gatling2_5.jpg}
+  \caption{Celkový počet vykonaných požiadaviek}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{gatling2_5_distr.jpg}
+  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
+\end{figure}
 
 \item Perfcake
 
@@ -777,7 +983,414 @@ Priemerný počet vykonaných dotazov za sekundu: 10665,128
 
 \item Faban
 
+\textbf{Prvý test - 5 znaková správa}
+\begin{itemize}
+
+\item[\textbf{1. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 6807453\\
+Priemerný počet vykonaných požiadaviek za sekundu: 22691,510
+
+\item[\textbf{2. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 6802899\\
+Priemerný počet vykonaných požiadaviek za sekundu: 22676,330
+
+\item[\textbf{3. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 6857271\\
+Priemerný počet vykonaných požiadaviek za sekundu: 22857,570
+
+\item[\textbf{4. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 6831598\\
+Priemerný počet vykonaných požiadaviek za sekundu: 22771,993
+
+\item[\textbf{5. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 6837934\\
+Priemerný počet vykonaných požiadaviek za sekundu: 22793,113
+
+\item[\textbf{Priemer}]\ \\
+Celkový počet vykonaných požiadaviek: 6827431\\
+Priemerný počet vykonaných požiadaviek za sekundu: 22758,103
+
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{faban3_1.jpg}
+  \caption{Celkový počet vykonaných požiadaviek}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{faban3_1_distr.jpg}
+  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
+\end{figure}
+
+\textbf{Druhý test - 1024 znaková správa (1 KB)}
+\begin{itemize}
+
+\item[\textbf{1. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 339326\\
+Priemerný počet vykonaných požiadaviek za sekundu: 1131,087
+
+\item[\textbf{2. iterácia}]\ \\
+Chyba, \hyperlink{label}{viď. test 2.3.5}.
+
+\item[\textbf{3. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 339615\\
+Priemerný počet vykonaných požiadaviek za sekundu: 1132,050
+
+\item[\textbf{4. iterácia}]\ \\
+Chyba, \hyperlink{label}{viď. test 2.3.5}.
+
+\item[\textbf{5. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 336776\\
+Priemerný počet vykonaných požiadaviek za sekundu: 1122,587
+
+\item[\textbf{Priemer}]\ \\
+Celkový počet vykonaných požiadaviek: 338572,3\\
+Priemerný počet vykonaných požiadaviek za sekundu: 1128,574
+
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{faban3_2.jpg}
+  \caption{Celkový počet vykonaných požiadaviek}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{faban3_2_distr.jpg}
+  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
+\end{figure}
+
+\textbf{Tretí test - 5120 znaková správa (5 KB)}
+\begin{itemize}
+
+\item[\textbf{1. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 68625\\
+Priemerný počet vykonaných požiadaviek za sekundu: 228,750
+
+\item[\textbf{2. iterácia}]\ \\
+Chyba, \hyperlink{label}{viď. test 2.3.5}.
+
+\item[\textbf{3. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 68748\\
+Priemerný počet vykonaných požiadaviek za sekundu: 229,160
+
+\item[\textbf{4. iterácia}]\ \\
+Chyba, \hyperlink{label}{viď. test 2.3.5}.
+
+\item[\textbf{5. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 68932\\
+Priemerný počet vykonaných požiadaviek za sekundu: 229,773
+
+\item[\textbf{Priemer}]\ \\
+Celkový počet vykonaných požiadaviek: 68768,3\\
+Priemerný počet vykonaných požiadaviek za sekundu: 229,228
+
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{faban3_3.jpg}
+  \caption{Celkový počet vykonaných požiadaviek}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{faban3_3_distr.jpg}
+  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
+\end{figure}
+
+\textbf{Štvrtý test - 51200 znaková správa (50 KB)}
+\begin{itemize}
+
+\item[\textbf{1. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 6794\\
+Priemerný počet vykonaných požiadaviek za sekundu: 22,647
+
+\item[\textbf{2. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 6743\\
+Priemerný počet vykonaných požiadaviek za sekundu: 22,477
+
+\item[\textbf{3. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 6752\\
+Priemerný počet vykonaných požiadaviek za sekundu: 22,507
+
+\item[\textbf{4. iterácia}]\ \\
+Chyba, \hyperlink{label}{viď. test 2.3.5}.
+
+\item[\textbf{5. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 6772\\
+Priemerný počet vykonaných požiadaviek za sekundu: 22,573
+
+\item[\textbf{Priemer}]\ \\
+Celkový počet vykonaných požiadaviek: 6765,3\\
+Priemerný počet vykonaných požiadaviek za sekundu: 22,551
+
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{faban3_4.jpg}
+  \caption{Celkový počet vykonaných požiadaviek}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{faban3_4_distr.jpg}
+  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
+\end{figure}
+
+\textbf{Piaty test - 512000 znaková správa (500 KB)}
+\begin{itemize}
+
+\item[\textbf{1. iterácia}]\ \\
+Chyba, \hyperlink{label}{viď. test 2.3.5}.
+
+\item[\textbf{2. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 610\\
+Priemerný počet vykonaných požiadaviek za sekundu: 2,033
+
+\item[\textbf{3. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 612\\
+Priemerný počet vykonaných požiadaviek za sekundu: 2,040
+
+\item[\textbf{4. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 613\\
+Priemerný počet vykonaných požiadaviek za sekundu: 2,043
+
+\item[\textbf{5. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 615\\
+Priemerný počet vykonaných požiadaviek za sekundu: 2,050
+
+\item[\textbf{Priemer}]\ \\
+Celkový počet vykonaných požiadaviek: 612,5\\
+Priemerný počet vykonaných požiadaviek za sekundu: 2,042
+
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{faban3_5.jpg}
+  \caption{Celkový počet vykonaných požiadaviek}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{faban3_5_distr.jpg}
+  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
+\end{figure}
+
+
 \item Gatling
+
+\textbf{Prvý test - 5 znaková správa}
+\begin{itemize}
+
+\item[\textbf{1. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 2578507\\
+Priemerný počet vykonaných požiadaviek za sekundu: 8595,023
+
+\item[\textbf{2. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 2606448\\
+Priemerný počet vykonaných požiadaviek za sekundu: 8688,160
+
+\item[\textbf{3. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 2609597\\
+Priemerný počet vykonaných požiadaviek za sekundu: 8698,657
+
+\item[\textbf{4. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 2516099\\
+Priemerný počet vykonaných požiadaviek za sekundu: 8386,997
+
+\item[\textbf{5. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 2586725\\
+Priemerný počet vykonaných požiadaviek za sekundu: 8622,417
+
+\item[\textbf{Priemer}]\ \\
+Celkový počet vykonaných požiadaviek: 2571944,75\\
+Priemerný počet vykonaných požiadaviek za sekundu: 8573,149
+
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{gatling3_1.jpg}
+  \caption{Celkový počet vykonaných požiadaviek}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{gatling3_1_distr.jpg}
+  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
+\end{figure}
+
+\textbf{Druhý test - 1024 znaková správa (1 KB)}
+\begin{itemize}
+
+\item[\textbf{1. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 334502\\
+Priemerný počet vykonaných požiadaviek za sekundu: 1115,007
+
+\item[\textbf{2. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 337257\\
+Priemerný počet vykonaných požiadaviek za sekundu: 1124,190
+
+\item[\textbf{3. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 337315\\
+Priemerný počet vykonaných požiadaviek za sekundu: 1124,383
+
+\item[\textbf{4. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 334833\\
+Priemerný počet vykonaných požiadaviek za sekundu: 1116,110
+
+\item[\textbf{5. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 336393\\
+Priemerný počet vykonaných požiadaviek za sekundu: 1121,310
+
+\item[\textbf{Priemer}]\ \\
+Celkový počet vykonaných požiadaviek: 335746,25\\
+Priemerný počet vykonaných požiadaviek za sekundu: 1119,154
+
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{gatling3_2.jpg}
+  \caption{Celkový počet vykonaných požiadaviek}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{gatling3_2_distr.jpg}
+  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
+\end{figure}
+
+\textbf{Tretí test - 5120 znaková správa (5 KB)}
+\begin{itemize}
+
+\item[\textbf{1. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 68448\\
+Priemerný počet vykonaných požiadaviek za sekundu: 228,160
+
+\item[\textbf{2. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 68762\\
+Priemerný počet vykonaných požiadaviek za sekundu: 229,207
+
+\item[\textbf{3. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 68519\\
+Priemerný počet vykonaných požiadaviek za sekundu: 228,397
+
+\item[\textbf{4. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 68745\\
+Priemerný počet vykonaných požiadaviek za sekundu: 229,150
+
+\item[\textbf{5. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 68579\\
+Priemerný počet vykonaných požiadaviek za sekundu: 228,597
+
+\item[\textbf{Priemer}]\ \\
+Celkový počet vykonaných požiadaviek: 68633,5\\
+Priemerný počet vykonaných požiadaviek za sekundu: 228,778
+
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{gatling3_3.jpg}
+  \caption{Celkový počet vykonaných požiadaviek}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{gatling3_3_distr.jpg}
+  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
+\end{figure}
+
+\textbf{Štvrtý test - 51200 znaková správa (50 KB)}
+\begin{itemize}
+
+\item[\textbf{1. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 6829\\
+Priemerný počet vykonaných požiadaviek za sekundu: 22,763
+
+\item[\textbf{2. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 6832\\
+Priemerný počet vykonaných požiadaviek za sekundu: 22,773
+
+\item[\textbf{3. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 6818\\
+Priemerný počet vykonaných požiadaviek za sekundu: 22,727
+
+\item[\textbf{4. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 6806\\
+Priemerný počet vykonaných požiadaviek za sekundu: 22,687
+
+\item[\textbf{5. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 6855\\
+Priemerný počet vykonaných požiadaviek za sekundu: 22,850
+
+\item[\textbf{Priemer}]\ \\
+Celkový počet vykonaných požiadaviek: 6830,5\\
+Priemerný počet vykonaných požiadaviek za sekundu: 22,768
+
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{gatling3_4.jpg}
+  \caption{Celkový počet vykonaných požiadaviek}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{gatling3_4_distr.jpg}
+  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
+\end{figure}
+
+\textbf{Piaty test - 512000 znaková správa (500 KB)}
+\begin{itemize}
+
+\item[\textbf{1. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 692\\
+Priemerný počet vykonaných požiadaviek za sekundu: 2,307
+
+\item[\textbf{2. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 692\\
+Priemerný počet vykonaných požiadaviek za sekundu: 2,307
+
+\item[\textbf{3. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 689\\
+Priemerný počet vykonaných požiadaviek za sekundu: 2,297
+
+\item[\textbf{4. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 693\\
+Priemerný počet vykonaných požiadaviek za sekundu: 2,310
+
+\item[\textbf{5. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 689\\
+Priemerný počet vykonaných požiadaviek za sekundu: 2,297
+
+\item[\textbf{Priemer}]\ \\
+Celkový počet vykonaných požiadaviek: 691,5\\
+Priemerný počet vykonaných požiadaviek za sekundu: 2,305
+
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{gatling3_5.jpg}
+  \caption{Celkový počet vykonaných požiadaviek}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{gatling3_5_distr.jpg}
+  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
+\end{figure}
+
+
 
 \item Perfcake
 
@@ -791,9 +1404,55 @@ Priemerný počet vykonaných dotazov za sekundu: 10665,128
 
 \item Faban
 
+Dokumentácia Fabanu neobsahovala žiadne informácie o testovaní JMS. S vynaložením nemalého úsilia sa mi podarilo nájsť na internete blog, ktorý popisoval nastavenie Fabanu, tak aby s ním bolo možné testovať JMS. Článok neobsahoval informácie o nastavení atribútov potrebných pre testovanie JMS. Nadpis článku naznačoval, že existuje pokračovanie, ktoré sa mi nepodarilo nájsť. Z toho usudzujem, že Faban nepodporuje testovanie JMS. Článok bol publikovaný 21.4.2009\cite{FabanBlog}.
+
 \item Gatling
 
+Gatling dokumentácia obsahuje nastavenie testovacieho scenára pre testovanie JMS. Po nastavení všetkých parametrov testu sa pri testovaní objavuje výnimka "{}User NULL"{} naznačujúca, že nie je možné identifikovať užívateľa, pomocou ktorého je možné pristupovať k JMS frontám JBoss AS servera. Meno a heslo užívateľa som nastavil v súlade s návodom a tieto údaje sú rovnaké, ako pri nástrojoch Apache JMeter a Perfcake, u ktorých testy fungujú. Návod je k dispozícii na stránke \url{http://gatling.io/docs/2.1.1/jms.html}.
+
 \item Perfcake
+
+Všetých päť iterácií JMS testu prebehlo bez problémov. Rozptyl medzi maximom a minimom je 2900 vykonaných požiadaviek.
+
+\begin{itemize}
+
+\item[\textbf{1. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 113714\\
+Priemerný počet vykonaných požiadaviek za sekundu: 394.867
+
+\item[\textbf{2. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 112162\\
+Priemerný počet vykonaných požiadaviek za sekundu: 413.784
+
+\item[\textbf{3. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 112527\\
+Priemerný počet vykonaných požiadaviek za sekundu: 388.142
+
+\item[\textbf{4. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 115062\\
+Priemerný počet vykonaných požiadaviek za sekundu: 397.234
+
+\item[\textbf{5. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 115012\\
+Priemerný počet vykonaných požiadaviek za sekundu: 377.893
+
+\item[\textbf{Priemer}]\ \\
+Celkový počet vykonaných požiadaviek: 113695.4\\
+Priemerný počet vykonaných požiadaviek za sekundu: 378,985	
+
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{perfcake4.jpg}
+  \caption{Celkový počet vykonaných požiadaviek}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{perfcake4_distr.jpg}
+  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
+\end{figure}
 
 \end{itemize}
 
@@ -805,7 +1464,89 @@ Priemerný počet vykonaných dotazov za sekundu: 10665,128
 
 \item Faban
 
+\begin{itemize}
+
+\item[\textbf{1. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 68286\\
+Priemerný počet vykonaných požiadaviek za sekundu: 227,620
+
+\item[\textbf{2. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 68590\\
+Priemerný počet vykonaných požiadaviek za sekundu: 228,633
+
+\item[\textbf{3. iterácia}]\ \\
+Chyba, \hyperlink{label}{viď. test 2.3.5}.
+
+\item[\textbf{4. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 67874\\
+Priemerný počet vykonaných požiadaviek za sekundu: 226,247
+
+\item[\textbf{5. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 68567\\
+Priemerný počet vykonaných požiadaviek za sekundu: 228,557
+
+\item[\textbf{Priemer}]\ \\
+Celkový počet vykonaných požiadaviek: 68329,25\\
+Priemerný počet vykonaných požiadaviek za sekundu: 227,764
+
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{faban5.jpg}
+  \caption{Celkový počet vykonaných požiadaviek}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{faban5_distr.jpg}
+  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
+\end{figure}
+
+
+
 \item Gatling
+
+\begin{itemize}
+
+\item[\textbf{1. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 68775\\
+Priemerný počet vykonaných požiadaviek za sekundu: 229,250
+
+\item[\textbf{2. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 68452\\
+Priemerný počet vykonaných požiadaviek za sekundu: 228,173
+
+\item[\textbf{3. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 68495\\
+Priemerný počet vykonaných požiadaviek za sekundu: 228,317
+
+\item[\textbf{4. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 68273\\
+Priemerný počet vykonaných požiadaviek za sekundu: 227,577
+
+\item[\textbf{5. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 68805\\
+Priemerný počet vykonaných požiadaviek za sekundu: 229,350
+
+\item[\textbf{Priemer}]\ \\
+Celkový počet vykonaných požiadaviek: 68560\\
+Priemerný počet vykonaných požiadaviek za sekundu: 228,533
+
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{gatling5.jpg}
+  \caption{Celkový počet vykonaných požiadaviek}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{gatling5_distr.jpg}
+  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
+\end{figure}
+
 
 \item Perfcake
 
@@ -818,6 +1559,60 @@ Priemerný počet vykonaných dotazov za sekundu: 10665,128
 \item Apache JMeter
 
 \item Faban
+
+\textbf{Bez úniku pamäte}
+\begin{itemize}
+
+\item[\textbf{1. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 818265\\
+Priemerný počet vykonaných požiadaviek za sekundu: 227,296
+
+\item[\textbf{2. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 823862\\
+Priemerný počet vykonaných požiadaviek za sekundu: 228,851
+
+\item[\textbf{3. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 818863\\
+Priemerný počet vykonaných požiadaviek za sekundu: 227,462
+
+\item[\textbf{Priemer}]\ \\
+Celkový počet vykonaných požiadaviek: 820330\\
+Priemerný počet vykonaných požiadaviek za sekundu: 227,869
+
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{faban6_no_leak.jpg}
+  \caption{Celkový počet vykonaných požiadaviek}
+\end{figure}
+
+\textbf{S únikom pamäte}
+\begin{itemize}
+
+\item[\textbf{1. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 822346\\
+Priemerný počet vykonaných požiadaviek za sekundu: 228,429
+
+\item[\textbf{2. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 817627\\
+Priemerný počet vykonaných požiadaviek za sekundu: 227,119
+
+\item[\textbf{3. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 818486\\
+Priemerný počet vykonaných požiadaviek za sekundu: 227,357
+
+\item[\textbf{Priemer}]\ \\
+Celkový počet vykonaných požiadaviek: 819486,3\\
+Priemerný počet vykonaných požiadaviek za sekundu: 227,635
+
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{faban6_leak.jpg}
+  \caption{Celkový počet vykonaných požiadaviek}
+\end{figure}
 
 \item Gatling
 
@@ -833,7 +1628,92 @@ Priemerný počet vykonaných dotazov za sekundu: 10665,128
 
 \item Faban
 
+\begin{itemize}
+
+\item[\textbf{1. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 8385444\\
+Priemerný počet vykonaných požiadaviek za sekundu: 27951,480
+
+\item[\textbf{2. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 8670415\\
+Priemerný počet vykonaných požiadaviek za sekundu: 28901,383
+
+\item[\textbf{3. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 8810458\\
+Priemerný počet vykonaných požiadaviek za sekundu: 29368,193
+
+\item[\textbf{4. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 8775981\\
+Priemerný počet vykonaných požiadaviek za sekundu: 29253,270
+
+\item[\textbf{5. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 8762981\\
+Priemerný počet vykonaných požiadaviek za sekundu: 29209,937
+
+\item[\textbf{Priemer}]\ \\
+Celkový počet vykonaných požiadaviek: 8681055,8\\
+Priemerný počet vykonaných požiadaviek za sekundu: 28936,853
+
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{faban7.jpg}
+  \caption{Celkový počet vykonaných požiadaviek}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{faban7_distr.jpg}
+  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
+\end{figure}
+
+
+
 \item Gatling
+
+
+
+\begin{itemize}
+
+\item[\textbf{1. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 3044179\\
+Priemerný počet vykonaných požiadaviek za sekundu: 10147,263
+
+\item[\textbf{2. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 2846062\\
+Priemerný počet vykonaných požiadaviek za sekundu: 9486,873
+
+\item[\textbf{3. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 2989634\\
+Priemerný počet vykonaných požiadaviek za sekundu: 9965,447
+
+\item[\textbf{4. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 3034939\\
+Priemerný počet vykonaných požiadaviek za sekundu: 10116,463
+
+\item[\textbf{5. iterácia}]\ \\
+Celkový počet vykonaných požiadaviek: 2979783\\
+Priemerný počet vykonaných požiadaviek za sekundu: 9932,610
+
+\item[\textbf{Priemer}]\ \\
+Celkový počet vykonaných požiadaviek: 2978919,4\\
+Priemerný počet vykonaných požiadaviek za sekundu: 9929,731
+
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{gatling7.jpg}
+  \caption{Celkový počet vykonaných požiadaviek}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.9\textwidth]{gatling7_distr.jpg}
+  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
+\end{figure}
+
 
 \item Perfcake
 
