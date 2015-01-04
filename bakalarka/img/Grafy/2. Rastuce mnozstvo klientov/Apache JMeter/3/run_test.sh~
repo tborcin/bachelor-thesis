@@ -1,0 +1,9 @@
+for i in 1 2 3 4 5
+do
+
+./restart_jboss.sh
+Nastroje/apache-jmeter-2.11/bin/jmeter -n -t 2/Apache\ JMeter/3/scenario_2.3.jmx -l 2/Apache\ JMeter/3/threads_results_2.3.$i.jtl > 2/Apache\ JMeter/3/report_2.3.$i;
+mv 2/Apache\ JMeter/3/performance_monitor.jtl 2/Apache\ JMeter/3/performance_monitor_2.3.$i.jtl
+echo "2.3.$i Apache JMeter test finished"
+
+done

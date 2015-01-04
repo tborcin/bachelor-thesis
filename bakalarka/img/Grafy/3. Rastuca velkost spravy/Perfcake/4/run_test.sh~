@@ -1,0 +1,8 @@
+for i in 1 2 3 4 5
+do
+
+./restart_jboss.sh
+Nastroje/perfcake-3.3/bin/perfcake.sh -s scenario_3.4 -sd $(pwd)/3/Perfcake/4 > 3/Perfcake/4/report_3.4.$i;
+echo "3.4.$i Perfcake test finished"
+
+done

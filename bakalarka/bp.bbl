@@ -1,26 +1,34 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{ComputingPower}
 W.~Garside.
 \newblock Computing power: capacity on demand.
 \newblock
   \url{www.computerweekly.com/feature/Computing-power-capacity-on-demand}.
-\newblock Navštívené: 22.6.2014.
+\newblock Navštívené: 26.12.2014.
 
 \bibitem{Sochor}
 J.~Sochor.
 \newblock {ÚVT MU} zpravodaj.
 \newblock \url{www.ics.muni.cz/bulletin/articles/61.html}.
-\newblock Navštívené: 22.6.2014.
+\newblock Navštívené: 22.12.2014.
 
 \bibitem{Art}
 Ian Molyneaux.
 \newblock {\em The Art of Application Performance Testing}.
 \newblock O’Reilly Media, Inc., Sebastopol, first edition edition, 2009.
+\newblock ISBN: 9780596520663.
+
+\bibitem{IntegratedApproach}
+B.M. Subraya.
+\newblock {\em Integrated Approach to Web Performance Testing: A Practitioneres
+  Guide}.
+\newblock IRM Press, Hershey, 2006.
+\newblock ISBN: 9781591407850.
 
 \bibitem{Apache}
 Apache~Software Foundation.
-\newblock Apache jmeter.
+\newblock {Apache JMeter}.
 \newblock \url{http://jmeter.apache.org/index.html}.
 \newblock Navštívené: 19.12.2014.
 
@@ -34,11 +42,31 @@ Gatling.
 \newblock \url{http://gatling.io/docs/2.1.1/}.
 \newblock Navštívené: 19.12.2014.
 
+\bibitem{Michalko}
+M.~Michalko.
+\newblock {PerfCakeIDEA}.
+\newblock \url{https://github.com/PerfCake/PerfCakeIDEA}.
+\newblock Navštívené: 19.12.2014.
+
+\bibitem{HTTP}
+R.~Fielding.
+\newblock {Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing}.
+\newblock \url{http://tools.ietf.org/html/rfc7230}.
+\newblock Navštívené: 13.12.2014.
+
+\bibitem{Wescott}
+Bob Wescott.
+\newblock {\em The Every Computer Performance Book: How to Avoid and Solve
+  Performance Problems on The Computers You Work With}.
+\newblock CreateSpace Independent Publishing Platform, first edition edition,
+  2013.
+\newblock ISBN: 1482657759.
+
 \bibitem{FabanBlog}
 Kim LiChong.
-\newblock How to write a jms faban driver (part one).
+\newblock {How to write a JMS Faban driver (Part One)}.
 \newblock
   \url{https://blogs.oracle.com/klc/entry/using_faban_as_an_asynchronous}.
-\newblock Navštívené: 22.6.2014.
+\newblock Navštívené: 22.12.2014.
 
 \end{thebibliography}

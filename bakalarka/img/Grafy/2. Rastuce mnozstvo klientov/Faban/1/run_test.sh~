@@ -1,0 +1,18 @@
+rm -rf 2/Faban/1/report*
+
+for i in 1 2 3 4 5
+do
+
+ssh $1@$2 "$3/testy/ssh_restart_jboss.sh $3 $2"
+
+./restart_faban.sh
+
+Nastroje/faban/bin/fabancli submit test test 2/Faban/1/scenario_2.1.xml
+
+sleep 110
+
+cp -r Nastroje/faban/output/$dir 2/Faban/1
+mv 2/Faban/1/$dir 2/Faban/1/report_2.1.$i
+echo "2.1.$i Faban test finished";
+
+done

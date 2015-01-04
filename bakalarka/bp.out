@@ -5,8 +5,8 @@
 \BOOKMARK [1][-]{section.2.3}{ Stresov\351 testy}{chapter.2}% 5
 \BOOKMARK [1][-]{section.2.4}{ Testy vytrvalosti}{chapter.2}% 6
 \BOOKMARK [1][-]{section.2.5}{ Testy \235picky}{chapter.2}% 7
-\BOOKMARK [1][-]{section.2.6}{ Konfiguracn\351 testy}{chapter.2}% 8
-\BOOKMARK [1][-]{section.2.7}{ Izolacn\351 testy}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.6}{ Izolacn\351 testy}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.7}{ Konfiguracn\351 testy}{chapter.2}% 9
 \BOOKMARK [0][-]{chapter.3}{Metodika porovn\341vania n\341strojov}{}% 10
 \BOOKMARK [0][-]{chapter.4}{N\341stroje}{}% 11
 \BOOKMARK [1][-]{section.4.1}{ Apache JMeter}{chapter.4}% 12
@@ -14,25 +14,25 @@
 \BOOKMARK [2][-]{subsection.4.1.2}{ Pou\236\355vanie}{section.4.1}% 14
 \BOOKMARK [2][-]{subsection.4.1.3}{ Dokument\341cia}{section.4.1}% 15
 \BOOKMARK [2][-]{subsection.4.1.4}{ Pou\236itelnost vo v\375vojovom prostred\355}{section.4.1}% 16
-\BOOKMARK [2][-]{subsection.4.1.5}{ Generovanie reportov}{section.4.1}% 17
+\BOOKMARK [2][-]{subsection.4.1.5}{ Generovanie v\375sledkov}{section.4.1}% 17
 \BOOKMARK [1][-]{section.4.2}{ Faban}{chapter.4}% 18
 \BOOKMARK [2][-]{subsection.4.2.1}{ In\235tal\341cia}{section.4.2}% 19
 \BOOKMARK [2][-]{subsection.4.2.2}{ Pou\236\355vanie}{section.4.2}% 20
 \BOOKMARK [2][-]{subsection.4.2.3}{ Dokument\341cia}{section.4.2}% 21
 \BOOKMARK [2][-]{subsection.4.2.4}{ Pou\236itelnost vo v\375vojovom prostred\355}{section.4.2}% 22
-\BOOKMARK [2][-]{subsection.4.2.5}{ Generovanie reportov}{section.4.2}% 23
+\BOOKMARK [2][-]{subsection.4.2.5}{ Generovanie v\375sledkov}{section.4.2}% 23
 \BOOKMARK [1][-]{section.4.3}{ Gatling}{chapter.4}% 24
 \BOOKMARK [2][-]{subsection.4.3.1}{ In\235tal\341cia}{section.4.3}% 25
 \BOOKMARK [2][-]{subsection.4.3.2}{ Pou\236\355vanie}{section.4.3}% 26
 \BOOKMARK [2][-]{subsection.4.3.3}{ Dokument\341cia}{section.4.3}% 27
 \BOOKMARK [2][-]{subsection.4.3.4}{ Pou\236itelnost vo v\375vojovom prostred\355}{section.4.3}% 28
-\BOOKMARK [2][-]{subsection.4.3.5}{ Generovanie reportov}{section.4.3}% 29
-\BOOKMARK [1][-]{section.4.4}{ Perfcake}{chapter.4}% 30
+\BOOKMARK [2][-]{subsection.4.3.5}{ Generovanie v\375sledkov}{section.4.3}% 29
+\BOOKMARK [1][-]{section.4.4}{ PerfCake}{chapter.4}% 30
 \BOOKMARK [2][-]{subsection.4.4.1}{ In\235tal\341cia}{section.4.4}% 31
 \BOOKMARK [2][-]{subsection.4.4.2}{ Pou\236\355vanie}{section.4.4}% 32
 \BOOKMARK [2][-]{subsection.4.4.3}{ Dokument\341cia}{section.4.4}% 33
 \BOOKMARK [2][-]{subsection.4.4.4}{ Pou\236itelnost vo v\375vojovom prostred\355}{section.4.4}% 34
-\BOOKMARK [2][-]{subsection.4.4.5}{ Generovanie reportov}{section.4.4}% 35
+\BOOKMARK [2][-]{subsection.4.4.5}{ Generovanie v\375sledkov}{section.4.4}% 35
 \BOOKMARK [0][-]{chapter.5}{Testy}{}% 36
 \BOOKMARK [1][-]{section.5.1}{ Testovan\341 aplik\341cia}{chapter.5}% 37
 \BOOKMARK [1][-]{section.5.2}{ Testovacie prostredie}{chapter.5}% 38
@@ -41,16 +41,17 @@
 \BOOKMARK [2][-]{subsection.5.4.1}{ Klient}{section.5.4}% 41
 \BOOKMARK [2][-]{subsection.5.4.2}{ Server}{section.5.4}% 42
 \BOOKMARK [1][-]{section.5.5}{ Probl\351my pri vytv\341ran\355 testov a testovan\355}{chapter.5}% 43
-\BOOKMARK [2][-]{subsection.5.5.1}{ Faban}{section.5.5}% 44
-\BOOKMARK [2][-]{subsection.5.5.2}{ Gatling}{section.5.5}% 45
-\BOOKMARK [1][-]{section.5.6}{ V\375sledky testov}{chapter.5}% 46
-\BOOKMARK [2][-]{subsection.5.6.1}{ Z\341kladn\375 test s jedn\375m klientom}{section.5.6}% 47
-\BOOKMARK [2][-]{subsection.5.6.2}{ Testy s rast\372cim poctom klientov}{section.5.6}% 48
-\BOOKMARK [2][-]{subsection.5.6.3}{ Testy s rast\372cou velkostou spr\341v}{section.5.6}% 49
-\BOOKMARK [2][-]{subsection.5.6.4}{ Z\341kladn\375 JMS test so 100 klientmi}{section.5.6}% 50
-\BOOKMARK [2][-]{subsection.5.6.5}{ Z\341kladn\375 test so 100 klientmi}{section.5.6}% 51
-\BOOKMARK [2][-]{subsection.5.6.6}{ Vytrvalostn\375 test}{section.5.6}% 52
-\BOOKMARK [2][-]{subsection.5.6.7}{ Test teoretickej priepustnosti n\341stroja}{section.5.6}% 53
-\BOOKMARK [0][-]{chapter.6}{Z\341ver}{}% 54
-\BOOKMARK [1][-]{section.6.1}{ Zhrnutie}{chapter.6}% 55
-\BOOKMARK [0][-]{appendix.A}{Obsah prilo\236en\351ho CD}{}% 56
+\BOOKMARK [2][-]{subsection.5.5.1}{ Apache JMeter}{section.5.5}% 44
+\BOOKMARK [2][-]{subsection.5.5.2}{ Faban}{section.5.5}% 45
+\BOOKMARK [2][-]{subsection.5.5.3}{ Gatling}{section.5.5}% 46
+\BOOKMARK [1][-]{section.5.6}{ V\375sledky testov}{chapter.5}% 47
+\BOOKMARK [2][-]{subsection.5.6.1}{ Z\341kladn\375 test s jedn\375m klientom}{section.5.6}% 48
+\BOOKMARK [2][-]{subsection.5.6.2}{ Testy s rast\372cim poctom klientov}{section.5.6}% 49
+\BOOKMARK [2][-]{subsection.5.6.3}{ Testy s rast\372cou velkostou spr\341v}{section.5.6}% 50
+\BOOKMARK [2][-]{subsection.5.6.4}{ Z\341kladn\375 JMS test so 100 klientmi}{section.5.6}% 51
+\BOOKMARK [2][-]{subsection.5.6.5}{ Z\341kladn\375 test so 100 klientmi}{section.5.6}% 52
+\BOOKMARK [2][-]{subsection.5.6.6}{ Vytrvalostn\375 test}{section.5.6}% 53
+\BOOKMARK [2][-]{subsection.5.6.7}{ Test teoretickej priepustnosti n\341stroja}{section.5.6}% 54
+\BOOKMARK [0][-]{chapter.6}{Z\341ver}{}% 55
+\BOOKMARK [1][-]{section.6.1}{ Zhrnutie}{chapter.6}% 56
+\BOOKMARK [0][-]{appendix.A}{Obsah prilo\236en\351ho CD}{}% 57

@@ -1,0 +1,8 @@
+for i in 1 2 3 4 5
+do
+
+ssh $1@$2 "$3/testy/ssh_restart_jboss.sh $3 $2"
+Nastroje/perfcake-4.0-SNAPSHOT/bin/perfcake.sh -s scenario_1 -sd $(pwd)/1/Perfcake/ > 1/Perfcake/report_1.$i;
+echo "1.$i Perfcake test finished"
+
+done

@@ -1,0 +1,30 @@
+package basic.scenario
+
+import io.gatling.core.Predef._
+import io.gatling.http.Predef._
+import scala.concurrent.duration._
+
+class Basic extends Simulation {
+
+  object Browse {
+
+	  val browse = during(60) {
+		  exec(http("request")
+			  .get("/generate:%205120"))
+	  }
+  }
+
+  val httpConf = http
+    .baseURL("http://localhost:8080/Bakalarka_last_version/webresources/webservice")
+    .acceptHeader("text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8")
+    .doNotTrackHeader("1")
+    .acceptLanguageHeader("en-US,en;q=0.5")
+    .acceptEncodingHeader("gzip, deflate")
+    .userAgentHeader("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/16.0")
+
+  val client = scenario("Client").exec(Browse.browse)
+
+  setUp(
+    client.inject(atOnceUsers(100))
+  ).protocols(httpConf)
+}

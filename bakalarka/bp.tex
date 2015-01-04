@@ -10,13 +10,13 @@
 \graphicspath{ {./img/} }
 %\usepackage{color}
 %\usepackage{url}
-%\sloppy
+\sloppy
 
 \newcommand\todo[1]{\textcolor{red}{#1}}
 \newcommand\underscore[1]{\underline{\hspace{8pt}}}
 
 
-\thesistitle{Moderní nástroje pro měření výkonu v praxi}
+\thesistitle{Moderní nástroje pro měření výkonu v~praxi}
 \thesissubtitle{Bakalárska práca}
 \thesisstudent{Tomáš Borčin}
 \thesiswoman{false}
@@ -37,12 +37,12 @@
 
 \begin{ThesisThanks}
 
-Rád by som sa poďakoval Mgr. Marekovi Grácovi, Ph.D.	za vedenie a rady poskytnuté pri písaní tejto práce. Veľká vďaka patrí aj Mgr. Martinovi Večeřovi a Ing. Pavlovi Macíkovi. V neposlednej rade ďakujem mojej rodine, hlavne mojim rodičom, Emílii a Ladislavovi za ich podporu pri štúdiu.
+Rád by som sa poďakoval Mgr. Marekovi Grácovi, Ph.D.	za vedenie a rady poskytnuté pri písaní tejto práce. Veľká vďaka patrí aj Mgr. Martinovi Večeřovi a Ing. Pavlovi Macíkovi. V~neposlednej rade ďakujem mojej rodine, hlavne mojim rodičom, Emílii a Ladislavovi za ich podporu pri štúdiu.
 
 \end{ThesisThanks}
 
 \begin{ThesisAbstract}
- Cílem práce je nastudovat a popsat moderní nástroje na testování výkonu aplikací a velmi detailně porovnat jejich vlastnosti (tj. funkcionalita, použitelnost, podpora v IDE, možnosti nastavení, generování reportů atd.). Student napíše jednoduchou aplikaci, která bude odpovídat na dotazy za použití několika protokolů (především WS, JMS, REST, HTTP), kterou nasadí na JBoss AS 7. Poté navrhne několik testovacích scénářů pro všechny nástroje a spoustí měření vyvinuté aplikace. Každé měření musí být provedeno několikrát a bude sledována spolehlivost výsledků. Student by se měl pokusit odhalit příčinu případných rozptylů ve výsledcích. Dále by měla být změřena teoretická propustnost samotného náastroje.
+ Cílem práce je nastudovat a popsat moderní nástroje na testování výkonu aplikací a velmi detailně porovnat jejich vlastnosti (tj. funkcionalita, použitelnost, podpora v~IDE, možnosti nastavení, generování reportů atd.). Student napíše jednoduchou aplikaci, která bude odpovídat na dotazy za použití několika protokolů (především WS, JMS, REST, HTTP), kterou nasadí na JBoss AS 7. Poté navrhne několik testovacích scénářů pro všechny nástroje a spoustí měření vyvinuté aplikace. Každé měření musí být provedeno několikrát a bude sledována spolehlivost výsledků. Student by se měl pokusit odhalit příčinu případných rozptylů ve výsledcích. Dále by měla být změřena teoretická propustnost samotného náastroje.
 \newline \newline
 Nástroje pro porovnání: 
 \begin{itemize}
@@ -60,60 +60,61 @@ performance testy, testovanie, porovnanie nástrojov, Apache JMeter, PerfCake, F
 \end{ThesisKeyWords}
 
 \tableofcontents
-\listoffigures
+%\listoffigures
 \MainMatter
 
 \chapter{Úvod}
 Obrovský rozvoj informačných technológií so sebou prináša zvyšovanie nárokov na
 výpočtový výkon \cite{ComputingPower}. Tento problém sa dá riešiť dvoma spôsobmi. Jednoduchým riešením 
-je neustále zvyšovanie systémových zdrojov spolu s rastúcimi požiadavkami. Treba 
-podotknúť, že toto riešenie je z dlhodobého hľadiska neefektívne, pretože investície do 
-systémových zdrojov budú s ďalším vývojom a údržbou systému rásť, kým neprekročia 
-únosnú hranicu a systém sa stane neudržateľným \cite{Sochor}. Prácnejším, ale o to efektívnejším 
+je neustále zvyšovanie systémových zdrojov spolu s~rastúcimi požiadavkami. Treba 
+podotknúť, že toto riešenie je z~dlhodobého hľadiska neefektívne, pretože investície do 
+systémových zdrojov budú s~ďalším vývojom a údržbou systému rásť, kým neprekročia 
+únosnú hranicu a systém sa stane neudržateľným \cite{Sochor}.
+\par Prácnejším, ale o~to efektívnejším 
 riešením je testovanie aplikácií a analýza ich výkonu \cite{Art}. Test výkonu aplikácie sa 
-uskutočňuje s cieľom zistiť, ako daná aplikácia pracuje pod určitou záťažou. Taktiež môže 
+uskutočňuje s~cieľom zistiť, ako daná aplikácia pracuje pod určitou záťažou. Taktiež môže 
 slúžiť na vyšetrovanie, meranie, potvrdzovanie alebo overovanie ďalších vlastností systému, 
 ako rozšíriteľnosť a efektívnosť využívania prostriedkov. Najčastejšie používanými testami 
 výkonu sú záťažové testy, únavové testy, testy výdrže, kulminačné testy, konfiguračné testy a separačné testy \cite{Art}.
-\newline
 \par
-Výber správneho nástroja na testovanie je často náročnou úlohou, pričom kriticky dôležitá funkcionalita závisí od rôznych faktorov. Testovací nástroj určený na občasné testovanie jednoduchej aplikácie nemusí  poskytovať detailné informácie o priebehu testov, avšak jednoduchosť používania a rýchlosť prípravy testov môže byť kritická. Toto zadanie môže spĺnať aj nástroj, ktorý nepodporuje najnovšie technológie a jeho vývoj prebieha oproti iným nástrojom veľmi pomaly. Naopak tomu môže byť vo firme s desiatkami zamestnancov, ktorá vyvíja nové aplikácie s použitím najmodernejších technológií. Tím skúsených testerov denne vykonávajúci množstvo testov kladie vysoké požiadavky na automatizáciu, dobrú organizáciu a presnosť testov. Výsledky testov generované v užívateľsky čitateľnej forme môžu byť prezentované vedeniu firmy bez nutnosti ďalšej úpravy. Pravidelná aktualizácia, aktívny vývoj a poskytovaná užívateľská podpora zohráva nemenej dôležitú rolu.
-\newline
+Výber správneho nástroja na testovanie je často náročnou úlohou, pričom kriticky dôležitá funkcionalita závisí od rôznych faktorov. Testovací nástroj určený na občasné testovanie jednoduchej aplikácie nemusí  poskytovať detailné informácie o~priebehu testov, avšak jednoduchosť používania a rýchlosť prípravy testov môže byť kritická. Toto zadanie môže spĺnať aj nástroj, ktorý nepodporuje najnovšie technológie a jeho vývoj prebieha oproti iným nástrojom veľmi pomaly. Naopak tomu môže byť vo firme s~desiatkami zamestnancov, ktorá vyvíja nové aplikácie s~použitím najmodernejších technológií. Tím skúsených testerov denne vykonávajúci množstvo testov kladie vysoké požiadavky na automatizáciu, dobrú organizáciu a presnosť testov. Výsledky testov generované v~užívateľsky čitateľnej forme môžu byť prezentované vedeniu firmy bez nutnosti ďalšej úpravy. Pravidelná aktualizácia, aktívny vývoj a poskytovaná užívateľská podpora zohráva nemenej dôležitú rolu.
 \par
-Úlohou tejto práce je porovnať nástroje používané k testovaniu výkonu aplikácii v praxi a poskytnúť tak čitateľovi prehľad pri výbere nástroja. V práci sú popísané klady a zápory jednotlivých nástrojov a čitateľ si na základe svojich kritérií može zvoliť nástroj, ktorý mu najviac vyhovuje.
+Úlohou tejto práce je porovnať nástroje používané k~testovaniu výkonu aplikácii v~praxi a poskytnúť tak čitateľovi prehľad pri výbere nástroja. V~práci sú popísané klady a zápory jednotlivých nástrojov a čitateľ si na základe svojich kritérií može zvoliť nástroj, ktorý mu najviac vyhovuje.
 
 \chapter{Testy výkonu}
-
 Testovanie je dôležitou súčasťou vývoja softvéru. Existuje mnoho testov, ktoré majú za účel odhaliť rôzne typy chýb. Spoločnosti vyvíjajúce softvér si veľmi dobre uvedomujú dôležitosť testovania a preto sú testy nedeliteľnou súčasťou životného cyklu vývoja softvéru. Napriek tomu sú testy výkonu softvéru podceňované a nie je im prikladaný dostatočný dôraz \cite{Art}.
 Testy výkonu sa delia na základné testy, záťažové testy, stresové testy, testy vytrvalosti, testy špičky, konfiguračné testy a izolačné testy.	
 
 \section{Základné testy}
-Základné testy určujú čas potrebný na vykonanie jednotlivých transakcií jedným klientom. Za účelom získania čo najpresnejších údajov je nutné, aby počas vykonávania testov systém nevykonával žiadne iné aktivity. Pomocou týchto informácií je možné zistiť, v akej miere klesol výkon systému s ohľadom na záťaž systému a počet klientov pracujúcich so systémom.
+Základné testy určujú čas potrebný na vykonanie jednotlivých transakcií jedným klientom. Za účelom získania čo najpresnejších údajov je nutné, aby počas vykonávania testov systém nevykonával žiadne iné aktivity. Pomocou týchto informácií je možné zistiť, v~akej miere klesol výkon systému s~ohľadom na záťaž systému a počet klientov pracujúcich so systémom.
 
 \section{Záťažové testy}
 Najpoužívanejším a najjednoduchším testom je záťažový test. Počas tohto testu je systém vystavený stálej záťaži, pričom je monitorovaná dostupnosť služieb, priepustnosť a čas odozvy. Tento test je najvernejšou reprezentáciou reálneho používania systému. Vkladanie a čítanie dát musí byť oneskorené tak, ako je tomu pri práci užívateľa.
 
 \section{Stresové testy}
-Stresové testy vystavujú aplikáciu rastúcej záťaži a tým spôsobia, že celá aplikácia alebo jej časť zlyhajú. Zlyhaním systému môže byť nedostupnosť celej aplikácie, jej služby alebo veľmi dlhý čas odozvy. Následne je možné určiť maximálnu únosnú záťaž systému. Znalosť limít systému je dôležitá pre budúci vývoj aplikácie. Maximálna záťaž systému by mala poskytovať dostatočnú rezervu v závislosti na spôsobe používania aplikácie a množstvo klientov, ktoré ju používa. 
+Stresové testy vystavujú aplikáciu rastúcej záťaži a tým spôsobia, že celá aplikácia alebo jej časť zlyhajú. Zlyhaním systému môže byť nedostupnosť celej aplikácie, jej služby alebo veľmi dlhý čas odozvy. Následne je možné určiť maximálnu únosnú záťaž systému. Znalosť limít systému je dôležitá pre budúci vývoj aplikácie. Maximálna záťaž systému by mala poskytovať dostatočnú rezervu v~závislosti na spôsobe používania aplikácie a množstvo klientov, ktoré ju používa. 
 
 \section{Testy vytrvalosti}
-Testy vytrvalosti podrobujú systém stálej očakávanej záťaži, pričom sú monitorované rôzne časti systému. Vďaka tomu je možné odhaliť problémy s pamäťou, neuvoľnené zdroje a celkovú degradáciu výkonu v čase. Je potrebné zabezpečiť, aby výkon časom neklesal, ale bol rovnaký ako pri spustení, prípadne sa zvyšoval. Cieľom testu je zistiť, ako sa systém správa pri stálom používaní, tak ako tomu bude po jeho nasadení do praxe. 
+Testy vytrvalosti podrobujú systém stálej očakávanej záťaži, pričom sú monitorované rôzne časti systému. Vďaka tomu je možné odhaliť problémy s~pamäťou, neuvoľnené zdroje a celkovú degradáciu výkonu v~čase. Je potrebné zabezpečiť, aby výkon časom neklesal, ale bol rovnaký ako pri spustení, prípadne sa zvyšoval. Cieľom testu je zistiť, ako sa systém správa pri stálom používaní, tak ako tomu bude po jeho nasadení do praxe. 
 
 \section{Testy špičky}
-Počas testu špičky dochádza k náhlemu zvýšeniu záťaže. Úlohou tohto testu je zistiť ako systém reaguje na náhle zmeny záťaže.
-
-\section{Konfiguračné testy}
-Konfiguračné testy pozorujú, ako zmeny konfigurácie ovplyvňujú výkon, jednotlivé komponenty a celkové správanie systému. Zmeny konfigurácie môžu systému pomôcť lepšie zvládať zmeny záťaže.
+Počas testu špičky dochádza k~náhlemu zvýšeniu záťaže. Úlohou tohto testu je zistiť ako systém reaguje na náhle zmeny záťaže.
 
 \section{Izolačné testy}
 Izolačné testy pomáhajú odhaliť chybné komponenty opakovaným spúšťaním neúspešných testov.
 
+\section{Konfiguračné testy}
+Konfiguračné testy pozorujú, ako zmeny konfigurácie ovplyvňujú výkon, jednotlivé komponenty a celkové správanie systému. Zmeny konfigurácie môžu systému pomôcť lepšie zvládať zmeny záťaže\cite{IntegratedApproach}.
+
+
 
 \chapter{Metodika porovnávania nástrojov}
 
+V nasledujúcom zozname popisujem postup práce a definujem kategórie, ktoré zohľadňujem pri porovnávaní a hodnotení nástrojov.
+
 \begin{enumerate}
 
-\item Inštalácia, oboznámenie sa s nástrojmi, študovanie dokumentácie, inštalácia nástrojov do vývojových prostredí IntelliJ IDEA, NetBeans Eclipse, nástroja Apache Maven a nastavovanie generovania reportov, pričom sa kladie dôraz na jednoduchosť používania nástroja.
+\item Inštalácia, oboznámenie sa s~nástrojmi, študovanie dokumentácie, inštalácia nástro-jov do vývojových prostredí IntelliJ IDEA, NetBeans Eclipse, nástroja Apache Maven a nastavovanie generovania výsledkov, pričom sa kladie dôraz na jednoduchosť používania nástroja.
 
 \item Návrh a vytvorenie testov, nastavenie generovania výsledkov. Dôraz sa kladie na jednoduchosť a rýchlosť vytvorenia testovacích scenárov, ako aj prínos dokumentácie pri ich tvorbe a riešení vzniknutých problémov.
 
@@ -121,7 +122,7 @@ Izolačné testy pomáhajú odhaliť chybné komponenty opakovaným spúšťaní
 
 \item Spustenie testov. Sem patrí monitorovanie testov a sledovanie chýb, ktoré sa pri testovaní vyskytli. 
 
-\item Vyhodnotenie výsledkov. Tu je dôležité si všímať nie len výkon nástrojov, ale aj spoľahlivosť výsledkov. Veľký rozptyl vo výsledkoch znamená nie veľmi relevantné výsledky.
+\item Vyhodnotenie výsledkov. Tu je dôležité si všímať nie len výkon nástrojov, ale aj spoľahlivosť výsledkov. Veľký rozdiel vo výsledkoch znamená znižuje relevantnosť výsledkov.
 
 \item Konečné zhodnotenie nástrojov na základe hodnotiacich kritérií.
 
@@ -130,126 +131,127 @@ Izolačné testy pomáhajú odhaliť chybné komponenty opakovaným spúšťaní
 \chapter{Nástroje}
 
 \section{Apache JMeter}
-Apache JMeter je písaný v jazyku Java a dostupný pod open-source licenciou. Nástroj poskytuje podporu pre testovanie statických, ako aj dynamických zdrojov a podporuje širokú škálu protokolov \cite{Apache}. Najnovšia verzia 2.12 je dostupná na stránke \url{www.jmeter.apache.org/download_jmeter.cgi}. Ja som používal verziu 2.11.
+Apache JMeter je písaný v~jazyku Java a dostupný pod open-source licenciou. Nástroj poskytuje podporu pre testovanie statických, ako aj dynamických zdrojov a podporuje širokú škálu protokolov \cite{Apache}. Najnovšia verzia 2.12 je dostupná na stránke \url{www.jmeter.apache.org/download_jmeter.cgi}. Ja som používal verziu 2.11.
 
 \subsection{Inštalácia}
-Keďže je Apache JMeter aplikácia písaná v jazyku Java, vyžaduje k svojmu behu systém s nainštalovaným Java behovým prostredím JRE\footnote{Java Runtime Environment(JRE) je prostredie umožnujúce spúšťať Java aplikácie.} verzie 6 a vyššej. V operačnom systéme Ubuntu je možné Apache JMeter nainštalovať aj cez softvérové centrum alebov termináli pomocou príkazu \textit{sudo apt-get install jmeter}. Inštalácia cez softvérové centrum alebo pomocou príkazu \textit{sudo apt-get install jmeter} je jednoduchšia, ale obsahuje dva roky starú verziu 2.8.1.
+Keďže je Apache JMeter aplikácia písaná v~jazyku Java, vyžaduje k~svojmu behu systém s~nainštalovaným Java behovým prostredím JRE\footnote{Java Runtime Environment(JRE) je prostredie umožnujúce spúšťať Java aplikácie.} verzie 6 a vyššej. V~operačnom systéme Ubuntu 14.04 LTS je možné Apache JMeter nainštalovať aj cez softvérové centrum alebo v termináli pomocou príkazu \textit{sudo apt-get install jmeter}. Inštalácia cez softvérové centrum alebo pomocou príkazu \textit{sudo apt-get install jmeter} je jednoduchšia, ale obsahuje dva roky starú verziu 2.8.1. 
 
 \subsection{Používanie}
-Spustenie programu je možné z príkazového riadka pomocou príkazu \textit{jmeter.bat} pre Windows a \textit{./jmeter} pre Linux a MacOS, prípadne univerzálnym príkazom \textit{java -jar ApacheJMeter.jar}. Otvorí sa užívateľské rozhranie, v ktorom je možné vytvárať testy a nastavovať generovanie reportov. Dokumentácia nepopisuje vytváranie testov v textovom editore tak, ako pri zvyšných nástrojoch, preto je nutné k tvorbe testov používať toto rozhranie. Spúšťanie testov v prebieha spustením  príkazu \textit{./jmeter} s prepínačom "{}-n"{}, ktorý zabezpečí, aby sa test spustil bez grafického rozhrania.
+Spustenie programu je možné z~príkazového riadka pomocou príkazu \textit{jmeter.bat} pre Windows a \textit{./jmeter} pre Linux a MacOS, prípadne univerzálnym príkazom \textit{java -jar ApacheJMeter.jar}. Otvorí sa užívateľské rozhranie, v~ktorom je možné vytvárať testy a nastavovať generovanie výsledkov. Dokumentácia nepopisuje vytváranie testov v~textovom editore tak, ako pri zvyšných nástrojoch, preto je nutné k~tvorbe testov používať toto rozhranie. Spúšťanie testov v~prebieha spustením  príkazu \textit{./jmeter} s~prepínačom "{}-n"{}, ktorý zabezpečí, aby sa test spustil bez grafického rozhrania.
 
 \subsection{Dokumentácia}
-Užívateľská dokumentácia je dostupná na stránke \url{http://jmeter.apache.org/usermanual/index.html}. Apache JMeter je pomerne robustný nástroj, čo sa odrazilo aj na rozsahu dokumentácie. Ako pozitívum hodnotím wiki stránku \url{http://wiki.apache.org/jmeter/}, ktorá obsahuje tutoriály, popisuje rozšírenia a tiež poskytuje informácie pre vývojárov. Nachádza sa tu aj tutoriál popisujúci nastavenie Apache JMetra pre používanie v Eclipse IDE. Pozitívom je aj FAQ stránka \url{http://wiki.apache.org/jmeter/JMeterFAQ} ponúkajúca odpovede na najčastejšie problémy, s ktorými  sa môže užívateľ pri používaní Apache JMetra stretnúť. Dokumentácia je napriek svojej rozsiahlosti prehľadná a pre každý typ testu poskytuje samostatnú kapitolu popisujúcu vytvorenie testu od úplného začiatku.
+Užívateľská dokumentácia je dostupná na stránke \url{http://jmeter.apache.org/usermanual/index.html}. Apache JMeter je pomerne robustný nástroj, čo sa odrazilo aj na rozsahu dokumentácie. Ako pozitívum hodnotím wiki stránku \url{http://wiki.apache.org/jmeter/}, ktorá obsahuje návody, popisuje rozšírenia a tiež poskytuje informácie pre vývojárov. Nachádza sa tu aj návod popisujúci nastavenie Apache JMetra pre používanie v~Eclipse IDE. Pozitívom je aj FAQ stránka \url{http://wiki.apache.org/jmeter/JMeterFAQ} ponúkajúca odpovede na najčastejšie problémy, s~ktorými  sa môže užívateľ pri používaní Apache JMetra stretnúť. Dokumentácia je napriek svojej rozsiahlosti prehľadná a pre každý typ testu poskytuje samostatnú kapitolu popisujúcu vytvorenie testu od úplného začiatku.
 
 \subsection{Použiteľnosť vo vývojovom prostredí}
 \textbf{Eclipse}
 \newline
-Tutoriál \url{http://wiki.apache.org/jmeter/JMeterAndEclipseHowTo} z wiki stránky čitateľa hneď v úvode presmeruje na stránku \url{http://people.apache.org/~mkostrze/jmeter-eclipse/jmeter-eclipse.html}, ktorá bola naposledy upravená 10.03.2004. Stránka odkazuje na neexistujúce zdroje a nepodarilo sa mi podľa nej nastaviť Apache JMeter tak, aby sa dal jednoducho použiť v Eclipse IDE verzie 4.4.1.
+Návod \url{http://wiki.apache.org/jmeter/JMeterAndEclipseHowTo} z~wiki strán-ky čitateľa hneď v~úvode presmeruje na stránku \url{http://people.apache.org/~mkostrze/jmeter-eclipse/jmeter-eclipse.html}, ktorá bola naposledy upravená 10.03.2004. Stránka odkazuje na neexistujúce zdroje a nepodarilo sa mi podľa nej nastaviť Apache JMeter tak, aby sa dal jednoducho použiť v~Eclipse IDE verzie 4.4.1.
 \newline
 
 \noindent\textbf{NetBeans}
 \newline
-Apache JMeter doplnok je možné do NetBeans IDE nainštalovať v menu Nástroje (Tools) $\rightarrow$ Doplnky (Plugins). V okne doplnkov je potrebné vybrať panel Dostupných doplnkov (Available Plugins), vyhľadať JMeter doplnok a spustiť inštaláciu. Následne je možné do projektu pridať nový JMeter plán. Doplnok vytvorí v adresári projektu nový priečinok "jmeter", ktorý obsahuje jednoduchý návrh testu. V okne služieb vznikne nová služba Generátory záťaže (Load Generators) obsahujúca generátor JMeter, ktorému je nutné priradiť testovací plán. Testy je možné spustiť samostatne alebo automaticky pri kompilácii projektu.
+Apache JMeter doplnok je možné do NetBeans IDE nainštalovať v~menu Nástroje (Tools) $\rightarrow$ Doplnky (Plugins). V~okne doplnkov je potrebné vybrať panel Dostupných doplnkov (Available Plugins), vyhľadať JMeter doplnok a spustiť inštaláciu. Následne je možné do projektu pridať nový JMeter plán. Doplnok vytvorí v~adresári projektu nový priečinok "jmeter", ktorý obsahuje jednoduchý návrh testu. V~okne služieb vznikne nová služba Generátory záťaže (Load Generators) obsahujúca generátor JMeter, ktorému je nutné priradiť testovací plán. Testy je možné spustiť samostatne alebo automaticky pri kompilácii projektu.
 \newline
 
 \noindent\textbf{IntelliJ IDEA}
 \newline
-Doplnok pre IntelliJ IDEA je nutné stiahnuť zo stránky \url{https://plugins.jetbrains.com/plugin/7013}.  V IntelliJ IDEA v menu Nastavenia (Settings) $\rightarrow$ IDE nastavenia (IDE Settings) $\rightarrow$ Doplnky (Plugins) vyberieme možnosť Nainštalovať doplnok z disku (Install plugin from disk). Po dokončení inštalácie a reštartovaní IDE je nutné nastaviť v menu Nastavenia $\rightarrow$ Nastavenia projektu (Project settings) $\rightarrow$ JMeter domovský adresár pre Apache JMeter. Následne je možné do projektu vložiť JMeter súbor a v IDE ho aj upravovať. Po spustení testovacieho súboru sa otvorí okno Apache JMeter, v ktorom je možné spustiť testy.
+Doplnok pre IntelliJ IDEA je nutné stiahnuť zo stránky \url{https://plugins.jetbrains.com/plugin/7013}.  V~IntelliJ IDEA v~menu Nastavenia (Settings) $\rightarrow$ IDE nastavenia (IDE Settings) $\rightarrow$ Doplnky (Plugins) vyberieme možnosť Nainštalovať doplnok z~disku (Install plugin from disk). Po dokončení inštalácie a reštartovaní IDE je nutné nastaviť v~menu Nastavenia $\rightarrow$ Nastavenia projektu (Project settings) $\rightarrow$ JMeter domovský adresár pre Apache JMeter. Následne je možné do projektu vložiť JMeter súbor a v~IDE ho aj upravovať. Po spustení testovacieho súboru sa otvorí okno Apache JMeter, v~ktorom je možné spustiť testy.
 \newline
 
-\newpage
-\noindent\textbf{Apache Maven\footnote{Apache Maven je softvér určený na automatizáciu tvorby aplikácií.}}
+\noindent\textbf{Apache Maven\footnote{Apache Maven je softvér určený na riadienie životného cyklu zostavovania aplikácií.}}
 \newline
-Chýbajúci doplnok pre Eclipse IDE je možné nahradiť doplnkom pre Maven. Návod je k dispozícii na wiki stránke Apache JMeter \url{https://wiki.apache.org/jmeter/JMeterMavenPlugin}. Po nastavení doplnku a vytvorení JMeter testovacích scenárov sa tieto testy spúšťajú automaticky pri kompilácii projektu.
+Chýbajúci doplnok pre Eclipse IDE je možné nahradiť doplnkom pre Maven. Návod je k~dispozícii na wiki stránke Apache JMeter \url{https://wiki.apache.org/jmeter/JMeterMavenPlugin}. Po nastavení doplnku a vytvorení JMeter testovacích scenárov sa tieto testy spúšťajú automaticky pri kompilácii projektu.
 
-\subsection{Generovanie reportov}
-Apache JMeter poskytuje širokú škálu spôsobov, pomocou ktorých je možné monitorovať priebeh testov. Monitor zaznamenávajúci využitie procesora a pamäte RAM nie je súčasťou Apache JMeter, ale je poskytovaný zdarma ako rozšírenie. Inštalácia doplnku prebieha skopírovaním knižnice JMeterPlugins-Standard.jar do adresára lib/ext, ktorý sa nachádza v domovskom adresári nástroja. Následne je nutné nastaviť aj Apache agenta, ktorý bude na strane servera monitorovať využitie procesora a pamäte. Adresár obsahujúci agenta je nutné priložiť k serveru tak, aby bolo možné pri štarte servera spustiť aj agenta, ktorý sa štartuje spustením skriptu startAgent.sh. Agent používa na komunikáciu port číslo 4444.
+\subsection{Generovanie výsledkov}
+Apache JMeter poskytuje širokú škálu spôsobov, pomocou ktorých je možné monitorovať priebeh testov. Monitor zaznamenávajúci využitie procesora a pamäte RAM nie je súčasťou Apache JMeter, ale je poskytovaný zdarma ako rozšírenie. Inštalácia doplnku prebieha skopírovaním knižnice JMeterPlugins-Standard.jar do adresára lib/ext, ktorý sa nachádza v~domovskom adresári nástroja. Následne je nutné nastaviť aj Apache agenta, ktorý bude na strane servera monitorovať využitie procesora a pamäte. Adresár obsahujúci agenta je nutné priložiť k~serveru tak, aby bolo možné pri štarte servera spustiť aj agenta, ktorý sa štartuje spustením skriptu startAgent.sh. Agent používa na komunikáciu port číslo 4444.
 
 \newpage
 \section{Faban}
-Faban je napísaný v jazyku Java a jeho licencia je open-source. Skladá sa z dvoch hlavných komponent: Faban Driver Framework a Faban Harness. Driver Framework slúži na definovanie záťaže, riadenie životného cyklu a nastavenie reportovania. Faban Harness poskytuje užívateľské rozhranie k spúšťaniu a kontrolovaniu testov, generovaniu výsledkov a ukladaniu naplánovaných testov do fronty \cite{Faban}. Aktuálna verzia  Fabanu je 1.2 a dá sa získať na stránke projeku \url{www.faban.org/}. Používam túto verziu Fabanu. Faban sa nachádza aj na GitHub-e: \url{www.github.com/akara/faban}.
+Faban je napísaný v~jazyku Java a jeho licencia je open-source. Skladá sa z~dvoch hlavných komponent: Faban Driver Framework a Faban Harness. Driver Framework slúži na definovanie záťaže, riadenie životného cyklu a nastavenie výpisu výsledkov. Faban Harness poskytuje užívateľské rozhranie k~spúšťaniu a kontrolovaniu testov, generovaniu výsledkov a ukladaniu naplánovaných testov do fronty \cite{Faban}. Aktuálna verzia  Fabanu je 1.2 a dá sa získať na stránke projeku \url{www.faban.org/}. Používam túto verziu Fabanu. Faban sa nachádza aj na GitHub-e: \url{www.github.com/akara/faban}.
 
 \subsection{Inštalácia}
 Faban vyžaduje plnú JDK\footnote{Java Development Kit (JDK) je vývojová platforma pre programovací jazyk Java. Súčasťou balíka JDK sú komponenty a nástroje umožňujúce vývoj Java aplikácií a JRE umožňujúce ich spúšťanie.} inštaláciu verzie 1.5 a vyššej. Nutnosť inštalácie JDK hodnotím ako negatívum. Najnovšia verzia programu sa nachádza na stránke \url{www.faban.org/download.html}.
 
 \subsection{Používanie}
-Najskôr je nutné spustiť Faban Master, ktorý sa spúšťa v Linuxe pomocou príkazu \textit{./startup.sh}, pre Windows príkazom \textit{startup-using-launcher.bat}. Súbory sa nachádzajú v priečinku master/bin a je nutné ich spustiť cez príkazový riadok, pretože po spustení program vypíše adresu, na ktorej beží Faban server. Túto adresu je nutné zadať do prehliadača. Otvorí sa rozhranie, v ktorom je nutné nastaviť vytvorený ovládač definujúci základné parametre testu. Následne je možné upravovať, spúšťať, ukončovať testy a prezerať si vygenerované výsledký testov. Syntax pre spúšťanie testov z príkazového riadku je \textit{FABAN\underscore{}HOME/bin/fabancli submit benchmark profile /configuration/run.xml}, kde FABAN\underscore{}HOME je adresár obsahujúci Faban, fabancli je skript umožňujúci interakciu s Faban Harness. Prvý argument spúšťaného skriptu definuje príkaz, ktorý sa má vykonať. V tomto prípade sa má zaregistrovať nový test. Druhý argument určuje ovládač použitý k spúšťaniu testov, nasledujúci argument určuje profil použitý k spusteniu testov a posledným argumentom je konfiguračný súbor, ktorý obsahuje základné informácie o teste, teda dĺžku testu, počet klientov a verziu Javy použitú v testoch.
+Najskôr je nutné spustiť Faban Master, ktorý sa spúšťa v~Linuxe pomocou príkazu \textit{./startup.sh}, pre Windows príkazom \textit{startup-using-launcher.bat}. Súbory sa nachádzajú v~priečin-ku master/bin a je nutné ich spustiť cez príkazový riadok, pretože po spustení program vypíše adresu, na ktorej beží Faban server. Túto adresu je nutné zadať do prehliadača. Otvorí sa rozhranie, v~ktorom je nutné nastaviť vytvorený ovládač definujúci základné parametre testu. Následne je možné upravovať, spúšťať, ukončovať testy a prezerať si vygenerované výsledký testov. Syntax pre spúšťanie testov z~príkazového riadku je \textit{FABAN\underscore{}HOME/bin/fabancli submit benchmark profile /configuration/run.xml}, kde FABAN\underscore{}-HOME je adresár obsahujúci Faban, fabancli je skript umožňujúci interakciu s~Faban Harness. Prvý argument spúšťaného skriptu definuje príkaz, ktorý sa má vykonať. V~tomto prípade sa má zaregistrovať nový test. Druhý argument určuje ovládač použitý k~spúšťaniu testov, nasledujúci argument určuje profil použitý k~spusteniu testov a posledným argumentom je konfiguračný súbor, ktorý obsahuje základné informácie o~teste, teda dĺžku testu, počet klientov a verziu Javy použitú v~testoch.
 
 \subsection{Dokumentácia}
-Stručný tutoriál popisujúci inštaláciu a spustenie prvých testov je dostupný na stránke \url{http://faban.org/docs/QuickStartTutorial.html}. Návod popisujúci vytváranie záťaže je k dispozícii na stránke \url{http://faban.org/docs/CreatingWorkloadTutorial.html}. Ďalšie návody sú k dispozícii na stránke \url{http://faban.org/1.2/docs/index.html}.
+Stručný návod popisujúci inštaláciu a spustenie prvých testov je dostupný na stránke \url{http://faban.org/docs/QuickStartTutorial.html}. Návod popisujúci vytvára-nie záťaže je k~dispozícii na stránke \url{http://faban.org/docs/CreatingWorkloadTutorial.html}. Ďalšie návody sú k~dispozícii na stránke \url{http://faban.org/1.2/docs/index.html}.
 
 \subsection{Použiteľnosť vo vývojovom prostredí}
 Žiadne doplnky pre vývojové prostredia Eclipse, NetBeans, IntelliJ IDEA a nástroj Maven som nenašiel.
 
-\subsection{Generovanie reportov}
-Vytváranie reportov a logovacích súborov prebieha automaticky. Pri štarte testu dostane každý test identifikačný reťazec, ktorý sa skladá z názvu profilu použitého pri testovaní, bodky, čísla a velkého písmena. Číslo a písmeno slúži ako jednoznačný identifikátor testu a Faban ho generuje automaticky. Výsledky testu je možné zobraziť v grafickom prostredí Faban Harness. V menu View Results je nutné vybrať test identifikovaný identifikačným reťazcom, čím sa zobrazí stručný report. Detailnejšie výsledky sú k dispozícii v hornom menu v záložkách Detailed Results, Run Log a Statistics. Výsledky testov sa ukladajú do adresára output, ktorý sa nachádza v adresári Fabanu. Pre každý test Faban vytvára adresár, ktorého názov je zhodný s identifikačným reťazcom testu a do tohto adresára ukladá všetky reporty a logy, ktoré patria k danému testu.
+\subsection{Generovanie výsledkov}
+Vytváranie výsledkov a logovacích súborov prebieha automaticky. Pri štarte testu dostane každý test identifikačný reťazec, ktorý sa skladá z~názvu profilu použitého pri testovaní, bodky, čísla a velkého písmena. Číslo a písmeno slúži ako jednoznačný identifikátor testu a Faban ho generuje automaticky. Výsledky testu je možné zobraziť v~grafickom prostredí Faban Harness. V~menu View Results je nutné vybrať test identifikovaný identifikačným reťazcom, čím sa zobrazí stručný výpis výsledku. Detailnejšie výsledky sú k~dispozícii v~hornom menu v~záložkách Detailed Results, Run Log a Statistics. Výsledky testov sa ukladajú do adresára output, ktorý sa nachádza v~adresári Fabanu. Pre každý test Faban vytvára adresár, ktorého názov je zhodný s~identifikačným reťazcom testu a do tohto adresára ukladá všetky výsledky a logy, ktoré patria k~danému testu.
 
 \newpage
 \section{Gatling}
-Gatling je open-source, podobne ako všetky predchádzajúce nástroje. Kým predchádzajúce nástroje boli písané výhradne, alebo z veľkej časti v jazyku Java, Gatling je vyvíjaný v jazyku Scala. Gatling ako jediný nástroj nepoužíva jazyk XML\footnote{Extensible Markup Language je obecný značkovací jazyk vyvinutý a štandardizovaný konzorciom W3C.} pre písanie testovacích scenárov. Scenáre sú písané v jazyku Scala. Jadro nástroja nie je závislé na konkrétnom protokole a je ľahko rozšíriteľné. V súčasnosti poskytuje podporu pre HTTP a JMS protokol \cite{Gatling}. Stránka projektu \url{www.gatling-tool.org/} je veľmi jednoduchá a obsahuje len pár odkazov, vačšinou na GitHub stránku projektu \url{www.github.com/excilys/gatling}.
+Gatling je open-source, podobne ako všetky predchádzajúce nástroje. Kým predchádza-júce nástroje boli písané výhradne, alebo z~veľkej časti v~jazyku Java, Gatling je vyvíjaný v~jazyku Scala, ktorý beží v tom istom virtuálnom stroji, ako Java a preto je nevyhnutné ju mať nainštalovanú. Gatling ako jediný nástroj nepoužíva jazyk XML\footnote{Extensible Markup Language je všeobecný značkovací jazyk vyvinutý a štandardizovaný konzorciom W3C.} pre písanie testovacích scenárov. Scenáre sú písané v~jazyku Scala. Jadro nástroja nie je závislé na konkrétnom protokole a je ľahko rozšíriteľné. V~súčasnosti poskytuje podporu pre HTTP a JMS protokol \cite{Gatling}. Stránka projektu \url{www.gatling-tool.org/} je veľmi jednoduchá a obsahuje len pár odkazov, vačšinou na GitHub stránku projektu \url{www.github.com/excilys/gatling}.
 
 \subsection{Inštalácia}
 Staré verzie programu sa nachádzajú na stránke \url{www.github.com/excilys/gatling/wiki/Downloads}. Najnovšia stabilná verzia 2.1.2 je dostupná na stránke \url{http://gatling.io/download/}. Nachádza sa tu aj verzia 2.2.0-SNAPSHOT, ktorá je vo vývoji. Ja používam verziu 2.0.1. Základným predpokladom pre používanie programu Gatling je JDK verzie 6, pričom sa odporúča mať nainštalovanú najnovšiu verziu JDK.
 
 \subsection{Používanie}
-Program je možné spustiť v príkazovom riadku príkazom \textit{./gatling.sh} pre Linux a príkazom \textit{gatling.bat} pre Windows. Spúšťacie skripty sa nachádzajú v priečinku bin. Gatling nemá grafické rozhranie, preto testy vytváram v textovom editore podľa dokumentácie. Spúšťanie prebieha
+Program je možné spustiť v~príkazovom riadku príka-zom \textit{./gatling.sh} pre Linux a príka-zom \textit{gatling.bat} pre Windows. Spúšťacie skripty sa nachádzajú v~priečinku bin. Gatling nemá grafické rozhranie, preto testy vytváram v~textovom editore podľa dokumentácie. Spúšťa-nie prebieha
 
 \subsection{Dokumentácia}
-Zoznam užívateľských manuálov je k dispozícii na stránke \url{http://gatling.io/docs/2.0.1/}. Nachádza sa tu stručný a prehľadný návod popisujúci inštaláciu a spustenie prvých testov, ako aj pokročilejšie tutoriály detailne popisujúce nastavenie nástroja a vytváranie testov. Dokumentácia je prehľadná, dobre sa v nej orientuje a pozitívom je aj vzhľad, ktorý je kvalitne spracovaný.
+Zoznam užívateľských manuálov je k~dispozícii na stránke \url{http://gatling.io/docs/2.0.1/}. Nachádza sa tu stručný a prehľadný návod popisujúci inštaláciu a spustenie prvých testov, ako aj pokročilejšie návody detailne popisujúce nastavenie nástroja a vytváranie testov. Dokumentácia je prehľadná, dobre sa v~nej orientuje a pozitívom je aj vzhľad, ktorý je kvalitne spracovaný.
 
 
 \subsection{Použiteľnosť vo vývojovom prostredí}
 \textbf{Eclipse}, \textbf{NetBeans}, \textbf{IntelliJ IDEA}
 \newline
-Gatling neposkytuje podporu pomocou samostatných doplnkov pre jednotlivé vývojové prostredia. Integrácia Gatlingu je realizovaná pomocou Maven buildovacieho nástroja, ktorý tieto vývojové prostredia podporujú.
+Gatling neposkytuje podporu pomocou samostatných doplnkov pre jednotlivé vývojové prostredia. Integrácia Gatlingu je realizovaná pomocou Apache Maven nástroja, ktorý tieto vývojové prostredia podporujú.\\
 
-\newpage
 \noindent \textbf{Maven}
 \newline
 Dokumentácia obsahuje sekciu Extensions, ktorá popisuje nastavenie Maven Plugin a Maven Archetype.
-\newline Maven Plugin je možné použiť v každom projekte, ktorý využíva Maven ako buildovací nástroj. Maven je možné použiť v Eclipse, IntelliJ IDEA, ako aj NetBeans. Pri nastavovaní Maven konfiguračného súboru podľa stránky \url{http://gatling.io/docs/2.0.1/extensions/maven_plugin.html} je nutné zmeniť hodnotu \textit{io.gatling} v elemente \textit{groupId} na hodnotu \textit{io.gatling.highcharts}, pretože závislosť (Dependency) s hodnotou \textit{io.gatling} v maven repozitári nebola k dispozícii.
+\par Maven Plugin je možné použiť v~každom projekte, ktorý využíva Maven ako nástroj pre správu tvorby aplikácií. Maven je možné použiť v~Eclipse, IntelliJ IDEA, ako aj NetBeans. Pri nastavovaní Maven konfiguračného súboru podľa stránky \url{http://gatling.io/docs/2.0.1/extensions/maven_plugin.html} je nutné zmeniť hodnotu \textit{io.gat-ling} v~elemente \textit{groupId} na hodnotu \textit{io.gatling.highcharts}, pretože závislosť (Dependency) s~hodnotou \textit{io.gatling} v~maven repozitári nebola k~dispozícii.
 \newline
 \newline
-Gatling je možné pomocou Maven Archetype iba do vývojových prostredí podporujúcich jazyk Scala a obsahujúcich Maven. Aj keď testované vývojové prostredia neobsahujú natívnu podporu jazyka Scala je možné túto funkcionalitu implementovať pomocou doplnkov dostupných pre každé vývojové prostredie. Manuál popisujúci integráciu Gatling do vývojového prostredia pomocou Maven Archetype sa nachádza na stránke \url{http://gatling.io/docs/2.0.1/extensions/maven_archetype.html}.
+\par Gatling je možné pomocou Maven Archetype iba do vývojových prostredí podporujúcich jazyk Scala a obsahujúcich Maven. Aj keď testované vývojové prostredia neobsahujú natívnu podporu jazyka Scala je možné túto funkcionalitu implementovať pomocou doplnkov dostupných pre každé vývojové prostredie. Manuál popisujúci integráciu Gatling do vývojového prostredia pomocou Maven Archetype sa nachádza na stránke \url{http://gatling.io/docs/2.0.1/extensions/maven_archetype.html}.
 \newline
 
-\subsection{Generovanie reportov}
-Po spustení testu sú výsledky priebežne vypisované do terminálu a zároveň sa vytvorí adresár, ktorý umožňuje zobraziť výsledky v prehľadnej grafickej podobe. Adresár obsahuje aj logovací súbor, ktorý zaznamenáva výsledok každej pre každú vykonanú požiadavku. Výsledky som z terminálu presmeroval do súboru a pri spúšťaní testu nastavujem umiestnenie adresára s výsledkami na adresár, v ktorom sa spúšťa daný test.
+\subsection{Generovanie výsledkov}
+Po spustení testu sú výsledky priebežne vypisované do terminálu a zároveň sa vytvorí adresár, ktorý umožňuje zobraziť výsledky v~prehľadnej grafickej podobe. Adresár obsahuje aj logovací súbor, ktorý zaznamenáva výsledok každej pre každú vykonanú požiadavku. Výsledky som z~terminálu presmeroval do súboru a pri spúšťaní testu nastavujem umiestnenie adresára s~výsledkami na adresár, v~ktorom sa spúšťa daný test.
 
 \newpage
-\section{Perfcake}
-PerfCake je open-source nástroj písaný v jazyku Java. V súčasnosti je k dispozícii verzia 3.3, ktorú aj používam. Dátum vydania verzie 4.0 je naplánovaný na 20.3.2015. Stránka projektu: \url{www.perfcake.org/}. Github: \url{www.github.com/PerfCake/PerfCake}. Na stránke \url{www.github.com/PerfCake} sú dostupné pluginy pre Maven, IntelliJ IDEA, Eclipse a rôzne ukážkové testovacie scenáre. 
+\section{PerfCake}
+PerfCake je open-source nástroj písaný v~jazyku Java. V~súčasnosti je k~dispozícii verzia 3.3, ktorú aj používam. Dátum vydania verzie 4.0 je naplánovaný na 20.3.2015. Stránka projektu: \url{www.perfcake.org}. Github: \url{www.github.com/PerfCake/PerfCake}. Na stránke \url{www.github.com/PerfCake} sú dostupné pluginy pre Maven, IntelliJ IDEA, Eclipse a rôzne ukážkové testovacie scenáre. 
 
 \subsection{Inštalácia}
-Základným predpokladom pre používanie PerfCake je systém s Java Runtime Environment verzie 7 alebo vyššej. Tiež je nutné mať správne nastavenú \$JAVA\_{}HOME premennú prostredia. Pre operačné systémy Windows a Linux je na stránke \url{www.perfcake.org/download/} pripravená binárna distribúcia, ktorú je možné používať hneď po stiahnutí a rozbalení archívu. Užívatelia operačného systému Mac si musia stiahnuť zdrojový kód a skompilovať ho. Týmto je program pripravený na používanie. Inštalácia je veľmi jednoduchá, prebehla bez komplikácií a zaberie len pár minút.
+Základným predpokladom pre používanie PerfCake je systém s~Java Runtime Environment verzie 7 alebo vyššej. Tiež je nutné mať správne nastavenú \$JAVA\_{}HOME premennú prostredia. Pre operačné systémy Windows a Linux je na stránke \url{www.perfcake.org/download/} pripravená binárna distribúcia, ktorú je možné používať hneď po stiahnutí a rozbalení archívu. Užívatelia operačného systému Mac si musia stiahnuť zdrojový kód a skompilovať ho. Týmto je program pripravený na používanie. Inštalácia je veľmi jednoduchá, prebehla bez komplikácií a zaberie len pár minút.
 
 \subsection{Používanie}
-Práca s programom prebieha prostredníctvom príkazoveho riadka. V systéme Windows spustíme PerfCake príkazom \textit{perfcake.bat}, v systémoch Linux a MacOS \textit{./perfcake.sh}. Po spustení týchto príkazov sa zobrazia argumenty, ktoré je možné používať pri spúšťaní programu.
+Práca s~programom prebieha prostredníctvom príkazoveho riadka. V~systéme Windows spustíme PerfCake príkazom \textit{perfcake.bat}, v~systémoch Linux a MacOS \textit{./perfcake.sh}. Po spustení týchto príkazov sa zobrazia argumenty, ktoré je možné používať pri spúšťaní programu.
 
 \subsection{Dokumentácia}
-Užívateľská dokumentácia sa nachádza na stránke \url{www.perfcake.org/docs/perfcake-user-guide.pdf}. Skladá sa zo siedmich kapitol, v ktorých popisuje architektúru, vytváranie scenárov, generovanie záťaže, posielanie správ, generovanie reportov, validáciu a rozšírenia PerfCake. Pre každú komponentu testu obsahuje jednoduchý príklad.
+Užívateľská dokumentácia sa nachádza na stránke \url{www.perfcake.org/docs/perfcake-user-guide.pdf}. Skladá sa zo siedmich kapitol, v~ktorých popisuje architektúru, vytváranie scenárov, generovanie záťaže, posielanie správ, generovanie výsledkov, validáciu a rozšírenia PerfCake. Pre každú komponentu testu obsahuje jednoduchý príklad.
 
 \subsection{Použiteľnosť vo vývojovom prostredí}
 \textbf{Eclipse}\\
-Perfcake obsahuje doplnok pre vývojové prostredie Eclipse Kepler. Doplnok je možné nainštalovať cez Eclipse Marketplace v menu Help. Doplnok obsahuje aj jednoduché užívateľské prostredie, pomocou ktorého je možné vytvárať testy.
+PerfCake obsahuje doplnok PerfClipse pre vývojové prostredie Eclipse Kepler. Doplnok je možné nainštalovať cez Eclipse Marketplace v~menu Help. Doplnok obsahuje aj jednoduché užívateľské prostredie, pomocou ktorého je možné vytvárať testy. PerfClipse vytvoril v rámci svojej záverečnej práce Jakub Knetl. Archív práce je k dispozícii na stránke: \url{https://is.muni.cz/auth/th/396062/fi_b/?lang=cs}.\\
 
-\textbf{Apache Maven}
-Doplnok pre Maven a návod k jeho inštalácii je k dispozícii na stránke \url{https://github.com/PerfCake/PerfCakeMavenPlugin}. Maven doplnok nahrádza chýbajúce doplnky pre vývojové prostredia NetBeans a IntelliJ IDEA.
+\noindent\textbf{IntelliJ IDEA}\\
+IntelliJ IDEA doplnok PerfCakeIDEA je dostupný na stránke \url{https://github.com/PerfCake/PerfCakeIDEA}. Pre inštaláciu doplnku je potrebné najskôr stiahnuť archív \url{http://download.jetbrains.com/idea/ideaIU-14.0.2.zip} do Maven repozitára, zostaviť z príkazovej riadky príkazom \textit{mvn package} a nakoniec nainštalovať v programe IntelliJ IDEA v menu Súbor (File) $\rightarrow$ Nastavenia (Settings) $\rightarrow$ IDE Settings (Nastavenia IDE) $\rightarrow$ Doplnky (Plugins) $\rightarrow$ Nainštalovať doplnok z disku... (Install plugin from disk...)\cite{Michalko}.\\
 
-\subsection{Generovanie reportov}
-V prípade nástroja Perfcake sú všetky informácie vypisované do príkazového riadku v časových intervaloch, ktoré sa nastavujú v testovacích scenároch. Reporty som vytvoril presmerovaním výstupu z terminálu do súboru. Všetky informácie sú prehľadne umiestnené v jednom súbore.
+\noindent\textbf{Apache Maven}\\
+Doplnok pre Maven a návod k~jeho inštalácii je k~dispozícii na stránke \url{https://github.com/PerfCake/PerfCakeMavenPlugin}. Maven doplnok nahrádza chýbajúce doplnky pre vývojové prostredia NetBeans a IntelliJ IDEA.
+
+\subsection{Generovanie výsledkov}
+V~prípade nástroja PerfCake sú všetky informácie vypisované do príkazového riadku v~časových intervaloch, ktoré sa nastavujú v~testovacích scenároch. Výsledky som vytvoril presmerovaním výstupu z~terminálu do súboru. Všetky informácie sú prehľadne umiestnené v~jednom súbore. Okrem toho je možné PerfCake nastaviť tak, aby výpis generoval do súbora s príponou \textit{.csv}.
 
 \chapter{Testy}
 
 \section{Testovaná aplikácia}
-K vytvoreniu testovanej aplikácie som použil programovací jazyk Java vo verzii 7 a ako vývojové prostredie NetBeans 8.0.1. Aplikácia sa skladá z dvoch častí: webových služieb a triedy obsluhujúcej Java Message Services (ďalej len JMS). Webové služby som naimplementoval pomocou Java aplikačného programovacieho rozhrania pre REST\footnote{Representational state transfer je abstraktný architektúrny vzor pre distribuované prostredie.} webové služby, ktoré sa v skratke označuje ako JAX-RS. Aplikácia pozostáva zo siedmich webových služieb, ktoré sú volané pomocou HyperText Transfer Protocol (ďalej len HTTP) protokolu. HTTP je protokol umožňujúci prenos dokumentov vo formáte značkovacieho jazyka HyperText Markup Language (HTML).
+K~vytvoreniu testovanej aplikácie som použil programovací jazyk Java, konkrétne JDK vo verzii 7 a ako vývojové prostredie NetBeans 8.0.1. Aplikácia sa skladá z~dvoch častí: webových služieb a triedy obsluhujúcej Java Message Services (ďalej len JMS). Webové služby som naimplementoval pomocou Java aplikačného programovacieho rozhrania pre REST\footnote{Representational state transfer je abstraktný architektúrny vzor pre distribuované prostredie.} webové služby, ktoré sa v~skratke označuje ako JAX-RS. Aplikácia pozostáva zo siedmich webových služieb, ktoré sú volané pomocou HyperText Transfer Protocol (ďalej len HTTP). HTTP je protokol umožňujúci prenos dokumentov\cite{HTTP}.
 \par Druhá časť aplikácie implementuje JMS rozhranie pre posielanie správ medzi dvomi klientami. Testovacie nástroje posielajú správy do fronty a tieto správy sú preposielané do druhej fronty, odkiaľ správu vyberie testovací nástroj.
-\par Webová služba main prijíma na vstupe reťazec znakov a za použitia zvyšných webových služieb vypíše na výstup pôvodný reťazec, otočený reťazec, dĺžku reťazca, počet samohlások, spoluhlások, číslic a nakoniec veľkosť pôvodného reťazca v bytoch. Pre účely testov som službu upravil tak, aby po zadaní reťazca "{}generate: x" vygenerovala reťazec o dĺžke x znakov, pričom každý vygenerovaný znak má veľkosť jeden bajt. Veľkosťou správy rozumieme veľkosť vygenerovaného reťazca.
-\par Služba memoryLeak sa od služby main líši len v tom, že simuluje únik pamäte. Simuláciu som naprogramoval pomocou mapy, ktorá nemá naimplementované metódy equals a hashCode. Správne naprogramovaná mapa musí mať tieto metódy korektne naimplementované, pretože pomocou nich rozhoduje, či sa vkladaná hodnota v mape už nachádza. Bez týchto metód moja mapa nedokáže detekovať duplicity a preto do mapy vkladá stále nové a nové hodnoty, a tým sa vytvorí únik pamäte. Službu používam len pri vytrvalostných testoch, ktoré sa skladajú z dvoch častí: Bez memory leaku a S memory leakom. Pri testovaní Bez memory leaku používajú testy službu main a pri testovaní S memory leakom volajú službu memoryLeak.
-\par Poslednou priamo volanou službou je echo, ktorú používam pri testovaní teoretickej priepustnosti jednotlivých nástrojov. Táto služba vracia jednoduchý reťazec "{}echo", vďaka čomu dokáže server veľmi rýchlo vrátiť odpoveď a tým sa teoretické hrdlo fľaše presunie od služby k testovaným nástrojom. Hrdlo fľaše v softvérovom inžinierstve označuje tú časť systému, ktorá výrazne limituje priepustnosť celého systému.
+\par Webová služba \textit{main} prijíma na vstupe reťazec znakov a za použitia zvyšných webových služieb vypíše na výstup pôvodný reťazec, otočený reťazec, dĺžku reťazca, počet samohlások, spoluhlások, číslic a nakoniec veľkosť pôvodného reťazca v~bytoch. Pre účely testov som službu upravil tak, aby po zadaní reťazca "{}generate: x" vygenerovala reťazec o~dĺžke x znakov, pričom každý vygenerovaný znak má veľkosť jeden bajt. Veľkosťou správy rozumieme veľkosť vygenerovaného reťazca.
+\par Služba \textit{memoryLeak} sa od služby \textit{main} líši len v~tom, že simuluje únik pamäte. Simuláciu som naprogramoval pomocou mapy, ktorá nemá naimplementované metódy equals a hashCode. Správne naprogramovaná mapa musí mať tieto metódy korektne naimplementované, pretože pomocou nich rozhoduje, či sa vkladaná hodnota v~mape už nachádza. Bez týchto metód moja mapa nedokáže detekovať duplicity a preto do mapy vkladá stále nové a nové hodnoty. Tým sa vytvorí únik pamäte. Službu používam len pri vytrvalostných testoch, ktoré sa skladajú z~dvoch častí: Bez memory leaku a S~memory leakom. Pri testovaní Bez memory leaku používajú testy službu \textit{main} a pri testovaní S~memory leakom volajú službu \textit{memoryLeak}.
+\par Poslednou priamo volanou službou je \textit{echo}, ktorú používam pri testovaní teoretickej priepustnosti jednotlivých nástrojov. Táto služba vracia jednoduchý reťazec "{}echo", vďaka čomu dokáže server veľmi rýchlo vrátiť odpoveď a tým sa teoretické úzke hrdlo (Bottleneck) presunie od služby k~testovaným nástrojom. Úzke hrdlo (Bottleneck) v~softvérovom inžinierstve označuje tú časť systému, ktorá má najnižšiu priepustnosť zo všetkých častí prenosovej sústavy a tým výrazne limituje priepustnosť celého systému\cite{Wescott}.
 
 \section{Testovacie prostredie}
-K testovniu sú použité dva samostatné počítače. Aplikácia je nasadená na aplikačnom serveri JBoss Application Server 7.1.1.Final "{}Brontes". Server beží na počítači Acer Aspire 4830TG s procesorom Intel Core i5-2410 a 8GB RAM pamäťou. Na počítači je nainštalovaná 64-bitová verzia operačného systému Ubuntu 14.04 LTS. Generovanie záťaže prebieha na počítači \todo{RED HAT PC, alebo moj PC}.
+K~testovniu som použil dva samostatné počítače. Aplikáciu som nasadil na aplikačý server JBoss Application Server 7.1.1.Final "{}Brontes". Server beží na počítači Acer Aspire 4830TG s~procesorom Intel Core i5-2410 a 8GB RAM pamäťou. Na počítači je nainštalovaná 64-bitová verzia operačného systému Ubuntu 14.04 LTS. Generovanie záťaže prebieha na počítači \todo{RED HAT PC, alebo moj PC}.
 
 \newpage
 \section{Testy}
@@ -258,108 +260,117 @@ Pre potreby porovnania nástrojov som navrhol 7 typov testov. Medzi jednotlivým
 
 \begin{enumerate}
 
-\item \textbf{Základný test s jedným klientom}
+\item \textbf{Základný test s~jedným klientom}
 \newline
 Prvý test má za úlohu simulovať maximálnu možnú záťaž systému jedným klientom, pričom je vykonávaný po dobu piatich minút. Na základe tohto testu je možné sledovať efektivitu generovania maximálnej záťaže, generovanie výsledkov a spotrebu zdrojov jedným klientom.
 \newline
 
-\item \textbf{Testy s rastúcim počtom klientov}
+\item \textbf{Testy s~rastúcim počtom klientov}
 \newline
-K simulácii stresového typu testu slúži postupné zvyšovanie nárokov na systém. Test sa preto skladá zo série testov, pričom rastie množstvo klientov využívajúcich systém. Klienti zasielajú správy o veľkosti 100 znakov po dobu piatich minút. Je spustených päť druhov testov, z nich každý paťkrát, celkovo je spustených dvadsaťpäť testov pre každý nástroj. Množstvo klientov v testoch je: desať, päťdesiat, sto, stopäťdesiat a dvesto. Test slúži k identifikácii optimálneho množstva klientov využívajúcich systém a monitorovaniu efektivity nástrojov pri rôznych počtoch klientov.
+K~simulácii stresového typu testu slúži postupné zvyšovanie nárokov na systém. Test sa preto skladá zo série testov, pričom rastie množstvo klientov využívajúcich systém. Klienti zasielajú správy o~veľkosti 100 znakov po dobu piatich minút. Je spustených päť druhov testov, z~nich každý paťkrát, celkovo je spustených dvadsaťpäť testov pre každý nástroj. Množstvo klientov v~testoch je: 10, 50, 100, 150 a 200. Test slúži k~identifikácii optimálneho množstva klientov využívajúcich systém a monitorovaniu efektivity nástrojov pri rôznych počtoch klientov.
 \newline
 
-\item \textbf{Testy s rastúcou veľkosťou správ}
+\item \textbf{Testy s~rastúcou veľkosťou správ}
 \newline
-Stresový typ testu je možné nasimulovať aj pomocou rastúcej veľkosti generovaných správ pri fixnom počte klientov. Podobne ako v predchazajúcom prípade sa test skladá zo série testov, pričom sa postupne zväčšuje veľkosť správ. Dĺžka každého testu je päť minút. Zasielaných je päť druhov správ pre každý testovaný nástroj. Počet klientov v každom teste je 50 a veľkosti  správ sú: 5 znakov, 1024 znakov (1 KB), 5120 znakov (5 KB), 51200 znakov (50 KB) a 512000 znakov (500 KB). Veľkosťou správy myslím dĺžku reťazca, ktorý generuje server.
+Stresový typ testu je možné nasimulovať aj pomocou rastúcej veľkosti generovaných správ pri fixnom počte klientov. Podobne ako v~predchazajúcom prípade sa test skladá zo série testov, pričom sa postupne zväčšuje veľkosť správ. Dĺžka každého testu je päť minút. Zasielaných je päť druhov správ pre každý testovaný nástroj. Počet klientov v~každom teste je 50 a veľkosti  správ sú: 5 znakov, 1024 znakov (1 KB), 5120 znakov (5 KB), 51200 znakov (50 KB) a 512000 znakov (500 KB). Veľkosťou správy myslím dĺžku reťazca, ktorý generuje server.
 \newline
 
 \newpage
 \item \textbf{Základný JMS test so 100 klientmi}
 \newline
-Počas JMS testu nástroje zasielajú správy do vstupnej JMS fronty na serveri. Server správy preposiela do výstupnej fronty, odkiaľ ich vyberajú nástroje. Test prebieha po dobu 5 minút. Hlavným účelom testu je overiť schopnosť nástrojov pracovať s JMS. Samozrejmosťou je sledovanie a porovnanie výkonu nástrojov.
+Počas JMS testu nástroje zasielajú správy do vstupnej JMS fronty na serveri. Server správy preposiela do výstupnej fronty, odkiaľ ich vyberajú nástroje. Test prebieha po dobu 5 minút. Hlavným účelom testu je overiť schopnosť nástrojov pracovať s~JMS. Samozrejmosťou je sledovanie a porovnanie výkonu nástrojov.
 \newline
 
 \item \textbf{Základný test so 100 klientmi}
 \newline
-Najčastejšie používaný typ testov výkonu je reprezentovaný pomocou základného testu so 100 klientmi. Po dobu 5 minút 100 klientov zasiela správy o dĺžke 5120 znakov (5 KB).
+Najčastejšie používaný typ testov výkonu je reprezentovaný pomocou základného testu so 100 klientmi. V teste používam 100 klientov a zasielam správy o dĺžke 5120 znakov, čo sú stredné hodnoty z druhého a tretieho typu testu.
 \newline
 
 \item \textbf{Vytrvalostný test}
 \newline
-Dlhodobé monitorovanie systému je realizované pomocou vytrvalostných testov. Systém je vystavený záťaži generovanej sto klientmi po dobu jednej hodiny. Veľkosť správy je rovnaká ako v predchádzajúcom teste, t.j. 5120 znakov. Test sa skladá z dvoch častí. V prvej časti je testovaná služba použitá v predchádzajúcich testoch a v druhej časti upravená služba simulujúca únik pamäte. Druhá časť testu ukáže rastúcu spotrebu pamäte a v porovnaní s prvou časťou tak bude možné odhaliť vzniknutý únik pamäte. Pre tento test som musel nastaviť v nástrojoch monitorovanie operačnej pamäte na serveri.
+Dlhodobé monitorovanie systému je realizované pomocou vytrvalostných testov. Systém je vystavený záťaži generovanej sto klientmi po dobu jednej hodiny. Veľkosť správy je rovnaká ako v~predchádzajúcom teste, t.j. 5120 znakov. Test sa skladá z~dvoch častí. V~prvej časti je testovaná služba použitá v~predchádzajúcich testoch a v~druhej časti upravená služba simulujúca únik pamäte. Druhá časť testu ukáže rastúcu spotrebu pamäte a v~porovnaní s~prvou časťou tak bude možné odhaliť vzniknutý únik pamäte. Pre tento test som musel nastaviť v~nástrojoch monitorovanie operačnej pamäte na serveri.
 \newline
 
 \item \textbf{Test teoretickej priepustnosti nástroja}
 \newline
-Teoretická priepustnosť nástroja určuje, ako rýchlo dokáže nástroj generovať záťaž. Vysoká priepustnosť nástroja umožňuje generovať vyššiu záťaž za využitia menšieho objemu zdrojov. Test prebieha generovaním maximálnej možnej záťaže aplikácie, ktorá ako odpoveď vracia vždy rovnaký reťazec. Server je schopný odpovedať na požiadavku v čase kratšom, ako je čas potrebný na vygenerovanie požiadavky. Celková priepustnosť systému je tak limitovaná samotným nástrojom. Na generovanie záťaže je použitých 100 klientov.
+Teoretická priepustnosť nástroja určuje, ako rýchlo dokáže nástroj generovať záťaž. Vysoká priepustnosť nástroja umožňuje generovať vyššiu záťaž. Test prebieha generovaním maximálnej možnej záťaže aplikácie, ktorá ako odpoveď vracia vždy rovnaký reťazec. Server je schopný odpovedať na požiadavku v~čase kratšom, ako je čas potrebný na vygenerovanie požiadavky. Celková priepustnosť systému je tak limitovaná samotným nástrojom. Na generovanie záťaže je použitých 100 klientov.
 
 \end{enumerate}
 
 \newpage
 \section{Automatizácia testov}
-Pre účely testu bola vytvorená architektúra obsahujúca zložená z klientskej a serverovej časti. Architektúra je vytvorená tak, aby bolo možné spúšťať testy v Linuxových operačných systémoch.
+Pre účely testu bola vytvorená architektúra obsahujúca zložená z~klientskej a serverovej časti. Architektúra je vytvorená tak, aby bolo možné spúšťať testy v~Linuxových operačných systémoch.
 
 \subsection{Klient}
-Klient obsahuje adresáre so spúšťacími skriptami a testami, symbolické linky adresárov, testovacie nástroje a skripty spúšťajúce testy a upravujúce testy. Názov adresára obsahuje číslo a popis spúšťaného testu. V každom adresári sú umiestnené podadresáre Apache JMeter, Faban, Gatling a Perfcake, ktoré obsahujú testy pre daný nástroj a skript, ktorý riadi spúštanie testu. V adresároch druhého, tretieho a šiesteho testu sa nachádzajú podadresáre obsahujúce modifikácie daného testu, tak ako je to uvedené v ich definícii. Tieto testy navyše obsahujú skript, ktorý spúšťa jednotlivé modifikácie daných testov. Nasleduje popis skriptov, ktoré sa nachádzajú v koreňovom adresári.	
+Klient obsahuje adresáre so spúšťacími skriptami a testami, symbolické linky adresárov, testovacie nástroje a skripty spúšťajúce testy a upravujúce testy. Názov adresára obsahuje číslo a popis spúšťaného testu. V~každom adresári sú umiestnené podadresáre Apache JMeter, Faban, Gatling a PerfCake, ktoré obsahujú testy pre daný nástroj a skript, ktorý riadi spúštanie testu. V~adresároch druhého, tretieho a šiesteho testu sa nachádzajú podadresáre obsahujúce modifikácie daného testu, tak ako je to uvedené v~ich definícii. Tieto testy navyše obsahujú skript, ktorý spúšťa jednotlivé modifikácie daných testov. Nasleduje popis skriptov, ktoré sa nachádzajú v~koreňovom adresári.	
 
 \begin{itemize}
-\item \textbf{change\underscore{}runtime.sh}\\
-Slúži na nastavenie dĺžky testov. Prijíma dva prepínače: "{}-b"{} a "{}-t"{}. Prepínač -t prijíma ako argument číslo, ktoré reprezentuje dĺžku trvania vytrvalostných testov v minútach a argument prepínača -b reprezentuje dĺžku trvania zvyšných testov v sekundách. Implicitná hodnota pre prepínač -t je 60, čiže jedna hodina a pre prepínač -b 300, teda 5 minút. Tieto hodnoty sa použijú v prípade, ak je skript spustený bez argumentov. Skript sa automaticky volá v skripte run\underscore{}all.sh, ktorým sa spúšťajú všetky testy. Tým sa zabezpečí korektné nastavenie času v testoch.\\
+\item \textit{\textbf{change\underscore{}runtime.sh}}\\
+Slúži na nastavenie dĺžky testov. Prijíma dva prepínače: "{}-b"{} a "{}-t"{}. Prepínač -t prijíma ako argument číslo, ktoré reprezentuje dĺžku trvania vytrvalostných testov v~minútach a argument prepínača -b reprezentuje dĺžku trvania zvyšných testov v~sekundách. Implicitná hodnota pre prepínač -t je 60, čiže jedna hodina a pre prepínač -b 300, teda 5 minút. Tieto hodnoty sa použijú v~prípade, ak je skript spustený bez argumentov. Skript sa automaticky volá v~skripte \textit{run\underscore{}all.sh}, ktorým sa spúšťajú všetky testy. Tým sa zabezpečí korektné nastavenie času v~testoch.\\
 \textbf{Použitie:} \textit{./change\underscore{}runtime.sh -b 10 -t 120}
 
-\item \textbf{change\underscore{}server\underscore{}and\underscore{}port.sh}\\
-Skript nastavuje adresu servera, číslo portu pre webové služby a číslo JMS portu. Na vstupe berie tri prepínače: "{}-s"{}, "{}-p"{} a "{}-m"{}. Argumentom prepínača -s je adresa servera, ktorá môže byť reprezentovaná IP adresou. IP adresa môže byť reprezentovaná číslom, pomocou ktorého je možné jednoznačne identifikovať server v počítačovej sieti alebo aliasom, ktorý je k danej IP adrese pridelený. Prepínač -p prijíma ako argument číslo portu, pomocou ktorého je možné komunikovať s webovými službami aplikácie. A nakoniec prepínač -m, ktorý nastavuje port pre JMS. V prípade, že nie sú pri spustení skriptu použité argumenty, použije sa pre server implicitná hodnota "{}localhost"{}, pre port webových služieb hodnota "{}8080"{} a port JMS sa nastaví na hodnotu "{}4447"{}. Použité čísla portov sú východiskovými portmi JBoss AS servera pre dané komunikačné technológie.\\
+\item \textit{\textbf{change\underscore{}server\underscore{}and\underscore{}port.sh}}\\
+Skript nastavuje adresu servera, číslo portu pre webové služby a číslo JMS portu. Na vstupe berie tri prepínače: "{}-s"{}, "{}-p"{} a "{}-m"{}. Argumentom prepínača -s je adresa servera, ktorá môže byť reprezentovaná IP adresou. IP adresa môže byť reprezentovaná číslom, pomocou ktorého je možné jednoznačne identifikovať server v~počítačovej sieti alebo aliasom, ktorý je k~danej IP adrese pridelený. Prepínač -p prijíma ako argument číslo portu, pomocou ktorého je možné komunikovať s~webovými službami aplikácie. A~nakoniec prepínač -m, ktorý nastavuje port pre JMS. V~prípade, že nie sú pri spustení skriptu použité argumenty, použije sa pre server implicitná hodnota "{}localhost"{}, pre port webových služieb hodnota "{}8080"{} a port JMS sa nastaví na hodnotu "{}4447"{}. Použité čísla portov sú východiskovými portmi JBoss AS servera pre dané komunikačné technológie. Podobne, ako v~predchádzajúcom prípade sa skript automaticky spúšťa v~skripte \textit{run\underscore{}all.sh}, ktorým sa spúšťajú všetky testy.\\
 \textbf{Použitie:} \textit{./change\underscore{}server\underscore{}and\underscore{}port.sh -s 192.168.0.2 -p 18080 -p 14447}
 
-\item \textbf{open\underscore{}scenarios.sh}\\
-Po spustení skriptu sa otvoria všetky testovacie scenáre v textovom editore gedit. Skript často používam pri kontrole správneho nastavenia scenárov.\\
+\item \textit{\textbf{open\underscore{}scenarios.sh}}\\
+Po spustení skriptu sa otvoria všetky testovacie scenáre v~textovom editore gedit. Skript často používam pri kontrole správneho nastavenia scenárov.\\
 \textbf{Použitie:} \textit{./open\underscore{}scenarios.sh}
 
 
-\item \textbf{remove\underscore{}all\underscore{}logs.sh}\\
+\item \textit{\textbf{remove\underscore{}all\underscore{}logs.sh}}\\
 Tento skript slúži na vymazanie všetkých záznamov a logovacích súborov, ktoré vznikli pri testovaní. Vygenerované záznamy a logovacie súbory majú značnú veľkosť, čo spôsobuje problémy pri kopírovaní testov.\\
 \textbf{Použitie:} \textit{remove\underscore{}all\underscore{}logs.sh}
 
-\item \textbf{remove\underscore{}big\underscore{}logs.sh}\\
-Podobne ako v predchádzajúcom prípade odstraňuje skript súbory, ktoré vznikli pri testovaní. Na rozdiel od predchádzajúceho prípadu odstraňuje len najväčšie súbory. V prípade nástroja Apache JMeter sú to súbory s príponou "{}.jtl"{} a v prípade nástroja Gatling súbory "{}simulation.log"{}. Tieto súbory obsahujú záznam pre každú prijatú odpoveď, čo je užitočné v prípade výskytu chyby, pretože je možné presne identifikovať kedy chyba nastala. Súbory neobsahujú informácie dôležité pre vyhodnotenie a porovnanie testov, preto je žiadúce ich zmazanie po úspešnom ukončení testov.\\
+\item \textit{\textbf{remove\underscore{}big\underscore{}logs.sh}}\\
+Podobne ako v~predchádzajúcom prípade odstraňuje skript súbory, ktoré vznikli pri testovaní. Na rozdiel od predchádzajúceho prípadu odstraňuje len najväčšie súbory. V~prípade nástroja Apache JMeter sú to súbory s~príponou "{}.jtl"{} a v~prípade nástroja Gatling súbory "{}simulation.log"{}. Tieto súbory obsahujú záznam pre každú prijatú odpoveď, čo je užitočné v~prípade výskytu chyby, pretože je možné presne identifikovať kedy chyba nastala. Súbory neobsahujú informácie dôležité pre vyhodnotenie a porovnanie testov, preto je žiadúce ich zmazanie po úspešnom ukončení testov.\\
 \textbf{Použitie:} \textit{remove\underscore{}big\underscore{}logs.sh}
 
-\item \textbf{restart\underscore{}faban.sh}\\
-Nástroj Faban sa skladá z dvoch hlavných komponent: Faban Driver Framework a Faban Harness. Kým Faban Driver Framework slúži k vytváraniu testov a definovaniu testovacej záťaže, Faban Harness slúži k samotnému spúšťaniu a monitorovaniu testov. Komponenta beží na Apache serveri, ktorý je reštartovaný pred každým spustením Faban testu. Cieľom tohto reštartu je minimalizovanie vplyvu predchádzajúcich testov.\\
+\item \textit{\textbf{restart\underscore{}faban.sh}}\\
+Nástroj Faban sa skladá z~dvoch hlavných komponent: Faban Driver Framework a Faban Harness. Kým Faban Driver Framework slúži k~vytváraniu testov a definovaniu testovacej záťaže, Faban Harness slúži k~samotnému spúšťaniu a monitorovaniu testov. Komponenta beží na Apache serveri, ktorý je reštartovaný pred každým spustením Faban testu. Cieľom tohto reštartu je minimalizovanie vplyvu predchádzajúcich testov.\\
 \textbf{Použitie:} \textit{restart\underscore{}faban.sh}
 
-\item \textbf{run\underscore{}all.sh}\\
-K spusteniu všetkých testov slúži tento skript, ktorý prijíma 7 prepínačov: "{}-s"{}, "{}-p"{}, "{}-m"{}, "{}-t"{}, "{}-b"{}, "{}-u"{} a "{}-d"{}. Pred samotným sputstením všetkých testov sú spustené skripty \textit{change\underscore{}runtime.sh} a \textit{change\underscore{}server\underscore{}and\underscore{}port.sh}, ktorým sú predané argumenty prepínačov pre nastavenie dĺžky trvania testov, adresy servera, čísla portu webových služieb a čísla portu pre JMS. Prepínač -u prijíma ako argument meno užívateľa, cez ktorého klient pomocou príkazu \textit{ssh} reštartuje JBoss AS server, ktorý beží na inom stroji. Pokiaľ tento atribút nie je definovaný, skript skončí s chybou. Argument posledného prepínača reprezentuje adresár, v ktorom je umiestnený koreňový adresár obsahujúci server JBoss AS a skript potrebný na jeho obsluhu. V prípade, že adresár nie je definovaný, použije sa implicitná hodnota "{/home/user}"{}, kde user je meno užívateľa nastavené prepínačom -u.\\
+\item \textit{\textbf{run\underscore{}all.sh}}\\
+K~spusteniu všetkých testov slúži tento skript, ktorý prijíma 7 prepínačov: "{}-s"{}, "{}-p"{}, "{}-m"{}, "{}-t"{}, "{}-b"{}, "{}-u"{} a "{}-d"{}. Pred samotným sputstením všetkých testov sú spustené skripty \textit{change\underscore{}runtime.sh} a \textit{change\underscore{}server\underscore{}and\underscore{}port.sh}, ktorým sú predané argumenty prepínačov pre nastavenie dĺžky trvania testov, adresy servera, čísla portu webových služieb a čísla portu pre JMS. Prepínač -u prijíma ako argument meno užívateľa, cez ktorého klient pomocou príkazu \textit{ssh} reštartuje JBoss AS server, ktorý beží na inom stroji. Pokiaľ tento atribút nie je definovaný, skript skončí s~chybou. Argument posledného prepínača reprezentuje adresár, v~ktorom je umiestnený koreňový adresár obsahujúci server JBoss AS a skript potrebný na jeho obsluhu. V~prípade, že adresár nie je definovaný, použije sa implicitná hodnota "{/home/user}"{}, kde user je meno užívateľa nastavené prepínačom -u.\\
 \textbf{Použitie:} \textit{run\underscore{}all.sh -s 192.168.0.2 -p 18080 -m 14447 -b 10 -t 120 -u tomas -d /home/to-mas/server}
 
 \end{itemize}
 
 \newpage
 \subsection{Server}
-Na strane servera sa nachádza adresár obsahujúci server JBoss AS, skript potrebný k jeho reštartovaniu a agenti Apache JMeter a Perfcake, ktorí slúžia k monitorovaniu využitia pamäte na strane servera.
+Na strane servera sa nachádza adresár obsahujúci server JBoss AS, skript potrebný k~jeho reštartovaniu a agenti Apache JMeter a PerfCake, ktorí slúžia k~monitorovaniu využitia pamäte na strane servera.
 
 \begin{itemize}
 
-\item \textbf{ssh\underscore{}restart\underscore{}jboss.sh}\\
-Skripty spúšťajúce testy na strane klienta reštartujú JBoss AS server pred každým spustením testu. K tomu dochádza spustením skriptu ssh\underscore{}restart\underscore{}jboss.sh príkazom ssh na strane klienta. Tento skript prijíma dva argumenty. Prvým argumentom je adresár, v ktorom je umiestnený koreňový adresár. Ako druhý argument je potrebné uviesť IP adresu servera. Adresa sa používa pri spustení servera a server pomocou nej komunikuje s klientom. Server sa vždy spúšťa na porte 8080.\\
+\item \textit{\textbf{ssh\underscore{}restart\underscore{}jboss.sh}}\\
+Skripty spúšťajúce testy na strane klienta reštartujú JBoss AS server pred každým spustením testu. K~tomu dochádza spustením skriptu \textit{ssh\underscore{}restart\underscore{}jboss.sh} príkazom ssh na strane klienta. Tento skript prijíma dva argumenty. Prvým argumentom je adresár, v~ktorom je umiestnený koreňový adresár. Ako druhý argument je potrebné uviesť IP adresu servera. Adresa sa používa pri spustení servera a server pomocou nej komunikuje s~klientom. Server sa vždy spúšťa na porte 8080.\\
 \textbf{Použitie:} \textit{ssh user@192.168.0.2 "/user/dir/ssh\underscore{}restart\underscore{}jboss.sh /user/dir 192.168.0.2"}
 \end{itemize}
 
 \section{Problémy pri vytváraní testov a testovaní}
-Táto sekcia popisuje problémy, s ktorými som sa stretol pri vytváraní testov a testovaní.
+Táto sekcia popisuje problémy, s~ktorými som sa stretol pri vytváraní testov a testovaní.
+
+\subsection{Apache JMeter}
+
+\begin{itemize}
+
+\item \textbf{Výsledky testov}\\
+Apache JMeter vypisuje výsledky testov do konzoly v rôznych časových intervaloch. Z toho dôvodu som pre Apache JMeter nemohol zostaviť grafy zobrazujúce počet vykonaných požiadaviek počas testu. Asynchrónne vypisovanie výsledkov súvisí s optimalizáciou behu testu. Apache JMeter vypisuje výsledky v priemere každých 30 sekúnd. V dokumentácii sa mi nepodarilo nájsť spôsob, ktorým by som toto vypisovanie výsledkov mohol zmeniť na mnou požadované hodnoty.
+
+\end{itemize}
 
 \subsection{Faban}
 
 \begin{itemize}
 
 \item \textbf{Generovanie výsledkov testov}\\
-Problém vytvárania reportov spočíva v tom, že Faban ukladá výsledky do adresára output, ktorý sa nachádza v domovskom adresári nástroja. Dokumentácia nepopisuje spôsob, ktorým by som mohol zmeniť tento implicitný adresár pre ukladanie výslekov. Preto som po každom teste musel adresár pomocou skriptu presunúť do adresára daného testu a zmeniť jeho meno v súlade s číslom testu a iteráciou testu. Ďalší problém, ktorý som musel riešiť je spojený so spôsobom spúšťania testov. Faban testy ukladá do fronty a testy spúšťa postupne. Do skriptu, ktorý spúšťa testy som preto musel pridať príkaz, ktorý zastavil beh skriptu na dobu potrebnú pre vykonanie testu a vygenerovanie reportov a logovacích súborov z testu. Až potom som mohol presunúť adresár s výsledkami a zmeniť jeho meno. Doba, počas ktorej skript čaká je nastavená na dĺžku testu plus 100 sekúnd, ktoré sú potrebné na naštartovanie testu a vygenerovanie výsledkov. Z tohto dôvodu musím dobu čakania upravovať pri každej zmene dĺžky trvania testu. Pri veľkom počte krátkych testov spôsobí toto čakanie značné predĺženie doby testovania.
+Problém vytvárania výsledkov spočíva v~tom, že Faban ukladá výsledky do adresára output, ktorý sa nachádza v~domovskom adresári nástroja. Dokumentácia nepopisuje spôsob, ktorým by som mohol zmeniť tento implicitný adresár pre ukladanie výslekov. Preto som po každom teste musel adresár pomocou skriptu presunúť do adresára daného testu a zmeniť jeho meno v~súlade s~číslom testu a iteráciou testu. Ďalší problém, ktorý som musel riešiť je spojený so spôsobom spúšťania testov. Faban testy ukladá do fronty a testy spúšťa postupne. Do skriptu, ktorý spúšťa testy som preto musel pridať príkaz, ktorý zastavil beh skriptu na dobu potrebnú pre vykonanie testu a vygenerovanie výsledkov a logovacích súborov z~testu. Až potom som mohol presunúť adresár s~výsledkami a zmeniť jeho meno. Doba, počas ktorej skript čaká je nastavená na dĺžku testu plus 100 sekúnd, ktoré sú potrebné na naštartovanie testu a vygenerovanie výsledkov. Z~tohto dôvodu musím dobu čakania upravovať pri každej zmene dĺžky trvania testu. Pri veľkom počte krátkych testov spôsobí toto čakanie značné predĺženie doby testovania.
 
 \item \textbf{Faban Harness}\\
-K spúšťaniu testov je nutné najskôr spustiť Faban Harness. Táto komponenta Fabanu je reprezentovaná serverom, ktorý som musel pred každým testom reštartovať, aby som tak zabezpečil rovnaké vstupné podmienky pre každý test. K tomu som musel vytvoriť skript \textit{restart\underscore{}faban.sh}, ktorý som spúšťal pred každým testom.\\
+K~spúšťaniu testov je nutné najskôr spustiť Faban Harness. Táto komponenta Fabanu je reprezentovaná serverom, ktorý som musel pred každým testom reštartovať, aby som tak zabezpečil rovnaké vstupné podmienky pre každý test. K~tomu som musel vytvoriť skript \textit{restart\underscore{}faban.sh}, ktorý som spúšťal pred každým testom.\\
 
 \item \textbf{Monitorovanie využitia operačnej pamäte}\\
-Faban implicitne monitoruje využitie procesora počas testu. Pre potreby Vytrvalostného testu som potreboval monitorovať využitie operačnej pamäte na serveri. Dokumentácia neobsahuje žiadne informácie o monitorovaní operačnej pamäte. Nepodarilo sa mi vyhľadať žiadne informácie, ako toto monitorovanie nastaviť a preto usudzujem, že to nie je možné.\\
+Faban implicitne monitoruje využitie procesora počas testu. Pre potreby Vytrvalostného testu som potreboval monitorovať využitie operačnej pamäte na serveri. Dokumentácia neobsahuje žiadne informácie o~monitorovaní operačnej pamäte. Nepodarilo sa mi vyhľadať žiadne informácie, ako toto monitorovanie nastaviť a preto usudzujem, že to nie je možné.\\
 
 \end{itemize}
 
@@ -368,955 +379,1106 @@ Faban implicitne monitoruje využitie procesora počas testu. Pre potreby Vytrva
 \begin{itemize}
 
 \item \textbf{Monitorovanie využitia operačnej pamäte}\\
-Dokumentácia obsahuje návod, pomocou ktorého je možné nastaviť zaznamenávanie využitia operačnej pamäte. Napriek veľkej snahe sa mi podľa tohto návodu nepodarilo nastaviť zaznamenávanie využitia pamäte. Nastavenie vyžadovalo zmenu konfiguračného súboru Gatlingu a inštaláciu programov tretích strán. Po zmene konfiguračného súboru sa stal nástroj nepoužiteľným a nástroj som musel inštalovať odznova. V dokumentácii navyše chýbal návod k inštalácii programov tretích strán. Návod je k dispozícii na stránke: \url{http://gatling.io/docs/2.1.1/realtime_monitoring/index.html}.
+Dokumentácia obsahuje návod, pomocou ktorého je možné nastaviť zaznamenávanie využitia operačnej pamäte. Napriek veľkej snahe sa mi podľa tohto návodu nepodarilo nastaviť zaznamenávanie využitia pamäte. Nastavenie vyžadovalo zmenu konfiguračného súboru Gatlingu a inštaláciu programov tretích strán. Po zmene konfiguračného súboru sa stal nástroj nepoužiteľným a nástroj som musel inštalovať odznova. V~dokumentácii navyše chýbal návod k~inštalácii programov tretích strán. Návod je k~dispozícii na stránke: \url{http://gatling.io/docs/2.1.1/realtime_monitoring/index.html}.
 
 \end{itemize}
 
 \section{Výsledky testov}
 
-\subsection{Základný test s jedným klientom}
+\subsection{Základný test s~jedným klientom}
 
 \begin{itemize}
 
 \item Apache JMeter
 
+Počas testu sa nevyskytli žiadne problémy. Apache dosiahol najlepšie výsledky spomedzi všetkých nástrojov a taktiež najnižší rozdiel medzi najlepším a najhorším výsledkom iterácie testu.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 400242 & 1334,140 \\ \hline
+		 2. iterácia & 401162 & 1337,207 \\ \hline
+		 3. iterácia & 399109 & 1330,363 \\ \hline
+		 4. iterácia & 399407 & 1331,357 \\ \hline
+		 5. iterácia & 400173 & 1333,910 \\ \hline
+		 Priemer & 400018,6 & 1333,395 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Apache JMeter Základný test s~jedným klientom}
+\end{table}
+
 \item Faban
 
-Všetých päť iterácií prvého testu prebehlo bez problémov a poskytlo relevantné informácie o priebehu testu. Zaujímavá je spoľahlivosť výsledkov jednotlivých iterácií testu, keď medzi najlepším a najhorším výsledkom je rozdiel len 2102 vykonaných požiadaviek.
+Všetých päť iterácií prvého testu prebehlo bez problémov. Zaujímavá je spoľahlivosť výsledkov jednotlivých iterácií testu, keď medzi najlepším a najhorším výsledkom je rozdiel porovnateľný s rozdielom Apache Jmeter.
 
-\begin{itemize}
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 166362 & 554,540 \\ \hline
+		 2. iterácia & 167141 & 557,137 \\ \hline
+		 3. iterácia & 167346 & 557,820 \\ \hline
+		 4. iterácia & 166108 & 553,693 \\ \hline
+		 5. iterácia & 168210 & 560,700 \\ \hline
+		 Priemer & 167033,4 & 556,778 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Faban Základný test s~jedným klientom}
+\end{table}
 
-\item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 166362\\
-Priemerný počet vykonaných požiadaviek za sekundu: 554,540
-
-\item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 167141\\
-Priemerný počet vykonaných požiadaviek za sekundu: 557,137
-
-\item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 167346\\
-Priemerný počet vykonaných požiadaviek za sekundu: 557,820
-
-\item[\textbf{4. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 166108\\
-Priemerný počet vykonaných požiadaviek za sekundu: 553,693
-
-\item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 168210\\
-Priemerný počet vykonaných požiadaviek za sekundu: 560,700
-
-\item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných požiadaviek: 167033,4\\
-Priemerný počet vykonaných požiadaviek za sekundu: 556,778
-
-\end{itemize}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{faban1.jpg}
-  \caption{Celkový počet vykonaných požiadaviek}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{faban1_distr.jpg}
-  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
-\end{figure}
 
 \item Gatling
 
-Podobne ako v prípade Fabanu všetkých päť iterácií prvého testu prebehlo bez problémov. Gatling vykonal viac požiadaviek, ako Faban. Negatívom je horšia spoľahlivosť výsledkov, keď medzi najlepším a najhorším výsledkom je rozdiel 14870 vykonaných požiadaviek. Gatling má slabší štart testu v porovnaní s Fabanom, keď sa na svoje maximum dostal až 50 sekúnd po štarte, čo je pri 300 sekundovom teste veľmi dlhá doba štartu.
+Podobne ako v~prípade Fabanu všetkých päť iterácií prvého testu prebehlo bez problémov. Gatling vykonal viac požiadaviek, ako Faban. Negatívom je najhoršia spoľahlivosť výsledkov, keď medzi najlepším a najhorším výsledkom je rozdiel 14870 vykonaných požiadaviek. Gatling má najslabší štart zo všetkých nástrojov, keď sa na svoje maximum dostal až 50 sekúnd po štarte, čo je pri 300 sekundovom teste veľmi dlhá doba štartu. Graf zobrazujúci priebeh vykonaných požiadaviek počas testu je k dispozícií v adresári Grafy v priloženom CD.
 
-\begin{itemize}
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 302827 & 1009,423 \\ \hline
+		 2. iterácia & 296602 & 988,673 \\ \hline
+		 3. iterácia & 311472 & 1038,240 \\ \hline
+		 4. iterácia & 303419 & 1011,397 \\ \hline
+		 5. iterácia & 307912 & 1026,373 \\ \hline
+		 Priemer & 304446,4 & 1014,821 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Gatling Základný test s~jedným klientom}
+\end{table}
 
-\item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 302827\\
-Priemerný počet vykonaných požiadaviek za sekundu: 1009,423
 
-\item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 296602\\
-Priemerný počet vykonaných požiadaviek za sekundu: 988,673
+\item PerfCake
 
-\item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 311472\\
-Priemerný počet vykonaných požiadaviek za sekundu: 1038,24
+Ani počas testov PerfCake sa nevyskytli žiadne problémy. PerfCake dosiahol druhý najlepší výsledok, ale mal výrazne väčší rozdiel vo výsledkoch ako Apache JMeter a Faban.
 
-\item[\textbf{4. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 303419\\
-Priemerný počet vykonaných požiadaviek za sekundu: 1011,397
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 365398 & 1217,993 \\ \hline
+		 2. iterácia & 372943 & 1243,143 \\ \hline
+		 3. iterácia & 370583 & 1235,277 \\ \hline
+		 4. iterácia & 372749 & 1242,497 \\ \hline
+		 5. iterácia & 365319 & 1217,730 \\ \hline
+		 Priemer & 369398,4 & 1231,328 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{PerfCake Základný test s~jedným klientom}
+\end{table}
 
-\item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 307912\\
-Priemerný počet vykonaných požiadaviek za sekundu: 1026,373
+\item Vyhodnotenie
 
-\item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných požiadaviek: 304446,4\\
-Priemerný počet vykonaných požiadaviek za sekundu: 1014,821
+Najviac vykonaných požiadaviek a zároveň najnižší rozdiel vo výsledkoch dosiahol Apache JMeter. Nízky rozdiel má aj Faban, ale  tu je nutné zohľadniť nízky počet požiadaviek, ktoré vykonal. S vyššou rýchlosťou klesá aj spoľahlivosť výsledkov. Druhý najvyšší počet požiadaviek vykonal PerfCake, ale dosiahol pri tom takmer štyrikrát vyšší rozdiel medzi najlepším a najhorším výsledkom, ako Apache JMeter a Faban. Po ňom nasleduje Gatling a Faban. Za zmienku stojí veľký rozdiel vo výsledkoch Gatlingu. Jasným víťazom tohto testu je Apache JMeter nasledovaný PerfCake. Tretie miesto obsadil Faban a posledné Gatling kvôli veľmi vysokému rozdielu vo výsledkoch.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c |}
+		\hline
+		 \textbf{Nástroj} & \textbf{Priemerný počet požiadaviek} & \textbf{Rozdiel MAX - MIN} \\ \hline
+		 Apache JMeter & 400018,6 & 2053 \\ \hline
+		 Faban & 167033,4 & 2102 \\ \hline
+		 Gatling & 304446,4 & 14870 \\ \hline
+		 PerfCake & 369398,4 & 7624 \\ \hline
+\end{tabular}
+\end{center}
+\caption{Základný test s~jedným klientom}
+\end{table}
 
 \end{itemize}
 
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{gatling1.jpg}
-  \caption{Celkový počet vykonaných požiadaviek}
-\end{figure}
 
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{gatling1_distr.jpg}
-  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
-\end{figure}
-
-\item Perfcake
-
-\end{itemize}
-
-\subsection{Testy s rastúcim počtom klientov}
+\subsection{Testy s~rastúcim počtom klientov}
 
 \begin{itemize}
 
 \item Apache JMeter
 
+Najlepší výsledok v druhom type testu dosiahol Apache JMeter hneď v prvej modifikácii s 10 klientmi. Zaujímavý je aj výsledok 5. iterácie testu, keď Apache JMeter dosiahol výrazne horší výsledok, ako v predchádzajúcich iteráciach. To spôsobilo aj výrazne najhorší rozdiel vo výsledkoch.
+
+\textbf{Prvý test -- 10 klientov}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 4060026 & 13533,420 \\ \hline
+		 2. iterácia & 4052695 & 13508,983 \\ \hline
+		 3. iterácia & 4020450 & 13401,500 \\ \hline
+		 4. iterácia & 4048666 & 13495,553 \\ \hline
+		 5. iterácia & 3549533 & 11831,777 \\ \hline
+		 Priemer & 3946274 & 13154,247 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Apache JMeter Test s~rastúcim počtom klientov -- 10 klientov}
+\end{table}
+
+
+\textbf{Druhý test -- 50 klientov}
+
+Kým zvyšné nástroje dosiahli maximum v teste s 50 klientmi, Apache JMeter zaznamenal o približne 22\% horší výsledok, ako v prípade testu s 10 klientmi. Tak isto zaznamenal v jednej iterácii výrazný prepad výsledku a podobne, ako v prvom teste výrazne najhorší rozdiel vo výsledkoch.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 3233657 & 10778,857 \\ \hline
+		 2. iterácia & 3207578 & 10691,927 \\ \hline
+		 3. iterácia & 2642832 & 8809,440 \\ \hline
+		 4. iterácia & 3192770 & 10642,567 \\ \hline
+		 5. iterácia & 3191952 & 10639,840 \\ \hline
+		 Priemer & 3093757,8 & 10312,526 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Apache JMeter Test s~rastúcim počtom klientov -- 50 klientov}
+\end{table}
+
+
+\textbf{Tretí test -- 100 klientov}
+
+Nebyť výrazného prepadu vo výsledkoch testu s 50 klientmi, bol by rozdiel vo výsledkoch týchto modifikácií vyšší. Tentokrát Apache JMeter nezaznamenal výrazný prepad výsledkov v žiadnej z iterácií.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 3027911 & 10093,037 \\ \hline
+		 2. iterácia & 3058845 & 10196,150 \\ \hline
+		 3. iterácia & 3087140 & 10290,467 \\ \hline
+		 4. iterácia & 3130614 & 10435,380 \\ \hline
+		 5. iterácia & 3061439 & 10204,797 \\ \hline
+		 Priemer & 3073189,8 & 10243,966 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Apache JMeter Test s~rastúcim počtom klientov -- 100 klientov}
+\end{table}
+
+
+\textbf{Štvrtý test -- 150 klientov}
+
+Zaujímavým zistením je mierne zvýšenie výkonu Apache JMeter v teste so 150 klientmi. Maximum z testu s 10 klientmi však neprekonal. Prepad výsledkov sa nevyskytol v žiadnej iterácii testu.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 3095486 & 10318,287 \\ \hline
+		 2. iterácia & 3086050 & 10286,833 \\ \hline
+		 3. iterácia & 3153720 & 10512,400 \\ \hline
+		 4. iterácia & 3202832 & 10676,107 \\ \hline
+		 5. iterácia & 3184660 & 10615,533 \\ \hline
+		 Priemer & 3144549,6 & 10481,832 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Apache JMeter Test s~rastúcim počtom klientov -- 150 klientov}
+\end{table}
+
+
+\textbf{Piaty test -- 200 klientov}
+
+Posledný druh testu dosiahol porovnateľné výsledky, ako test so 150 klientmi. Prepad výsledkov sa neprejavil ani v poslednom druhu testu.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 3012575 & 10041,917 \\ \hline
+		 2. iterácia & 3238759 & 10795,863 \\ \hline
+		 3. iterácia & 3107115 & 10357,050 \\ \hline
+		 4. iterácia & 3081815 & 10272,717 \\ \hline
+		 5. iterácia & 3176557 & 10588,523 \\ \hline
+		 Priemer & 3123364,2 & 10411,214 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Apache JMeter Test s~rastúcim počtom klientov -- 200 klientov}
+\end{table}
+
 \item Faban
 
-\textbf{Prvý test - 10 klientov}
-\begin{itemize}
+\textbf{Prvý test -- 10 klientov}
 
-\item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 1608896\\
-Priemerný počet vykonaných požiadaviek za sekundu: 5362,987
+Najhorší výsledok spomedzi testov s 10 klientmi dosiahol Faban. Pozitívom je, že v teste s 10 klientmi dosiahol Faban najnižší rozdiel vo výsledkoch jednotlivých iterácií testu.
 
-\item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 1614361\\
-Priemerný počet vykonaných požiadaviek za sekundu: 5381,203
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 1608896 & 5362,987 \\ \hline
+		 2. iterácia & 1614361 & 5381,203 \\ \hline
+		 3. iterácia & 1614381 & 5381,270 \\ \hline
+		 4. iterácia & 1616067 & 5386,890 \\ \hline
+		 5. iterácia & 1612970 & 5376,567 \\ \hline
+		 Priemer & 1613335 & 5377,783 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Faban Test s~rastúcim počtom klientov -- 10 klientov}
+\end{table}
 
-\item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 1614381\\
-Priemerný počet vykonaných požiadaviek za sekundu: 5381,270
+\textbf{Druhý test -- 50 klientov}
 
-\item[\textbf{4. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 1616067\\
-Priemerný počet vykonaných požiadaviek za sekundu: 5386,890
+Najlepší výsledok dosiahol Faban v teste s 50 klientmi. Zvýšenie výkonu oproti prvej modifikácii je vyše dvojnásobné, pričom si Faban opäť zachoval najvyššiu spoľahlivosť výsledkov. 
 
-\item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 1612970\\
-Priemerný počet vykonaných požiadaviek za sekundu: 5376,567
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 3300257 & 11000,857 \\ \hline
+		 2. iterácia & 3304396 & 11014,653 \\ \hline
+		 3. iterácia & 3286365 & 10954,550 \\ \hline
+		 4. iterácia & 3280246 & 10934,153 \\ \hline
+		 5. iterácia & 3303527 & 11011,757 \\ \hline
+		 Priemer & 3294958,2 & 10983,194 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Faban Test s~rastúcim počtom klientov -- 50 klientov}
+\end{table}
 
-\item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných požiadaviek: 1613335\\
-Priemerný počet vykonaných požiadaviek za sekundu: 5377,783
 
-\end{itemize}
+\textbf{Tretí test -- 100 klientov}
 
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{faban2_1.jpg}
-  \caption{Celkový počet vykonaných požiadaviek}
-\end{figure}
+V 5. iterácii testu sa objavila chyba Error initializing driver object. com.sun.faban.dri-ver.ConfigurationException: Only single host:port currently supported. Chyba sa vyskytla len pri jednej iterácii.\hypertarget{label}{} Chybu sa mi nepodarilo odstrániť, pretože k nej dochádza úplne náhodne a jej popis naznačuje, že sa jedná o chybu nástroja, ktorý nedokázal inicializovať jadro (tzv. Driver) testu.
+\par Výsledky sa oproti predchádzajúcej modifikácii mierne zhoršili, ale Faban si zachoval svoju vysokú spoľahlivosť výsledkov.
 
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{faban2_1_distr.jpg}
-  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
-\end{figure}
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 3208731 & 10695,770 \\ \hline
+		 2. iterácia & 3232719 & 10775,730 \\ \hline
+		 3. iterácia & 3220658 & 10735,527 \\ \hline
+		 4. iterácia & 3225564 & 10751,880 \\ \hline
+		 5. iterácia & Chyba & Chyba \\ \hline
+		 Priemer & 3221918 & 10739,727 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Faban Test s~rastúcim počtom klientov -- 100 klientov}
+\end{table}
 
-\textbf{Druhý test - 50 klientov}
-\begin{itemize}
 
-\item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 3300257\\
-Priemerný počet vykonaných požiadaviek za sekundu: 11000,857
+\textbf{Štvrtý test -- 150 klientov}
 
-\item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 3304396\\
-Priemerný počet vykonaných požiadaviek za sekundu: 11014,653
+Faban opäť zaznamenal mierny pokles vo výsledkoch, ale aj výrazné zlepšenie spoľahlivosti. Kým v predchádzajúcej modifikácii bol rozdiel vo výsledkoch 23988 požiadaviek, v tomto teste je to len 8046 požiadaviek.
 
-\item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 3286365\\
-Priemerný počet vykonaných požiadaviek za sekundu: 10954,550
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 3189387 & 10631,290 \\ \hline
+		 2. iterácia & 3186480 & 10621,600 \\ \hline
+		 3. iterácia & 3184917 & 10616,390 \\ \hline
+		 4. iterácia & 3187227 & 10624,090 \\ \hline
+		 5. iterácia & 3192963 & 10643,210 \\ \hline
+		 Priemer & 3188194,8 & 10627,316 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Faban Test s~rastúcim počtom klientov -- 150 klientov}
+\end{table}
 
-\item[\textbf{4. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 3280246\\
-Priemerný počet vykonaných požiadaviek za sekundu: 10934,153
+\textbf{Piaty test -- 200 klientov}
 
-\item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 3303527\\
-Priemerný počet vykonaných požiadaviek za sekundu: 11011,757
+V poslednej modifikácii sa znova objavila chyba z 5. iterácie testu so 100 klientmi. Faban tiež v tejto modifikácii zaznamenal najväčší rozdiel vo výsledkoch spomedzi všetkých modifikácií testu s rastúcim množstvom klientov.
 
-\item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných požiadaviek: 3294958,2\\
-Priemerný počet vykonaných požiadaviek za sekundu: 10983,194
-
-\end{itemize}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{faban2_2.jpg}
-  \caption{Celkový počet vykonaných požiadaviek}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{faban2_2_distr.jpg}
-  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
-\end{figure}
-
-\textbf{Tretí test - 100 klientov}
-\begin{itemize}
-
-\item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 3208731\\
-Priemerný počet vykonaných požiadaviek za sekundu: 10695,770
-
-\item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 3232719\\
-Priemerný počet vykonaných požiadaviek za sekundu: 10775,730
-
-\item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 3220658\\
-Priemerný počet vykonaných požiadaviek za sekundu: 10735,527
-
-\item[\textbf{4. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 3225564\\
-Priemerný počet vykonaných požiadaviek za sekundu: 10751,880
-
-\item[\textbf{5. iterácia}]\ \\
-Test zlyhal, objavila sa chyba: Error initializing driver object. com.sun.fa-ban.driver.ConfigurationException: Only single host:port currently supported.\\ Chyba sa vyskytla len pri jednej iterácii a týka sa inicializácie testu Fabanom.\hypertarget{label}{}
-
-\item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných požiadaviek: 3221918\\
-Priemerný počet vykonaných požiadaviek za sekundu: 10739,727
-
-\end{itemize}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{faban2_3.jpg}
-  \caption{Celkový počet vykonaných požiadaviek}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{faban2_3_distr.jpg}
-  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
-\end{figure}
-
-\textbf{Štvrtý test - 150 klientov}
-\begin{itemize}
-
-\item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 3189387\\
-Priemerný počet vykonaných požiadaviek za sekundu: 10631,290
-
-\item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 3186480\\
-Priemerný počet vykonaných požiadaviek za sekundu: 10621,600
-
-\item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 3184917\\
-Priemerný počet vykonaných požiadaviek za sekundu: 10616,390
-
-\item[\textbf{4. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 3187227\\
-Priemerný počet vykonaných požiadaviek za sekundu: 10624,090
-
-\item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 3192963\\
-Priemerný počet vykonaných požiadaviek za sekundu: 10643,210
-
-\item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných požiadaviek: 3188194,8\\
-Priemerný počet vykonaných požiadaviek za sekundu: 10627,316
-
-\end{itemize}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{faban2_4.jpg}
-  \caption{Celkový počet vykonaných požiadaviek}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{faban2_4_distr.jpg}
-  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
-\end{figure}
-
-\textbf{Piaty test - 200 klientov}
-\begin{itemize}
-
-\item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 3186355\\
-Priemerný počet vykonaných požiadaviek za sekundu: 10621,183
-
-\item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 3206037\\
-Priemerný počet vykonaných požiadaviek za sekundu: 10686,790
-
-\item[\textbf{3. iterácia}]\ \\
-Rovnaká chyba ako v \hyperlink{label}{piatej iterácii tretieho testu}.
-
-\item[\textbf{4. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 3187980\\
-Priemerný počet vykonaných požiadaviek za sekundu: 10626,600
-
-\item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 3217781\\
-Priemerný počet vykonaných požiadaviek za sekundu: 10725,937
-
-\item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných požiadaviek: 3199538,25\\
-Priemerný počet vykonaných požiadaviek za sekundu: 10665,128
-
-\end{itemize}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{faban2_5.jpg}
-  \caption{Celkový počet vykonaných požiadaviek}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{faban2_5_distr.jpg}
-  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
-\end{figure}
-
-Z výsledkov testu je jasne vidieť, že Faban dosiahol najvyšší výkon počas testu s 50 klientmi. Testy so 100, 150 a 200 klientmi majú slabšie výsledky. Ako veľké negatívum hodnotím zlyhanie poslednej iterácie testu so 100 klientmi a zlyhanie 3. iterácie testu s 200 klientmi. Chybu som spozoroval už pri spúšťaní testov na nečisto. Vyskytuje sa úplne náhodne a nepodarilo sa mi zistiť, prečo k nej dochádza.
-\par Na druhej strane oproti základnému testu s jedným klientom klesol čas potrebný k dosiahnutiu maximálneho výkonu. V teste s 10 klientmi Faban potreboval len 10 sekúnd na dosiahnutie maximálneho výkonu, pričom rozdiel v počte požiadaviek tvoril len 8\%, kdežto v základnom teste to bolo až 20\%. Zvyšné modifikácie dokonca zaznamenali najvyšší výkon hneď pri štarte.
-
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 3186355 & 10621,183 \\ \hline
+		 2. iterácia & 3206037 & 10686,790 \\ \hline
+ 		 3. iterácia & Chyba, \hyperlink{label}{viď. test 2.3.5} & Chyba, \hyperlink{label}{viď. test 2.3.5}  \\ \hline
+		 4. iterácia & 3187980 & 10626,600 \\ \hline
+		 5. iterácia & 3217781 & 10725,937 \\ \hline
+		 Priemer & 3199538,25 & 10665,128 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Faban Test s~rastúcim počtom klientov -- 200 klientov}
+\end{table}
 
 
 \item Gatling
 
-\textbf{Prvý test - 10 klientov}
-\begin{itemize}
+V teste s 10 klientmi dosiahol Gatling len o trochu lepší výsledok, ako Faban. Na druhej strane mal výrazne nižšiu spoľahlivosť výsledkov.
 
-\item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 1831121\\
-Priemerný počet vykonaných požiadaviek za sekundu: 6103,737
+\textbf{Prvý test -- 10 klientov}
 
-\item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 1818769\\
-Priemerný počet vykonaných požiadaviek za sekundu: 6062,563
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 1831121 & 6103,737 \\ \hline
+		 2. iterácia & 1818769 & 6062,563 \\ \hline
+		 3. iterácia & 1835757 & 6119,190 \\ \hline
+		 4. iterácia & 1812333 & 6041,110 \\ \hline
+		 5. iterácia & 1827221 & 6090,737 \\ \hline
+		 Priemer & 1822361 & 6074,537 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Gatling Test s~rastúcim počtom klientov -- 10 klientov}
+\end{table}
 
-\item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 1835757\\
-Priemerný počet vykonaných požiadaviek za sekundu: 6119,190
 
-\item[\textbf{4. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 1812333\\
-Priemerný počet vykonaných požiadaviek za sekundu: 6041,110
+\textbf{Druhý test -- 50 klientov}
 
-\item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 1827221\\
-Priemerný počet vykonaných požiadaviek za sekundu: 6090,737
+Najhorší výsledok v teste s 50 klientmi zaznamenal Gatling. Na rozdiel od ostatných nástrojov sa oproti predchádzajúcej modifikácii zlepšil len mierne. Rozdiel vo výsledkoch sa však zdvojnásobil.
 
-\item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných požiadaviek: 1822361\\
-Priemerný počet vykonaných požiadaviek za sekundu: 6074,537
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 1918599 & 6395,330 \\ \hline
+		 2. iterácia & 1952562 & 6508,540 \\ \hline
+		 3. iterácia & 1913446 & 6378,153 \\ \hline
+		 4. iterácia & 1935923 & 6453,077 \\ \hline
+		 5. iterácia & 1905032 & 6350,107 \\ \hline
+		 Priemer & 1928029 & 6426,763 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Gatling Test s~rastúcim počtom klientov -- 50 klientov}
+\end{table}
+
+
+\textbf{Tretí test -- 100 klientov}
+
+Pomalý rast výkonu pokračoval aj v teste so 100 klientmi. Zároveň však došlo k zhoršeniu spoľahlivosti výsledkov.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 2136292 & 7120,973 \\ \hline
+		 2. iterácia & 2167595 & 7225,317 \\ \hline
+		 3. iterácia & 2128423 & 7094,743 \\ \hline
+		 4. iterácia & 2108157 & 7027,190 \\ \hline
+		 5. iterácia & 2148207 & 7160,690 \\ \hline
+		 Priemer & 2140062,75 & 7133,543 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Gatling Test s~rastúcim počtom klientov -- 100 klientov}
+\end{table}
+
+
+\textbf{Štvrtý test -- 150 klientov}
+
+V zlepšovaní výsledkov Gatling pokračoval aj v teste so 150 klientmi. Pozitívom je zlepšenie spoľahlivosti výsledkov, keď sa rozdiel vo výsledkoch najlepšej a najhoršej iterácie klesol zmenšil na polovicu. S prihliadnutím na zvýšenie výkonu je to veľmi pozitívna správa, pretože rozdiel vo výsledkoch rastie s rastúcim počtom vykonaných požiadaviek.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 2323968 & 7746,560 \\ \hline
+		 2. iterácia & 2322686 & 7742,287 \\ \hline
+		 3. iterácia & 2336059 & 7786,863 \\ \hline
+		 4. iterácia & 2334234 & 7780,780 \\ \hline
+		 5. iterácia & 2352479 & 7841,597 \\ \hline
+		 Priemer & 2333341,75 & 7777,806 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Gatling Test s~rastúcim počtom klientov -- 150 klientov}
+\end{table}
+
+
+\textbf{Piaty test -- 200 klientov}
+
+Aj v poslednej modifikácii testu s rastúcim počtom klientov dosiahol Gatling zlepšenie oproti predchádzajúcej modifikácii. Rozdiel vo výsledkoch sa zvýšil na hodnotu z testu so 100 klientmi. Pri zvýšení počtu vykonaných požiadaviek to ale nie je tak výrazné zhoršenie spoľahlivosti výsledkov.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 2508025 & 8360,083 \\ \hline
+		 2. iterácia & 2511472 & 8371,573 \\ \hline
+		 3. iterácia & 2490477 & 8301,590 \\ \hline
+		 4. iterácia & 2536607 & 8455,357 \\ \hline
+		 5. iterácia & 2550135 & 8500,450 \\ \hline
+		 Priemer & 2526559,75 & 8421,866 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Gatling Test s~rastúcim počtom klientov -- 200 klientov}
+\end{table}
+
+
+\item PerfCake
+
+Najlepší výsledok testu s 10 klientmi dosiahol PerfCake a rozdiel vo výsledkoch bol tiež veľmi malý.
+
+\textbf{Prvý test -- 10 klientov}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 3951517 & 13171,723 \\ \hline
+		 2. iterácia & 3963717 & 13212,390 \\ \hline
+		 3. iterácia & 3991775 & 13305,917 \\ \hline
+		 4. iterácia & 3957599 & 13191,997 \\ \hline
+		 5. iterácia & 3984467 & 13281,557 \\ \hline
+		 Priemer & 3969815 & 13232,717 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{PerfCake Test s~rastúcim počtom klientov -- 10 klientov}
+\end{table}
+
+
+\textbf{Druhý test -- 50 klientov}
+
+Suverénne najlepší výsledok dosiahol v teste s 50 klientmi PerfCake, pričom sa nezhoršila ani spoľahlivosť výsledkov.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 8436852 & 28122,840 \\ \hline
+		 2. iterácia & 8468862 & 28229,540 \\ \hline
+		 3. iterácia & 8364056 & 27880,187 \\ \hline
+		 4. iterácia & 8378125 & 27927,083 \\ \hline
+		 5. iterácia & 8457090 & 28190,300 \\ \hline
+		 Priemer & 8420997 & 28069,990 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{PerfCake Test s~rastúcim počtom klientov -- 50 klientov}
+\end{table}
+
+
+\textbf{Tretí test -- 100 klientov}
+
+Oproti predchádzajúcej modifikácii dosiahol PerfCake výrazný prepad vo výsledkoch, ako aj v spoľahlivosti výsledkov.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 7382610 & 24608,700 \\ \hline
+		 2. iterácia & 6638997 & 22129,990 \\ \hline
+		 3. iterácia & 7469201 & 24897,337 \\ \hline
+		 4. iterácia & 6891892 & 22972,973 \\ \hline
+		 5. iterácia & 7257491 & 24191,637 \\ \hline
+		 Priemer & 7128038,2 & 23760,127 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{PerfCake Test s~rastúcim počtom klientov -- 100 klientov}
+\end{table}
+
+
+\textbf{Štvrtý test -- 150 klientov}
+
+V štvrtej modifikácii PerfCake zaznamenal mierne zníženie výkonu oproti predchádzajúcej modifikácii, ale zároveň došlo k výraznému zlepšeniu spoľahlivosti výsledkov.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 6824064 & 22746,880 \\ \hline
+		 2. iterácia & 7221323 & 24071,077 \\ \hline
+		 3. iterácia & 7325744 & 24419,147 \\ \hline
+		 4. iterácia & 6845474 & 22818,247 \\ \hline
+		 5. iterácia & 7289434 & 24298,113 \\ \hline
+		 Priemer & 7101207,8 & 23670,693 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{PerfCake Test s~rastúcim počtom klientov -- 150 klientov}
+\end{table}
+
+\textbf{Piaty test -- 200 klientov}
+
+Posledná modifikácia opäť zaznamenala mierne zníženie výsledkov. Väčším negatívom je, že sa zároveň znížila aj spoľahlivosť výsledkov.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 7011158 & 23370,527 \\ \hline
+		 2. iterácia & 6667422 & 22224,740 \\ \hline
+		 3. iterácia & 6807714 & 22692,380 \\ \hline
+		 4. iterácia & 7142392 & 23807,973 \\ \hline
+		 5. iterácia & 7256323 & 24187,743 \\ \hline
+		 Priemer & 6977001,8 & 23256,673 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{PerfCake Test s~rastúcim počtom klientov -- 200 klientov}
+\end{table}
+
+\item Vyhodnotenie
+
+\textbf{Vykonané požiadavky}\\
+Z pohľadu počtu vykonaných požiadaviek je jasným víťazom PerfCake. V teste s 50 klientmi, kde dosiahli najlepší výkon všetky nástroje okrem Gatling, dokázal PerfCake vykonať takmer trikrát viac požiadaviek, ako Apache JMeter a Faban. Najhorší výsledok dosiahol Gatling, ktorý ale ako jediný dokázal zvyšovať počet vykonaných požiadaviek so zvyšujúcim sa počtom klientov. Apache JMeter a Faban dosiahli takmer rovnaké výsledky. Faban výrazne zaostal v teste s 10 klientmi, no v ďalších modifikáciach už mal navrch.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Test} & \textbf{Apache JMeter} & \textbf{Faban} & \textbf{Gatling} & \textbf{PerfCake} \\ \hline
+		 10 klientov & 3946274 & 1613335 & 1825040 & 3969815 \\ \hline
+ 		 50 klientov & 3093758 & 3294958 & 1925112 & 8420997 \\ \hline
+ 		 100 klientov & 3073190 & 3221918 & 2137735 & 7128038 \\ \hline
+ 		 150 klientov & 3144550 & 3188195 & 2333885 & 7101208 \\ \hline
+		 200 klientov & 3123364 & 3199538 & 2519343 & 6977002 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Test s~rastúcim počtom klientov -- priemerný počet vykonaných požiadaviek}
+\end{table}
+
+\textbf{Rozdiel vo výsledkoch}\\
+Najspoľahlivejšie výsledky poskytoval počas všetkých testov Faban. Neohrozil ho ani druhý Gatling, ktorého rozdiel vo výsledkoch nie je o mnoho väčší, pretože dosiahol nižší počet vykonaných požiadaviek. Ako vidieť z výsledkov, s rastúcim počtom vykonaných požiadaviek rastie rozdiel vo výsledkoch. Pre porovnanie Faban a Gatling najlepšie poslúži rvý test, v ktorom dosiahli podobné výsledky, ale Gatling mal viac ako trikrát väčší rozdiel vo výsledkoch. Najhoršie dopadol Apache JMeter, ktorého výsledky boli konzistentné, ale niektoré iterácie zaznamenali výrazný prepad vo výsledkoch. Z pohľadu absolútnych čísel dosiahol veľký rozdiel aj PerfCake, no v jeho prospech hrá výrazne vyšší počet vykonaných požiadaviek.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Test} & \textbf{Apache JMeter} & \textbf{Faban} & \textbf{Gatling} & \textbf{PerfCake} \\ \hline
+		 10 klientov & 510493 & 7171 & 23424 & 40258 \\ \hline
+		 50 klientov & 590825 & 24150 & 47530 & 104806 \\ \hline
+		 100 klientov & 102703 & 23988 & 59438 & 830204 \\ \hline
+		 150 klientov & 116782 & 8046 & 29793 & 501680 \\ \hline
+		 200 klientov & 226184 & 31426 & 59658 & 588901 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Test s~rastúcim počtom klientov -- rozdiel vo výsledkoch}
+\end{table}
 
 \end{itemize}
 
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{gatling2_1.jpg}
-  \caption{Celkový počet vykonaných požiadaviek}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{gatling2_1_distr.jpg}
-  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
-\end{figure}
-
-\textbf{Druhý test - 50 klientov}
-\begin{itemize}
-
-\item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 1918599\\
-Priemerný počet vykonaných požiadaviek za sekundu: 6395,330
-
-\item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 1952562\\
-Priemerný počet vykonaných požiadaviek za sekundu: 6508,540
-
-\item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 1913446\\
-Priemerný počet vykonaných požiadaviek za sekundu: 6378,153
-
-\item[\textbf{4. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 1935923\\
-Priemerný počet vykonaných požiadaviek za sekundu: 6453,077
-
-\item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 1905032\\
-Priemerný počet vykonaných požiadaviek za sekundu: 6350,107
-
-\item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných požiadaviek: 1928029\\
-Priemerný počet vykonaných požiadaviek za sekundu: 6426,763
-
-\end{itemize}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{gatling2_2.jpg}
-  \caption{Celkový počet vykonaných požiadaviek}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{gatling2_2_distr.jpg}
-  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
-\end{figure}
-
-\textbf{Tretí test - 100 klientov}
-\begin{itemize}
-
-\item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 2136292\\
-Priemerný počet vykonaných požiadaviek za sekundu: 7120,973
-
-\item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 2167595\\
-Priemerný počet vykonaných požiadaviek za sekundu: 7225,317
-
-\item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 2128423\\
-Priemerný počet vykonaných požiadaviek za sekundu: 7094,743
-
-\item[\textbf{4. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 2108157\\
-Priemerný počet vykonaných požiadaviek za sekundu: 7027,190
-
-\item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 2148207\\
-Priemerný počet vykonaných požiadaviek za sekundu: 7160,690
-
-\item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných požiadaviek: 2140062,75\\
-Priemerný počet vykonaných požiadaviek za sekundu: 7133,543
-
-\end{itemize}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{gatling2_3.jpg}
-  \caption{Celkový počet vykonaných požiadaviek}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{gatling2_3_distr.jpg}
-  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
-\end{figure}
-
-\textbf{Štvrtý test - 150 klientov}
-\begin{itemize}
-
-\item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 2323968\\
-Priemerný počet vykonaných požiadaviek za sekundu: 7746,560
-
-\item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 2322686\\
-Priemerný počet vykonaných požiadaviek za sekundu: 7742,287
-
-\item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 2336059\\
-Priemerný počet vykonaných požiadaviek za sekundu: 7786,863
-
-\item[\textbf{4. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 2334234\\
-Priemerný počet vykonaných požiadaviek za sekundu: 7780,780
-
-\item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 2352479\\
-Priemerný počet vykonaných požiadaviek za sekundu: 7841,597
-
-\item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných požiadaviek: 2333341,75\\
-Priemerný počet vykonaných požiadaviek za sekundu: 7777,806
-
-\end{itemize}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{gatling2_4.jpg}
-  \caption{Celkový počet vykonaných požiadaviek}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{gatling2_4_distr.jpg}
-  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
-\end{figure}
-
-\textbf{Piaty test - 200 klientov}
-\begin{itemize}
-
-\item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 2508025\\
-Priemerný počet vykonaných požiadaviek za sekundu: 8360,083
-
-\item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 2511472\\
-Priemerný počet vykonaných požiadaviek za sekundu: 8371,573
-
-\item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 2490477\\
-Priemerný počet vykonaných požiadaviek za sekundu: 8301,590
-
-\item[\textbf{4. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 2536607\\
-Priemerný počet vykonaných požiadaviek za sekundu: 8455,357
-
-\item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 2550135\\
-Priemerný počet vykonaných požiadaviek za sekundu: 8500,450
-
-\item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných požiadaviek: 2526559,75\\
-Priemerný počet vykonaných požiadaviek za sekundu: 8421,866
-
-\end{itemize}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{gatling2_5.jpg}
-  \caption{Celkový počet vykonaných požiadaviek}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{gatling2_5_distr.jpg}
-  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
-\end{figure}
-
-\item Perfcake
-
-\end{itemize}
-
-\subsection{Testy s rastúcou veľkosťou správ}
+\subsection{Testy s~rastúcou veľkosťou správ}
 
 \begin{itemize}
 
 \item Apache JMeter
 
+Najvyšší počet vykonaných požiadaviek v prvej modifikácii testu s rastúcou veľkosťou správy dosiahol Apache JMeter. Vzhľadom k vysokému počtu požiadaviek mal aj dobrý výsledok rozdielu medzi najlepšou a najhoršou iteráciou.
+
+\textbf{Prvý test -- 5 znaková správa}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 10930840 & 36436,133 \\ \hline
+		 2. iterácia & 11432411 & 38108,037 \\ \hline
+		 3. iterácia & 11602715 & 38675,717 \\ \hline
+		 4. iterácia & 11039125 & 36797,083 \\ \hline
+		 5. iterácia & 11279402 & 37598,007 \\ \hline
+		 Priemer & 11256898,6 & 37522,995 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Apache JMeter Test s~rastúcou veľkosťou správy -- 5 znakov}
+\end{table}
+
+
+\textbf{Druhý test -- 1024 znaková správa (1 KB)}
+
+S nárastom veľkosti správy sa logicky znížilo aj množstvo vykonaných požiadaviek. Zároveň sa ale objavil náhly výkyv počtu požiadaviek u jednej iterácie, ako tomu bolo aj v prípade prvých dvoch modifikácii testu s rastúcim počtom klientov. V tomto prípade nedošlo k zníženiu výkonu, ale naopak k radikálnemu zýšeniu počtu vykonaných požiadaviek v 3. iterácii testu.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 335654 & 1118,847 \\ \hline
+		 2. iterácia & 336515 & 1121,717 \\ \hline
+		 3. iterácia & 485819 & 1619,397 \\ \hline
+		 4. iterácia & 335579 & 1118,597 \\ \hline
+		 5. iterácia & 336568 & 1121,893 \\ \hline
+		 Priemer & 366027 & 1220,090 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Apache JMeter Test s~rastúcou veľkosťou správy -- 1024 znakov}
+\end{table}
+
+
+\textbf{Tretí test -- 5120 znaková správa (5 KB)}
+
+Tretia modifikácia zaznamenala v prípade Apache JMeter v priemere päťnásobné zníženie počtu vykonaných požiadaviek (bez započítania 3. iterácie testu s 1024 znakovou správou). To signalizuje, že sa väčšina záťaže presunula na server alebo prenosovú sústavu, t.j. mimo nástroj Apache JMeter. Rozdiel vo výsledkoch oproti predchádzajúcemu testu výrazne klesol.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 67304 & 224,347 \\ \hline
+		 2. iterácia & 67570 & 225,233 \\ \hline
+		 3. iterácia & 68036 & 226,787 \\ \hline
+		 4. iterácia & 67756 & 225,853 \\ \hline
+		 5. iterácia & 67915 & 226,383 \\ \hline
+		 Priemer & 67716,2 & 225,721 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Apache JMeter Test s~rastúcou veľkosťou správy -- 5120 znakov}
+\end{table}
+
+
+\textbf{Štvrtý test -- 51200 znaková správa (50 KB)}
+
+Desaťnásobné zväčšenie správy spôsobilo približne desaťnásobné zníženie počtu vykonaných požiadaviek. Rozdiel vo výsledkoch sa znova znížil, ale už nie takým výrazným pomerom, ako v prípade 2. a 3. iterácie.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 6805 & 22,683 \\ \hline
+		 2. iterácia & 6855 & 22,850 \\ \hline
+		 3. iterácia & 6813 & 22,710 \\ \hline
+		 4. iterácia & 6768 & 22,560 \\ \hline
+		 5. iterácia & 6828 & 22,760 \\ \hline
+		 Priemer & 6813,8 & 22,713 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Apache JMeter Test s~rastúcou veľkosťou správy -- 51200 znakov}
+\end{table}
+
+
+\textbf{Piaty test -- 512000 znaková správa (500 KB)}
+
+Ďalšie desaťnásobné zväčšenie veľkosti správy opäť znamenalo zníženie počtu prenesených správ rovnakým pomerom. Rozdiel v správach opäť klesol.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 691 & 2,303 \\ \hline
+		 2. iterácia & 692 & 2,307 \\ \hline
+		 3. iterácia & 693 & 2,310 \\ \hline
+		 4. iterácia & 693 & 2,310 \\ \hline
+		 5. iterácia & 704 & 2,347 \\ \hline
+		 Priemer & 694,6 & 2,315 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Apache JMeter Test s~rastúcou veľkosťou správy -- 512000 znakov}
+\end{table}
+
 \item Faban
 
-\textbf{Prvý test - 5 znaková správa}
-\begin{itemize}
+\textbf{Prvý test -- 5 znaková správa}
 
-\item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 6807453\\
-Priemerný počet vykonaných požiadaviek za sekundu: 22691,510
+Faban si rovnako ako v predchádzajúcich testoch drží najvyššiu spoľahlivosť výsledkov. Počet vykonaných požiadaviek už v prvej modifikácii nie je najhorší, ako tomu bolo v predchádzajúcich testoch.
 
-\item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 6802899\\
-Priemerný počet vykonaných požiadaviek za sekundu: 22676,330
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 6807453 & 22691,510 \\ \hline
+		 2. iterácia & 6802899 & 22676,330 \\ \hline
+		 3. iterácia & 6857271 & 22857,570 \\ \hline
+		 4. iterácia & 6831598 & 22771,993 \\ \hline
+		 5. iterácia & 6837934 & 22793,113 \\ \hline
+		 Priemer & 6827431 & 22758,103 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Faban Test s~rastúcou veľkosťou správy -- 5 znakov}
+\end{table}
 
-\item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 6857271\\
-Priemerný počet vykonaných požiadaviek za sekundu: 22857,570
 
-\item[\textbf{4. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 6831598\\
-Priemerný počet vykonaných požiadaviek za sekundu: 22771,993
+\textbf{Druhý test -- 1024 znaková správa (1 KB)}
 
-\item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 6837934\\
-Priemerný počet vykonaných požiadaviek za sekundu: 22793,113
+Druhá modifikácia bola poznačená dvomi zlyhaniami testu. V 2. a 4. iterácii sa vyskytla rovnaká chyba, ako v teste \hyperlink{label}{2.3.5}.
+\par Počet vykonaných požiadaviek klesol. Rovnako klesol aj rozdiel vo výsledkoch. Spoľahlivosť výsledkov výrazne narušili dve zlyhania testov.
 
-\item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných požiadaviek: 6827431\\
-Priemerný počet vykonaných požiadaviek za sekundu: 22758,103
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 339326 & 1131,087 \\ \hline
+		 2. iterácia & Chyba, \hyperlink{label}{viď. test 2.3.5} & Chyba, \hyperlink{label}{viď. test 2.3.5} \\ \hline
+		 3. iterácia & 339615 & 1132,050 \\ \hline
+		 4. iterácia & Chyba, \hyperlink{label}{viď. test 2.3.5} & Chyba, \hyperlink{label}{viď. test 2.3.5} \\ \hline
+		 5. iterácia & 336776 & 1122,587 \\ \hline
+		 Priemer & 338572,3 & 1128,574 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Faban Test s~rastúcou veľkosťou správy -- 1024 znakov}
+\end{table}
 
-\end{itemize}
 
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{faban3_1.jpg}
-  \caption{Celkový počet vykonaných požiadaviek}
-\end{figure}
+\textbf{Tretí test -- 5120 znaková správa (5 KB)}
 
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{faban3_1_distr.jpg}
-  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
-\end{figure}
+Podobne, ako v predchádzajúcej modifikácii, aj teraz sa vyskytli chyby v 2. a 4. iterácii testu. Počet vykonaných požiadaviek, ako aj rozdiel vo výsledkoch klesol. Dôveryhodnosť výsledkov je znížená dvomi zlyhaniami testov.
 
-\textbf{Druhý test - 1024 znaková správa (1 KB)}
-\begin{itemize}
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 68625 & 228,750 \\ \hline
+		 2. iterácia & Chyba, \hyperlink{label}{viď. test 2.3.5} & Chyba, \hyperlink{label}{viď. test 2.3.5} \\ \hline
+		 3. iterácia & 68748 & 229,160 \\ \hline
+		 4. iterácia & Chyba, \hyperlink{label}{viď. test 2.3.5} & Chyba, \hyperlink{label}{viď. test 2.3.5} \\ \hline
+		 5. iterácia & 68932 & 229,773 \\ \hline
+		 Priemer & 68768,3 & 229,228 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Faban Test s~rastúcou veľkosťou správy -- 5120 znakov}
+\end{table}
 
-\item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 339326\\
-Priemerný počet vykonaných požiadaviek za sekundu: 1131,087
 
-\item[\textbf{2. iterácia}]\ \\
-Chyba, \hyperlink{label}{viď. test 2.3.5}.
+\textbf{Štvrtý test -- 51200 znaková správa (50 KB)}
 
-\item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 339615\\
-Priemerný počet vykonaných požiadaviek za sekundu: 1132,050
+Štvrtá modifikácia zaznamenala len jednu chybu v 4. iterácii testu. Počet vykonaných požiadaviek spolu s rozdielom vo výsledkoch klesol.
 
-\item[\textbf{4. iterácia}]\ \\
-Chyba, \hyperlink{label}{viď. test 2.3.5}.
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 6794 & 22,647 \\ \hline
+		 2. iterácia & 6743 & 22,477 \\ \hline
+		 3. iterácia & 6752 & 22,507 \\ \hline
+		 4. iterácia & Chyba, \hyperlink{label}{viď. test 2.3.5} & Chyba, \hyperlink{label}{viď. test 2.3.5} \\ \hline
+		 5. iterácia & 6772 & 22,573 \\ \hline
+		 Priemer & 6765,3 & 22,551 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Faban Test s~rastúcou veľkosťou správy -- 51200 znakov}
+\end{table}
 
-\item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 336776\\
-Priemerný počet vykonaných požiadaviek za sekundu: 1122,587
 
-\item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných požiadaviek: 338572,3\\
-Priemerný počet vykonaných požiadaviek za sekundu: 1128,574
+\textbf{Piaty test -- 512000 znaková správa (500 KB)}
 
-\end{itemize}
+Aj posledná modifikácia testu zaznamenala jednu chybu, tentokrát v prvej iterácii testu. Počet požiadaviek a rozdiel vo výsledkoch opäť klesol.
 
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{faban3_2.jpg}
-  \caption{Celkový počet vykonaných požiadaviek}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{faban3_2_distr.jpg}
-  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
-\end{figure}
-
-\textbf{Tretí test - 5120 znaková správa (5 KB)}
-\begin{itemize}
-
-\item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 68625\\
-Priemerný počet vykonaných požiadaviek za sekundu: 228,750
-
-\item[\textbf{2. iterácia}]\ \\
-Chyba, \hyperlink{label}{viď. test 2.3.5}.
-
-\item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 68748\\
-Priemerný počet vykonaných požiadaviek za sekundu: 229,160
-
-\item[\textbf{4. iterácia}]\ \\
-Chyba, \hyperlink{label}{viď. test 2.3.5}.
-
-\item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 68932\\
-Priemerný počet vykonaných požiadaviek za sekundu: 229,773
-
-\item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných požiadaviek: 68768,3\\
-Priemerný počet vykonaných požiadaviek za sekundu: 229,228
-
-\end{itemize}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{faban3_3.jpg}
-  \caption{Celkový počet vykonaných požiadaviek}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{faban3_3_distr.jpg}
-  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
-\end{figure}
-
-\textbf{Štvrtý test - 51200 znaková správa (50 KB)}
-\begin{itemize}
-
-\item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 6794\\
-Priemerný počet vykonaných požiadaviek za sekundu: 22,647
-
-\item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 6743\\
-Priemerný počet vykonaných požiadaviek za sekundu: 22,477
-
-\item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 6752\\
-Priemerný počet vykonaných požiadaviek za sekundu: 22,507
-
-\item[\textbf{4. iterácia}]\ \\
-Chyba, \hyperlink{label}{viď. test 2.3.5}.
-
-\item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 6772\\
-Priemerný počet vykonaných požiadaviek za sekundu: 22,573
-
-\item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných požiadaviek: 6765,3\\
-Priemerný počet vykonaných požiadaviek za sekundu: 22,551
-
-\end{itemize}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{faban3_4.jpg}
-  \caption{Celkový počet vykonaných požiadaviek}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{faban3_4_distr.jpg}
-  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
-\end{figure}
-
-\textbf{Piaty test - 512000 znaková správa (500 KB)}
-\begin{itemize}
-
-\item[\textbf{1. iterácia}]\ \\
-Chyba, \hyperlink{label}{viď. test 2.3.5}.
-
-\item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 610\\
-Priemerný počet vykonaných požiadaviek za sekundu: 2,033
-
-\item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 612\\
-Priemerný počet vykonaných požiadaviek za sekundu: 2,040
-
-\item[\textbf{4. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 613\\
-Priemerný počet vykonaných požiadaviek za sekundu: 2,043
-
-\item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 615\\
-Priemerný počet vykonaných požiadaviek za sekundu: 2,050
-
-\item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných požiadaviek: 612,5\\
-Priemerný počet vykonaných požiadaviek za sekundu: 2,042
-
-\end{itemize}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{faban3_5.jpg}
-  \caption{Celkový počet vykonaných požiadaviek}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{faban3_5_distr.jpg}
-  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
-\end{figure}
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & Chyba, \hyperlink{label}{viď. test 2.3.5} & Chyba, \hyperlink{label}{viď. test 2.3.5} \\ \hline
+		 2. iterácia & 610 & 2,033 \\ \hline
+		 3. iterácia & 612 & 2,040 \\ \hline
+		 4. iterácia & 613 & 2,043 \\ \hline
+		 5. iterácia & 615 & 2,050 \\ \hline
+		 Priemer & 612,5 & 2,042 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Faban Test s~rastúcou veľkosťou správy -- 512000 znakov}
+\end{table}
 
 
 \item Gatling
 
-\textbf{Prvý test - 5 znaková správa}
-\begin{itemize}
+Najhorší výsledok dosiahol v prvej modifikácii testu s rastúcou veľkosťou správy Gatling. Rozdiel vo výsledkoch je vyšší, ako v prípade poslednej modifikácie testu s rastúcim počtom klientov, ktorý mal rovnaký počet vykonaných požiadaviek. 
 
-\item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 2578507\\
-Priemerný počet vykonaných požiadaviek za sekundu: 8595,023
+\textbf{Prvý test -- 5 znaková správa}
 
-\item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 2606448\\
-Priemerný počet vykonaných požiadaviek za sekundu: 8688,160
-
-\item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 2609597\\
-Priemerný počet vykonaných požiadaviek za sekundu: 8698,657
-
-\item[\textbf{4. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 2516099\\
-Priemerný počet vykonaných požiadaviek za sekundu: 8386,997
-
-\item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 2586725\\
-Priemerný počet vykonaných požiadaviek za sekundu: 8622,417
-
-\item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných požiadaviek: 2571944,75\\
-Priemerný počet vykonaných požiadaviek za sekundu: 8573,149
-
-\end{itemize}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{gatling3_1.jpg}
-  \caption{Celkový počet vykonaných požiadaviek}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{gatling3_1_distr.jpg}
-  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
-\end{figure}
-
-\textbf{Druhý test - 1024 znaková správa (1 KB)}
-\begin{itemize}
-
-\item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 334502\\
-Priemerný počet vykonaných požiadaviek za sekundu: 1115,007
-
-\item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 337257\\
-Priemerný počet vykonaných požiadaviek za sekundu: 1124,190
-
-\item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 337315\\
-Priemerný počet vykonaných požiadaviek za sekundu: 1124,383
-
-\item[\textbf{4. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 334833\\
-Priemerný počet vykonaných požiadaviek za sekundu: 1116,110
-
-\item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 336393\\
-Priemerný počet vykonaných požiadaviek za sekundu: 1121,310
-
-\item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných požiadaviek: 335746,25\\
-Priemerný počet vykonaných požiadaviek za sekundu: 1119,154
-
-\end{itemize}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{gatling3_2.jpg}
-  \caption{Celkový počet vykonaných požiadaviek}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{gatling3_2_distr.jpg}
-  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
-\end{figure}
-
-\textbf{Tretí test - 5120 znaková správa (5 KB)}
-\begin{itemize}
-
-\item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 68448\\
-Priemerný počet vykonaných požiadaviek za sekundu: 228,160
-
-\item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 68762\\
-Priemerný počet vykonaných požiadaviek za sekundu: 229,207
-
-\item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 68519\\
-Priemerný počet vykonaných požiadaviek za sekundu: 228,397
-
-\item[\textbf{4. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 68745\\
-Priemerný počet vykonaných požiadaviek za sekundu: 229,150
-
-\item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 68579\\
-Priemerný počet vykonaných požiadaviek za sekundu: 228,597
-
-\item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných požiadaviek: 68633,5\\
-Priemerný počet vykonaných požiadaviek za sekundu: 228,778
-
-\end{itemize}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{gatling3_3.jpg}
-  \caption{Celkový počet vykonaných požiadaviek}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{gatling3_3_distr.jpg}
-  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
-\end{figure}
-
-\textbf{Štvrtý test - 51200 znaková správa (50 KB)}
-\begin{itemize}
-
-\item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 6829\\
-Priemerný počet vykonaných požiadaviek za sekundu: 22,763
-
-\item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 6832\\
-Priemerný počet vykonaných požiadaviek za sekundu: 22,773
-
-\item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 6818\\
-Priemerný počet vykonaných požiadaviek za sekundu: 22,727
-
-\item[\textbf{4. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 6806\\
-Priemerný počet vykonaných požiadaviek za sekundu: 22,687
-
-\item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 6855\\
-Priemerný počet vykonaných požiadaviek za sekundu: 22,850
-
-\item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných požiadaviek: 6830,5\\
-Priemerný počet vykonaných požiadaviek za sekundu: 22,768
-
-\end{itemize}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{gatling3_4.jpg}
-  \caption{Celkový počet vykonaných požiadaviek}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{gatling3_4_distr.jpg}
-  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
-\end{figure}
-
-\textbf{Piaty test - 512000 znaková správa (500 KB)}
-\begin{itemize}
-
-\item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 692\\
-Priemerný počet vykonaných požiadaviek za sekundu: 2,307
-
-\item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 692\\
-Priemerný počet vykonaných požiadaviek za sekundu: 2,307
-
-\item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 689\\
-Priemerný počet vykonaných požiadaviek za sekundu: 2,297
-
-\item[\textbf{4. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 693\\
-Priemerný počet vykonaných požiadaviek za sekundu: 2,310
-
-\item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 689\\
-Priemerný počet vykonaných požiadaviek za sekundu: 2,297
-
-\item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných požiadaviek: 691,5\\
-Priemerný počet vykonaných požiadaviek za sekundu: 2,305
-
-\end{itemize}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{gatling3_5.jpg}
-  \caption{Celkový počet vykonaných požiadaviek}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{gatling3_5_distr.jpg}
-  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
-\end{figure}
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 2578507 & 8595,023 \\ \hline
+		 2. iterácia & 2606448 & 8688,160 \\ \hline
+		 3. iterácia & 2609597 & 8698,657 \\ \hline
+		 4. iterácia & 2516099 & 8386,997 \\ \hline
+		 5. iterácia & 2586725 & 8622,417 \\ \hline
+		 Priemer & 2571944,75 & 8573,149 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Gatling Test s~rastúcou veľkosťou správy -- 5 znakov}
+\end{table}
 
 
+\textbf{Druhý test -- 1024 znaková správa (1 KB)}
 
-\item Perfcake
+Počet vykonaných požiadaviek klesol podobne ako u zvyšných nástrojov. Výrazne klesol rozdiel vo výsledkoch, keď sa dokonca dostal na úroveň nástroja Faban.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 334502 & 1115,007 \\ \hline
+		 2. iterácia & 337257 & 1124,190 \\ \hline
+		 3. iterácia & 337315 & 1124,383 \\ \hline
+		 4. iterácia & 334833 & 1116,110 \\ \hline
+		 5. iterácia & 336393 & 1121,310 \\ \hline
+		 Priemer & 335746,25 & 1119,154 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Gatling Test s~rastúcou veľkosťou správy -- 1024 znakov}
+\end{table}
+
+
+\textbf{Tretí test -- 5120 znaková správa (5 KB)}
+
+Znova klesol počet vykonaných požiadaviek, ako aj rozdiel vo výsledkoch.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 68448 & 228,160 \\ \hline
+		 2. iterácia & 68762 & 229,207 \\ \hline
+		 3. iterácia & 68519 & 228,397 \\ \hline
+		 4. iterácia & 68745 & 229,150 \\ \hline
+		 5. iterácia & 68579 & 228,597 \\ \hline
+		 Priemer & 68633,5 & 228,778 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Gatling Test s~rastúcou veľkosťou správy -- 5120 znakov}
+\end{table}
+
+
+\textbf{Štvrtý test -- 51200 znaková správa (50 KB)}
+
+Štvrtá modifikácia testu opäť zaznamenala pokles vykonaných požiadaviek, ako aj zodpovedajúci pokles rozdielu vo výsledkoch.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 6829 & 22,763 \\ \hline
+		 2. iterácia & 6832 & 22,773 \\ \hline
+		 3. iterácia & 6818 & 22,727 \\ \hline
+		 4. iterácia & 6806 & 22,687 \\ \hline
+		 5. iterácia & 6855 & 22,850 \\ \hline
+		 Priemer & 6830,5 & 22,768 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Gatling Test s~rastúcou veľkosťou správy -- 51200 znakov}
+\end{table}
+
+
+\textbf{Piaty test -- 512000 znaková správa (500 KB)}
+
+Aj poslednej modifikácii klesol počet vykonaných požiadaviek spolu s rozdielom vo výsledkoch.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 692 & 2,307 \\ \hline
+		 2. iterácia & 692 & 2,307 \\ \hline
+		 3. iterácia & 689 & 2,297 \\ \hline
+		 4. iterácia & 693 & 2,310 \\ \hline
+		 5. iterácia & 689 & 2,297 \\ \hline
+		 Priemer & 691,5 & 2,305 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Gatling Test s~rastúcou veľkosťou správy -- 512000 znakov}
+\end{table}
+
+
+\item PerfCake
+
+\textbf{Prvý test -- 5 znaková správa}
+
+Druhý najlepší výsledok v prvej modifikácii testu s rastúcou veľkosťou správy dosiahol PerfCake. Negatívom je veľký rozdiel vo výsledkoch.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 8297885 & 27659,617 \\ \hline
+		 2. iterácia & 7668593 & 25561,977 \\ \hline
+		 3. iterácia & 8223258 & 27410,860 \\ \hline
+		 4. iterácia & 8250351 & 27501,170 \\ \hline
+		 5. iterácia & 8072231 & 26907,437 \\ \hline
+		 Priemer & 8102463,6 & 27008,212 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{PerfCake Test s~rastúcou veľkosťou správy -- 5 znakov}
+\end{table}
+
+
+\textbf{Druhý test -- 1024 znaková správa (1 KB)}
+
+PerfCake ako jediný nástroj dosiahol podobné výsledky aj v druhej modifikácii. Rozdiel vo výsledkoch klesol zhruba o polovicu.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 8345874 & 27819,580 \\ \hline
+		 2. iterácia & 8192962 & 27309,873 \\ \hline
+		 3. iterácia & 8294026 & 27646,753 \\ \hline
+		 4. iterácia & 8527301 & 28424,337 \\ \hline
+		 5. iterácia & 8436495 & 28121,650 \\ \hline
+		 Priemer & 8359331,6 & 27864,439 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{PerfCake Test s~rastúcou veľkosťou správy -- 1024 znakov}
+\end{table}
+
+
+\textbf{Tretí test -- 5120 znaková správa (5 KB)}
+
+Aj v tretej modifikácii dosiahol PerfCake podobné výsledky, ako v predchádzajúcich modifikáciach. Rozdiel vo výsledkoch znova stúpol na hodnotu z prvej modifikácie.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 8502858 & 28342,860 \\ \hline
+		 2. iterácia & 8294405 & 27648,017 \\ \hline
+		 3. iterácia & 7853568 & 26178,560 \\ \hline
+		 4. iterácia & 8094159 & 26980,530 \\ \hline
+		 5. iterácia & 8406732 & 28022,440 \\ \hline
+		 Priemer & 8230344,4 & 27434,481 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{PerfCake Test s~rastúcou veľkosťou správy -- 5120 znakov}
+\end{table}
+
+
+\textbf{Štvrtý test -- 51200 znaková správa (50 KB)}
+
+Počet vykonaných požiadaviek sa aj v štvrtej modifikácii pohyboval na úrovni predchádzajúcich modifikácií. Rozdiel vo výsledkoch znovu klesol na polovičnú hodnotu.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 8521986 & 28406,620 \\ \hline
+		 2. iterácia & 8226342 & 27421,140 \\ \hline
+		 3. iterácia & 8220155 & 27400,517 \\ \hline
+		 4. iterácia & 8199410 & 27331,367 \\ \hline
+		 5. iterácia & 8248134 & 27493,780 \\ \hline
+		 Priemer & 8283205,4 & 27610,685 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{PerfCake Test s~rastúcou veľkosťou správy -- 51200 znakov}
+\end{table}
+
+
+\textbf{Piaty test -- 512000 znaková správa (500 KB)}
+
+Aj posledná modifikácia dosiahla podobné výsledky, ako predchádzajúce modifikácie. Rozdiel vo výsledkoch sa znova zvýšil.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 8206422 & 27354,740 \\ \hline
+		 2. iterácia & 8495780 & 28319,267 \\ \hline
+		 3. iterácia & 8382870 & 27942,900 \\ \hline
+		 4. iterácia & 7852399 & 26174,663 \\ \hline
+		 5. iterácia & 8251700 & 27505,667 \\ \hline
+		 Priemer & 8237834,2 & 27459,447 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{PerfCake Test s~rastúcou veľkosťou správy -- 512000 znakov}
+\end{table}
+
+
+\item Vyhodnotenie
+
+\textbf{Vykonané požiadavky}\\
+Najzaujímavejším zistením bol nulový pokles v počte vykonaných požiadaviek nástrojom PerfCake. To je spôsobené minimalizmom PerfCake, ktorý nespracováva odpovede od požiadaviek, ak od nich návratový kód HTTP menší, ako 400. Testovaná aplikácia explicitne nenastavuje HTTP návratový kód služieb. Problém sa prejaví pri veľkých správach, ktoré majú dlhý čas návratu odpovede. V tomto teste neberiem výsledky PerfCake do úvahy.
+\par Najväčšie rozdiely medzi nástrojmi sú v prípade správy s veľkosťou 5 znakov. Takáto správa je dostatočne malá na to, aby ju server dokázal spracovať veľmi rýchlo a do výsledkov sa prenesie výkon nástroja. V prvej modifikácii je možné porovnať PerfCake spolu s ostatnými nástrojmi.
+\par Nasledujúce modifikácie ukazujú značný pokles počtu vykonaných požiadaviek v všetkých nástrojov, okrem PerfCake. Z porovnania tohto testu vychádza ako víťaz Apache JMeter, ktorého výkon je o takmer 10\% lepší, ako výkon Faban a Gatling. Nasledujúce modifikácie o výkone nástrojov veľa informácií neprinášajú, pretože prenášané správy sú príliš veľké a hlavnú záťaž znáša server a prenosová sústava.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Test} & \textbf{Apache JMeter} & \textbf{Faban} & \textbf{Gatling} & \textbf{PerfCake} \\ \hline
+		 5 znakov & 11256899 & 6827431 & 2579475 & 8102464 \\ \hline
+ 		 1KB správa & 366027 & 338572 & 336060 & 8359332 \\ \hline
+ 		 5KB správa & 67716 & 68768 & 68611 & 8230344 \\ \hline
+ 		 50KB správa & 6814 & 6765 & 6828 & 8283205 \\ \hline
+		 500KB správa & 695 & 613 & 691 & 8237834 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Test s~rastúcim počtom klientov -- priemerný počet vykonaných požiadaviek}
+\end{table}
+
+\textbf{Rozdiel vo výsledkoch}\\
+Z výsledkov vidieť, že hoci Faban vykonal najmenej požiadaviek v prvej modifikácii, drží si spolu s Gatling najnižší rozdiel vo výsledkoch zvyšných modifikácií, ktoré mali porovnateľné množstvo vykonaných požiadaviek. Za zmienku opäť stojí obrovský rozdiel vo výsledkoch Apache JMeter v druhej modifikácii testu. Najlepšie výsledky dosiahol Faban nasledovaný Gatling a Apache JMeter. Výsledky PerfCake opäť nie sú relevantné pre účely porovnávania.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Test} & \textbf{Apache JMeter} & \textbf{Faban} & \textbf{Gatling} & \textbf{PerfCake} \\ \hline
+		 5 znakov & 671875 & 54372 & 93498 & 629292 \\ \hline
+		 1KB správa & 150240 & 2839 & 2813 & 334339 \\ \hline
+		 5KB správa & 732 & 307 & 314 & 649290 \\ \hline
+		 50KB správa & 87 & 51 & 49 & 322576 \\ \hline
+		 500KB správa & 13 & 5 & 4 & 643381 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Test s~rastúcim počtom klientov -- rozdiel vo výsledkoch}
+\end{table}
 
 \end{itemize}
 
@@ -1326,57 +1488,69 @@ Priemerný počet vykonaných požiadaviek za sekundu: 2,305
 
 \item Apache JMeter
 
+Výsledky Apache JMeter obsahovali chybu: JVM should have exitted but did not. Chybu som pri nastavovaní testov a spúšťaní v grafickom prostredí nespozoroval, objavila sa len v automatizovaných testoch spúšťaných cez príkazový riadok. 
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 113729 & 379,097 \\ \hline
+		 2. iterácia & 116433 & 388,110 \\ \hline
+		 3. iterácia & 113632 & 378,773 \\ \hline
+		 4. iterácia & 114521 & 381,737 \\ \hline
+		 5. iterácia & 114332 & 381,107 \\ \hline
+		 Priemer & 114529,4 & 381,765 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Apache JMeter Základný JMS test so 100 klientmi}
+\end{table}
+
 \item Faban
 
-Dokumentácia Fabanu neobsahovala žiadne informácie o testovaní JMS. S vynaložením nemalého úsilia sa mi podarilo nájsť na internete blog, ktorý popisoval nastavenie Fabanu, tak aby s ním bolo možné testovať JMS. Článok neobsahoval informácie o nastavení atribútov potrebných pre testovanie JMS. Nadpis článku naznačoval, že existuje pokračovanie, ktoré sa mi nepodarilo nájsť. Z toho usudzujem, že Faban nepodporuje testovanie JMS. Článok bol publikovaný 21.4.2009\cite{FabanBlog}.
+Dokumentácia Fabanu neobsahovala žiadne informácie o~testovaní JMS. S~vynaložením nemalého úsilia sa mi podarilo nájsť na internete blog, ktorý popisoval nastavenie Fabanu, tak aby s~ním bolo možné testovať JMS. Článok neobsahoval informácie o~nastavení atribútov potrebných pre testovanie JMS. Nadpis článku naznačoval, že existuje pokračovanie, ktoré sa mi nepodarilo nájsť. Z~toho usudzujem, že Faban nepodporuje testovanie JMS. Článok bol publikovaný 21.4.2009\cite{FabanBlog}.
 
 \item Gatling
 
-Gatling dokumentácia obsahuje nastavenie testovacieho scenára pre testovanie JMS. Po nastavení všetkých parametrov testu sa pri testovaní objavuje výnimka "{}User NULL"{} naznačujúca, že nie je možné identifikovať užívateľa, pomocou ktorého je možné pristupovať k JMS frontám JBoss AS servera. Meno a heslo užívateľa som nastavil v súlade s návodom a tieto údaje sú rovnaké, ako pri nástrojoch Apache JMeter a Perfcake, u ktorých testy fungujú. Návod je k dispozícii na stránke \url{http://gatling.io/docs/2.1.1/jms.html}.
+Gatling dokumentácia obsahuje nastavenie testovacieho scenára pre testovanie JMS. Po nastavení všetkých parametrov testu sa pri testovaní objavuje výnimka "{}User NULL"{} naznačujúca, že nie je možné identifikovať užívateľa, pomocou ktorého je možné pristupovať k~JMS frontám JBoss AS servera. Meno a heslo užívateľa som nastavil v~súlade s~návodom a tieto údaje sú rovnaké, ako pri nástrojoch Apache JMeter a PerfCake, u~ktorých testy fungujú. Návod je k~dispozícii na stránke \url{http://gatling.io/docs/2.1.1/jms.html}.
 
-\item Perfcake
+\item PerfCake
 
-Všetých päť iterácií JMS testu prebehlo bez problémov. Rozptyl medzi maximom a minimom je 2900 vykonaných požiadaviek.
+Všetých päť iterácií JMS testu prebehlo bez problémov. Rozdiel medzi maximom a minimom je 2900 vykonaných požiadaviek.
 
-\begin{itemize}
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 113714 & 394,867 \\ \hline
+		 2. iterácia & 112162 & 413,784 \\ \hline
+		 3. iterácia & 112527 & 388,142 \\ \hline
+		 4. iterácia & 115062 & 397,234 \\ \hline
+		 5. iterácia & 115012 & 377,893 \\ \hline
+		 Priemer & 113695,4 & 378,985 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{PerfCake Základný JMS test so 100 klientmi}
+\end{table}
 
-\item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 113714\\
-Priemerný počet vykonaných požiadaviek za sekundu: 394.867
+\item Vyhodnotenie
 
-\item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 112162\\
-Priemerný počet vykonaných požiadaviek za sekundu: 413.784
-
-\item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 112527\\
-Priemerný počet vykonaných požiadaviek za sekundu: 388.142
-
-\item[\textbf{4. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 115062\\
-Priemerný počet vykonaných požiadaviek za sekundu: 397.234
-
-\item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 115012\\
-Priemerný počet vykonaných požiadaviek za sekundu: 377.893
-
-\item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných požiadaviek: 113695.4\\
-Priemerný počet vykonaných požiadaviek za sekundu: 378,985	
-
-\end{itemize}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{perfcake4.jpg}
-  \caption{Celkový počet vykonaných požiadaviek}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{perfcake4_distr.jpg}
-  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
-\end{figure}
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c |}
+		\hline
+		 \textbf{Nástroj} & \textbf{Priemerný počet požiadaviek} & \textbf{Rozdiel MAX - MIN} \\ \hline
+		 Apache JMeter & 114529,4 & 2801 \\ \hline
+		 Faban & -- & -- \\ \hline
+		 Gatling & -- & -- \\ \hline
+		 PerfCake & 113695,4 & 2900 \\ \hline
+\end{tabular}
+\end{center}
+\caption{Základný test s~jedným klientom}
+\end{table}
 
 \end{itemize}
 
@@ -1386,93 +1560,82 @@ Priemerný počet vykonaných požiadaviek za sekundu: 378,985
 
 \item Apache JMeter
 
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 68390 & 227,967 \\ \hline
+		 2. iterácia & 67537 & 225,123 \\ \hline
+		 3. iterácia & 68908 & 229,693 \\ \hline
+		 4. iterácia & 68753 & 229,177 \\ \hline
+		 5. iterácia & 67863 & 226,210 \\ \hline
+		 Priemer & 68290,2 & 227,634 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Apache JMeter Základný test so 100 klientmi}
+\end{table}
+
+
 \item Faban
 
-\begin{itemize}
-
-\item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 68286\\
-Priemerný počet vykonaných požiadaviek za sekundu: 227,620
-
-\item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 68590\\
-Priemerný počet vykonaných požiadaviek za sekundu: 228,633
-
-\item[\textbf{3. iterácia}]\ \\
-Chyba, \hyperlink{label}{viď. test 2.3.5}.
-
-\item[\textbf{4. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 67874\\
-Priemerný počet vykonaných požiadaviek za sekundu: 226,247
-
-\item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 68567\\
-Priemerný počet vykonaných požiadaviek za sekundu: 228,557
-
-\item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných požiadaviek: 68329,25\\
-Priemerný počet vykonaných požiadaviek za sekundu: 227,764
-
-\end{itemize}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{faban5.jpg}
-  \caption{Celkový počet vykonaných požiadaviek}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{faban5_distr.jpg}
-  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
-\end{figure}
-
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 68286 & 227,620 \\ \hline
+		 2. iterácia & 68590 & 228,633 \\ \hline
+		 3. iterácia & Chyba, \hyperlink{label}{viď. test 2.3.5} & Chyba, \hyperlink{label}{viď. test 2.3.5} \\ \hline
+		 4. iterácia & 67874 & 226,247 \\ \hline
+		 5. iterácia & 68567 & 228,557 \\ \hline
+		 Priemer & 68329,25 & 227,764 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Faban Základný test so 100 klientmi}
+\end{table}
 
 
 \item Gatling
 
-\begin{itemize}
-
-\item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 68775\\
-Priemerný počet vykonaných požiadaviek za sekundu: 229,250
-
-\item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 68452\\
-Priemerný počet vykonaných požiadaviek za sekundu: 228,173
-
-\item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 68495\\
-Priemerný počet vykonaných požiadaviek za sekundu: 228,317
-
-\item[\textbf{4. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 68273\\
-Priemerný počet vykonaných požiadaviek za sekundu: 227,577
-
-\item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 68805\\
-Priemerný počet vykonaných požiadaviek za sekundu: 229,350
-
-\item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných požiadaviek: 68560\\
-Priemerný počet vykonaných požiadaviek za sekundu: 228,533
-
-\end{itemize}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{gatling5.jpg}
-  \caption{Celkový počet vykonaných požiadaviek}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{gatling5_distr.jpg}
-  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
-\end{figure}
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 68775 & 229,250 \\ \hline
+		 2. iterácia & 68452 & 228,173 \\ \hline
+		 3. iterácia & 68495 & 228,317 \\ \hline
+		 4. iterácia & 68273 & 227,577 \\ \hline
+		 5. iterácia & 68805 & 229,350 \\ \hline
+		 Priemer & 68560 & 228,533 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Gatling Základný test so 100 klientmi}
+\end{table}
 
 
-\item Perfcake
+\item PerfCake
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 7344119 & 24480,397 \\ \hline
+		 2. iterácia & 7536481 & 25121,603 \\ \hline
+		 3. iterácia & 7415389 & 24717,963 \\ \hline
+		 4. iterácia & 7164312 & 23881,040 \\ \hline
+		 5. iterácia & 7952241 & 26507,470 \\ \hline
+		 Priemer & 7482508,4 & 24941,695 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Gatling Základný test so 100 klientmi}
+\end{table}
 
 \end{itemize}
 
@@ -1482,65 +1645,84 @@ Priemerný počet vykonaných požiadaviek za sekundu: 228,533
 
 \item Apache JMeter
 
+\textbf{Bez úniku pamäte}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 820011 & 227,781 \\ \hline
+		 2. iterácia & 821934 & 228,315 \\ \hline
+		 3. iterácia & 824035 & 228,899 \\ \hline
+		 Priemer & 821993,33 & 228,331 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Faban Vytrvalostný test bez úniku pamäte}
+\end{table}
+
+
+
+\textbf{S~únikom pamäte}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 813733 & 226,037 \\ \hline
+		 2. iterácia & 821163 & 228,101 \\ \hline
+		 3. iterácia & 823443 & 228,734 \\ \hline
+		 Priemer & 819446,33 & 227,624 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Faban Vytrvalostný test s~únikom pamäte}
+\end{table}
+
 \item Faban
 
 \textbf{Bez úniku pamäte}
-\begin{itemize}
 
-\item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 818265\\
-Priemerný počet vykonaných požiadaviek za sekundu: 227,296
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 818265 & 227,296 \\ \hline
+		 2. iterácia & 823862 & 228,851 \\ \hline
+		 3. iterácia & 818863 & 227,462 \\ \hline
+		 Priemer & 820330 & 227,869 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Faban Vytrvalostný test bez úniku pamäte}
+\end{table}
 
-\item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 823862\\
-Priemerný počet vykonaných požiadaviek za sekundu: 228,851
 
-\item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 818863\\
-Priemerný počet vykonaných požiadaviek za sekundu: 227,462
 
-\item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných požiadaviek: 820330\\
-Priemerný počet vykonaných požiadaviek za sekundu: 227,869
+\textbf{S~únikom pamäte}
 
-\end{itemize}
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 822346 & 228,429 \\ \hline
+		 2. iterácia & 817627 & 227,119 \\ \hline
+		 3. iterácia & 818486 & 227,357 \\ \hline
+		 Priemer & 819486,3 & 227,635 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Faban Vytrvalostný test s~únikom pamäte}
+\end{table}
 
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{faban6_no_leak.jpg}
-  \caption{Celkový počet vykonaných požiadaviek}
-\end{figure}
-
-\textbf{S únikom pamäte}
-\begin{itemize}
-
-\item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 822346\\
-Priemerný počet vykonaných požiadaviek za sekundu: 228,429
-
-\item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 817627\\
-Priemerný počet vykonaných požiadaviek za sekundu: 227,119
-
-\item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 818486\\
-Priemerný počet vykonaných požiadaviek za sekundu: 227,357
-
-\item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných požiadaviek: 819486,3\\
-Priemerný počet vykonaných požiadaviek za sekundu: 227,635
-
-\end{itemize}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{faban6_leak.jpg}
-  \caption{Celkový počet vykonaných požiadaviek}
-\end{figure}
 
 \item Gatling
 
-\item Perfcake
+\item PerfCake
 
 \end{itemize}
 
@@ -1550,96 +1732,63 @@ Priemerný počet vykonaných požiadaviek za sekundu: 227,635
 
 \item Apache JMeter
 
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 13329690 & 44432,300 \\ \hline
+		 2. iterácia & 13256854 & 44189,513 \\ \hline
+		 3. iterácia & 13256973 & 44189,910 \\ \hline
+		 4. iterácia & 13576708 & 45255,693 \\ \hline
+		 5. iterácia & 13300559 & 44335,197 \\ \hline
+		 Priemer & 13344156,8 & 44480,523 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Apache JMeter Test teoretickej priepustnosti}
+\end{table}
+
 \item Faban
 
-\begin{itemize}
-
-\item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 8385444\\
-Priemerný počet vykonaných požiadaviek za sekundu: 27951,480
-
-\item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 8670415\\
-Priemerný počet vykonaných požiadaviek za sekundu: 28901,383
-
-\item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 8810458\\
-Priemerný počet vykonaných požiadaviek za sekundu: 29368,193
-
-\item[\textbf{4. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 8775981\\
-Priemerný počet vykonaných požiadaviek za sekundu: 29253,270
-
-\item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 8762981\\
-Priemerný počet vykonaných požiadaviek za sekundu: 29209,937
-
-\item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných požiadaviek: 8681055,8\\
-Priemerný počet vykonaných požiadaviek za sekundu: 28936,853
-
-\end{itemize}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{faban7.jpg}
-  \caption{Celkový počet vykonaných požiadaviek}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{faban7_distr.jpg}
-  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
-\end{figure}
-
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 8385444 & 27951,480 \\ \hline
+		 2. iterácia & 8670415 & 28901,383 \\ \hline
+		 3. iterácia & 8810458 & 29368,193 \\ \hline
+		 4. iterácia & 8775981 & 29253,270 \\ \hline
+		 5. iterácia & 8762981 & 29209,937 \\ \hline
+		 Priemer & 8681055,8 & 28936,853 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Faban Test teoretickej priepustnosti}
+\end{table}
 
 
 \item Gatling
 
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
+		 1. iterácia & 3044179 & 10147,263 \\ \hline
+		 2. iterácia & 2846062 & 9486,873 \\ \hline
+		 3. iterácia & 2989634 & 9965,447 \\ \hline
+		 4. iterácia & 3034939 & 10116,463 \\ \hline
+		 5. iterácia & 2979783 & 9932,610 \\ \hline
+		 Priemer & 2978919,4 & 9929,731 \\ \hline
+		 
+\end{tabular}
+\end{center}
+\caption{Gatling Test teoretickej priepustnosti}
+\end{table}
 
-
-\begin{itemize}
-
-\item[\textbf{1. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 3044179\\
-Priemerný počet vykonaných požiadaviek za sekundu: 10147,263
-
-\item[\textbf{2. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 2846062\\
-Priemerný počet vykonaných požiadaviek za sekundu: 9486,873
-
-\item[\textbf{3. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 2989634\\
-Priemerný počet vykonaných požiadaviek za sekundu: 9965,447
-
-\item[\textbf{4. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 3034939\\
-Priemerný počet vykonaných požiadaviek za sekundu: 10116,463
-
-\item[\textbf{5. iterácia}]\ \\
-Celkový počet vykonaných požiadaviek: 2979783\\
-Priemerný počet vykonaných požiadaviek za sekundu: 9932,610
-
-\item[\textbf{Priemer}]\ \\
-Celkový počet vykonaných požiadaviek: 2978919,4\\
-Priemerný počet vykonaných požiadaviek za sekundu: 9929,731
-
-\end{itemize}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{gatling7.jpg}
-  \caption{Celkový počet vykonaných požiadaviek}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-      \includegraphics[width=0.9\textwidth]{gatling7_distr.jpg}
-  \caption{Časový priebeh vykonaných požiadaviek - aritmetický priemer všetkých iterácií}
-\end{figure}
-
-
-\item Perfcake
+\item PerfCake
 
 \end{itemize}
 
@@ -1647,27 +1796,27 @@ Priemerný počet vykonaných požiadaviek za sekundu: 9929,731
 \chapter{Záver}
 
 \section{Zhrnutie}
-Cieľom práce bolo porovnanie nástrojov, ich vlastností a porovnanie výsledkov testov. Vďaka tomu si čitateľ môže vybrať jemu vyhovujúci nástroj. Pre zjednodušenie výberu na záver poskytujem stručné zhrnutie a porovnanie všetkých hodnotených kategórií. Súčasťou hodnotenia je aj tabuľka, ktorá pre každú kategóriu obsahuje známku od 1 do 4 reprezentujúcu umiestnenie nástroja v danej kategórii. Nižšie číslo znamená lepšie umiestnenie a ak nástroje dosiahli rovnaké výsledky, hodnotím ich rovnakou známkou.
+Cieľom práce bolo porovnanie nástrojov, ich vlastností a porovnanie výsledkov testov. Vďaka tomu si čitateľ môže vybrať jemu vyhovujúci nástroj. Pre zjednodušenie výberu na záver poskytujem stručné zhrnutie a porovnanie všetkých hodnotených kategórií. Súčasťou hodnotenia je aj tabuľka, ktorá pre každú kategóriu obsahuje známku od 1 do 4 reprezentujúcu umiestnenie nástroja v~danej kategórii. Nižšie číslo znamená lepšie umiestnenie a ak nástroje dosiahli rovnaké výsledky, hodnotím ich rovnakou známkou.
 
 \begin{itemize}
 
 \item \textbf{Inštalácia}\\
-V prvej kategórii hodnotím Apache JMeter a Perfcake známkou 1 a Gatling s Fabanom známkou 2. Všetky nástroje sa inštalujú veľmi jednoducho, stačí ich stiahnuť a rozbaliť. Gatling a Faban majú nižšiu známku, lebo požadujú JDK a nie JRE ako v prípade Apache JMeter a Perfcake.
+V~prvej kategórii hodnotím Apache JMeter a PerfCake známkou 1 a Gatling s~Fabanom známkou 2. Všetky nástroje sa inštalujú veľmi jednoducho, stačí ich stiahnuť a rozbaliť. Gatling a Faban majú nižšiu známku, lebo požadujú JDK a nie JRE ako v~prípade Apache JMeter a PerfCake.
 
 \item \textbf{Používanie}\\
-Víťazmi kategórie sa stávajú Apache JMeter, Gatling a Perfcake. Práca s nimi je jednoduchá a rýchla. Vytvorené testy sa spúšťajú jedným príkazom. Faban vyžaduje pred spustením testov naštartovanie servera.
+Víťazmi kategórie sa stávajú Apache JMeter, Gatling a PerfCake. Práca s~nimi je jednoduchá a rýchla. Vytvorené testy sa spúšťajú jedným príkazom. Faban vyžaduje pred spustením testov naštartovanie servera.
 
 \item \textbf{Dokumentácia}\\
-Nebyť problému s JMS testami, víťazom by bol Gatling. Jeho dokumentácia je najprehľadnejšia a najlepšie sa v nej orientuje. Problém s nastavením JMS Gatling posunul za Apache JMeter a Perfcake, ktoré sa umiestnili na spoločnom prvom mieste. Dokumentácia oboch nástrojov dostačovala k riešeniu všetkých problémov a orientovalo sa v nej rovnako dobre. Posledný skončil Faban. Jeho dokumentácia je najmenej prehľadná. 
+Nebyť problému s~JMS testami, víťazom by bol Gatling. Jeho dokumentácia je najprehľadnejšia a najlepšie sa v~nej orientuje. Problém s~nastavením JMS Gatling posunul za Apache JMeter a PerfCake, ktoré sa umiestnili na spoločnom prvom mieste. Dokumentácia oboch nástrojov dostačovala k~riešeniu všetkých problémov a orientovalo sa v~nej rovnako dobre. Posledný skončil Faban. Jeho dokumentácia je najmenej prehľadná. 
 
 \item \textbf{Vývojové prostredia}\\
-Kategóriu použiteľnosti vo vývojových prostrediach suverénne vyhráva Apache JMeter, ktorý poskytuje doplnok pre NetBeans, IntelliJ IDEA a Maven. Nasleduje Perfcake s podporou pre Eclipse Kepler a Maven, potom Gatling s podporou pre Maven a nakoniec Faban neposkytujúci žiadnu podporu pre vývojové prostredia.
+Kategóriu použiteľnosti vo vývojových prostrediach vyhráva Apache JMeter spolu s PerfCake. Apache JMeter poskytuje doplnok pre NetBeans, IntelliJ IDEA a Maven. PerfCake má podporou pre Eclipse Kepler, IntelliJ IDEA a Maven. Nasleduje Gatling s~podporou pre Maven a nakoniec Faban neposkytujúci žiadnu podporu pre vývojové prostredia.
 
-\item \textbf{Generovanie reportov}\\
-Generovanie reportov Gatlingu a Perfcake prebieha v scenároch, je jednoduché a rýchle. JMeter reporty je nutné nastaviť v grafickom užívateľskom rozhraní a dokumentácia nepopisuje nastavenie v scenároch, čo je jednoduchšia, ale hlavne rýchlejšia cesta. Najhoršie skončil Faban, v ktorom nie je možné zmeniť východiskový adresár pre ukladanie reportov a tým vzniká problém, ktorý som musel riešiť pomocou skriptov.
+\item \textbf{Generovanie výsledkov}\\
+Generovanie výsledkov Gatlingu a PerfCake prebieha v~scenároch, je jednoduché a rýchle. JMeter výpis výsledkov je nutné nastaviť v~grafickom užívateľskom rozhraní a dokumentácia nepopisuje nastavenie v~scenároch, čo je jednoduchšia, ale hlavne rýchlejšia cesta. Najhoršie skončil Faban, v~ktorom nie je možné zmeniť východiskový adresár pre ukladanie výsledkov a tým vzniká problém, ktorý som musel riešiť pomocou skriptov.
 
 \item \textbf{Tvorba testov}\\
-Perfcake testy sa tvoria najjednoduchšie a najrýchlejšie. Nasleduje Gatling s jazykom Scala, na ktorý som si musel chvíľu zvykať. Apache JMeter testy som musel vytvárať v grafickom užívateľskom prostredí, ktoré nie je také rýchle, ako písanie a upravovanie testov v textovom editore. Posledným je Faban, pre ktorý som musel vytvoriť Driver, profil testu a nakoniec samotný scenár.
+PerfCake testy sa tvoria najjednoduchšie a najrýchlejšie. Nasleduje Gatling s~jazykom Scala, na ktorý som si musel chvíľu zvykať. Apache JMeter testy som musel vytvárať v~grafickom užívateľskom prostredí, ktoré nie je také rýchle, ako písanie a upravovanie testov v~textovom editore. Posledným je Faban, pre ktorý som musel vytvoriť Driver, profil testu a nakoniec samotný scenár.
 
 \item \textbf{JMS testy}\\
 
@@ -1695,12 +1844,12 @@ Priemer je vypočítaný ako súčet všetkých známok vydelený počtom hodnot
 \begin{center}
 \begin{tabular}{ | l | c | c | c | c |}
 		\hline
-		 \textbf{Kategória} & \textbf{Apache JMeter} & \textbf{Faban} & \textbf{Gatling} & \textbf{Perfcake} \\ \hline
+		 \textbf{Kategória} & \textbf{Apache JMeter} & \textbf{Faban} & \textbf{Gatling} & \textbf{PerfCake} \\ \hline
 		 Inštalácia & 1 & 2 & 2 & 1 \\ \hline
 		 Používanie & 1 & 2 & 1 & 1 \\ \hline
 		 Dokumentácia & 1 & 4 & 3 & 1 \\ \hline
-		 Vývojové prostredia & 1 & 4 & 3 & 2 \\ \hline
-		 Generovanie reportov & 2 & 3 & 1 & 1 \\ \hline
+		 Vývojové prostredia & 1 & 4 & 2 & 1 \\ \hline
+		 Generovanie výsledkov & 2 & 3 & 1 & 1 \\ \hline
 		 Tvorba testov & 3 & 4 & 2 & 1 \\ \hline
  		 JMS testy &  &  &  &  \\ \hline
 		 Monitorovanie pamäte &  &  &  &  \\ \hline
@@ -1711,7 +1860,7 @@ Priemer je vypočítaný ako súčet všetkých známok vydelený počtom hodnot
 		 
 \end{tabular}
 \end{center}
-\caption{Gatling argumenty}
+\caption{Hodnotiaca tabuľka}
 \end{table}
 
 \textbf{Apache Jmeter}
@@ -1725,11 +1874,11 @@ Plusy
 
 \noindent Mínusy
 \begin{itemize}
-\item[-] Chýbajúce informácie o ďalšom vývoji
+\item[-] Chýbajúce informácie o~ďalšom vývoji
 \item[-] Miestami zastaralá dokumentácia \\
 \end{itemize}
 
-\noindent \textbf{Perfcake}
+\noindent \textbf{PerfCake}
 \newline \\
 Plusy
 \begin{itemize}
@@ -1768,12 +1917,12 @@ Plusy
 Plusy
 \begin{itemize}
 \item[+] Dokumentácia
-\item[+] Výsledky zobrazené v grafickom prostredí
+\item[+] Výsledky zobrazené v~grafickom prostredí
 \end{itemize}
 
 \noindent Mínusy
 \begin{itemize}
-\item[-] Chýbajúce informácie o ďalšom vývoji
+\item[-] Chýbajúce informácie o~ďalšom vývoji
 \item[-] Úprava a tvorba scenárov vyžaduje znalosti jazyka Scala
 \item[-] Neexistuje grafické prostredie \\
 \end{itemize}
@@ -1783,26 +1932,26 @@ Plusy
 
 \appendix
 \chapter{Obsah priloženého CD}
-Súčasťou tejto práce je aj CD obsahujúce všetky materiály, ktoré boli vytvorené v rámci písania práce. Adresárová štruktúra CD vyzerá nasledovne:
+Súčasťou tejto práce je aj CD obsahujúce všetky materiály, ktoré boli vytvorené v~rámci písania práce. Adresárová štruktúra CD vyzerá nasledovne:
 
 \bigskip
 
 \dirtree{%
 .1 /.
 .2 Bakalárska práca.
-.3 img\DTcomment{Adresár s obrázkami použitými v práci}.
 .3 bibliografie.bib\DTcomment{Bibliografická databáza práce}.
 .3 bp.tex\DTcomment{Zdrojový kód práce}.
 .3 bp.pdf\DTcomment{Hotová práca}.
+.2 Grafy\DTcomment{Adresár obsahujúci grafy s výsledkami testov}.
 .2 klient.zip\DTcomment{Archív obsahujúci klientskú časť testov}.
-.3 1, 2, 3, 4, 5, 6, 7\DTcomment{Symbolické odkazy k adresárom}.
-.3 1.Zakladny\ test\ s\ jednym\ klientom\DTcomment{Adresár s testom}.
-.3 2.Rastuce\ mnozstvo\ klientov\DTcomment{Adresár s testom}.
-.3 3.Rastuca\ velkost\ spravy\DTcomment{Adresár s testom}.
-.3 4.JMS zakladny test so 100 klientmi\DTcomment{Adresár s testom}.
-.3 5.Zakladny\ test\ so 100 klientmi\DTcomment{Adresár s testom}.
-.3 6.Vytrvalostny\ test\DTcomment{Adresár s testom}.
-.3 7.Test\ teoretickej priepustnosti nastrojov\DTcomment{Adresár s testom}.
+.3 1, 2, 3, 4, 5, 6, 7\DTcomment{Symbolické odkazy k~adresárom}.
+.3 1.Zakladny\ test\ s\ jednym\ klientom\DTcomment{Adresár s~testom}.
+.3 2.Rastuce\ mnozstvo\ klientov\DTcomment{Adresár s~testom}.
+.3 3.Rastuca\ velkost\ spravy\DTcomment{Adresár s~testom}.
+.3 4.JMS zakladny test so 100 klientmi\DTcomment{Adresár s~testom}.
+.3 5.Zakladny\ test\ so 100 klientmi\DTcomment{Adresár s~testom}.
+.3 6.Vytrvalostny\ test\DTcomment{Adresár s~testom}.
+.3 7.Test\ teoretickej priepustnosti nastrojov\DTcomment{Adresár s~testom}.
 .3 Nastroje\DTcomment{Adresár obsahujúci nástroje}.
 .4 apache-jmeter-2.11\DTcomment{Nástroj Apache JMeter}.
 .4 faban\DTcomment{Nástroj Faban}.
@@ -1810,8 +1959,8 @@ Súčasťou tejto práce je aj CD obsahujúce všetky materiály, ktoré boli vy
 .4 change\underscore{}runtime.sh\DTcomment{Skript meniaci čas testov}.
 .4 change\underscore{}server\underscore{}and\underscore{}port.sh\DTcomment{Skript meniaci server a port}.
 .4 open\underscore{}scenarios.sh\DTcomment{Skript otvárajúci scenáre}.
-.4 remove\underscore{}all\underscore{}logs.sh\DTcomment{Skript odstraňujúci všetky logy a reporty}.
-.4 remove\underscore{}big\underscore{}logs.sh\DTcomment{Skript odstraňujúci velké logy a reporty}.
+.4 remove\underscore{}all\underscore{}logs.sh\DTcomment{Skript odstraňujúci všetky logy a výsledky}.
+.4 remove\underscore{}big\underscore{}logs.sh\DTcomment{Skript odstraňujúci velké logy a výsledky}.
 .4 restart\underscore{}faban.sh\DTcomment{Skript reštartujúci Faban server}.
 .4 run\underscore{}all.sh\DTcomment{Skript spúšťajúci testy}.
 .2 server.zip\DTcomment{Archív obsahujúci serverovú časť testov}.

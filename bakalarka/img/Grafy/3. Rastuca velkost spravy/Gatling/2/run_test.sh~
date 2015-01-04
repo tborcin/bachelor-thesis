@@ -1,0 +1,10 @@
+rm -rf 3/Gatling/2/basic*
+
+for i in 1 2 3 4 5
+do
+
+./restart_jboss.sh
+Nastroje/gatling-charts-highcharts-2.0.1/bin/gatling.sh -sf $(pwd)/3/Gatling/2 -s basic.scenario.Basic -rf $(pwd)/3/Gatling/2 > 3/Gatling/2/report_3.2.$i
+echo "3.2.$i Gatling test finished"
+
+done

@@ -1,0 +1,6 @@
+for i in 1 2 3 4 5
+do
+
+2/Faban/$i/run_test.sh
+
+done

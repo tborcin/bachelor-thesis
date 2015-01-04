@@ -1,0 +1,9 @@
+for i in 1 2 3
+do
+
+./restart_jboss.sh
+Nastroje/apache-jmeter-2.11/bin/jmeter -n -t 6/Apache\ JMeter/S\ memory\ leakom/scenario_6.2.jmx -l 6/Apache\ JMeter/S\ memory\ leakom/threads_results_6.2.$i.jtl > 6/Apache\ JMeter/S\ memory\ leakom/report_6.2.$i;
+mv 6/Apache\ JMeter/S\ memory\ leakom/performance_monitor.jtl 6/Apache\ JMeter/S\ memory\ leakom/performance_monitor_6.2.$i.jtl
+echo "6.2.$i Apache JMeter test finished"
+
+done

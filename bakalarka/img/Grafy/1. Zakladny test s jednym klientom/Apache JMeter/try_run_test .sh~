@@ -1,0 +1,11 @@
+for i in 1 2 3 4 5
+do
+
+echo "jano"
+ssh $1@$2 "$3/testy/ssh_restart_jboss.sh $3 $2"
+Nastroje/apache-jmeter-2.11/bin/jmeter -n -t 1/Apache\ JMeter/scenario_1.jmx -l 1/Apache\ JMeter/threads_results_1.$i.jtl > 1/Apache\ JMeter/report_1.$i
+mv 1/Apache\ JMeter/performance_monitor.jtl 1/Apache\ JMeter/performance_monitor_$i.jtl
+
+echo "1.$i Apache JMeter test finished";
+
+done

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.1)  1 JAN 2015 21:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.1)  4 JAN 2015 20:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -580,51 +580,10 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write4
 \openout4 = `bp.toc'.
 
- [7] (./bp.lof
-Underfull \vbox (badness 1558) has occurred while \output is active []
-
- [8
-
-]
-Underfull \vbox (badness 1533) has occurred while \output is active []
-
- [9])
-\tf@lof=\write5
-\openout5 = `bp.lof'.
-
-
-[10]
+ [7]
 Kapitola 1.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 66.
-
-Overfull \hbox (9.21805pt too wide) in paragraph at lines 67--79
-\OT1/ppl/m/n/12 v[]ypo[]ctov[]y v[]ykon [[]]. Tento probl[]em sa d[]a rie[]sit[
-] dvoma sp[]osobmi. Jed-no-duch[]ym rie[]sen[]^^Pm
- []
-
-
-Overfull \hbox (2.95332pt too wide) in paragraph at lines 67--79
-\OT1/ppl/m/n/12 vlast-nost[]^^P syst[]emu, ako roz[]s[]^^Pritel[]nost[] a efekt
-[]^^Pvnost[] vyu[]z[]^^Pvania pros-tried-kov. Naj[]castej[]sie
- []
-
-
-Overfull \hbox (0.79343pt too wide) in paragraph at lines 67--79
-\OT1/ppl/m/n/12 pou[]z[]^^Pvan[]ymi tes-tami v[]ykonu s[]u z[]at[]a[]zov[]e tes
-ty, []unavov[]e testy, testy v[]ydr[]ze, kul-mina[]cn[]e
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 67--79
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 80--82
-
- []
-
 [1
 
 
@@ -633,19 +592,7 @@ Kapitola 2.
 
 Package hyperref Warning: Composite letter `\textasciicaron+t'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 93.
-
-
-Overfull \hbox (2.45033pt too wide) in paragraph at lines 94--95
-\OT1/ppl/m/n/12 Najpou[]z[]^^Pvanej[]s[]^^Pm a naj-jed-no-duch[]s[]^^Pm tes-tom
- je z[]at[]a[]zov[]y test. Po[]cas tohto testu je syst[]em
- []
-
-
-Overfull \hbox (4.65802pt too wide) in paragraph at lines 97--98
-\OT1/ppl/m/n/12 alebo vel[]mi dlh[]y []cas odozvy. N[]asledne je mo[]zn[]e ur[]
-cit[] ma-xim[]alnu []unosn[]u z[]at[]a[]z syst[]emu.
- []
+(hyperref)                removing `\textasciicaron' on input line 91.
 
 [2
 
@@ -653,133 +600,120 @@ cit[] ma-xim[]alnu []unosn[]u z[]at[]a[]z syst[]emu.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 102.
+(hyperref)                removing `\textasciicaron' on input line 100.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 105.
+(hyperref)                removing `\textasciicaron' on input line 103.
 
 
-Package hyperref Warning: Composite letter `\textasciicaron+c'
-(hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 108.
-
-
-Overfull \hbox (20.18562pt too wide) in paragraph at lines 109--110
+Underfull \hbox (badness 4899) in paragraph at lines 104--105
 \OT1/ppl/m/n/12 Izola[]cn[]e testy pom[]ahaj[]u od-ha-lit[] chybn[]e kom-po-nen
-ty opa-ko-van[]ym sp[]u[]st[]an[]^^Pm ne[]uspe[]sn[]ych
+ty opa-ko-van[]ym sp[]u[]st[]an[]^^Pm
  []
+
+
+Package hyperref Warning: Composite letter `\textasciicaron+c'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textasciicaron' on input line 106.
 
 [3]
 Kapitola 3.
 
-Overfull \hbox (17.99042pt too wide) in paragraph at lines 116--117
-[]\OT1/ppl/m/n/12 In[]stal[]acia, obozn[]amenie sa s n[]astrojmi, []studovanie 
-do-ku-ment[]acie, in[]stal[]acia n[]astrojov
+Underfull \hbox (badness 1584) in paragraph at lines 113--114
+\OT1/ppl/m/n/12 V na-sle-duj[]ucom zo-zname po-pi-su-jem po-stup pr[]ace a de-f
+i-nu-jem ka-teg[]orie, ktor[]e
  []
 
 
-Overfull \hbox (3.69731pt too wide) in paragraph at lines 120--121
-[]\OT1/ppl/m/n/12 Vytvorenie tes-to-va-cej ar-chi-tekt[]ury, ktor[]a sp[]u[]st[
-]a a riadi prie-beh tes-tov. Tu je d[]ole[]zit[]e
+Underfull \hbox (badness 1147) in paragraph at lines 117--118
+[]\OT1/ppl/m/n/12 In[]stal[]acia, obozn[]amenie sa s n[]astrojmi, []studovanie 
+do-ku-ment[]acie, in[]stal[]acia
  []
 
 [4
 
 ]
 Kapitola 4.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 133.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 134.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-Overfull \hbox (3.69734pt too wide) in paragraph at lines 136--137
-\OT1/ppl/m/n/12 s nain[]stalovan[]ym Java be-hov[]ym pro-stred[]^^Pm JRE[][][][
-][] ver-zie 6 a vy[]s[]sej. V opera[]cnom syst[]eme
- []
-
-[5
+) [5
 
 ]
 
 Package hyperref Warning: Composite letter `\textasciicaron+l'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 144.
+(hyperref)                removing `\textasciicaron' on input line 145.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+t'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 144.
+(hyperref)                removing `\textasciicaron' on input line 145.
 
 
-Overfull \hbox (27.02925pt too wide) in paragraph at lines 145--149
-\OT1/ppl/m/n/12 Tutori[]al [][]$\OT1/pcr/m/n/12 http : / / wiki . apache . org 
-/ jmeter / JMeterAndEclipseHowTo$[][] \OT1/ppl/m/n/12 z wiki str[]anky
+Underfull \hbox (badness 3838) in paragraph at lines 146--150
+\OT1/ppl/m/n/12 N[]avod [][]$\OT1/pcr/m/n/12 http : / / wiki . apache . org / j
+meter / JMeterAndEclipseHowTo$[][] \OT1/ppl/m/n/12 z wiki
  []
 
 
-Overfull \hbox (27.79582pt too wide) in paragraph at lines 145--149
-[]\OT1/ppl/m/n/12 citatel[]a hned[] v []uvode pre-sme-ruje na str[]anku [][]$\O
-T1/pcr/m/n/12 http : / / people . apache . org / []mkostrze /
+Underfull \hbox (badness 5726) in paragraph at lines 146--150
+\OT1/pcr/m/n/12 org / []mkostrze / jmeter-[]eclipse / jmeter-[]eclipse . html$[
+][]\OT1/ppl/m/n/12 , ktor[]a bola na-po-
  []
 
 
-Overfull \hbox (12.81297pt too wide) in paragraph at lines 145--149
-\OT1/pcr/m/n/12 jmeter-[]eclipse / jmeter-[]eclipse . html$[][]\OT1/ppl/m/n/12 
-, ktor[]a bola na-po-sledy upra-ven[]a 10.03.2004.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 145--149
+Underfull \hbox (badness 10000) in paragraph at lines 146--150
 
  []
 
 
-Overfull \hbox (2.95396pt too wide) in paragraph at lines 150--154
-\OT1/ppl/m/n/12 nov[]a slu[]zba Ge-ner[]atory z[]at[]a[]ze (Load Ge-ne-ra-tors)
- ob-sa-huj[]uca ge-ner[]ator JMe-ter, ktor[]emu
+Underfull \hbox (badness 1308) in paragraph at lines 151--155
+\OT1/ppl/m/n/12 vznikne nov[]a slu[]zba Ge-ner[]atory z[]at[]a[]ze (Load Ge-ne-
+ra-tors) ob-sa-huj[]uca ge-ner[]ator
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--154
+Underfull \hbox (badness 10000) in paragraph at lines 151--155
 
  []
 
 
-Overfull \hbox (12.61403pt too wide) in paragraph at lines 155--159
+Underfull \hbox (badness 3482) in paragraph at lines 156--160
 \OT1/ppl/m/n/12 Doplnok pre In-tel-liJ IDEA je nutn[]e stia-hnut[] zo str[]anky
- [][]$\OT1/pcr/m/n/12 https : / / plugins . jetbrains .
+ [][]$\OT1/pcr/m/n/12 https : / / plugins .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--159
+Underfull \hbox (badness 10000) in paragraph at lines 156--160
 
  []
 
 [6] [7]
-Overfull \hbox (7.21486pt too wide) in paragraph at lines 170--171
-\OT1/ppl/m/n/12 Faban je nap[]^^Psan[]y v ja-zyku Java a jeho li-cen-cia je ope
-n-source. Sklad[]a sa z dvoch hlavn[]ych
+Underfull \hbox (badness 2213) in paragraph at lines 179--180
+\OT1/ppl/m/n/12 Stru[]cn[]y n[]avod po-pi-suj[]uci in[]stal[]aciu a spus-te-nie
+ prv[]ych tes-tov je do-stupn[]y na
  []
 
 
-Overfull \hbox (22.5167pt too wide) in paragraph at lines 179--180
-[][]$\OT1/pcr/m/n/12 http : / / faban . org / docs / QuickStartTutorial . html$
-[][]\OT1/ppl/m/n/12 . N[]avod po-pi-suj[]uci vytv[]aranie
+Underfull \hbox (badness 5446) in paragraph at lines 179--180
+\OT1/ppl/m/n/12 str[]anke [][]$\OT1/pcr/m/n/12 http : / / faban . org / docs / 
+QuickStartTutorial . html$[][]\OT1/ppl/m/n/12 . N[]avod po-pi-
  []
 
 
-Overfull \hbox (44.3811pt too wide) in paragraph at lines 179--180
-\OT1/ppl/m/n/12 z[]at[]a[]ze je k dis-poz[]^^Pcii na str[]anke [][]$\OT1/pcr/m/
-n/12 http : / / faban . org / docs / CreatingWorkloadTutorial .
+Underfull \hbox (badness 1199) in paragraph at lines 179--180
+\OT1/ppl/m/n/12 suj[]uci vytv[]ara-nie z[]at[]a[]ze je k dis-poz[]^^Pcii na str
+[]anke [][]$\OT1/pcr/m/n/12 http : / / faban . org / docs /
  []
 
 
-Overfull \hbox (15.70076pt too wide) in paragraph at lines 179--180
-\OT1/pcr/m/n/12 html$[][]\OT1/ppl/m/n/12 . []Dal[]sie n[]avody s[]u k dis-poz[]
-^^Pcii na str[]anke [][]$\OT1/pcr/m/n/12 http : / / faban . org / 1 . 2 / docs 
-/ index .
+Underfull \hbox (badness 1622) in paragraph at lines 179--180
+\OT1/pcr/m/n/12 CreatingWorkloadTutorial . html$[][]\OT1/ppl/m/n/12 . []Dal[]si
+e n[]avody s[]u k dis-poz[]^^Pcii na str[]anke
  []
 
 
@@ -793,33 +727,9 @@ Package hyperref Warning: Composite letter `\textasciicaron+t'
 (hyperref)                removing `\textasciicaron' on input line 181.
 
 [8] [9]
-Overfull \hbox (14.89418pt too wide) in paragraph at lines 189--190
-\OT1/ppl/m/n/12 Gatling je open-source, po-dobne ako v[]setky predch[]adzaj[]uc
-e n[]astroje. K[]ym predch[]adzaj[]uce
- []
-
-
-Overfull \hbox (15.06462pt too wide) in paragraph at lines 192--193
+Underfull \hbox (badness 2626) in paragraph at lines 192--193
 \OT1/ppl/m/n/12 Star[]e ver-zie prog-ramu sa nach[]adzaj[]u na str[]anke [][]$\
-OT1/pcr/m/n/12 www . github . com / excilys / gatling /
- []
-
-
-Overfull \hbox (8.38028pt too wide) in paragraph at lines 192--193
-\OT1/pcr/m/n/12 gatling . io / download/$[][]\OT1/ppl/m/n/12 . Nach[]adza sa tu
- aj ver-zia 2.2.0-SNAPSHOT, ktor[]a je vo v[]yvoji.
- []
-
-
-Overfull \hbox (12.75839pt too wide) in paragraph at lines 195--196
-\OT1/ppl/m/n/12 Program je mo[]zn[]e spus-tit[] v pr[]^^Pkazovom riadku pr[]^^P
-kazom \OT1/ppl/m/it/12 ./gat-ling.sh \OT1/ppl/m/n/12 pre Li-nux a pr[]^^Pkazom
- []
-
-
-Overfull \hbox (19.80106pt too wide) in paragraph at lines 195--196
-\OT1/ppl/m/n/12 gra-fick[]e ro-z-hra-nie, preto testy vytv[]aram v tex-to-vom e
-di-tore podl[]a do-ku-ment[]acie. Sp[]u[]st[]anie
+OT1/pcr/m/n/12 www . github . com / excilys /
  []
 
 
@@ -833,1157 +743,807 @@ Package hyperref Warning: Composite letter `\textasciicaron+t'
 (hyperref)                removing `\textasciicaron' on input line 201.
 
 
-Overfull \hbox (2.3172pt too wide) in paragraph at lines 202--205
+Underfull \hbox (badness 4132) in paragraph at lines 202--205
 \OT1/ppl/m/n/12 Gatling ne-pos-ky-tuje pod-poru po-mo-cou sa-mos-tatn[]ych do-p
-l-n-kov pre jed-not-liv[]e v[]yvojov[]e
+l-n-kov pre jed-not-liv[]e
+ []
+
+
+Underfull \hbox (badness 1221) in paragraph at lines 202--205
+\OT1/ppl/m/n/12 v[]yvojov[]e pro-stre-dia. In-tegr[]acia Gat-lingu je re-a-li-z
+o-van[]a po-mo-cou Apa-che Ma-ven
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--205
+
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 207--215
+Underfull \hbox (badness 1845) in paragraph at lines 209--212
+\OT1/ppl/m/n/12 ako aj Ne-tBe-ans. Pri na-sta-vo-van[]^^P Ma-ven kon-fi-gura[]c
+n[]eho s[]uboru podl[]a str[]anky
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 209--212
 
  []
 
 
-Overfull \hbox (6.74568pt too wide) in paragraph at lines 207--215
-\OT1/ppl/m/n/12 Gatling je mo[]zn[]e po-mo-cou Ma-ven Ar-che-type iba do v[]yvo
-jov[]ych pro-stred[]^^P pod-po-ruj[]ucich
+Underfull \hbox (badness 10000) in paragraph at lines 209--212
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--215
+Underfull \hbox (badness 10000) in paragraph at lines 212--214
 
  []
 
 [11]
-Overfull \hbox (10.16676pt too wide) in paragraph at lines 221--222
-\OT1/ppl/m/n/12 Na str[]anke [][]$\OT1/pcr/m/n/12 www . github . com / PerfCake
-$[][] \OT1/ppl/m/n/12 s[]u do-stupn[]e plu-giny pre Ma-ven, In-tel-liJ IDEA,
+Underfull \hbox (badness 1107) in paragraph at lines 220--221
+\OT1/ppl/m/n/12 pro-jektu: [][]$\OT1/pcr/m/n/12 www . perfcake . org$[][]\OT1/p
+pl/m/n/12 . Git-hub: [][]$\OT1/pcr/m/n/12 www . github . com / PerfCake / PerfC
+ake$[][]\OT1/ppl/m/n/12 .
  []
 
 
-Overfull \hbox (11.21152pt too wide) in paragraph at lines 224--225
-\OT1/ppl/m/n/12 menn[]u pro-stre-dia. Pre opera[]cn[]e syst[]emy Win-dows a Li-
-nux je na str[]anke [][]$\OT1/pcr/m/n/12 www . perfcake .
- []
-
-
-Overfull \hbox (108.98033pt too wide) in paragraph at lines 230--231
+Underfull \hbox (badness 2521) in paragraph at lines 229--230
 \OT1/ppl/m/n/12 U[]z[]^^Pvatel[]sk[]a do-ku-ment[]acia sa nach[]adza na str[]an
-ke [][]$\OT1/pcr/m/n/12 www . perfcake . org / docs / perfcake-[]user-[]guide .
-
- []
-
-
-Overfull \hbox (4.23798pt too wide) in paragraph at lines 230--231
-\OT1/pcr/m/n/12 pdf$[][]\OT1/ppl/m/n/12 . Sklad[]a sa zo sied-mich ka-pi-tol, v
- ktor[]ych po-pi-suje ar-chi-tekt[]uru, vytv[]aranie scen[]arov,
+ke [][]$\OT1/pcr/m/n/12 www . perfcake . org / docs /
  []
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+l'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 232.
+(hyperref)                removing `\textasciicaron' on input line 231.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+t'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 232.
+(hyperref)                removing `\textasciicaron' on input line 231.
 
-[12] [13]
-Kapitola 5.
 
-Overfull \hbox (1.69434pt too wide) in paragraph at lines 248--249
-\OT1/ppl/m/n/12 mapy vklad[]a st[]ale nov[]e a nov[]e hod-noty, a t[]ym sa vy-t
-vor[]^^P []unik pam[]ate. Slu[]zbu pou[]z[]^^Pvam
+Underfull \hbox (badness 10000) in paragraph at lines 232--234
+
  []
 
+
+Underfull \hbox (badness 1043) in paragraph at lines 235--237
+[][]$\OT1/pcr/m/n/12 http : / / download . jetbrains . com / idea / ideaIU-[]14
+ . 0 . 2 . zip$[][] \OT1/ppl/m/n/12 do Ma-ven re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 235--237
+
+ []
+
+[12]
+Underfull \hbox (badness 6592) in paragraph at lines 238--240
+\OT1/pcr/m/n/12 / / github . com / PerfCake / PerfCakeMavenPlugin$[][]\OT1/ppl/
+m/n/12 . Ma-ven do-pl-nok nahr[]adza
+ []
+
+[13]
+Kapitola 5.
 [14
 
-]
-Overfull \hbox (35.78445pt too wide) in paragraph at lines 252--253
-\OT1/ppl/m/n/12 pire 4830TG s pro-ce-so-rom In-tel Core i5-2410 a 8GB RAM pam[]
-at[]ou. Na po[]c[]^^Pta[]ci je nain[]stalovan[]a
- []
-
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 256--258
+] [15]
+Underfull \hbox (badness 10000) in paragraph at lines 258--260
 
  []
 
 
-Overfull \hbox (2.55789pt too wide) in paragraph at lines 261--265
-\OT1/ppl/m/n/12 mo[]zn[]e sle-do-vat[] efek-ti-vitu ge-ne-ro-va-nia ma-xim[]aln
-ej z[]at[]a[]ze, ge-ne-ro-va-nie v[]ysledkov
+Underfull \hbox (badness 1048) in paragraph at lines 263--267
+\OT1/ppl/m/n/12 kli-en-tom, pri[]com je vy-kon[]avan[]y po dobu pia-tich min[]u
+t. Na z[]aklade tohto
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--265
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 266--270
+Underfull \hbox (badness 10000) in paragraph at lines 263--267
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--275
+Underfull \hbox (badness 10000) in paragraph at lines 268--272
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 273--277
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 277--281
+Underfull \hbox (badness 10000) in paragraph at lines 279--283
 
  []
 
 
-Overfull \hbox (0.80615pt too wide) in paragraph at lines 282--286
+Underfull \hbox (badness 10000) in paragraph at lines 284--288
 \OT1/ppl/m/n/12 Naj[]castej[]sie pou[]z[]^^Pvan[]y typ tes-tov v[]ykonu je re-p
-re-zen-to-van[]y po-mo-cou z[]akladn[]eho
+re-zen-to-van[]y po-mo-cou
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 282--286
-
- []
-
-
-Overfull \hbox (4.7898pt too wide) in paragraph at lines 287--291
-\OT1/ppl/m/n/12 Syst[]em je vy-sta-ven[]y z[]at[]a[]zi ge-ne-ro-va-nej sto kli-
-entmi po dobu jed-nej ho-diny. Vel[]kost[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 287--291
+Underfull \hbox (badness 10000) in paragraph at lines 284--288
 
  []
 
 
-Overfull \hbox (1.88623pt too wide) in paragraph at lines 292--295
-\OT1/ppl/m/n/12 Teoretick[]a prie-pust-nost[] n[]astroja ur[]cuje, ako r[]ychlo
- dok[]a[]ze n[]astroj ge-ne-ro-vat[] z[]at[]a[]z.
- []
+Underfull \hbox (badness 10000) in paragraph at lines 289--293
 
-
-Overfull \hbox (14.23412pt too wide) in paragraph at lines 292--295
-\OT1/ppl/m/n/12 Vy-sok[]a prie-pust-nost[] n[]astroja umo[]z[]nuje ge-ne-ro-vat
-[] vy[]s[]siu z[]at[]a[]z za vyu[]zitia men[]sieho
  []
 
 [17]
-Overfull \hbox (2.25743pt too wide) in paragraph at lines 303--304
-\OT1/ppl/m/n/12 ktor[]y riadi sp[]u[]stanie testu. V ad-res[]aroch druh[]eho, t
-re-tieho a []siesteho testu sa nach[]adzaj[]u
- []
-
-[18]
-Overfull \hbox (2.52184pt too wide) in paragraph at lines 323--326
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 308.
+ [18]
+Underfull \hbox (badness 1688) in paragraph at lines 325--328
 \OT1/ppl/m/n/12 s[]ubory. V pr[]^^Ppade n[]astroja Apa-che JMe-ter s[]u to s[]u
-bory s pr[]^^Pponou ".jtl" a v pr[]^^Ppade
+bory s pr[]^^Pponou ".jtl"
  []
 
-
-Overfull \hbox (4.02245pt too wide) in paragraph at lines 323--326
-\OT1/ppl/m/n/12 n[]astroja Gat-ling s[]ubory "si-mu-la-tion.log". Tieto s[]ubor
-y ob-sa-huj[]u z[]aznam pre ka[]zd[]u
+[19] [20]
+Underfull \hbox (badness 1648) in paragraph at lines 345--348
+\OT1/ppl/m/n/12 Skripty sp[]u[]st[]aj[]uce testy na strane kli-enta re[]startuj
+[]u JBoss AS ser-ver pred
  []
 
-
-Overfull \hbox (16.61015pt too wide) in paragraph at lines 323--326
-\OT1/ppl/m/n/12 hod-no-te-nie a po-rov-na-nie tes-tov, preto je []ziad[]uce ich
- zma-za-nie po []uspe[]snom ukon[]cen[]^^P
- []
-
-[19]
-Overfull \hbox (13.45775pt too wide) in paragraph at lines 343--346
-\OT1/ppl/m/n/12 spus-ten[]^^Pm testu. K tomu doch[]adza spus-ten[]^^Pm skriptu 
-ssh$[]$restart$[]$jboss.sh pr[]^^Pkazom
- []
-
-
-Overfull \hbox (5.10176pt too wide) in paragraph at lines 355--357
-\OT1/ppl/m/n/12 dobu po-trebn[]u pre vy-ko-na-nie testu a vy-ge-ne-ro-va-nie re
--por-tov a lo-go-vac[]^^Pch s[]uborov
- []
-
-
-Overfull \hbox (10.56252pt too wide) in paragraph at lines 358--360
-\OT1/ppl/m/n/12 banu je re-pre-zen-to-van[]a ser-ve-rom, ktor[]y som mu-sel pre
-d ka[]zd[]ym tes-tom re[]startovat[],
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 358--360
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 369--371
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 361--363
+Underfull \hbox (badness 10000) in paragraph at lines 372--374
 
  []
 
-[20]
-Overfull \hbox (16.70653pt too wide) in paragraph at lines 370--372
+
+Underfull \hbox (badness 1082) in paragraph at lines 381--383
 \OT1/ppl/m/n/12 Dokument[]acia ob-sa-huje n[]avod, po-mo-cou ktor[]eho je mo[]z
-n[]e na-sta-vit[] za-zna-men[]avanie
+n[]e na-sta-vit[] za-zna-
  []
 
 
-Overfull \hbox (8.76202pt too wide) in paragraph at lines 370--372
-\OT1/ppl/m/n/12 kon-fi-gura[]cn[]eho s[]uboru sa stal n[]astroj ne-pou[]zitel[]
-n[]ym a n[]astroj som mu-sel in[]stalovat[]
+Underfull \hbox (badness 2237) in paragraph at lines 381--383
+\OT1/ppl/m/n/12 men[]avanie vyu[]zitia opera[]cnej pam[]ate. Na-priek vel[]kej 
+snahe sa mi podl[]a
  []
 
-[21] <./img/faban1.jpg, id=656, 867.24pt x 385.44pt>
-File: ./img/faban1.jpg Graphic file (type jpg)
- <use ./img/faban1.jpg>
-Package pdftex.def Info: ./img/faban1.jpg used on input line 417.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
+[22]
+Underfull \hbox (badness 3514) in paragraph at lines 415--416
+[]\OT1/ppl/m/n/12 V[]set[]ych p[]at[] iter[]aci[]^^P prv[]eho testu pre-behlo b
+ez probl[]emov. Zauj[]^^Pmav[]a je
+ []
 
-<./img/faban1_distr.jpg, id=657, 867.24pt x 385.44pt>
-File: ./img/faban1_distr.jpg Graphic file (type jpg)
 
-<use ./img/faban1_distr.jpg>
-Package pdftex.def Info: ./img/faban1_distr.jpg used on input line 423.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
- [22pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-1}) has been already used, duplicate ignored
+Underfull \vbox (badness 7963) has occurred while \output is active []
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.429 P
-       odobne ako v prípade Fabanu všetkých päť iterácií prvého test...
-pdfTeX warning (ext4): destination with the same identifier (name{figure.5.2}) 
-has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.429 P
-       odobne ako v prípade Fabanu všetkých päť iterácií prvého test...
- <./img/faban1.jpg> <./img/faban1_distr.jpg>]
-<./img/gatling1.jpg, id=662, 867.24pt x 385.44pt>
-File: ./img/gatling1.jpg Graphic file (type jpg)
- <use ./img/gatling1.jpg>
-Package pdftex.def Info: ./img/gatling1.jpg used on input line 461.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-<./img/gatling1_distr.jpg, id=663, 867.24pt x 385.44pt>
-File: ./img/gatling1_distr.jpg Graphic file (type jpg)
-
-<use ./img/gatling1_distr.jpg>
-Package pdftex.def Info: ./img/gatling1_distr.jpg used on input line 467.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
- [23pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-3}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.470 
-       <./img/gatling1.jpg>]
-
-Package hyperref Warning: Composite letter `\textasciicaron+c'
-(hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 475.
-
-[24pdfTeX warning (ext4): destination with the same identifier (name{figure.5.4
+ [23pdfTeX warning (ext4): destination with the same identifier (name{table.5.1
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.510 \end{itemize}
-                    <./img/gatling1_distr.jpg>]
-<./img/faban2_1.jpg, id=672, 867.24pt x 385.44pt>
-File: ./img/faban2_1.jpg Graphic file (type jpg)
- <use ./img/faban2_1.jpg>
-Package pdftex.def Info: ./img/faban2_1.jpg used on input line 514.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-<./img/faban2_1_distr.jpg, id=673, 867.24pt x 385.44pt>
-File: ./img/faban2_1_distr.jpg Graphic file (type jpg)
-
-<use ./img/faban2_1_distr.jpg>
-Package pdftex.def Info: ./img/faban2_1_distr.jpg used on input line 520.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
- [25pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-5}) has been already used, duplicate ignored
+l.455 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.5
+.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.534 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-5.6}) has been already used, duplicate ignored
+l.455 
+      ]
+Underfull \vbox (badness 2790) has occurred while \output is active []
+
+ [24pdfTeX warning (ext4): destination with the same identifier (name{table.5.3
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.534 
-       <./img/faban2_1.jpg> <./img/faban2_1_distr.jpg>]
-<./img/faban2_2.jpg, id=678, 867.24pt x 385.44pt>
-File: ./img/faban2_2.jpg Graphic file (type jpg)
- <use ./img/faban2_2.jpg>
-Package pdftex.def Info: ./img/faban2_2.jpg used on input line 555.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-<./img/faban2_2_distr.jpg, id=679, 867.24pt x 385.44pt>
-File: ./img/faban2_2_distr.jpg Graphic file (type jpg)
-
-<use ./img/faban2_2_distr.jpg>
-Package pdftex.def Info: ./img/faban2_2_distr.jpg used on input line 561.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [26pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-7}) has been already used, duplicate ignored
+l.495 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.5
+.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.564 
-       <./img/faban2_2.jpg>] <./img/faban2_3.jpg, id=685, 867.24pt x 385.44pt>
-File: ./img/faban2_3.jpg Graphic file (type jpg)
+l.495 
+      ]
 
-<use ./img/faban2_3.jpg>
-Package pdftex.def Info: ./img/faban2_3.jpg used on input line 595.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
- [27pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-8}) has been already used, duplicate ignored
+Package hyperref Warning: Composite letter `\textasciicaron+c'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textasciicaron' on input line 499.
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.598 
-       <./img/faban2_2_distr.jpg>]
-<./img/faban2_3_distr.jpg, id=692, 867.24pt x 385.44pt>
-File: ./img/faban2_3_distr.jpg Graphic file (type jpg)
 
-<use ./img/faban2_3_distr.jpg>
-Package pdftex.def Info: ./img/faban2_3_distr.jpg used on input line 601.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
- [28pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-9}) has been already used, duplicate ignored
+Underfull \vbox (badness 8170) has occurred while \output is active []
+
+ [25pdfTeX warning (ext4): destination with the same identifier (name{table.5.5
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.620 \item[\textbf{4. iterácia}]
-                                  \ \\pdfTeX warning (ext4): destination with t
-he same identifier (name{figure.5.10}) has been already used, duplicate ignored
-
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.620 \item[\textbf{4. iterácia}]
-                                  \ \\ <./img/faban2_3.jpg> <./img/faban2_3_dis
-tr.jpg>] <./img/faban2_4.jpg, id=697, 867.24pt x 385.44pt>
-File: ./img/faban2_4.jpg Graphic file (type jpg)
-
-<use ./img/faban2_4.jpg>
-Package pdftex.def Info: ./img/faban2_4.jpg used on input line 636.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-<./img/faban2_4_distr.jpg, id=698, 867.24pt x 385.44pt>
-File: ./img/faban2_4_distr.jpg Graphic file (type jpg)
-
-<use ./img/faban2_4_distr.jpg>
-Package pdftex.def Info: ./img/faban2_4_distr.jpg used on input line 642.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [29pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-11}) has been already used, duplicate ignored
+l.547 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.5
+.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.645 
-       <./img/faban2_4.jpg>] <./img/faban2_5.jpg, id=704, 867.24pt x 385.44pt>
-File: ./img/faban2_5.jpg Graphic file (type jpg)
-
-<use ./img/faban2_5.jpg>
-Package pdftex.def Info: ./img/faban2_5.jpg used on input line 676.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-Underfull \vbox (badness 5245) has occurred while \output is active []
-
- [30pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-12}) has been already used, duplicate ignored
+l.547 
+      ] [26pdfTeX warning (ext4): destination with the same identifier (name{ta
+ble.5.7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.679 
-       <./img/faban2_4_distr.jpg>]
-<./img/faban2_5_distr.jpg, id=709, 867.24pt x 385.44pt>
-File: ./img/faban2_5_distr.jpg Graphic file (type jpg)
-
-<use ./img/faban2_5_distr.jpg>
-Package pdftex.def Info: ./img/faban2_5_distr.jpg used on input line 682.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
- [31pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-13}) has been already used, duplicate ignored
+l.595 P
+       osledný druh testu dosiahol porovnateľné výsledky, ako test so 15...
+pdfTeX warning (ext4): destination with the same identifier (name{table.5.8}) h
+as been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.688 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-5.14}) has been already used, duplicate ignored
+l.595 P
+       osledný druh testu dosiahol porovnateľné výsledky, ako test so 15...
+pdfTeX warning (ext4): destination with the same identifier (name{table.5.9}) h
+as been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.688 
-       <./img/faban2_5.jpg> <./img/faban2_5_distr.jpg>]
-<./img/gatling2_1.jpg, id=714, 867.24pt x 385.44pt>
-File: ./img/gatling2_1.jpg Graphic file (type jpg)
- <use ./img/gatling2_1.jpg>
-Package pdftex.def Info: ./img/gatling2_1.jpg used on input line 724.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
+l.595 P
+       osledný druh testu dosiahol porovnateľné výsledky, ako test so 15...
+]
+Underfull \vbox (badness 1360) has occurred while \output is active []
 
-<./img/gatling2_1_distr.jpg, id=715, 867.24pt x 385.44pt>
-File: ./img/gatling2_1_distr.jpg Graphic file (type jpg)
-
-<use ./img/gatling2_1_distr.jpg>
-Package pdftex.def Info: ./img/gatling2_1_distr.jpg used on input line 730.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
- [32pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-15}) has been already used, duplicate ignored
+ [27pdfTeX warning (ext4): destination with the same identifier (name{table.5.1
+0}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.733 
-       <./img/gatling2_1.jpg>]
-<./img/gatling2_2.jpg, id=720, 867.24pt x 385.44pt>
-File: ./img/gatling2_2.jpg Graphic file (type jpg)
- <use ./img/gatling2_2.jpg>
-Package pdftex.def Info: ./img/gatling2_2.jpg used on input line 765.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-Underfull \vbox (badness 2894) has occurred while \output is active []
-
- [33pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-16}) has been already used, duplicate ignored
+l.657 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.5
+.11}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.768 
-       <./img/gatling2_1_distr.jpg>]
-<./img/gatling2_2_distr.jpg, id=726, 867.24pt x 385.44pt>
-File: ./img/gatling2_2_distr.jpg Graphic file (type jpg)
+l.657 
+      ]
+Underfull \hbox (badness 10000) in paragraph at lines 661--662
+[]\OT1/ppl/m/n/12 V 5. iter[]acii testu sa ob-ja-vila chyba Er-ror ini-tia-li-z
+ing dri-ver ob-ject.
+ []
 
-<use ./img/gatling2_2_distr.jpg>
-Package pdftex.def Info: ./img/gatling2_2_distr.jpg used on input line 771.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
- [34pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+
+Underfull \hbox (badness 3780) in paragraph at lines 661--662
+\OT1/ppl/m/n/12 com.sun.faban.dri-ver.ConfigurationException: Only sin-gle host
+:port cur-ren-
+ []
+
+
+Underfull \vbox (badness 4899) has occurred while \output is active []
+
+ [28pdfTeX warning (ext4): destination with the same identifier (name{table.5.1
+2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.702 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.5
+.13}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.702 
+      ] [29pdfTeX warning (ext4): destination with the same identifier (name{ta
+ble.5.14}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.751 N
+       ajhorší výsledok v teste s 50 klientmi zaznamenal Gatling. Na rozd...
+pdfTeX warning (ext4): destination with the same identifier (name{table.5.15}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.751 N
+       ajhorší výsledok v teste s 50 klientmi zaznamenal Gatling. Na rozd...
+pdfTeX warning (ext4): destination with the same identifier (name{table.5.16}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.751 N
+       ajhorší výsledok v teste s 50 klientmi zaznamenal Gatling. Na rozd...
+] [30pdfTeX warning (ext4): destination with the same identifier (name{table.5.
 17}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.790 \item[\textbf{4. iterácia}]
-                                  \ \\pdfTeX warning (ext4): destination with t
-he same identifier (name{figure.5.18}) has been already used, duplicate ignored
-
+l.813 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.5
+.18}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.790 \item[\textbf{4. iterácia}]
-                                  \ \\ <./img/gatling2_2.jpg> <./img/gatling2_2
-_distr.jpg>] <./img/gatling2_3.jpg, id=731, 867.24pt x 385.44pt>
-File: ./img/gatling2_3.jpg Graphic file (type jpg)
-
-<use ./img/gatling2_3.jpg>
-Package pdftex.def Info: ./img/gatling2_3.jpg used on input line 806.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-<./img/gatling2_3_distr.jpg, id=732, 867.24pt x 385.44pt>
-File: ./img/gatling2_3_distr.jpg Graphic file (type jpg)
-
-<use ./img/gatling2_3_distr.jpg>
-Package pdftex.def Info: ./img/gatling2_3_distr.jpg used on input line 812.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
+l.813 
+      ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [35pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-19}) has been already used, duplicate ignored
+ [31pdfTeX warning (ext4): destination with the same identifier (name{table.5.1
+9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.815 
-       <./img/gatling2_3.jpg>]
-<./img/gatling2_4.jpg, id=737, 867.24pt x 385.44pt>
-File: ./img/gatling2_4.jpg Graphic file (type jpg)
- <use ./img/gatling2_4.jpg>
-Package pdftex.def Info: ./img/gatling2_4.jpg used on input line 847.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-Underfull \vbox (badness 2894) has occurred while \output is active []
-
- [36pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-20}) has been already used, duplicate ignored
+l.859 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.5
+.20}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.850 
-       <./img/gatling2_3_distr.jpg>]
-<./img/gatling2_4_distr.jpg, id=742, 867.24pt x 385.44pt>
-File: ./img/gatling2_4_distr.jpg Graphic file (type jpg)
-
-<use ./img/gatling2_4_distr.jpg>
-Package pdftex.def Info: ./img/gatling2_4_distr.jpg used on input line 853.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
- [37pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-21}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.872 \item[\textbf{4. iterácia}]
-                                  \ \\pdfTeX warning (ext4): destination with t
-he same identifier (name{figure.5.22}) has been already used, duplicate ignored
+l.859 
+      ]
+Underfull \hbox (badness 2875) in paragraph at lines 885--886
+[]\OT1/ppl/m/n/12 Oproti predch[]adzaj[]ucej mo-di-fik[]acii do-sia-hol Perf-Ca
+ke v[]yrazn[]y pre-pad vo
+ []
 
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.872 \item[\textbf{4. iterácia}]
-                                  \ \\ <./img/gatling2_4.jpg> <./img/gatling2_4
-_distr.jpg>] <./img/gatling2_5.jpg, id=747, 867.24pt x 385.44pt>
-File: ./img/gatling2_5.jpg Graphic file (type jpg)
+Underfull \hbox (badness 1769) in paragraph at lines 907--908
+[]\OT1/ppl/m/n/12 V []stvrtej mo-di-fik[]acii Perf-Cake za-zna-me-nal mierne zn
+[]^^P[]zenie v[]ykonu oproti
+ []
 
-<use ./img/gatling2_5.jpg>
-Package pdftex.def Info: ./img/gatling2_5.jpg used on input line 888.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
 
-<./img/gatling2_5_distr.jpg, id=748, 867.24pt x 385.44pt>
-File: ./img/gatling2_5_distr.jpg Graphic file (type jpg)
+Underfull \hbox (badness 10000) in paragraph at lines 907--908
+\OT1/ppl/m/n/12 predch[]adzaj[]ucej mo-di-fik[]acii, ale z[]arove[]n do[]slo k 
+v[]yrazn[]emu zlep[]seniu
+ []
 
-<use ./img/gatling2_5_distr.jpg>
-Package pdftex.def Info: ./img/gatling2_5_distr.jpg used on input line 894.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [38pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-23}) has been already used, duplicate ignored
+[32pdfTeX warning (ext4): destination with the same identifier (name{table.5.21
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.897 
-       <./img/gatling2_5.jpg>]
+l.908 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.5
+.22}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.908 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.5
+.23}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.908 
+      ]
+Underfull \hbox (badness 2326) in paragraph at lines 965--965
+[]\OT1/ppl/m/n/12 Tabul[]ka 5.26: []Test s rast[]ucim po[]ctom kli-en-tov -- pr
+ie-mern[]y po[]cet vy-ko-nan[]ych
+ []
+
+[33pdfTeX warning (ext4): destination with the same identifier (name{table.5.24
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.967 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.5
+.25}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.967 
+      ]
 
 Package hyperref Warning: Composite letter `\textasciicaron+l'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 902.
+(hyperref)                removing `\textasciicaron' on input line 989.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+t'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 902.
-
-[39pdfTeX warning (ext4): destination with the same identifier (name{figure.5.2
-4}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.937 \end{itemize}
-                    <./img/gatling2_5_distr.jpg>]
-<./img/faban3_1.jpg, id=758, 867.24pt x 385.44pt>
-File: ./img/faban3_1.jpg Graphic file (type jpg)
- <use ./img/faban3_1.jpg>
-Package pdftex.def Info: ./img/faban3_1.jpg used on input line 941.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-<./img/faban3_1_distr.jpg, id=759, 867.24pt x 385.44pt>
-File: ./img/faban3_1_distr.jpg Graphic file (type jpg)
-
-<use ./img/faban3_1_distr.jpg>
-Package pdftex.def Info: ./img/faban3_1_distr.jpg used on input line 947.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
- [40pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-25}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.961 \item[\textbf{3. iterácia}]
-                                  \ \\pdfTeX warning (ext4): destination with t
-he same identifier (name{figure.5.26}) has been already used, duplicate ignored
+(hyperref)                removing `\textasciicaron' on input line 989.
 
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.961 \item[\textbf{3. iterácia}]
-                                  \ \\ <./img/faban3_1.jpg> <./img/faban3_1_dis
-tr.jpg>] <./img/faban3_2.jpg, id=766, 867.24pt x 385.44pt>
-File: ./img/faban3_2.jpg Graphic file (type jpg)
-
-<use ./img/faban3_2.jpg>
-Package pdftex.def Info: ./img/faban3_2.jpg used on input line 980.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-<./img/faban3_2_distr.jpg, id=767, 867.24pt x 385.44pt>
-File: ./img/faban3_2_distr.jpg Graphic file (type jpg)
-
-<use ./img/faban3_2_distr.jpg>
-Package pdftex.def Info: ./img/faban3_2_distr.jpg used on input line 986.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [41pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-27}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.989 
-       <./img/faban3_2.jpg>] <./img/faban3_3.jpg, id=774, 867.24pt x 385.44pt>
-File: ./img/faban3_3.jpg Graphic file (type jpg)
-
-<use ./img/faban3_3.jpg>
-Package pdftex.def Info: ./img/faban3_3.jpg used on input line 1019.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [42pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-28}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1022 
-        <./img/faban3_2_distr.jpg>]
-<./img/faban3_3_distr.jpg, id=779, 867.24pt x 385.44pt>
-File: ./img/faban3_3_distr.jpg Graphic file (type jpg)
-
-<use ./img/faban3_3_distr.jpg>
-Package pdftex.def Info: ./img/faban3_3_distr.jpg used on input line 1025.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
- [43pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-29}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1044 \item[\textbf{4. iterácia}]
-                                   \ \\pdfTeX warning (ext4): destination with 
-the same identifier (name{figure.5.30}) has been already used, duplicate ignore
-d
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1044 \item[\textbf{4. iterácia}]
-                                   \ \\ <./img/faban3_3.jpg> <./img/faban3_3_di
-str.jpg>] <./img/faban3_4.jpg, id=785, 867.24pt x 385.44pt>
-File: ./img/faban3_4.jpg Graphic file (type jpg)
-
-<use ./img/faban3_4.jpg>
-Package pdftex.def Info: ./img/faban3_4.jpg used on input line 1059.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-<./img/faban3_4_distr.jpg, id=786, 867.24pt x 385.44pt>
-File: ./img/faban3_4_distr.jpg Graphic file (type jpg)
-
-<use ./img/faban3_4_distr.jpg>
-Package pdftex.def Info: ./img/faban3_4_distr.jpg used on input line 1065.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [44pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-31}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1068 
-        <./img/faban3_4.jpg>]
-<./img/faban3_5.jpg, id=792, 867.24pt x 385.44pt>
-File: ./img/faban3_5.jpg Graphic file (type jpg)
- <use ./img/faban3_5.jpg>
-Package pdftex.def Info: ./img/faban3_5.jpg used on input line 1099.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-Underfull \vbox (badness 5245) has occurred while \output is active []
-
- [45pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-32}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1102 
-        <./img/faban3_4_distr.jpg>]
-<./img/faban3_5_distr.jpg, id=798, 867.24pt x 385.44pt>
-File: ./img/faban3_5_distr.jpg Graphic file (type jpg)
-
-<use ./img/faban3_5_distr.jpg>
-Package pdftex.def Info: ./img/faban3_5_distr.jpg used on input line 1105.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
- [46pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-33}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1126 
-       pdfTeX warning (ext4): destination with the same identifier (name{figure
-.5.34}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1126 
-        <./img/faban3_5.jpg> <./img/faban3_5_distr.jpg>]
-<./img/gatling3_1.jpg, id=803, 867.24pt x 385.44pt>
-File: ./img/gatling3_1.jpg Graphic file (type jpg)
- <use ./img/gatling3_1.jpg>
-Package pdftex.def Info: ./img/gatling3_1.jpg used on input line 1143.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-<./img/gatling3_1_distr.jpg, id=804, 867.24pt x 385.44pt>
-File: ./img/gatling3_1_distr.jpg Graphic file (type jpg)
-
-<use ./img/gatling3_1_distr.jpg>
-Package pdftex.def Info: ./img/gatling3_1_distr.jpg used on input line 1149.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [47pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-35}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1152 
-        <./img/gatling3_1.jpg>]
-<./img/gatling3_2.jpg, id=810, 867.24pt x 385.44pt>
-File: ./img/gatling3_2.jpg Graphic file (type jpg)
- <use ./img/gatling3_2.jpg>
-Package pdftex.def Info: ./img/gatling3_2.jpg used on input line 1184.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-Underfull \vbox (badness 2894) has occurred while \output is active []
-
- [48pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-36}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1187 
-        <./img/gatling3_1_distr.jpg>]
-<./img/gatling3_2_distr.jpg, id=815, 867.24pt x 385.44pt>
-File: ./img/gatling3_2_distr.jpg Graphic file (type jpg)
-
-<use ./img/gatling3_2_distr.jpg>
-Package pdftex.def Info: ./img/gatling3_2_distr.jpg used on input line 1190.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
- [49pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-37}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1209 \item[\textbf{4. iterácia}]
-                                   \ \\pdfTeX warning (ext4): destination with 
-the same identifier (name{figure.5.38}) has been already used, duplicate ignore
-d
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1209 \item[\textbf{4. iterácia}]
-                                   \ \\ <./img/gatling3_2.jpg> <./img/gatling3_
-2_distr.jpg>] <./img/gatling3_3.jpg, id=820, 867.24pt x 385.44pt>
-File: ./img/gatling3_3.jpg Graphic file (type jpg)
-
-<use ./img/gatling3_3.jpg>
-Package pdftex.def Info: ./img/gatling3_3.jpg used on input line 1225.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-<./img/gatling3_3_distr.jpg, id=821, 867.24pt x 385.44pt>
-File: ./img/gatling3_3_distr.jpg Graphic file (type jpg)
-
-<use ./img/gatling3_3_distr.jpg>
-Package pdftex.def Info: ./img/gatling3_3_distr.jpg used on input line 1231.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [50pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-39}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1234 
-        <./img/gatling3_3.jpg>]
-<./img/gatling3_4.jpg, id=826, 867.24pt x 385.44pt>
-File: ./img/gatling3_4.jpg Graphic file (type jpg)
- <use ./img/gatling3_4.jpg>
-Package pdftex.def Info: ./img/gatling3_4.jpg used on input line 1266.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-Underfull \vbox (badness 2894) has occurred while \output is active []
-
- [51pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-40}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1269 
-        <./img/gatling3_3_distr.jpg>]
-<./img/gatling3_4_distr.jpg, id=832, 867.24pt x 385.44pt>
-File: ./img/gatling3_4_distr.jpg Graphic file (type jpg)
-
-<use ./img/gatling3_4_distr.jpg>
-Package pdftex.def Info: ./img/gatling3_4_distr.jpg used on input line 1272.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
- [52pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-41}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1291 \item[\textbf{4. iterácia}]
-                                   \ \\pdfTeX warning (ext4): destination with 
-the same identifier (name{figure.5.42}) has been already used, duplicate ignore
-d
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1291 \item[\textbf{4. iterácia}]
-                                   \ \\ <./img/gatling3_4.jpg> <./img/gatling3_
-4_distr.jpg>] <./img/gatling3_5.jpg, id=837, 867.24pt x 385.44pt>
-File: ./img/gatling3_5.jpg Graphic file (type jpg)
-
-<use ./img/gatling3_5.jpg>
-Package pdftex.def Info: ./img/gatling3_5.jpg used on input line 1307.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-<./img/gatling3_5_distr.jpg, id=838, 867.24pt x 385.44pt>
-File: ./img/gatling3_5_distr.jpg Graphic file (type jpg)
-
-<use ./img/gatling3_5_distr.jpg>
-Package pdftex.def Info: ./img/gatling3_5_distr.jpg used on input line 1313.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [53pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-43}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1316 
-        <./img/gatling3_5.jpg>]
-Overfull \hbox (16.23816pt too wide) in paragraph at lines 1335--1336
-\OT1/ppl/m/n/12 "User NULL" nazna[]cuj[]uca, []ze nie je mo[]zn[]e iden-ti-fi-k
-o-vat[] u[]z[]^^Pvatel[]a, po-mo-cou ktor[]eho
+Underfull \hbox (badness 3068) in paragraph at lines 995--996
+\OT1/ppl/m/n/12 vel[]kost[]ou spr[]avy do-sia-hol Apa-che JMe-ter. Vzhl[]adom k
+ vy-sok[]emu po[]ctu
  []
 
-[54pdfTeX warning (ext4): destination with the same identifier (name{figure.5.4
-4}) has been already used, duplicate ignored
+
+Underfull \hbox (badness 1701) in paragraph at lines 995--996
+\OT1/ppl/m/n/12 po[]ziadaviek mal aj dobr[]y v[]ysledok roz-dielu me-dzi naj-le
+p[]sou a naj-hor[]sou
+ []
+
+[34pdfTeX warning (ext4): destination with the same identifier (name{table.5.26
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1346 
-        <./img/gatling3_5_distr.jpg>]
-<./img/perfcake4.jpg, id=850, 867.24pt x 385.44pt>
-File: ./img/perfcake4.jpg Graphic file (type jpg)
- <use ./img/perfcake4.jpg>
-Package pdftex.def Info: ./img/perfcake4.jpg used on input line 1371.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-<./img/perfcake4_distr.jpg, id=851, 867.24pt x 385.44pt>
-File: ./img/perfcake4_distr.jpg Graphic file (type jpg)
-
-<use ./img/perfcake4_distr.jpg>
-Package pdftex.def Info: ./img/perfcake4_distr.jpg used on input line 1377.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [55pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-45}) has been already used, duplicate ignored
+l.1015 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+5.27}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1380 
-        <./img/perfcake4.jpg>] <./img/faban5.jpg, id=857, 867.24pt x 385.44pt>
-File: ./img/faban5.jpg Graphic file (type jpg)
+l.1015 
+       ]
+Underfull \hbox (badness 4132) in paragraph at lines 1019--1020
+[]\OT1/ppl/m/n/12 S n[]arastom vel[]kosti spr[]avy sa lo-gicky zn[]^^P[]zilo aj
+ mno[]zstvo vy-ko-nan[]ych
+ []
 
-<use ./img/faban5.jpg>
-Package pdftex.def Info: ./img/faban5.jpg used on input line 1420.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
- [56pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-46}) has been already used, duplicate ignored
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1423 
-        <./img/perfcake4_distr.jpg>]
-<./img/faban5_distr.jpg, id=862, 867.24pt x 385.44pt>
-File: ./img/faban5_distr.jpg Graphic file (type jpg)
+Underfull \vbox (badness 7963) has occurred while \output is active []
 
-<use ./img/faban5_distr.jpg>
-Package pdftex.def Info: ./img/faban5_distr.jpg used on input line 1426.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
- [57pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-47}) has been already used, duplicate ignored
+ [35pdfTeX warning (ext4): destination with the same identifier (name{table.5.2
+8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1448 \item[\textbf{4. iterácia}]
-                                   \ \\pdfTeX warning (ext4): destination with 
-the same identifier (name{figure.5.48}) has been already used, duplicate ignore
-d
+l.1059 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+5.29}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1448 \item[\textbf{4. iterácia}]
-                                   \ \\ <./img/faban5.jpg> <./img/faban5_distr.
-jpg>] <./img/gatling5.jpg, id=868, 867.24pt x 385.44pt>
-File: ./img/gatling5.jpg Graphic file (type jpg)
-
-<use ./img/gatling5.jpg>
-Package pdftex.def Info: ./img/gatling5.jpg used on input line 1464.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-<./img/gatling5_distr.jpg, id=869, 867.24pt x 385.44pt>
-File: ./img/gatling5_distr.jpg Graphic file (type jpg)
-
-<use ./img/gatling5_distr.jpg>
-Package pdftex.def Info: ./img/gatling5_distr.jpg used on input line 1470.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [58pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-49}) has been already used, duplicate ignored
+l.1059 
+       ] [36pdfTeX warning (ext4): destination with the same identifier (name{t
+able.5.30}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1473 
-        <./img/gatling5.jpg>]
-<./img/faban6_no_leak.jpg, id=874, 867.24pt x 385.44pt>
-File: ./img/faban6_no_leak.jpg Graphic file (type jpg)
-
-<use ./img/faban6_no_leak.jpg>
-Package pdftex.def Info: ./img/faban6_no_leak.jpg used on input line 1510.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
- [59pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-50}) has been already used, duplicate ignored
+l.1106 \textbf{Prvý test -- 5 znaková správa}
+                                                pdfTeX warning (ext4): destinat
+ion with the same identifier (name{table.5.31}) has been already used, duplicat
+e ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1513 
-        <./img/gatling5_distr.jpg>]
-<./img/faban6_leak.jpg, id=879, 867.24pt x 385.44pt>
-File: ./img/faban6_leak.jpg Graphic file (type jpg)
-
-<use ./img/faban6_leak.jpg>
-Package pdftex.def Info: ./img/faban6_leak.jpg used on input line 1537.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [60pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-51}) has been already used, duplicate ignored
+l.1106 \textbf{Prvý test -- 5 znaková správa}
+                                                pdfTeX warning (ext4): destinat
+ion with the same identifier (name{table.5.32}) has been already used, duplicat
+e ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1540 
-        <./img/faban6_no_leak.jpg>] [61pdfTeX warning (ext4): destination with 
-the same identifier (name{figure.5.52}) has been already used, duplicate ignore
-d
+l.1106 \textbf{Prvý test -- 5 znaková správa}
+                                                ] [37pdfTeX warning (ext4): des
+tination with the same identifier (name{table.5.33}) has been already used, dup
+licate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1581 \end{itemize}
-                     <./img/faban6_leak.jpg>]
-<./img/faban7.jpg, id=888, 867.24pt x 385.44pt>
-File: ./img/faban7.jpg Graphic file (type jpg)
- <use ./img/faban7.jpg>
-Package pdftex.def Info: ./img/faban7.jpg used on input line 1585.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-<./img/faban7_distr.jpg, id=889, 867.24pt x 385.44pt>
-File: ./img/faban7_distr.jpg Graphic file (type jpg)
-
-<use ./img/faban7_distr.jpg>
-Package pdftex.def Info: ./img/faban7_distr.jpg used on input line 1591.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
- [62pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-53}) has been already used, duplicate ignored
+l.1171 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+5.34}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1610 
-       pdfTeX warning (ext4): destination with the same identifier (name{figure
-.5.54}) has been already used, duplicate ignored
+l.1171 
+       ] [38pdfTeX warning (ext4): destination with the same identifier (name{t
+able.5.35}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1610 
-        <./img/faban7.jpg> <./img/faban7_distr.jpg>]
-<./img/gatling7.jpg, id=894, 867.24pt x 385.44pt>
-File: ./img/gatling7.jpg Graphic file (type jpg)
- <use ./img/gatling7.jpg>
-Package pdftex.def Info: ./img/gatling7.jpg used on input line 1631.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-<./img/gatling7_distr.jpg, id=895, 867.24pt x 385.44pt>
-File: ./img/gatling7_distr.jpg Graphic file (type jpg)
-
-<use ./img/gatling7_distr.jpg>
-Package pdftex.def Info: ./img/gatling7_distr.jpg used on input line 1637.
-(pdftex.def)             Requested size: 414.6463pt x 184.28569pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [63pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-55}) has been already used, duplicate ignored
+l.1220 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+5.36}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1640 
-        <./img/gatling7.jpg>] [64pdfTeX warning (ext4): destination with the sa
-me identifier (name{figure.5.56}) has been already used, duplicate ignored
+l.1220 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+5.37}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1647 \chapter
-               {Záver} <./img/gatling7_distr.jpg>]
+l.1220 
+       ]
+Underfull \hbox (badness 2326) in paragraph at lines 1243--1244
+[]\OT1/ppl/m/n/12 Po[]cet vy-ko-nan[]ych po[]ziadaviek kle-sol po-dobne ako u z
+vy[]sn[]ych n[]astrojov.
+ []
+
+
+Underfull \vbox (badness 2343) has occurred while \output is active []
+
+ [39pdfTeX warning (ext4): destination with the same identifier (name{table.5.3
+8}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1283 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+5.39}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1283 
+       ] [40pdfTeX warning (ext4): destination with the same identifier (name{t
+able.5.40}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1350 \end{table}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{table.5.41}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1350 \end{table}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{table.5.42}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1350 \end{table}
+                  ] [41pdfTeX warning (ext4): destination with the same identif
+ier (name{table.5.43}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1411 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+5.44}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1411 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+5.45}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1411 
+       ] [42pdfTeX warning (ext4): destination with the same identifier (name{t
+able.5.46}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1460 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+5.47}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1460 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+5.48}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1460 
+       ] [43pdfTeX warning (ext4): destination with the same identifier (name{t
+able.5.49}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1526 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+5.50}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1526 
+       ] [44pdfTeX warning (ext4): destination with the same identifier (name{t
+able.5.51}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1586 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+5.52}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1586 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+5.53}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1586 
+       ] [45pdfTeX warning (ext4): destination with the same identifier (name{t
+able.5.54}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1649 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+5.55}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1649 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+5.56}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1649 
+       ] [46pdfTeX warning (ext4): destination with the same identifier (name{t
+able.5.57}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1717 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+5.58}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1717 
+       pdfTeX warning (ext4): destination with the same identifier (name{table.
+5.59}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1717 
+       ] [47pdfTeX warning (ext4): destination with the same identifier (name{t
+able.5.60}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1743 \chapter
+               {Záver}pdfTeX warning (ext4): destination with the same identif
+ier (name{table.5.61}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1743 \chapter
+               {Záver}]
 Kapitola 6.
-
-Overfull \hbox (1.67pt too wide) in paragraph at lines 1660--1662
-\OT1/ppl/m/n/12 mieste. Do-ku-ment[]acia oboch n[]astrojov do-sta[]covala k rie
-[]seniu v[]setk[]ych probl[]emov
- []
-
-
-Overfull \hbox (16.52617pt too wide) in paragraph at lines 1666--1668
-\OT1/ppl/m/n/12 r[]ychlej[]sia cesta. Naj-hor[]sie skon[]cil Fa-ban, v kto-rom 
-nie je mo[]zn[]e zme-nit[] v[]ychodiskov[]y
- []
-
-[65
+[48
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1672--1673
+Underfull \hbox (badness 10000) in paragraph at lines 1768--1769
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1675--1676
+Underfull \hbox (badness 10000) in paragraph at lines 1771--1772
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1678--1679
+Underfull \hbox (badness 10000) in paragraph at lines 1774--1775
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1681--1682
+Underfull \hbox (badness 10000) in paragraph at lines 1777--1778
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1684--1685
+Underfull \hbox (badness 10000) in paragraph at lines 1780--1781
 
- []
-
-
-Overfull \hbox (1.92296pt too wide) in paragraph at lines 1687--1689
-\OT1/ppl/m/n/12 ka-teg[]ori[]^^P. T[]ym z[]^^Pskam prie-mern[]u zn[]amku a na j
-ej z[]aklade ur[]cujem naj-lep[]s[]^^P n[]astroj. 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1717--1720
+Underfull \hbox (badness 10000) in paragraph at lines 1813--1816
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1723--1724
+Underfull \hbox (badness 10000) in paragraph at lines 1819--1820
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1729--1730
+Underfull \hbox (badness 10000) in paragraph at lines 1825--1826
 
  []
 
-[66]
-Underfull \hbox (badness 10000) in paragraph at lines 1732--1735
+[49]
+Underfull \hbox (badness 10000) in paragraph at lines 1828--1831
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1738--1739
+Underfull \hbox (badness 10000) in paragraph at lines 1834--1835
 
  []
 
-[67pdfTeX warning (ext4): destination with the same identifier (name{table.6.1}
+[50pdfTeX warning (ext4): destination with the same identifier (name{table.6.1}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1741 \newpage
+l.1837 \newpage
                ]
-Underfull \hbox (badness 10000) in paragraph at lines 1746--1747
+Underfull \hbox (badness 10000) in paragraph at lines 1842--1843
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1749--1752
+Underfull \hbox (badness 10000) in paragraph at lines 1845--1848
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1762--1763
+Underfull \hbox (badness 10000) in paragraph at lines 1858--1859
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1766--1769
+Underfull \hbox (badness 10000) in paragraph at lines 1862--1865
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1778--1779
+Underfull \hbox (badness 10000) in paragraph at lines 1874--1875
 
  []
 
-(./bp.bbl [68]
+(./bp.bbl [51]
 Underfull \hbox (badness 10000) in paragraph at lines 4--9
 \OT1/pcr/m/n/12 com / feature / Computing-[]power-[]capacity-[]on-[]demand$[][]
 \OT1/ppl/m/n/12 .  Nav[]st[]^^Pven[]e:
  []
 
-) [69
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--50
+[]\OT1/ppl/m/n/12 M. Mi-chalko.  Perf-Ca-ke-I-DEA.  [][]$\OT1/pcr/m/n/12 https 
+: / / github . com / PerfCake /
+ []
+
+
+Underfull \hbox (badness 1675) in paragraph at lines 66--71
+[]\OT1/ppl/m/n/12 Kim Li-Chong.  How to write a JMS Fa-ban dri-ver (Part One). 
+ [][]$\OT1/pcr/m/n/12 https :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--71
+\OT1/pcr/m/n/12 / / blogs . oracle . com / klc / entry / using _ faban _ as _ a
+n _ asynchronous$[][]\OT1/ppl/m/n/12 .
+ []
+
+) [52
 
 ]
 Dodatok A.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1825.
-[70
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1921.
+[53
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1825.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1921.
  (./bp.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1825.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1825.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1921.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1921.
 
 Package rerunfilecheck Info: File `bp.out' has not changed.
-(rerunfilecheck)             Checksum: 08C0FAD4BF21F7A739A99FBCCFBC5DB4;3955.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1825.
+(rerunfilecheck)             Checksum: CEE01C469F295F3D8F4E3052C635C33D;4039.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1921.
  ) 
 Here is how much of TeX's memory you used:
- 6968 strings out of 493304
- 101951 string characters out of 6139871
- 197771 words of memory out of 5000000
- 10031 multiletter control sequences out of 15000+600000
- 19688 words of font info for 50 fonts, out of 8000000 for 9000
+ 6680 strings out of 493304
+ 95158 string characters out of 6139871
+ 192902 words of memory out of 5000000
+ 9813 multiletter control sequences out of 15000+600000
+ 20791 words of font info for 52 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 34i,9n,31p,1343b,468s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,9n,31p,1346b,432s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} <./fi-logo.514pk>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino
-/uplri8a.pfb>
-Output written on bp.pdf (80 pages, 1717698 bytes).
+fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatin
+o/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pf
+b>
+Output written on bp.pdf (60 pages, 298549 bytes).
 PDF statistics:
- 1074 PDF objects out of 1200 (max. 8388607)
- 869 compressed objects within 9 object streams
- 227 named destinations out of 1000 (max. 500000)
- 729 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 882 PDF objects out of 1000 (max. 8388607)
+ 753 compressed objects within 8 object streams
+ 216 named destinations out of 1000 (max. 500000)
+ 457 words of extra memory for PDF output out of 10000 (max. 10000000)
 

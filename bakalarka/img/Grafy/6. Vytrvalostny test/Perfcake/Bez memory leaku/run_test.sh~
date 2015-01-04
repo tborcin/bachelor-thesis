@@ -1,0 +1,8 @@
+for i in 1 2 3
+do
+
+./restart_jboss.sh
+Nastroje/perfcake-3.3/bin/perfcake.sh -s scenario_6.1 -sd $(pwd)/6/Perfcake/Bez\ memory\ leaku > 6/Perfcake/Bez\ memory\ leaku/report_6.1.$i;
+echo "6.1.$i Gatling test finished"
+
+done

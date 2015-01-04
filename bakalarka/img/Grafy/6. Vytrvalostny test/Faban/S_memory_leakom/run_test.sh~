@@ -1,0 +1,18 @@
+rm -rf 6/Faban/S_memory_leakom/report*
+
+for i in 1 2 3
+do
+
+ssh $1@$2 "$3/testy/ssh_restart_jboss.sh $3 $2"
+
+./restart_faban.sh
+
+Nastroje/faban/bin/fabancli submit test test 6/Faban/S_memory_leakom/scenario_6.2.xml
+
+sleep 400
+
+cp -r Nastroje/faban/output/$dir 6/Faban/S_memory_leakom
+mv 6/Faban/S_memory_leakom/$dir 6/Faban/S_memory_leakom/report_6.2.$i
+echo "6.2.$i Faban test finished";
+
+done

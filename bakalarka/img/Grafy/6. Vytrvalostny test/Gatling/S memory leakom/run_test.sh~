@@ -1,0 +1,10 @@
+rm -rf 6/Gatling/S\ memory\ leakom/basic*
+
+for i in 1 2 3
+do
+
+./restart_jboss.sh
+Nastroje/gatling-charts-highcharts-2.0.1/bin/gatling.sh -sf $(pwd)/6/Gatling/S\ memory\ leakom -s basic.scenario.Basic -rf $(pwd)/6/Gatling/S\ memory\ leakom > 6/Gatling/S\ memory\ leakom/report_6.2.$i
+echo "6.2.$i Gatling test finished"
+
+done

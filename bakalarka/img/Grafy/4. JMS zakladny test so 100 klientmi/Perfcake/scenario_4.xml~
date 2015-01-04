@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scenario xmlns="urn:perfcake:scenario:3.0">
+   <generator class="DefaultMessageGenerator" threads="${perfcake.thread.count:100}">
+      <run type="time" value="10000"/>
+   </generator>
+   <sender class="RequestResponseJmsSender">
+      <property name="target" value="jms/queue/test"/>
+      <property name="responseTarget" value="jms/queue/test2"/>
+      <property name="receivingTimeout" value="10000"/>
+      <property name="receiveAttempts" value="1"/>
+      <property name="connectionFactory" value="jms/RemoteConnectionFactory"/>
+      <property name="jndiUrl" value="remote://jawa07:5"/>
+      <property name="jndiContextFactory" value="org.jboss.naming.remote.client.InitialContextFactory"/>
+      <property name="username" value="guest"/>
+      <property name="password" value="guestp.1"/>
+      <property name="responseUsername" value="guest"/>
+      <property name="responsePassword" value="guestp.1"/>
+      <property name="jndiSecurityPrincipal" value="guest"/>
+      <property name="jndiSecurityCredentials" value="guestp.1"/>
+      <property name="responseJndiSecurityPrincipal" value="guest"/>
+      <property name="responseJndiSecurityCredentials" value="guestp.1"/>
+   </sender>
+   <reporting>
+      <reporter class="ThroughputStatsReporter">
+         <destination class="ConsoleDestination">
+            <period type="time" value="2000" />
+         </destination>
+      </reporter>
+      <reporter class="MemoryUsageReporter">
+         <property name="agentHostname" value="jawa07"/>
+         <property name="agentPort" value="8850"/>
+         <destination class="ConsoleDestination">
+            <period type="time" value="2000" />
+         </destination>
+      </reporter>
+   </reporting>
+   <messages>
+      <message content="message"/>
+   </messages>
+</scenario>

@@ -1,0 +1,54 @@
+package basic.scenario
+
+//import net.timewalker.ffmq3.FFMQConstants
+import io.gatling.core.Predef._
+import io.gatling.jms.Predef._
+import javax.jms._
+import scala.concurrent.duration._
+//import com.bluedevel.gatling.jms._
+//import java.util.Properties
+//import javax.naming.Context
+//import javax.naming.NamingException
+//import io.gatling.jms._
+
+
+class TestJmsDsl extends Simulation {
+
+  val jmsConfig = jms
+    .connectionFactoryName("jms/RemoteConnectionFactory")
+    .url("remote://localhost:14447")
+    .credentials("guest", "guestp.1")
+    .contextFactory("org.jboss.naming.remote.client.InitialContextFactory")
+    .listenerCount(1)
+    .usePersistentDeliveryMode
+    .matchByCorrelationID
+
+//  val jmsConfig = JmsProtocolBuilder.default
+//    .connectionFactoryName("jms/RemoteConnectionFactory")
+//   .url("remote://localhost:14447")
+//    .credentials("guest", "guestp.1")
+//    .contextFactory("org.jboss.naming.remote.client.InitialContextFactory")
+//    .listenerCount(1)
+//    .usePersistentDeliveryMode
+//    .matchByCorrelationID
+
+  val scn = scenario("JMS test").repeat(1) {
+    exec(jms("req reply testing").reqreply
+    .queue("jms/queue/test")
+    .replyQueue("jms/queue/test2")
+    .textMessage("hello from gatling jms")
+    .check(simpleCheck(checkBodyTextCorrect))
+    )
+  }
+
+  setUp(scn.inject(atOnceUsers(100)))
+    .protocols(jmsConfig)
+
+  def checkBodyTextCorrect(m: Message) = {
+    // this assumes that the service just does an "uppercase" transform on the text
+    m match {
+    case tm: TextMessage => tm.getText.toString == "HELLO FROM GATLING JMS DSL"
+    case _ => false
+    }
+  }
+}
