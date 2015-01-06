@@ -8,6 +8,7 @@
 \usepackage{dirtree}
 \usepackage{graphicx}
 \graphicspath{ {./img/} }
+\usepackage[all]{nowidow}
 %\usepackage{color}
 %\usepackage{url}
 \sloppy
@@ -42,17 +43,7 @@ Rád by som sa poďakoval Mgr. Marekovi Grácovi, Ph.D.	za vedenie a rady poskyt
 \end{ThesisThanks}
 
 \begin{ThesisAbstract}
- Cílem práce je nastudovat a popsat moderní nástroje na testování výkonu aplikací a velmi detailně porovnat jejich vlastnosti (tj. funkcionalita, použitelnost, podpora v~IDE, možnosti nastavení, generování reportů atd.). Student napíše jednoduchou aplikaci, která bude odpovídat na dotazy za použití několika protokolů (především WS, JMS, REST, HTTP), kterou nasadí na JBoss AS 7. Poté navrhne několik testovacích scénářů pro všechny nástroje a spoustí měření vyvinuté aplikace. Každé měření musí být provedeno několikrát a bude sledována spolehlivost výsledků. Student by se měl pokusit odhalit příčinu případných rozptylů ve výsledcích. Dále by měla být změřena teoretická propustnost samotného náastroje.
-\newline \newline
-Nástroje pro porovnání: 
-\begin{itemize}
-
-    \item Apache jMeter - jmeter.apache.org
-    \item PerfCake - perfcake.org
-    \item Faban - faban.org
-    \item Gatling - gatling-tool.org
-
-\end{itemize}
+Bakalárska práca sa venuje porovnávaniu nástrojov na testovanie výkonu aplikácií. V rámci práce je vytvorená jednoduchá aplikácia komunikujúca pomocou protokolov WS, JMS, REST a HTTP. Aplikácia je nasadená na JBoss AS 7. Súčasťou práce je návrh testovacích scenárov pre každý nástroj. Testovacie scenáre sú vykonané viackrát a počas testov je sledovaná spoľahlivosť výsledkov. Príčiny rozptylov vo výsledkoch sú odhalené a popísané. Pre každý nástroj je zmeraná teoretická priepustnosť. V závere práce sú výsledky testov a vlastnosti nástrojov. Práca porovnáva nástroje Apache JMeter, Faban, Gatling a PerfCake.
 \end{ThesisAbstract}
 
 \begin{ThesisKeyWords}
@@ -110,7 +101,7 @@ Konfiguračné testy pozorujú, ako zmeny konfigurácie ovplyvňujú výkon, jed
 
 \chapter{Metodika porovnávania nástrojov}
 
-V nasledujúcom zozname popisujem postup práce a definujem kategórie, ktoré zohľadňujem pri porovnávaní a hodnotení nástrojov.
+V~nasledujúcom zozname popisujem postup práce a definujem kategórie, ktoré zohľadňujem pri porovnávaní a hodnotení nástrojov.
 
 \begin{enumerate}
 
@@ -134,7 +125,7 @@ V nasledujúcom zozname popisujem postup práce a definujem kategórie, ktoré z
 Apache JMeter je písaný v~jazyku Java a dostupný pod open-source licenciou. Nástroj poskytuje podporu pre testovanie statických, ako aj dynamických zdrojov a podporuje širokú škálu protokolov \cite{Apache}. Najnovšia verzia 2.12 je dostupná na stránke \url{www.jmeter.apache.org/download_jmeter.cgi}. Ja som používal verziu 2.11.
 
 \subsection{Inštalácia}
-Keďže je Apache JMeter aplikácia písaná v~jazyku Java, vyžaduje k~svojmu behu systém s~nainštalovaným Java behovým prostredím JRE\footnote{Java Runtime Environment(JRE) je prostredie umožnujúce spúšťať Java aplikácie.} verzie 6 a vyššej. V~operačnom systéme Ubuntu 14.04 LTS je možné Apache JMeter nainštalovať aj cez softvérové centrum alebo v termináli pomocou príkazu \textit{sudo apt-get install jmeter}. Inštalácia cez softvérové centrum alebo pomocou príkazu \textit{sudo apt-get install jmeter} je jednoduchšia, ale obsahuje dva roky starú verziu 2.8.1. 
+Keďže je Apache JMeter aplikácia písaná v~jazyku Java, vyžaduje k~svojmu behu systém s~nainštalovaným Java behovým prostredím JRE\footnote{Java Runtime Environment(JRE) je prostredie umožnujúce spúšťať Java aplikácie.} verzie 6 a vyššej. V~operačnom systéme Ubuntu 14.04 LTS je možné Apache JMeter nainštalovať aj cez softvérové centrum alebo v~termináli pomocou príkazu \textit{sudo apt-get install jmeter}. Inštalácia cez softvérové centrum alebo pomocou príkazu \textit{sudo apt-get install jmeter} je jednoduchšia, ale obsahuje dva roky starú verziu 2.8.1. 
 
 \subsection{Používanie}
 Spustenie programu je možné z~príkazového riadka pomocou príkazu \textit{jmeter.bat} pre Windows a \textit{./jmeter} pre Linux a MacOS, prípadne univerzálnym príkazom \textit{java -jar ApacheJMeter.jar}. Otvorí sa užívateľské rozhranie, v~ktorom je možné vytvárať testy a nastavovať generovanie výsledkov. Dokumentácia nepopisuje vytváranie testov v~textovom editore tak, ako pri zvyšných nástrojoch, preto je nutné k~tvorbe testov používať toto rozhranie. Spúšťanie testov v~prebieha spustením  príkazu \textit{./jmeter} s~prepínačom "{}-n"{}, ktorý zabezpečí, aby sa test spustil bez grafického rozhrania.
@@ -186,7 +177,7 @@ Vytváranie výsledkov a logovacích súborov prebieha automaticky. Pri štarte 
 
 \newpage
 \section{Gatling}
-Gatling je open-source, podobne ako všetky predchádzajúce nástroje. Kým predchádza-júce nástroje boli písané výhradne, alebo z~veľkej časti v~jazyku Java, Gatling je vyvíjaný v~jazyku Scala, ktorý beží v tom istom virtuálnom stroji, ako Java a preto je nevyhnutné ju mať nainštalovanú. Gatling ako jediný nástroj nepoužíva jazyk XML\footnote{Extensible Markup Language je všeobecný značkovací jazyk vyvinutý a štandardizovaný konzorciom W3C.} pre písanie testovacích scenárov. Scenáre sú písané v~jazyku Scala. Jadro nástroja nie je závislé na konkrétnom protokole a je ľahko rozšíriteľné. V~súčasnosti poskytuje podporu pre HTTP a JMS protokol \cite{Gatling}. Stránka projektu \url{www.gatling-tool.org/} je veľmi jednoduchá a obsahuje len pár odkazov, vačšinou na GitHub stránku projektu \url{www.github.com/excilys/gatling}.
+Gatling je open-source, podobne ako všetky predchádzajúce nástroje. Kým predchádza-júce nástroje boli písané výhradne, alebo z~veľkej časti v~jazyku Java, Gatling je vyvíjaný v~jazyku Scala, ktorý beží v~tom istom virtuálnom stroji, ako Java a preto je nevyhnutné ju mať nainštalovanú. Gatling ako jediný nástroj nepoužíva jazyk XML\footnote{Extensible Markup Language je všeobecný značkovací jazyk vyvinutý a štandardizovaný konzorciom W3C.} pre písanie testovacích scenárov. Scenáre sú písané v~jazyku Scala. Jadro nástroja nie je závislé na konkrétnom protokole a je ľahko rozšíriteľné. V~súčasnosti poskytuje podporu pre HTTP a JMS protokol \cite{Gatling}. Stránka projektu \url{www.gatling-tool.org/} je veľmi jednoduchá a obsahuje len pár odkazov, vačšinou na GitHub stránku projektu \url{www.github.com/excilys/gatling}.
 
 \subsection{Inštalácia}
 Staré verzie programu sa nachádzajú na stránke \url{www.github.com/excilys/gatling/wiki/Downloads}. Najnovšia stabilná verzia 2.1.2 je dostupná na stránke \url{http://gatling.io/download/}. Nachádza sa tu aj verzia 2.2.0-SNAPSHOT, ktorá je vo vývoji. Ja používam verziu 2.0.1. Základným predpokladom pre používanie programu Gatling je JDK verzie 6, pričom sa odporúča mať nainštalovanú najnovšiu verziu JDK.
@@ -230,16 +221,16 @@ Užívateľská dokumentácia sa nachádza na stránke \url{www.perfcake.org/doc
 
 \subsection{Použiteľnosť vo vývojovom prostredí}
 \textbf{Eclipse}\\
-PerfCake obsahuje doplnok PerfClipse pre vývojové prostredie Eclipse Kepler. Doplnok je možné nainštalovať cez Eclipse Marketplace v~menu Help. Doplnok obsahuje aj jednoduché užívateľské prostredie, pomocou ktorého je možné vytvárať testy. PerfClipse vytvoril v rámci svojej záverečnej práce Jakub Knetl. Archív práce je k dispozícii na stránke: \url{https://is.muni.cz/auth/th/396062/fi_b/?lang=cs}.\\
+PerfCake obsahuje doplnok PerfClipse pre vývojové prostredie Eclipse Kepler. Doplnok je možné nainštalovať cez Eclipse Marketplace v~menu Help. Doplnok obsahuje aj jednoduché užívateľské prostredie, pomocou ktorého je možné vytvárať testy. PerfClipse vytvoril v~rámci svojej záverečnej práce Jakub Knetl. Archív práce je k~dispozícii na stránke: \url{https://is.muni.cz/auth/th/396062/fi_b/?lang=cs}.\\
 
 \noindent\textbf{IntelliJ IDEA}\\
-IntelliJ IDEA doplnok PerfCakeIDEA je dostupný na stránke \url{https://github.com/PerfCake/PerfCakeIDEA}. Pre inštaláciu doplnku je potrebné najskôr stiahnuť archív \url{http://download.jetbrains.com/idea/ideaIU-14.0.2.zip} do Maven repozitára, zostaviť z príkazovej riadky príkazom \textit{mvn package} a nakoniec nainštalovať v programe IntelliJ IDEA v menu Súbor (File) $\rightarrow$ Nastavenia (Settings) $\rightarrow$ IDE Settings (Nastavenia IDE) $\rightarrow$ Doplnky (Plugins) $\rightarrow$ Nainštalovať doplnok z disku... (Install plugin from disk...)\cite{Michalko}.\\
+IntelliJ IDEA doplnok PerfCakeIDEA je dostupný na stránke \url{https://github.com/PerfCake/PerfCakeIDEA}. Pre inštaláciu doplnku je potrebné najskôr stiahnuť archív \url{http://download.jetbrains.com/idea/ideaIU-14.0.2.zip} do Maven repozitára, zostaviť z~príkazovej riadky príkazom \textit{mvn package} a nakoniec nainštalovať v~programe IntelliJ IDEA v~menu Súbor (File) $\rightarrow$ Nastavenia (Settings) $\rightarrow$ IDE Settings (Nastavenia IDE) $\rightarrow$ Doplnky (Plugins) $\rightarrow$ Nainštalovať doplnok z~disku... (Install plugin from disk...)\cite{Michalko}.\\
 
 \noindent\textbf{Apache Maven}\\
 Doplnok pre Maven a návod k~jeho inštalácii je k~dispozícii na stránke \url{https://github.com/PerfCake/PerfCakeMavenPlugin}. Maven doplnok nahrádza chýbajúce doplnky pre vývojové prostredia NetBeans a IntelliJ IDEA.
 
 \subsection{Generovanie výsledkov}
-V~prípade nástroja PerfCake sú všetky informácie vypisované do príkazového riadku v~časových intervaloch, ktoré sa nastavujú v~testovacích scenároch. Výsledky som vytvoril presmerovaním výstupu z~terminálu do súboru. Všetky informácie sú prehľadne umiestnené v~jednom súbore. Okrem toho je možné PerfCake nastaviť tak, aby výpis generoval do súbora s príponou \textit{.csv}.
+V~prípade nástroja PerfCake sú všetky informácie vypisované do príkazového riadku v~časových intervaloch, ktoré sa nastavujú v~testovacích scenároch. Výsledky som vytvoril presmerovaním výstupu z~terminálu do súboru. Všetky informácie sú prehľadne umiestnené v~jednom súbore. Okrem toho je možné PerfCake nastaviť tak, aby výpis generoval do súbora s~príponou \textit{.csv}.
 
 \chapter{Testy}
 
@@ -249,10 +240,10 @@ K~vytvoreniu testovanej aplikácie som použil programovací jazyk Java, konkré
 \par Webová služba \textit{main} prijíma na vstupe reťazec znakov a za použitia zvyšných webových služieb vypíše na výstup pôvodný reťazec, otočený reťazec, dĺžku reťazca, počet samohlások, spoluhlások, číslic a nakoniec veľkosť pôvodného reťazca v~bytoch. Pre účely testov som službu upravil tak, aby po zadaní reťazca "{}generate: x" vygenerovala reťazec o~dĺžke x znakov, pričom každý vygenerovaný znak má veľkosť jeden bajt. Veľkosťou správy rozumieme veľkosť vygenerovaného reťazca. Tento spôsob tvorby som použil preto, aby som nasimuloval sťahovanie informácií zo stránky.
 \par Služba \textit{memoryLeak} sa od služby \textit{main} líši len v~tom, že simuluje únik pamäte. Simuláciu som naprogramoval pomocou mapy, ktorá nemá naimplementované metódy equals a hashCode. Správne naprogramovaná mapa musí mať tieto metódy korektne naimplementované, pretože pomocou nich rozhoduje, či sa vkladaná hodnota v~mape už nachádza. Bez týchto metód moja mapa nedokáže detekovať duplicity a preto do mapy vkladá stále nové a nové hodnoty. Tým sa vytvorí únik pamäte. Službu používam len pri vytrvalostných testoch, ktoré sa skladajú z~dvoch častí: Bez memory leaku a S~memory leakom. Pri testovaní Bez memory leaku používajú testy službu \textit{main} a pri testovaní S~memory leakom volajú službu \textit{memoryLeak}.
 \par Poslednou priamo volanou službou je \textit{echo}, ktorú používam pri testovaní teoretickej priepustnosti jednotlivých nástrojov. Táto služba vracia jednoduchý reťazec "{}echo", vďaka čomu dokáže server veľmi rýchlo vrátiť odpoveď a tým sa teoretické úzke hrdlo (Bottleneck) presunie od služby k~testovaným nástrojom. Úzke hrdlo (Bottleneck) v~softvérovom inžinierstve označuje tú časť systému, ktorá má najnižšiu priepustnosť zo všetkých častí prenosovej sústavy a tým výrazne limituje priepustnosť celého systému\cite{Wescott}.
-\par Zdrojové kódy aplikácie som priložil aj na CD. Aplikáciu je možné zostaviť spustením skriptu \textit{build.sh}, ktorý sa nachádza v koreňovom adresári aplikácie. Výstupom zostavenia je súbor s príponou .war, ktorým sa aplikácia nasadzuje na server. Súbor sa nachádza v podadresári target.
+\par Zdrojové kódy aplikácie som priložil aj na CD. Aplikáciu je možné zostaviť spustením skriptu \textit{build.sh}, ktorý sa nachádza v~koreňovom adresári aplikácie. Výstupom zostavenia je súbor s~príponou .war, ktorým sa aplikácia nasadzuje na server. Súbor sa nachádza v~podadresári target.
 
 \section{Testovacie prostredie}
-K~testovniu som použil dva samostatné počítače s identickým operačným systémom, procesorom a operačnou pamäťou. Na počítačoch je nainštalovaný 64bitový operačný systém Linux so štvorjadrovým procesorom Quad-Core AMD Opteron(tm) Processor 2350. Každé jadro procesora pracuje s frekvenciou 2 GHz. Operačná pamäť má veľkosť 8GB.
+K~testovniu som použil dva samostatné počítače s~identickým operačným systémom, procesorom a operačnou pamäťou. Na počítačoch je nainštalovaný 64bitový operačný systém Linux so štvorjadrovým procesorom Quad-Core AMD Opteron(tm) Processor 2350. Každé jadro procesora pracuje s~frekvenciou 2 GHz. Operačná pamäť má veľkosť 8GB. Na strojoch sa počas testov nespúšťajú žiadne procesy a aktualizácie, ktoré by mohli ovplyvniť výsledky testov.
 
 \section{Testy}
 Pre potreby porovnania nástrojov som navrhol 7 typov testov. Medzi jednotlivými testami JBoss server reštartujem. Výsledky testov zaznamenávam pomocou generátorov výsledkov, ktoré ponúkaju jednotlivé nástroje. Medzi požiadavkami klientov nenastavujem oneskorenie.
@@ -282,12 +273,12 @@ Počas JMS testu nástroje zasielajú správy do vstupnej JMS fronty na serveri.
 
 \item \textbf{Základný test so 100 klientmi}
 \newline
-Najčastejšie používaný typ testov výkonu je reprezentovaný pomocou základného testu so 100 klientmi. V teste používam 100 klientov a zasielam správy o dĺžke 5120 znakov, čo sú stredné hodnoty z druhého a tretieho typu testu.
+Najčastejšie používaný typ testov výkonu je reprezentovaný pomocou základného testu so 100 klientmi. V~teste používam 100 klientov a zasielam správy o~dĺžke 5120 znakov, čo sú stredné hodnoty z~druhého a tretieho typu testu.
 \newline
 
 \item \textbf{Vytrvalostný test}
 \newline
-Dlhodobé monitorovanie systému je realizované pomocou vytrvalostných testov. Systém je vystavený záťaži generovanej sto klientmi po dobu jednej hodiny. Veľkosť správy je rovnaká ako v~predchádzajúcom teste, t.j. 5120 znakov. Test sa skladá z~dvoch častí. V~prvej časti je testovaná služba použitá v~predchádzajúcich testoch a v~druhej časti upravená služba simulujúca únik pamäte. Druhá časť testu ukáže rastúcu spotrebu pamäte a v~porovnaní s~prvou časťou tak bude možné odhaliť vzniknutý únik pamäte. Pre tento test som musel nastaviť v~nástrojoch monitorovanie operačnej pamäte na serveri.
+Dlhodobé monitorovanie systému je realizované pomocou vytrvalostných testov. Systém je vystavený záťaži generovanej sto klientmi po dobu jednej hodiny. Veľkosť správy je rovnaká ako v~predchádzajúcom teste, tj. 5120 znakov. Test sa skladá z~dvoch častí. V~prvej časti je testovaná služba použitá v~predchádzajúcich testoch a v~druhej časti upravená služba simulujúca únik pamäte. Druhá časť testu ukáže rastúcu spotrebu pamäte a v~porovnaní s~prvou časťou tak bude možné odhaliť vzniknutý únik pamäte. Pre tento test som musel nastaviť v~nástrojoch monitorovanie operačnej pamäte na serveri.
 \newline
 
 \item \textbf{Test teoretickej priepustnosti nástroja}
@@ -330,8 +321,8 @@ Nástroj Faban sa skladá z~dvoch hlavných komponent: Faban Driver Framework a 
 \textbf{Použitie:} \textit{restart\underscore{}faban.sh}
 
 \item \textit{\textbf{run\underscore{}all.sh}}\\
-K~spusteniu všetkých testov slúži tento skript, ktorý prijíma 7 prepínačov: "{}-s"{}, "{}-p"{}, "{}-m"{}, "{}-t"{}, "{}-b"{}, "{}-u"{} a "{}-d"{}. Pred samotným sputstením všetkých testov sú spustené skripty \textit{change\underscore{}runtime.sh} a \textit{change\underscore{}server\underscore{}and\underscore{}port.sh}, ktorým sú predané argumenty prepínačov pre nastavenie dĺžky trvania testov, adresy servera, čísla portu webových služieb a čísla portu pre JMS. Prepínač -u prijíma ako argument meno užívateľa, cez ktorého klient pomocou príkazu \textit{ssh} reštartuje JBoss AS server, ktorý beží na inom stroji. Pokiaľ tento atribút nie je definovaný, skript skončí s~chybou. Argument posledného prepínača reprezentuje adresár, v~ktorom je umiestnený koreňový adresár obsahujúci server JBoss AS a skript potrebný na jeho obsluhu. V~prípade, že adresár nie je definovaný, použije sa implicitná hodnota "{/home/user}"{}, kde user je meno užívateľa nastavené prepínačom -u.\\
-\textbf{Použitie:} \textit{run\underscore{}all.sh -s 192.168.0.2 -p 18080 -m 14447 -b 10 -t 120 -u tomas -d /home/to-mas/server}
+K~spusteniu všetkých testov slúži tento skript, ktorý prijíma 7 prepínačov: "{}-s"{}, "{}-p"{}, "{}-m"{}, "{}-t"{}, "{}-b"{}, "{}-u"{} a "{}-d"{}. Pred samotným spustením všetkých testov sú spustené skripty \textit{change\underscore{}runtime.sh} a \textit{change\underscore{}server\underscore{}and\underscore{}port.sh}, ktorým sú predané argumenty prepínačov pre nastavenie dĺžky trvania testov, adresy servera, čísla portu webových služieb a čísla portu pre JMS. Prepínač -u prijíma ako argument meno užívateľa, cez ktorého sa klient prihlasuje na stroj v ktorom beží server a pomocou príkazu \textit{ssh} spustí skript \textit{ssh\underscore{}restart\underscore{}jboss.sh}, ktorým ho reštartuje. Pokiaľ tento atribút nie je definovaný, skript skončí s~chybou. Argument posledného prepínača reprezentuje adresár, v~ktorom je umiestnený koreňový adresár obsahujúci server JBoss AS a skript potrebný na jeho obsluhu. V~prípade, že adresár nie je definovaný, použije sa implicitná hodnota "{/home/user}"{}, kde user je meno užívateľa nastavené prepínačom -u.\\
+\textbf{Použitie:} \textit{run\underscore{}all.sh -s 192.168.0.2 -p 8080 -m 4447 -b 50 -t 60 -u tomas -d /home/tomas}
 
 \end{itemize}
 
@@ -354,7 +345,10 @@ Táto sekcia popisuje problémy, s~ktorými som sa stretol pri vytváraní testo
 \begin{itemize}
 
 \item \textbf{Výsledky testov}\\
-Apache JMeter vypisuje výsledky testov do konzoly v rôznych časových intervaloch. Z toho dôvodu som pre Apache JMeter nemohol zostaviť grafy zobrazujúce počet vykonaných požiadaviek počas testu. Asynchrónne vypisovanie výsledkov súvisí s optimalizáciou behu testu. Apache JMeter vypisuje výsledky v priemere každých 30 sekúnd. V dokumentácii sa mi nepodarilo nájsť spôsob, ktorým by som toto vypisovanie výsledkov mohol zmeniť na mnou požadované hodnoty.
+Apache JMeter vypisuje výsledky testov do konzoly v~rôznych časových intervaloch. Z~toho dôvodu som pre Apache JMeter nemohol zostaviť grafy zobrazujúce počet vykonaných požiadaviek počas testu. Asynchrónne vypisovanie výsledkov súvisí s~optimalizáciou behu testu. Apache JMeter vypisuje výsledky v~priemere každých 30 sekúnd. V~dokumentácii sa mi nepodarilo nájsť spôsob, ktorým by som toto vypisovanie výsledkov mohol zmeniť na mnou požadované hodnoty.
+
+\item \textbf{Ukladanie výsledkov monitorovania pamäte}\\
+Meranie spotreby pamäte je v nástroji Apache JMeter realizované pomocou doplnka nástroja, ktorý som musel do Apache JMeter nainštalovať. Doplnok generuje výsledky do súbora, ktorý po musím po každej iterácii testu premenovať. Každá nová iterácia by prepísala výsledky predchádzajúcej iterácie.
 
 \end{itemize}
 
@@ -413,7 +407,7 @@ Počas testu sa nevyskytli žiadne problémy. Apache dosiahol najlepšie výsled
 
 \item Faban
 
-Všetých päť iterácií prvého testu prebehlo bez problémov. Zaujímavá je spoľahlivosť výsledkov jednotlivých iterácií testu, keď medzi najlepším a najhorším výsledkom je rozdiel porovnateľný s rozdielom Apache Jmeter.
+Všetých päť iterácií prvého testu prebehlo bez problémov. Zaujímavá je spoľahlivosť výsledkov jednotlivých iterácií testu, keď medzi najlepším a najhorším výsledkom je rozdiel porovnateľný s~rozdielom Apache Jmeter.
 
 \begin{table}[H]
 \begin{center}
@@ -435,7 +429,7 @@ Všetých päť iterácií prvého testu prebehlo bez problémov. Zaujímavá je
 
 \item Gatling
 
-Podobne ako v~prípade Fabanu všetkých päť iterácií prvého testu prebehlo bez problémov. Gatling vykonal viac požiadaviek, ako Faban. Negatívom je najhoršia spoľahlivosť výsledkov, keď medzi najlepším a najhorším výsledkom je rozdiel 14870 vykonaných požiadaviek. Gatling má najslabší štart zo všetkých nástrojov, keď sa na svoje maximum dostal až 50 sekúnd po štarte, čo je pri 300 sekundovom teste veľmi dlhá doba štartu. Graf zobrazujúci priebeh vykonaných požiadaviek počas testu je k dispozícií v adresári Grafy v priloženom CD.
+Podobne ako v~prípade Fabanu všetkých päť iterácií prvého testu prebehlo bez problémov. Gatling vykonal viac požiadaviek, ako Faban. Negatívom je najhoršia spoľahlivosť výsledkov, keď medzi najlepším a najhorším výsledkom je rozdiel 14870 vykonaných požiadaviek. Gatling má najslabší štart zo všetkých nástrojov, keď sa na svoje maximum dostal až 50 sekúnd po štarte, čo je pri 300 sekundovom teste veľmi dlhá doba štartu. Graf zobrazujúci priebeh vykonaných požiadaviek počas testu je k~dispozícií v~adresári Grafy v~priloženom CD.
 
 \begin{table}[H]
 \begin{center}
@@ -464,12 +458,12 @@ Ani počas testov PerfCake sa nevyskytli žiadne problémy. PerfCake dosiahol dr
 \begin{tabular}{ | l | c | c | c | c |}
 		\hline
 		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
-		 1. iterácia & 365398 & 1217,993 \\ \hline
-		 2. iterácia & 372943 & 1243,143 \\ \hline
-		 3. iterácia & 370583 & 1235,277 \\ \hline
-		 4. iterácia & 372749 & 1242,497 \\ \hline
-		 5. iterácia & 365319 & 1217,730 \\ \hline
-		 Priemer & 369398,4 & 1231,328 \\ \hline
+		 1. iterácia & 384757 & 1282,523 \\ \hline
+		 2. iterácia & 384015 & 1280,050 \\ \hline
+		 3. iterácia & 384460 & 1281,533 \\ \hline
+		 4. iterácia & 392274 & 1307,580 \\ \hline
+		 5. iterácia & 392016 & 1306,720 \\ \hline
+		 Priemer & 387504,4 & 1291,681 \\ \hline
 		 
 \end{tabular}
 \end{center}
@@ -478,7 +472,7 @@ Ani počas testov PerfCake sa nevyskytli žiadne problémy. PerfCake dosiahol dr
 
 \item Vyhodnotenie
 
-Najviac vykonaných požiadaviek a zároveň najnižší rozdiel vo výsledkoch dosiahol Apache JMeter. Nízky rozdiel má aj Faban, ale  tu je nutné zohľadniť nízky počet požiadaviek, ktoré vykonal. S vyššou rýchlosťou klesá aj spoľahlivosť výsledkov. Druhý najvyšší počet požiadaviek vykonal PerfCake, ale dosiahol pri tom takmer štyrikrát vyšší rozdiel medzi najlepším a najhorším výsledkom, ako Apache JMeter a Faban. Po ňom nasleduje Gatling a Faban. Za zmienku stojí veľký rozdiel vo výsledkoch Gatlingu. Jasným víťazom tohto testu je Apache JMeter nasledovaný PerfCake. Tretie miesto obsadil Faban a posledné Gatling kvôli veľmi vysokému rozdielu vo výsledkoch.
+Najviac vykonaných požiadaviek a zároveň najnižší rozdiel vo výsledkoch dosiahol Apache JMeter. Nízky rozdiel má aj Faban, ale  tu je nutné zohľadniť nízky počet požiadaviek, ktoré vykonal. S~vyššou rýchlosťou klesá aj spoľahlivosť výsledkov. Druhý najvyšší počet požiadaviek vykonal PerfCake, ale dosiahol pri tom štyrikrát vyšší rozdiel medzi najlepším a najhorším výsledkom, ako Apache JMeter a Faban. Po ňom nasleduje Gatling a Faban. Za zmienku stojí veľký rozdiel vo výsledkoch Gatlingu. Jasným víťazom tohto testu je Apache JMeter nasledovaný PerfCake. Tretie miesto obsadil Faban a posledné Gatling kvôli veľmi vysokému rozdielu vo výsledkoch.
 
 \begin{table}[H]
 \begin{center}
@@ -488,7 +482,7 @@ Najviac vykonaných požiadaviek a zároveň najnižší rozdiel vo výsledkoch 
 		 Apache JMeter & 400018,6 & 2053 \\ \hline
 		 Faban & 167033,4 & 2102 \\ \hline
 		 Gatling & 304446,4 & 14870 \\ \hline
-		 PerfCake & 369398,4 & 7624 \\ \hline
+		 PerfCake & 387504,4 & 8259 \\ \hline
 \end{tabular}
 \end{center}
 \caption{Základný test s~jedným klientom}
@@ -503,7 +497,7 @@ Najviac vykonaných požiadaviek a zároveň najnižší rozdiel vo výsledkoch 
 
 \item Apache JMeter
 
-Najlepší výsledok v druhom type testu dosiahol Apache JMeter hneď v prvej modifikácii s 10 klientmi. Zaujímavý je aj výsledok 5. iterácie testu, keď Apache JMeter dosiahol výrazne horší výsledok, ako v predchádzajúcich iteráciach. To spôsobilo aj výrazne najhorší rozdiel vo výsledkoch.
+Najlepší výsledok v~druhom type testu dosiahol Apache JMeter hneď v~prvej modifikácii s~10 klientmi. Zaujímavý je aj výsledok 5. iterácie testu, keď Apache JMeter dosiahol výrazne horší výsledok, ako v~predchádzajúcich iteráciach. To spôsobilo aj výrazne najhorší rozdiel vo výsledkoch.
 
 \textbf{Prvý test -- 10 klientov}
 
@@ -527,7 +521,7 @@ Najlepší výsledok v druhom type testu dosiahol Apache JMeter hneď v prvej mo
 
 \textbf{Druhý test -- 50 klientov}
 
-Kým zvyšné nástroje dosiahli maximum v teste s 50 klientmi, Apache JMeter zaznamenal o približne 22\% horší výsledok, ako v prípade testu s 10 klientmi. Tak isto zaznamenal v jednej iterácii výrazný prepad výsledku a podobne, ako v prvom teste výrazne najhorší rozdiel vo výsledkoch.
+Kým zvyšné nástroje dosiahli maximum v~teste s~50 klientmi, Apache JMeter zaznamenal o~približne 22\% horší výsledok, ako v~prípade testu s~10 klientmi. Tak isto zaznamenal v~jednej iterácii výrazný prepad výsledku a podobne, ako v~prvom teste výrazne najhorší rozdiel vo výsledkoch.
 
 \begin{table}[H]
 \begin{center}
@@ -549,7 +543,7 @@ Kým zvyšné nástroje dosiahli maximum v teste s 50 klientmi, Apache JMeter za
 
 \textbf{Tretí test -- 100 klientov}
 
-Nebyť výrazného prepadu vo výsledkoch testu s 50 klientmi, bol by rozdiel vo výsledkoch týchto modifikácií vyšší. Tentokrát Apache JMeter nezaznamenal výrazný prepad výsledkov v žiadnej z iterácií.
+Nebyť výrazného prepadu vo výsledkoch testu s~50 klientmi, bol by rozdiel vo výsledkoch týchto modifikácií vyšší. Tentokrát Apache JMeter nezaznamenal výrazný prepad výsledkov v~žiadnej z~iterácií.
 
 \begin{table}[H]
 \begin{center}
@@ -571,7 +565,7 @@ Nebyť výrazného prepadu vo výsledkoch testu s 50 klientmi, bol by rozdiel vo
 
 \textbf{Štvrtý test -- 150 klientov}
 
-Zaujímavým zistením je mierne zvýšenie výkonu Apache JMeter v teste so 150 klientmi. Maximum z testu s 10 klientmi však neprekonal. Prepad výsledkov sa nevyskytol v žiadnej iterácii testu.
+Zaujímavým zistením je mierne zvýšenie výkonu Apache JMeter v~teste so 150 klientmi. Maximum z~testu s~10 klientmi však neprekonal. Prepad výsledkov sa nevyskytol v~žiadnej iterácii testu.
 
 \begin{table}[H]
 \begin{center}
@@ -593,7 +587,7 @@ Zaujímavým zistením je mierne zvýšenie výkonu Apache JMeter v teste so 150
 
 \textbf{Piaty test -- 200 klientov}
 
-Posledný druh testu dosiahol porovnateľné výsledky, ako test so 150 klientmi. Prepad výsledkov sa neprejavil ani v poslednom druhu testu.
+Posledný druh testu dosiahol porovnateľné výsledky, ako test so 150 klientmi. Prepad výsledkov sa neprejavil ani v~poslednom druhu testu.
 
 \begin{table}[H]
 \begin{center}
@@ -616,7 +610,7 @@ Posledný druh testu dosiahol porovnateľné výsledky, ako test so 150 klientmi
 
 \textbf{Prvý test -- 10 klientov}
 
-Najhorší výsledok spomedzi testov s 10 klientmi dosiahol Faban. Pozitívom je, že v teste s 10 klientmi dosiahol Faban najnižší rozdiel vo výsledkoch jednotlivých iterácií testu.
+Najhorší výsledok spomedzi testov s~10 klientmi dosiahol Faban. Pozitívom je, že v~teste s~10 klientmi dosiahol Faban najnižší rozdiel vo výsledkoch jednotlivých iterácií testu.
 
 \begin{table}[H]
 \begin{center}
@@ -637,7 +631,7 @@ Najhorší výsledok spomedzi testov s 10 klientmi dosiahol Faban. Pozitívom je
 
 \textbf{Druhý test -- 50 klientov}
 
-Najlepší výsledok dosiahol Faban v teste s 50 klientmi. Zvýšenie výkonu oproti prvej modifikácii je vyše dvojnásobné, pričom si Faban opäť zachoval najvyššiu spoľahlivosť výsledkov. 
+Najlepší výsledok dosiahol Faban v~teste s~50 klientmi. Zvýšenie výkonu oproti prvej modifikácii je vyše dvojnásobné, pričom si Faban opäť zachoval najvyššiu spoľahlivosť výsledkov. 
 
 \begin{table}[H]
 \begin{center}
@@ -660,7 +654,7 @@ Najlepší výsledok dosiahol Faban v teste s 50 klientmi. Zvýšenie výkonu op
 \textbf{Tretí test -- 100 klientov}
 
 \hypertarget{label}{}
-V 5. iterácii testu sa objavila chyba Error initializing driver object. com.sun.faban.dri-ver.ConfigurationException: Only single host:port currently supported. Chyba sa vyskytla len pri jednej iterácii. Chybu sa mi nepodarilo odstrániť, pretože k nej dochádza úplne náhodne a jej popis naznačuje, že sa jedná o chybu nástroja, ktorý nedokázal inicializovať jadro (tzv. Driver) testu.
+V~5. iterácii testu sa objavila chyba Error initializing driver object. com.sun.faban.dri-ver.ConfigurationException: Only single host:port currently supported. Chyba sa vyskytla len pri jednej iterácii. Chybu sa mi nepodarilo odstrániť, pretože k~nej dochádza úplne náhodne a jej popis naznačuje, že sa jedná o~chybu nástroja, ktorý nedokázal inicializovať jadro (tzv. Driver) testu.
 \par Výsledky sa oproti predchádzajúcej modifikácii mierne zhoršili, ale Faban si zachoval svoju vysokú spoľahlivosť výsledkov.
 
 \begin{table}[H]
@@ -683,7 +677,7 @@ V 5. iterácii testu sa objavila chyba Error initializing driver object. com.sun
 
 \textbf{Štvrtý test -- 150 klientov}
 
-Faban opäť zaznamenal mierny pokles vo výsledkoch, ale aj výrazné zlepšenie spoľahlivosti. Kým v predchádzajúcej modifikácii bol rozdiel vo výsledkoch 23988 požiadaviek, v tomto teste je to len 8046 požiadaviek.
+Faban opäť zaznamenal mierny pokles vo výsledkoch, ale aj výrazné zlepšenie spoľahlivosti. Kým v~predchádzajúcej modifikácii bol rozdiel vo výsledkoch 23988 požiadaviek, v~tomto teste je to len 8046 požiadaviek.
 
 \begin{table}[H]
 \begin{center}
@@ -704,7 +698,7 @@ Faban opäť zaznamenal mierny pokles vo výsledkoch, ale aj výrazné zlepšeni
 
 \textbf{Piaty test -- 200 klientov}
 
-V poslednej modifikácii sa znova objavila chyba z 5. iterácie testu so 100 klientmi. Faban tiež v tejto modifikácii zaznamenal najväčší rozdiel vo výsledkoch spomedzi všetkých modifikácií testu s rastúcim množstvom klientov.
+V~poslednej modifikácii sa znova objavila chyba z~5. iterácie testu so 100 klientmi. Faban tiež v~tejto modifikácii zaznamenal najväčší rozdiel vo výsledkoch spomedzi všetkých modifikácií testu s~rastúcim množstvom klientov.
 
 \begin{table}[h!]
 \begin{center}
@@ -726,7 +720,7 @@ V poslednej modifikácii sa znova objavila chyba z 5. iterácie testu so 100 kli
 
 \item Gatling
 
-V teste s 10 klientmi dosiahol Gatling len o trochu lepší výsledok, ako Faban. Na druhej strane mal výrazne nižšiu spoľahlivosť výsledkov.
+V~teste s~10 klientmi dosiahol Gatling len o~trochu lepší výsledok, ako Faban. Na druhej strane mal výrazne nižšiu spoľahlivosť výsledkov.
 
 \textbf{Prvý test -- 10 klientov}
 
@@ -750,7 +744,7 @@ V teste s 10 klientmi dosiahol Gatling len o trochu lepší výsledok, ako Faban
 
 \textbf{Druhý test -- 50 klientov}
 
-Najhorší výsledok v teste s 50 klientmi zaznamenal Gatling. Na rozdiel od ostatných nástrojov sa oproti predchádzajúcej modifikácii zlepšil len mierne. Rozdiel vo výsledkoch sa však zdvojnásobil.
+Najhorší výsledok v~teste s~50 klientmi zaznamenal Gatling. Na rozdiel od ostatných nástrojov sa oproti predchádzajúcej modifikácii zlepšil len mierne. Rozdiel vo výsledkoch sa však zdvojnásobil.
 
 \begin{table}[H]
 \begin{center}
@@ -772,7 +766,7 @@ Najhorší výsledok v teste s 50 klientmi zaznamenal Gatling. Na rozdiel od ost
 
 \textbf{Tretí test -- 100 klientov}
 
-Pomalý rast výkonu pokračoval aj v teste so 100 klientmi. Zároveň však došlo k zhoršeniu spoľahlivosti výsledkov.
+Pomalý rast výkonu pokračoval aj v~teste so 100 klientmi. Zároveň však došlo k~zhoršeniu spoľahlivosti výsledkov.
 
 \begin{table}[H]
 \begin{center}
@@ -794,7 +788,7 @@ Pomalý rast výkonu pokračoval aj v teste so 100 klientmi. Zároveň však do�
 
 \textbf{Štvrtý test -- 150 klientov}
 
-V zlepšovaní výsledkov Gatling pokračoval aj v teste so 150 klientmi. Pozitívom je zlepšenie spoľahlivosti výsledkov, keď sa rozdiel vo výsledkoch najlepšej a najhoršej iterácie klesol zmenšil na polovicu. S prihliadnutím na zvýšenie výkonu je to veľmi pozitívna správa, pretože rozdiel vo výsledkoch rastie s rastúcim počtom vykonaných požiadaviek.
+V~zlepšovaní výsledkov Gatling pokračoval aj v~teste so 150 klientmi. Pozitívom je zlepšenie spoľahlivosti výsledkov, keď sa rozdiel vo výsledkoch najlepšej a najhoršej iterácie klesol zmenšil na polovicu. S~prihliadnutím na zvýšenie výkonu je to veľmi pozitívna správa, pretože rozdiel vo výsledkoch rastie s~rastúcim počtom vykonaných požiadaviek.
 
 \begin{table}[H]
 \begin{center}
@@ -816,7 +810,7 @@ V zlepšovaní výsledkov Gatling pokračoval aj v teste so 150 klientmi. Pozit�
 
 \textbf{Piaty test -- 200 klientov}
 
-Aj v poslednej modifikácii testu s rastúcim počtom klientov dosiahol Gatling zlepšenie oproti predchádzajúcej modifikácii. Rozdiel vo výsledkoch sa zvýšil na hodnotu z testu so 100 klientmi. Pri zvýšení počtu vykonaných požiadaviek to ale nie je tak výrazné zhoršenie spoľahlivosti výsledkov.
+Aj v~poslednej modifikácii testu s~rastúcim počtom klientov dosiahol Gatling zlepšenie oproti predchádzajúcej modifikácii. Rozdiel vo výsledkoch sa zvýšil na hodnotu z~testu so 100 klientmi. Pri zvýšení počtu vykonaných požiadaviek to ale nie je tak výrazné zhoršenie spoľahlivosti výsledkov.
 
 \begin{table}[H]
 \begin{center}
@@ -838,21 +832,20 @@ Aj v poslednej modifikácii testu s rastúcim počtom klientov dosiahol Gatling 
 
 \item PerfCake
 
-Najlepší výsledok testu s 10 klientmi dosiahol PerfCake a rozdiel vo výsledkoch bol tiež veľmi malý.
-
+Najlepší výsledok testu s~10 klientmi dosiahol PerfCake a vysoká bola aj spoľahlivosť výsledkov.
+\newpage
 \textbf{Prvý test -- 10 klientov}
-
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{ | l | c | c | c | c |}
 		\hline
 		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
-		 1. iterácia & 3951517 & 13171,723 \\ \hline
-		 2. iterácia & 3963717 & 13212,390 \\ \hline
-		 3. iterácia & 3991775 & 13305,917 \\ \hline
-		 4. iterácia & 3957599 & 13191,997 \\ \hline
-		 5. iterácia & 3984467 & 13281,557 \\ \hline
-		 Priemer & 3969815 & 13232,717 \\ \hline
+		 1. iterácia & 4026177 & 13420,590 \\ \hline
+		 2. iterácia & 4203087 & 14010,290 \\ \hline
+		 3. iterácia & 4175159 & 13917,197 \\ \hline
+		 4. iterácia & 4057625 & 13525,417 \\ \hline
+		 5. iterácia & 4172615 & 13908,717 \\ \hline
+		 Priemer & 4126932,6 & 13756,442 \\ \hline
 		 
 \end{tabular}
 \end{center}
@@ -862,19 +855,19 @@ Najlepší výsledok testu s 10 klientmi dosiahol PerfCake a rozdiel vo výsledk
 
 \textbf{Druhý test -- 50 klientov}
 
-Suverénne najlepší výsledok dosiahol v teste s 50 klientmi PerfCake, pričom sa nezhoršila ani spoľahlivosť výsledkov.
+V~teste s~50 klientmi výkon PerfCake klesol, pričom sa spoľahlivosť výsledkov mierne zlepšila.
 
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{ | l | c | c | c | c |}
 		\hline
 		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
-		 1. iterácia & 8436852 & 28122,840 \\ \hline
-		 2. iterácia & 8468862 & 28229,540 \\ \hline
-		 3. iterácia & 8364056 & 27880,187 \\ \hline
-		 4. iterácia & 8378125 & 27927,083 \\ \hline
-		 5. iterácia & 8457090 & 28190,300 \\ \hline
-		 Priemer & 8420997 & 28069,990 \\ \hline
+		 1. iterácia & 3144723 & 10482,410 \\ \hline
+		 2. iterácia & 3252899 & 10842,997 \\ \hline
+		 3. iterácia & 3116230 & 10387,433 \\ \hline
+		 4. iterácia & 3266764 & 10889,213 \\ \hline
+		 5. iterácia & 3237289 & 10790,963 \\ \hline
+		 Priemer & 3203581 & 10678,603 \\ \hline
 		 
 \end{tabular}
 \end{center}
@@ -884,19 +877,19 @@ Suverénne najlepší výsledok dosiahol v teste s 50 klientmi PerfCake, pričom
 
 \textbf{Tretí test -- 100 klientov}
 
-Oproti predchádzajúcej modifikácii dosiahol PerfCake výrazný prepad vo výsledkoch, ako aj v spoľahlivosti výsledkov.
+Oproti predchádzajúcej modifikácii dosiahol PerfCake malý nárast vo výsledkoch. Spoľahlivosti výsledkov sa znateľne zhoršila.
 
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{ | l | c | c | c | c |}
 		\hline
 		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
-		 1. iterácia & 7382610 & 24608,700 \\ \hline
-		 2. iterácia & 6638997 & 22129,990 \\ \hline
-		 3. iterácia & 7469201 & 24897,337 \\ \hline
-		 4. iterácia & 6891892 & 22972,973 \\ \hline
-		 5. iterácia & 7257491 & 24191,637 \\ \hline
-		 Priemer & 7128038,2 & 23760,127 \\ \hline
+		 1. iterácia & 3292183 & 10973,943 \\ \hline
+		 2. iterácia & 3138117 & 10460,390 \\ \hline
+		 3. iterácia & 3345793 & 11152,643 \\ \hline
+		 4. iterácia & 3210665 & 10702,217 \\ \hline
+		 5. iterácia & 3258665 & 10862,217 \\ \hline
+		 Priemer & 3249084,6 & 10830,282 \\ \hline
 		 
 \end{tabular}
 \end{center}
@@ -906,19 +899,19 @@ Oproti predchádzajúcej modifikácii dosiahol PerfCake výrazný prepad vo výs
 
 \textbf{Štvrtý test -- 150 klientov}
 
-V štvrtej modifikácii PerfCake zaznamenal mierne zníženie výkonu oproti predchádzajúcej modifikácii, ale zároveň došlo k výraznému zlepšeniu spoľahlivosti výsledkov.
+V~štvrtej modifikácii PerfCake zaznamenal mierne zníženie výkonu oproti predchádzajúcej modifikácii a záčoveň došlo k malému zlepšeniu spoľahlivosti výsledkov.
 
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{ | l | c | c | c | c |}
 		\hline
 		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
-		 1. iterácia & 6824064 & 22746,880 \\ \hline
-		 2. iterácia & 7221323 & 24071,077 \\ \hline
-		 3. iterácia & 7325744 & 24419,147 \\ \hline
-		 4. iterácia & 6845474 & 22818,247 \\ \hline
-		 5. iterácia & 7289434 & 24298,113 \\ \hline
-		 Priemer & 7101207,8 & 23670,693 \\ \hline
+		 1. iterácia & 3307975 & 11026,583 \\ \hline
+		 2. iterácia & 3341591 & 11138,637 \\ \hline
+		 3. iterácia & 3148483 & 10494,943 \\ \hline
+		 4. iterácia & 3232159 & 10773,863 \\ \hline
+		 5. iterácia & 3160903 & 10536,343 \\ \hline
+		 Priemer & 3238222,2 & 10794,074 \\ \hline
 		 
 \end{tabular}
 \end{center}
@@ -927,19 +920,19 @@ V štvrtej modifikácii PerfCake zaznamenal mierne zníženie výkonu oproti pre
 
 \textbf{Piaty test -- 200 klientov}
 
-Posledná modifikácia opäť zaznamenala mierne zníženie výsledkov. Väčším negatívom je, že sa zároveň znížila aj spoľahlivosť výsledkov.
+Posledná modifikácia zaznamenala výraznejšie zníženie výsledkov, ako v predchádzajúcich modifikáciach. Pozitívom je, že sa zároveň zvýšila spoľahlivosť výsledkov.
 
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{ | l | c | c | c | c |}
 		\hline
 		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
-		 1. iterácia & 7011158 & 23370,527 \\ \hline
-		 2. iterácia & 6667422 & 22224,740 \\ \hline
-		 3. iterácia & 6807714 & 22692,380 \\ \hline
-		 4. iterácia & 7142392 & 23807,973 \\ \hline
-		 5. iterácia & 7256323 & 24187,743 \\ \hline
-		 Priemer & 6977001,8 & 23256,673 \\ \hline
+		 1. iterácia & 3107211 & 10357,370 \\ \hline
+		 2. iterácia & 3118662 & 10395,540 \\ \hline
+		 3. iterácia & 3188449 & 10628,163 \\ \hline
+		 4. iterácia & 3277340 & 10924,467 \\ \hline
+		 5. iterácia & 3250709 & 10835,697 \\ \hline
+		 Priemer & 3188474,2 & 10628,247 \\ \hline
 		 
 \end{tabular}
 \end{center}
@@ -948,38 +941,40 @@ Posledná modifikácia opäť zaznamenala mierne zníženie výsledkov. Väčš�
 
 \item Vyhodnotenie
 
-\textbf{Vykonané požiadavky}\\
-Z pohľadu počtu vykonaných požiadaviek je jasným víťazom PerfCake. V teste s 50 klientmi, kde dosiahli najlepší výkon všetky nástroje okrem Gatling, dokázal PerfCake vykonať takmer trikrát viac požiadaviek, ako Apache JMeter a Faban. Najhorší výsledok dosiahol Gatling, ktorý ale ako jediný dokázal zvyšovať počet vykonaných požiadaviek so zvyšujúcim sa počtom klientov. Apache JMeter a Faban dosiahli takmer rovnaké výsledky. Faban výrazne zaostal v teste s 10 klientmi, no v ďalších modifikáciach už mal navrch.
+\textbf{Vykonané požiadavky}
+
+Z~pohľadu počtu vykonaných požiadaviek je víťazom PerfCake. Počas všetkých testov mal lepšie výsledky, ako Apache JMeter, ktorý sa umiestnil na druhom mieste. Faban zaznamenal v druhej, tertej, štvrtej a piatej modifikácii porovnateľné výsledky, ako Apache JMeter a PerfCake, ale v prípade prvej modifikácie dosiaholi oba nástroje viac ako dvojnásobok vykonaných požiadaviek. Najhorší výsledok dosiahol Gatling, ktorý ale ako jediný dokázal zvyšovať počet vykonaných požiadaviek so zvyšujúcim sa počtom klientov.
 
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{ | l | c | c | c | c |}
 		\hline
 		 \textbf{Test} & \textbf{Apache JMeter} & \textbf{Faban} & \textbf{Gatling} & \textbf{PerfCake} \\ \hline
-		 10 klientov & 3946274 & 1613335 & 1825040 & 3969815 \\ \hline
- 		 50 klientov & 3093758 & 3294958 & 1925112 & 8420997 \\ \hline
- 		 100 klientov & 3073190 & 3221918 & 2137735 & 7128038 \\ \hline
- 		 150 klientov & 3144550 & 3188195 & 2333885 & 7101208 \\ \hline
-		 200 klientov & 3123364 & 3199538 & 2519343 & 6977002 \\ \hline
+		 10 klientov & 3946274 & 1613335 & 1825040 & 4126933 \\ \hline
+ 		 50 klientov & 3093758 & 3294958 & 1925112 & 3203581 \\ \hline
+ 		 100 klientov & 3073190 & 3221918 & 2137735 & 3249085 \\ \hline
+ 		 150 klientov & 3144550 & 3188195 & 2333885 & 3238222 \\ \hline
+		 200 klientov & 3123364 & 3199538 & 2519343 & 3188474 \\ \hline
 		 
 \end{tabular}
 \end{center}
 \caption{Test s~rastúcim počtom klientov -- priemerný počet vykonaných požiadaviek}
 \end{table}
 
-\textbf{Rozdiel vo výsledkoch}\\
-Najspoľahlivejšie výsledky poskytoval počas všetkých testov Faban. Neohrozil ho ani druhý Gatling, ktorého rozdiel vo výsledkoch nie je o mnoho väčší, pretože dosiahol nižší počet vykonaných požiadaviek. Ako vidieť z výsledkov, s rastúcim počtom vykonaných požiadaviek rastie rozdiel vo výsledkoch. Pre porovnanie Faban a Gatling najlepšie poslúži rvý test, v ktorom dosiahli podobné výsledky, ale Gatling mal viac ako trikrát väčší rozdiel vo výsledkoch. Najhoršie dopadol Apache JMeter, ktorého výsledky boli konzistentné, ale niektoré iterácie zaznamenali výrazný prepad vo výsledkoch. Z pohľadu absolútnych čísel dosiahol veľký rozdiel aj PerfCake, no v jeho prospech hrá výrazne vyšší počet vykonaných požiadaviek.
+\textbf{Rozdiel vo výsledkoch}
+
+Najspoľahlivejšie výsledky poskytoval počas všetkých testov Faban. Neohrozil ho ani druhý Gatling, ktorého rozdiel vo výsledkoch nie je o~mnoho väčší, pretože dosiahol nižší počet vykonaných požiadaviek. Ako vidieť z~výsledkov, s~rastúcim počtom vykonaných požiadaviek rastie rozdiel vo výsledkoch. Pre porovnanie Faban a Gatling najlepšie poslúži prvý test, v~ktorom dosiahli podobné výsledky, ale Gatling mal viac ako trikrát väčší rozdiel vo výsledkoch. Najhoršie dopadol Apache JMeter, ktorého výsledky boli konzistentné, ale niektoré iterácie zaznamenali výrazný prepad vo výsledkoch. V porovnaní s nástrojom Faban má veľké rozdiely vo výsledkoch aj PerfCake, ktorý skončil na predposlednom mieste.
 
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{ | l | c | c | c | c |}
 		\hline
 		 \textbf{Test} & \textbf{Apache JMeter} & \textbf{Faban} & \textbf{Gatling} & \textbf{PerfCake} \\ \hline
-		 10 klientov & 510493 & 7171 & 23424 & 40258 \\ \hline
-		 50 klientov & 590825 & 24150 & 47530 & 104806 \\ \hline
-		 100 klientov & 102703 & 23988 & 59438 & 830204 \\ \hline
-		 150 klientov & 116782 & 8046 & 29793 & 501680 \\ \hline
-		 200 klientov & 226184 & 31426 & 59658 & 588901 \\ \hline
+		 10 klientov & 510493 & 7171 & 23424 & 176910 \\ \hline
+		 50 klientov & 590825 & 24150 & 47530 & 150534 \\ \hline
+		 100 klientov & 102703 & 23988 & 59438 & 207676 \\ \hline
+		 150 klientov & 116782 & 8046 & 29793 & 193108 \\ \hline
+		 200 klientov & 226184 & 31426 & 59658 & 170129 \\ \hline
 		 
 \end{tabular}
 \end{center}
@@ -994,8 +989,8 @@ Najspoľahlivejšie výsledky poskytoval počas všetkých testov Faban. Neohroz
 
 \item Apache JMeter
 
-Najvyšší počet vykonaných požiadaviek v prvej modifikácii testu s rastúcou veľkosťou správy dosiahol Apache JMeter. Vzhľadom k vysokému počtu požiadaviek mal aj dobrý výsledok rozdielu medzi najlepšou a najhoršou iteráciou.
-
+Najvyšší počet vykonaných požiadaviek v~prvej modifikácii testu s~rastúcou veľkosťou správy dosiahol Apache JMeter. Vzhľadom k~vysokému počtu požiadaviek mal aj dobrý výsledok rozdielu medzi najlepšou a najhoršou iteráciou.
+\newpage
 \textbf{Prvý test -- 5 znaková správa}
 
 \begin{table}[H]
@@ -1018,7 +1013,7 @@ Najvyšší počet vykonaných požiadaviek v prvej modifikácii testu s rastúc
 
 \textbf{Druhý test -- 1024 znaková správa (1 KiB)}
 
-S nárastom veľkosti správy sa logicky znížilo aj množstvo vykonaných požiadaviek. Zároveň sa ale objavil náhly výkyv počtu požiadaviek u jednej iterácie, ako tomu bolo aj v prípade prvých dvoch modifikácii testu s rastúcim počtom klientov. V tomto prípade nedošlo k zníženiu výkonu, ale naopak k radikálnemu zýšeniu počtu vykonaných požiadaviek v 3. iterácii testu.
+S~nárastom veľkosti správy sa logicky znížilo aj množstvo vykonaných požiadaviek. Zároveň sa ale objavil náhly výkyv počtu požiadaviek u~jednej iterácie, ako tomu bolo aj v~prípade prvých dvoch modifikácii testu s~rastúcim počtom klientov. V~tomto prípade nedošlo k~zníženiu výkonu, ale naopak k~radikálnemu zýšeniu počtu vykonaných požiadaviek v~3. iterácii testu.
 
 \begin{table}[H]
 \begin{center}
@@ -1040,7 +1035,7 @@ S nárastom veľkosti správy sa logicky znížilo aj množstvo vykonaných pož
 
 \textbf{Tretí test -- 5120 znaková správa (5 KiB)}
 
-Tretia modifikácia zaznamenala v prípade Apache JMeter v priemere päťnásobné zníženie počtu vykonaných požiadaviek (bez započítania 3. iterácie testu s 1024 znakovou správou). To signalizuje, že sa väčšina záťaže presunula na server alebo prenosovú sústavu, t.j. mimo nástroj Apache JMeter. Rozdiel vo výsledkoch oproti predchádzajúcemu testu výrazne klesol.
+Tretia modifikácia zaznamenala v~prípade Apache JMeter v~priemere päťnásobné zníženie počtu vykonaných požiadaviek (bez započítania 3. iterácie testu s~1024 znakovou správou). To signalizuje, že sa väčšina záťaže presunula na server alebo prenosovú sústavu, tj. mimo nástroj Apache JMeter. Rozdiel vo výsledkoch oproti predchádzajúcemu testu výrazne klesol.
 
 \begin{table}[H]
 \begin{center}
@@ -1062,7 +1057,7 @@ Tretia modifikácia zaznamenala v prípade Apache JMeter v priemere päťnásobn
 
 \textbf{Štvrtý test -- 51200 znaková správa (50 KiB)}
 
-Desaťnásobné zväčšenie správy spôsobilo približne desaťnásobné zníženie počtu vykonaných požiadaviek. Rozdiel vo výsledkoch sa znova znížil, ale už nie takým výrazným pomerom, ako v prípade 2. a 3. iterácie.
+Desaťnásobné zväčšenie správy spôsobilo približne desaťnásobné zníženie počtu vykonaných požiadaviek. Rozdiel vo výsledkoch sa znova znížil, ale už nie takým výrazným pomerom, ako v~prípade 2. a 3. iterácie.
 
 \begin{table}[H]
 \begin{center}
@@ -1084,7 +1079,7 @@ Desaťnásobné zväčšenie správy spôsobilo približne desaťnásobné zní�
 
 \textbf{Piaty test -- 512000 znaková správa (500 KiB)}
 
-Ďalšie desaťnásobné zväčšenie veľkosti správy opäť znamenalo zníženie počtu prenesených správ rovnakým pomerom. Rozdiel v správach opäť klesol.
+Ďalšie desaťnásobné zväčšenie veľkosti správy opäť znamenalo zníženie počtu prenesených správ rovnakým pomerom. Rozdiel v~správach opäť klesol.
 
 \begin{table}[H]
 \begin{center}
@@ -1107,7 +1102,7 @@ Desaťnásobné zväčšenie správy spôsobilo približne desaťnásobné zní�
 
 \textbf{Prvý test -- 5 znaková správa}
 
-Faban si rovnako ako v predchádzajúcich testoch drží najvyššiu spoľahlivosť výsledkov. Počet vykonaných požiadaviek už v prvej modifikácii nie je najhorší, ako tomu bolo v predchádzajúcich testoch.
+Faban si rovnako ako v~predchádzajúcich testoch drží najvyššiu spoľahlivosť výsledkov. Počet vykonaných požiadaviek už v~prvej modifikácii nie je najhorší, ako tomu bolo v~predchádzajúcich testoch.
 
 \begin{table}[H]
 \begin{center}
@@ -1129,7 +1124,7 @@ Faban si rovnako ako v predchádzajúcich testoch drží najvyššiu spoľahlivo
 
 \textbf{Druhý test -- 1024 znaková správa (1 KiB)}
 
-Druhá modifikácia bola poznačená dvomi zlyhaniami testu. V 2. a 4. iterácii sa vyskytla rovnaká chyba, ako v teste \hyperlink{label}{2.3.5}.
+Druhá modifikácia bola poznačená dvomi zlyhaniami testu. V~2. a 4. iterácii sa vyskytla rovnaká chyba, ako v~teste \hyperlink{label}{2.3.5}.
 \par Počet vykonaných požiadaviek klesol. Rovnako klesol aj rozdiel vo výsledkoch. Spoľahlivosť výsledkov výrazne narušili dve zlyhania testov.
 
 \begin{table}[H]
@@ -1152,7 +1147,7 @@ Druhá modifikácia bola poznačená dvomi zlyhaniami testu. V 2. a 4. iterácii
 
 \textbf{Tretí test -- 5120 znaková správa (5 KiB)}
 
-Podobne, ako v predchádzajúcej modifikácii, aj teraz sa vyskytli chyby v 2. a 4. iterácii testu. Počet vykonaných požiadaviek, ako aj rozdiel vo výsledkoch klesol. Dôveryhodnosť výsledkov je znížená dvomi zlyhaniami testov.
+Podobne, ako v~predchádzajúcej modifikácii, aj teraz sa vyskytli chyby v~2. a 4. iterácii testu. Počet vykonaných požiadaviek, ako aj rozdiel vo výsledkoch klesol. Dôveryhodnosť výsledkov je znížená dvomi zlyhaniami testov.
 
 \begin{table}[H]
 \begin{center}
@@ -1174,7 +1169,7 @@ Podobne, ako v predchádzajúcej modifikácii, aj teraz sa vyskytli chyby v 2. a
 
 \textbf{Štvrtý test -- 51200 znaková správa (50 KiB)}
 
-Štvrtá modifikácia zaznamenala len jednu chybu v 4. iterácii testu. Počet vykonaných požiadaviek spolu s rozdielom vo výsledkoch klesol.
+Štvrtá modifikácia zaznamenala len jednu chybu v~4. iterácii testu. Počet vykonaných požiadaviek spolu s~rozdielom vo výsledkoch klesol.
 
 \begin{table}[H]
 \begin{center}
@@ -1196,7 +1191,7 @@ Podobne, ako v predchádzajúcej modifikácii, aj teraz sa vyskytli chyby v 2. a
 
 \textbf{Piaty test -- 512000 znaková správa (500 KiB)}
 
-Aj posledná modifikácia testu zaznamenala jednu chybu, tentokrát v prvej iterácii testu. Počet požiadaviek a rozdiel vo výsledkoch opäť klesol.
+Aj posledná modifikácia testu zaznamenala jednu chybu, tentokrát v~prvej iterácii testu. Počet požiadaviek a rozdiel vo výsledkoch opäť klesol.
 
 \begin{table}[H]
 \begin{center}
@@ -1218,7 +1213,7 @@ Aj posledná modifikácia testu zaznamenala jednu chybu, tentokrát v prvej iter
 
 \item Gatling
 
-Najhorší výsledok dosiahol v prvej modifikácii testu s rastúcou veľkosťou správy Gatling. Rozdiel vo výsledkoch je vyšší, ako v prípade poslednej modifikácie testu s rastúcim počtom klientov, ktorý mal rovnaký počet vykonaných požiadaviek. 
+Najhorší výsledok dosiahol v~prvej modifikácii testu s~rastúcou veľkosťou správy Gatling. Rozdiel vo výsledkoch je vyšší, ako v~prípade poslednej modifikácie testu s~rastúcim počtom klientov, ktorý mal rovnaký počet vykonaných požiadaviek. 
 
 \textbf{Prvý test -- 5 znaková správa}
 
@@ -1242,7 +1237,7 @@ Najhorší výsledok dosiahol v prvej modifikácii testu s rastúcou veľkosťou
 
 \textbf{Druhý test -- 1024 znaková správa (1 KiB)}
 
-Počet vykonaných požiadaviek klesol podobne ako u zvyšných nástrojov. Výrazne klesol rozdiel vo výsledkoch, keď sa dokonca dostal na úroveň nástroja Faban.
+Počet vykonaných požiadaviek klesol podobne ako u~zvyšných nástrojov. Výrazne klesol rozdiel vo výsledkoch, keď sa dokonca dostal na úroveň nástroja Faban.
 
 \begin{table}[H]
 \begin{center}
@@ -1308,7 +1303,7 @@ Znova klesol počet vykonaných požiadaviek, ako aj rozdiel vo výsledkoch.
 
 \textbf{Piaty test -- 512000 znaková správa (500 KiB)}
 
-Aj poslednej modifikácii klesol počet vykonaných požiadaviek spolu s rozdielom vo výsledkoch.
+Aj poslednej modifikácii klesol počet vykonaných požiadaviek spolu s~rozdielom vo výsledkoch.
 
 \begin{table}[H]
 \begin{center}
@@ -1332,19 +1327,19 @@ Aj poslednej modifikácii klesol počet vykonaných požiadaviek spolu s rozdiel
 
 \textbf{Prvý test -- 5 znaková správa}
 
-Druhý najlepší výsledok v prvej modifikácii testu s rastúcou veľkosťou správy dosiahol PerfCake. Negatívom je veľký rozdiel vo výsledkoch.
+Druhý najlepší výsledok v~prvej modifikácii testu s~rastúcou veľkosťou správy dosiahol PerfCake. Veľmi dobrá je spoľahlivosť výsledkov.
 
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{ | l | c | c | c | c |}
 		\hline
 		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
-		 1. iterácia & 8297885 & 27659,617 \\ \hline
-		 2. iterácia & 7668593 & 25561,977 \\ \hline
-		 3. iterácia & 8223258 & 27410,860 \\ \hline
-		 4. iterácia & 8250351 & 27501,170 \\ \hline
-		 5. iterácia & 8072231 & 26907,437 \\ \hline
-		 Priemer & 8102463,6 & 27008,212 \\ \hline
+		 1. iterácia & 9437784 & 31459,280 \\ \hline
+		 2. iterácia & 9499103 & 31663,677 \\ \hline
+		 3. iterácia & 9423913 & 31413,043 \\ \hline
+		 4. iterácia & 9335989 & 31119,963 \\ \hline
+		 5. iterácia & 9476932 & 31589,773 \\ \hline
+		 Priemer & 9434744,2 & 31449,147 \\ \hline
 		 
 \end{tabular}
 \end{center}
@@ -1354,19 +1349,19 @@ Druhý najlepší výsledok v prvej modifikácii testu s rastúcou veľkosťou s
 
 \textbf{Druhý test -- 1024 znaková správa (1 KiB)}
 
-PerfCake ako jediný nástroj dosiahol podobné výsledky aj v druhej modifikácii. Rozdiel vo výsledkoch klesol zhruba o polovicu.
+Druhá modifikácia znamenala očakávaný pokles vykonaných požiadaviek. Spolu s nimi klesla aj spoľahlivosť výsledkov.
 
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{ | l | c | c | c | c |}
 		\hline
 		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
-		 1. iterácia & 8345874 & 27819,580 \\ \hline
-		 2. iterácia & 8192962 & 27309,873 \\ \hline
-		 3. iterácia & 8294026 & 27646,753 \\ \hline
-		 4. iterácia & 8527301 & 28424,337 \\ \hline
-		 5. iterácia & 8436495 & 28121,650 \\ \hline
-		 Priemer & 8359331,6 & 27864,439 \\ \hline
+		 1. iterácia & 338001 & 1126,670 \\ \hline
+		 2. iterácia & 335347 & 1117,823 \\ \hline
+		 3. iterácia & 333536 & 1111,787 \\ \hline
+		 4. iterácia & 334645 & 1115,483 \\ \hline
+		 5. iterácia & 337169 & 1123,897 \\ \hline
+		 Priemer & 335739,6 & 1119,132 \\ \hline
 		 
 \end{tabular}
 \end{center}
@@ -1376,19 +1371,19 @@ PerfCake ako jediný nástroj dosiahol podobné výsledky aj v druhej modifikác
 
 \textbf{Tretí test -- 5120 znaková správa (5 KiB)}
 
-Aj v tretej modifikácii dosiahol PerfCake podobné výsledky, ako v predchádzajúcich modifikáciach. Rozdiel vo výsledkoch znova stúpol na hodnotu z prvej modifikácie.
+Päťnásobné zväčšenie správy znamenalo pätnásobné zníženie počtu vykonaných požiadaviek.
 
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{ | l | c | c | c | c |}
 		\hline
 		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
-		 1. iterácia & 8502858 & 28342,860 \\ \hline
-		 2. iterácia & 8294405 & 27648,017 \\ \hline
-		 3. iterácia & 7853568 & 26178,560 \\ \hline
-		 4. iterácia & 8094159 & 26980,530 \\ \hline
-		 5. iterácia & 8406732 & 28022,440 \\ \hline
-		 Priemer & 8230344,4 & 27434,481 \\ \hline
+		 1. iterácia & 67753 & 225,843 \\ \hline
+		 2. iterácia & 68595 & 228,650 \\ \hline
+		 3. iterácia & 68500 & 228,333 \\ \hline
+		 4. iterácia & 68865 & 229,550 \\ \hline
+		 5. iterácia & 68156 & 227,187 \\ \hline
+		 Priemer & 68373,8 & 227,913 \\ \hline
 		 
 \end{tabular}
 \end{center}
@@ -1398,19 +1393,19 @@ Aj v tretej modifikácii dosiahol PerfCake podobné výsledky, ako v predchádza
 
 \textbf{Štvrtý test -- 51200 znaková správa (50 KiB)}
 
-Počet vykonaných požiadaviek sa aj v štvrtej modifikácii pohyboval na úrovni predchádzajúcich modifikácií. Rozdiel vo výsledkoch znovu klesol na polovičnú hodnotu.
+Počet vykonaných požiadaviek znova klesol rovnakým pomerom, akým vzrástla veľkosť prenášanej správy.
 
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{ | l | c | c | c | c |}
 		\hline
 		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
-		 1. iterácia & 8521986 & 28406,620 \\ \hline
-		 2. iterácia & 8226342 & 27421,140 \\ \hline
-		 3. iterácia & 8220155 & 27400,517 \\ \hline
-		 4. iterácia & 8199410 & 27331,367 \\ \hline
-		 5. iterácia & 8248134 & 27493,780 \\ \hline
-		 Priemer & 8283205,4 & 27610,685 \\ \hline
+		 1. iterácia & 6780 & 22,600 \\ \hline
+		 2. iterácia & 6836 & 22,787 \\ \hline
+		 3. iterácia & 6825 & 22,750 \\ \hline
+		 4. iterácia & 6801 & 22,670 \\ \hline
+		 5. iterácia & 6824 & 22,747 \\ \hline
+		 Priemer & 6813,2 & 22,711 \\ \hline
 		 
 \end{tabular}
 \end{center}
@@ -1420,19 +1415,19 @@ Počet vykonaných požiadaviek sa aj v štvrtej modifikácii pohyboval na úrov
 
 \textbf{Piaty test -- 512000 znaková správa (500 KiB)}
 
-Aj posledná modifikácia dosiahla podobné výsledky, ako predchádzajúce modifikácie. Rozdiel vo výsledkoch sa znova zvýšil.
+Aj v poslednej modifikácii klesol počet vykonaných požiadaviek v rovnakom pomere, akým vzrástla veľkosť správy.
 
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{ | l | c | c | c | c |}
 		\hline
 		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
-		 1. iterácia & 8206422 & 27354,740 \\ \hline
-		 2. iterácia & 8495780 & 28319,267 \\ \hline
-		 3. iterácia & 8382870 & 27942,900 \\ \hline
-		 4. iterácia & 7852399 & 26174,663 \\ \hline
-		 5. iterácia & 8251700 & 27505,667 \\ \hline
-		 Priemer & 8237834,2 & 27459,447 \\ \hline
+		 1. iterácia & 684 & 2,280 \\ \hline
+		 2. iterácia & 684 & 2,280 \\ \hline
+		 3. iterácia & 696 & 2,320 \\ \hline
+		 4. iterácia & 690 & 2,300 \\ \hline
+		 5. iterácia & 679 & 2,263 \\ \hline
+		 Priemer & 686,6 & 2,289 \\ \hline
 		 
 \end{tabular}
 \end{center}
@@ -1442,40 +1437,41 @@ Aj posledná modifikácia dosiahla podobné výsledky, ako predchádzajúce modi
 
 \item Vyhodnotenie
 
-\textbf{Vykonané požiadavky}\\
-Najzaujímavejším zistením bol nulový pokles v počte vykonaných požiadaviek nástrojom PerfCake. To je spôsobené minimalizmom PerfCake, ktorý nespracováva odpovede od požiadaviek, ak od nich návratový kód HTTP menší, ako 400. Testovaná aplikácia explicitne nenastavuje HTTP návratový kód služieb. Problém sa prejaví pri veľkých správach, ktoré majú dlhý čas návratu odpovede. V tomto teste neberiem výsledky PerfCake do úvahy.
-\par Najväčšie rozdiely medzi nástrojmi sú v prípade správy s veľkosťou 5 znakov. Takáto správa je dostatočne malá na to, aby ju server dokázal spracovať veľmi rýchlo a do výsledkov sa prenesie výkon nástroja. V prvej modifikácii je možné porovnať PerfCake spolu s ostatnými nástrojmi.
-\par Nasledujúce modifikácie ukazujú značný pokles počtu vykonaných požiadaviek v všetkých nástrojov, okrem PerfCake. Z porovnania tohto testu vychádza ako víťaz Apache JMeter, ktorého výkon je o takmer 10\% lepší, ako výkon Faban a Gatling. Nasledujúce modifikácie o výkone nástrojov veľa informácií neprinášajú, pretože prenášané správy sú príliš veľké a hlavnú záťaž znáša server a prenosová sústava.
+\textbf{Vykonané požiadavky}
+
+Najväčšie rozdiely medzi nástrojmi sú v~prípade správy s~veľkosťou 5 znakov. Takáto správa je dostatočne malá na to, aby ju server dokázal spracovať veľmi rýchlo a do výsledkov sa prenesie výkon nástroja.
+\par Nasledujúce modifikácie ukazujú značný pokles počtu vykonaných požiadaviek všetkých nástrojov. Z~porovnania tohto testu vychádza ako víťaz Apache JMeter, ktorý dosiahol najlepší výkon v prvej a druhej modifikácii. Na základe výsledkov prvej a druhej modifikácie dosiahol druhé najlepšie výsledky PerfCake nasledovaný nástrojom Faban a ako posledný skončil Gatling. Zvyšné modifikácie o~výkone nástrojov veľa informácií neprinášajú, pretože prenášané správy sú príliš veľké a hlavnú záťaž znáša server a prenosová sústava.
 
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{ | l | c | c | c | c |}
 		\hline
 		 \textbf{Test} & \textbf{Apache JMeter} & \textbf{Faban} & \textbf{Gatling} & \textbf{PerfCake} \\ \hline
-		 5 znakov & 11256899 & 6827431 & 2579475 & 8102464 \\ \hline
- 		 1KiB správa & 366027 & 338572 & 336060 & 8359332 \\ \hline
- 		 5KiB správa & 67716 & 68768 & 68611 & 8230344 \\ \hline
- 		 50KiB správa & 6814 & 6765 & 6828 & 8283205 \\ \hline
-		 500KiB správa & 695 & 613 & 691 & 8237834 \\ \hline
+		 5 znakov & 11256899 & 6827431 & 2579475 & 9434744 \\ \hline
+ 		 1KiB správa & 366027 & 338572 & 336060 & 335740 \\ \hline
+ 		 5KiB správa & 67716 & 68768 & 68611 & 68374 \\ \hline
+ 		 50KiB správa & 6814 & 6765 & 6828 & 6813 \\ \hline
+		 500KiB správa & 695 & 613 & 691 & 687 \\ \hline
 		 
 \end{tabular}
 \end{center}
 \caption{Test s~rastúcou veľkosťou správ -- priemerný počet vykonaných požiadaviek}
 \end{table}
 
-\textbf{Rozdiel vo výsledkoch}\\
-Z výsledkov vidieť, že hoci Faban vykonal najmenej požiadaviek v prvej modifikácii, drží si spolu s Gatling najnižší rozdiel vo výsledkoch zvyšných modifikácií, ktoré mali porovnateľné množstvo vykonaných požiadaviek. Za zmienku opäť stojí obrovský rozdiel vo výsledkoch Apache JMeter v druhej modifikácii testu. Najlepšie výsledky dosiahol Faban nasledovaný Gatling a Apache JMeter. Výsledky PerfCake opäť nie sú relevantné pre účely porovnávania.
+\textbf{Rozdiel vo výsledkoch}
+
+Z~výsledkov vidieť, že hoci Faban a Gatling dosiahli najvyššiu spoľahlivosť v testoch s veľkými správami, v ktorých všetky nástroje dosiahli porovnateľné výsledky. Za zmienku stojí obrovský rozdiel vo výsledkoch Apache JMeter v~druhej modifikácii testu. Najlepšie výsledky dosiahol Faban nasledovaný Gatling a PerfCake. Veľmi zlú spoľahlivosť výsledkov dosiahol Apache JMeter.
 
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{ | l | c | c | c | c |}
 		\hline
 		 \textbf{Test} & \textbf{Apache JMeter} & \textbf{Faban} & \textbf{Gatling} & \textbf{PerfCake} \\ \hline
-		 5 znakov & 671875 & 54372 & 93498 & 629292 \\ \hline
-		 1KiB správa & 150240 & 2839 & 2813 & 334339 \\ \hline
-		 5KiB správa & 732 & 307 & 314 & 649290 \\ \hline
-		 50KiB správa & 87 & 51 & 49 & 322576 \\ \hline
-		 500KiB správa & 13 & 5 & 4 & 643381 \\ \hline
+		 5 znakov & 671875 & 54372 & 93498 & 163114 \\ \hline
+		 1KiB správa & 150240 & 2839 & 2813 & 4465 \\ \hline
+		 5KiB správa & 732 & 307 & 314 & 1112 \\ \hline
+		 50KiB správa & 87 & 51 & 49 & 56 \\ \hline
+		 500KiB správa & 13 & 5 & 4 & 17 \\ \hline
 		 
 \end{tabular}
 \end{center}
@@ -1490,7 +1486,7 @@ Z výsledkov vidieť, že hoci Faban vykonal najmenej požiadaviek v prvej modif
 
 \item Apache JMeter
 
-Výsledky Apache JMeter obsahovali chybu: JVM should have exitted but did not. Chybu som pri nastavovaní testov a spúšťaní v grafickom prostredí nespozoroval, objavila sa len v automatizovaných testoch spúšťaných cez príkazový riadok. Chyba spôsobila zlyhanie približne 97\% požiadaviek.
+Výsledky Apache JMeter obsahovali chybu: JVM should have exitted but did not. Chybu som pri nastavovaní testov a spúšťaní v~grafickom prostredí nespozoroval, objavila sa len v~automatizovaných testoch spúšťaných cez príkazový riadok. Chyba spôsobila zlyhanie približne 97\% požiadaviek.
 
 \begin{table}[H]
 \begin{center}
@@ -1540,7 +1536,7 @@ Všetých päť iterácií JMS testu prebehlo bez problémov, počas testovania 
 
 \item Vyhodnotenie
 
-JMS testu sa zúčastnili len Apache JMeter a Perfcake. Oba nástroje dosiahli podobné výsledky v počte vykonaných požiadaviek a porovnateľný je aj rozdiel vo výsledkoch. V neprospech Apache JMeter hovorí len chyba, ktorá sa objavila počas testovania.
+JMS testu sa zúčastnili len Apache JMeter a Perfcake. Oba nástroje dosiahli podobné výsledky v~počte vykonaných požiadaviek a porovnateľný je aj rozdiel vo výsledkoch. V~neprospech Apache JMeter hovorí len chyba, ktorá sa objavila počas testovania.
 
 \begin{table}[H]
 \begin{center}
@@ -1586,7 +1582,7 @@ Základný test so 100 klientmi Apache JMeter prebehol bez problémov.
 
 \item Faban
 
-V 3. iterácii sa objavila rovnaká chyba, ako v 5. iterácii Faban testu so 100 klientmi. 
+V~3. iterácii sa objavila rovnaká chyba, ako v~5. iterácii Faban testu so 100 klientmi. 
 
 \begin{table}[H]
 \begin{center}
@@ -1630,19 +1626,19 @@ Počas testu sa nevyskytli žiadne problémy.
 
 \item PerfCake
 
-Pri testovaní sa opäť objavila rovnaký problém, ako pri testovaní veľkých správ. V teste bola použitá správa s veľkosťou 5 KiB, čo postačuje na prejavenie sa problému a získanie veľkého množstva vykonaných požiadviek. Výsledky testu neberiem do úvahy.
+Ani pri teste PerfCake sa nevyskytli žiadne problémy.
 
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{ | l | c | c | c | c |}
 		\hline
 		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
-		 1. iterácia & 7344119 & 24480,397 \\ \hline
-		 2. iterácia & 7536481 & 25121,603 \\ \hline
-		 3. iterácia & 7415389 & 24717,963 \\ \hline
-		 4. iterácia & 7164312 & 23881,040 \\ \hline
-		 5. iterácia & 7952241 & 26507,470 \\ \hline
-		 Priemer & 7482508,4 & 24941,695 \\ \hline
+		 1. iterácia & 68735 & 229,117 \\ \hline
+		 2. iterácia & 68049 & 226,830 \\ \hline
+		 3. iterácia & 68600 & 228,667 \\ \hline
+		 4. iterácia & 67954 & 226,513 \\ \hline
+		 5. iterácia & 68783 & 229,277 \\ \hline
+		 Priemer & 68424,2 & 228,081 \\ \hline
 		 
 \end{tabular}
 \end{center}
@@ -1651,7 +1647,7 @@ Pri testovaní sa opäť objavila rovnaký problém, ako pri testovaní veľkýc
 
 \item Vyhodnotenie
 
-Vo vyhodnotení nezohľadňujem výsledok nástroja PerfCake. Všetky porovnávané nástroje dosiahli podobné výsledky, ktoré sa líšia len rozdielom vo výsledkoch. Spôsobené to bolo príliš veľkou správou, ktorá zaťažila server a prenosovú sústavu oveľa viac, ako nástroje. Najlepší výsledok dosiahol Gatling, ktorý mal najnižší rozdiel vo výsledkoch. Najvyšší rozdiel vo výsledkoch dosiahol Apache JMeter.
+Všetky porovnávané nástroje dosiahli podobné výsledky, ktoré sa líšia len rozdielom vo výsledkoch. Spôsobené to bolo príliš veľkou správou, ktorá zaťažila server a prenosovú sústavu oveľa viac, ako nástroje. Najlepší výsledok dosiahol Gatling, ktorý mal aj najnižší rozdiel vo výsledkoch. Najvyšší rozdiel vo výsledkoch dosiahol Apache JMeter.
 
 \begin{table}[H]
 \begin{center}
@@ -1661,7 +1657,7 @@ Vo vyhodnotení nezohľadňujem výsledok nástroja PerfCake. Všetky porovnáva
 		 Apache JMeter & 68290 & 1371 \\ \hline
 		 Faban & 68329 & 716 \\ \hline
 		 Gatling & 68560 & 532 \\ \hline
-		 PerfCake & 7482508 & 787929 \\ \hline
+		 PerfCake & 68424 & 829 \\ \hline
 \end{tabular}
 \end{center}
 \caption{Základný test so 100 klientmi}
@@ -1675,7 +1671,7 @@ Vo vyhodnotení nezohľadňujem výsledok nástroja PerfCake. Všetky porovnáva
 
 \item Apache JMeter
 
-Monitorovanie pamäte zlyhalo, pretože nástroj monitoroval spotrebu pamäte na strane klienta a nie na strane servera. Výsledky oboch testov prebehli v poriadku, avšak sú takmer rovnaké a bez znalosti spotreby pamäte ich nie je možné porovnať.
+Monitorovanie pamäte zlyhalo, pretože nástroj monitoroval spotrebu pamäte na strane klienta a nie na strane servera. Výsledky oboch testov prebehli v~poriadku, avšak sú takmer rovnaké a bez znalosti spotreby pamäte ich nie je možné porovnať.
 
 \textbf{Bez úniku pamäte}
 
@@ -1694,6 +1690,7 @@ Monitorovanie pamäte zlyhalo, pretože nástroj monitoroval spotrebu pamäte na
 \caption{Faban Vytrvalostný test bez úniku pamäte}
 \end{table}
 
+\newpage
 \textbf{S~únikom pamäte}
 
 \begin{table}[H]
@@ -1713,7 +1710,7 @@ Monitorovanie pamäte zlyhalo, pretože nástroj monitoroval spotrebu pamäte na
 
 \item Faban
 
-Počas Faban vytrvalostného testu spotreba pamäte nebola monitorovaná, lebo sa mi nepodarilo toto monitorovanie nastaviť. Podrobný popis problému sa nachádza v sekcii \hyperlink{faban_memory}{problémy pri vytváraní testov a testovaní}. Výkon nástroja z oboch modifikácií testu je porovnateľne veľký.
+Počas Faban vytrvalostného testu spotreba pamäte nebola monitorovaná, lebo sa mi nepodarilo toto monitorovanie nastaviť. Podrobný popis problému sa nachádza v~sekcii \hyperlink{faban_memory}{problémy pri vytváraní testov a testovaní}. Výkon nástroja z~oboch modifikácií testu je porovnateľne veľký.
 
 \textbf{Bez úniku pamäte}
 
@@ -1754,7 +1751,7 @@ Počas Faban vytrvalostného testu spotreba pamäte nebola monitorovaná, lebo s
 
 \item Gatling
 
-Podobne ako v prípade nástroja Faban, ani v nástroji Gatling sa mi nepodarilo nastaviť monitorovanie využitia operačnej pamäte na serveri. Podrobný popis problému sa nachádza v sekcii \hyperlink{faban_memory}{problémy pri vytváraní testov a testovaní}. Výsledky prvej a druhej iterácie testu sú porovnateľné.
+Podobne ako v~prípade nástroja Faban, ani v~nástroji Gatling sa mi nepodarilo nastaviť monitorovanie využitia operačnej pamäte na serveri. Podrobný popis problému sa nachádza v~sekcii \hyperlink{faban_memory}{problémy pri vytváraní testov a testovaní}. Výsledky prvej a druhej iterácie testu sú porovnateľné.
 
 \textbf{Bez úniku pamäte}
 
@@ -1792,9 +1789,7 @@ Podobne ako v prípade nástroja Faban, ani v nástroji Gatling sa mi nepodarilo
 
 \item PerfCake
 
-V prípade testu PerfCake bolo monitorovanie pamäte nastavené správne a získal som aj korektné výsledky využitia pamäte na serveri. Problémom ale je, že PerfCake opäť ako v prípade ostatných veľkých správ nečakal na odpoveď servera a služba, ktorá mala spôsobiť únik pamäte sa nevykonala. Spotreba pamäte sa v oboch prípadoch líšila len v rádoch kilobajtov. Výsledky oboch testov sú porovnateľné.
-
-
+V~prípade testu PerfCake bolo monitorovanie pamäte nastavené správne a získal som korektné výsledky využitia pamäte na serveri. Spotreba pamäte v teste s únikom pamäte podľa očakávania rástla rýchlejšie, ako v teste bez úniku pamäte. Graf zobrazujúci spotrebu pamäte v testoch sa nachádza v priloženom CD. Výsledky oboch testov sú porovnateľné, pretože únik pamäte nebol dostatočne veľký, aby spôsobil vyčerpanie dostupnej operačnej pamäte.
 
 \textbf{Bez úniku pamäte}
 
@@ -1803,16 +1798,16 @@ V prípade testu PerfCake bolo monitorovanie pamäte nastavené správne a získ
 \begin{tabular}{ | l | c | c | c | c |}
 		\hline
 		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
-		 1. iterácia & 96115245 & 26698,679 \\ \hline
-		 2. iterácia & 97714275 & 27142,854 \\ \hline
-		 3. iterácia & 97478553 & 27077,376 \\ \hline
-		 Priemer & 97102691 & 26972,970 \\ \hline
+		 1. iterácia & 819458 & 227,627 \\ \hline
+		 2. iterácia & 824195 & 228,943 \\ \hline
+		 3. iterácia & 823020 & 228,617 \\ \hline
+		 Priemer & 822224 & 228,396 \\ \hline
 		 
 \end{tabular}
 \end{center}
 \caption{PerfCake Vytrvalostný test bez úniku pamäte}
 \end{table}
-
+\newpage
 \textbf{S~únikom pamäte}
 
 \begin{table}[H]
@@ -1820,10 +1815,10 @@ V prípade testu PerfCake bolo monitorovanie pamäte nastavené správne a získ
 \begin{tabular}{ | l | c | c | c | c |}
 		\hline
 		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
-		 1. iterácia & 91105106 & 25306,974 \\ \hline
-		 2. iterácia & 93325088 & 25923,636 \\ \hline
-		 3. iterácia & 93084772 & 25856,881 \\ \hline
-		 Priemer & 92504988,7 & 25695,830 \\ \hline
+		 1. iterácia & 823154 & 228,654 \\ \hline
+		 2. iterácia & 818712 & 227,420 \\ \hline
+		 3. iterácia & 820821 & 228,006 \\ \hline
+		 Priemer & 820895,7 & 228,027 \\ \hline
 		 
 \end{tabular}
 \end{center}
@@ -1832,18 +1827,18 @@ V prípade testu PerfCake bolo monitorovanie pamäte nastavené správne a získ
 
 \item Vyhodnotenie
 
-Pôvodný zámer ukázať únik pamäte nevyšiel. V dvoch prípadoch sa mi nepodarilo nastaviť monitorovanie pamäte v nástrojoch. Apache JMeter meral využitie pamäte na strane klienta a nie na strane servera. PerfCake monitorovanie pamäte zvládol, ale keďže jeho požiadavky neboli serverom spracované, neprejavil sa únik pamäte. Výsledky testov vsetkých nástrojov, okrem PerfCake sú porovnateľné.
+V~dvoch prípadoch sa mi nepodarilo nastaviť monitorovanie pamäte v~nástrojoch. Apache JMeter meral využitie pamäte na strane klienta a nie na strane servera. PerfCake bol jediný nástroj, ktorý poskytol relevantné údaje o spotrebe pamäte na strane servera. Počty vykonaných požiadaviek všetkých nástrojov sú porovnateľné. Pre tento type testov som nevytvoril lineárny graf počtu vykonaných požiadaviek počas testu.
 
 
-\textbf{Vykonané požiadavky}\\
+\textbf{Vykonané požiadavky}
 
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{ | l | c | c | c | c |}
 		\hline
 		 \textbf{Test} & \textbf{Apache JMeter} & \textbf{Faban} & \textbf{Gatling} & \textbf{PerfCake} \\ \hline
-		 Bez úniku pamäte & 821993 & 820330 & 820560 & 97102691 \\ \hline
- 		 S únikom pamäte & 819446 & 819486 & 818482 & 92504989 \\ \hline
+		 Bez úniku pamäte & 821993 & 820330 & 820560 & 822224 \\ \hline
+ 		 S~únikom pamäte & 819446 & 819486 & 818482 & 820896 \\ \hline
 		 
 \end{tabular}
 \end{center}
@@ -1851,15 +1846,15 @@ Pôvodný zámer ukázať únik pamäte nevyšiel. V dvoch prípadoch sa mi nepo
 \end{table}
 
 
-\textbf{Rozdiel vo výsledkoch}\\
+\textbf{Rozdiel vo výsledkoch}
 
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{ | l | c | c | c | c |}
 		\hline
 		 \textbf{Test} & \textbf{Apache JMeter} & \textbf{Faban} & \textbf{Gatling} & \textbf{PerfCake} \\ \hline
-		 Bez úniku pamäte & 4024 & 5597 & 7802 & 1599030 \\ \hline
- 		 S únikom pamäte & 9710 & 4719 & 3302 & 2219982 \\ \hline
+		 Bez úniku pamäte & 4024 & 5597 & 7802 & 4737 \\ \hline
+ 		 S~únikom pamäte & 9710 & 4719 & 3302 & 4442 \\ \hline
 		 
 \end{tabular}
 \end{center}
@@ -1868,6 +1863,7 @@ Pôvodný zámer ukázať únik pamäte nevyšiel. V dvoch prípadoch sa mi nepo
 
 \end{itemize}
 
+\newpage
 \subsection{Test teoretickej priepustnosti nástroja}
 
 \begin{itemize}
@@ -1930,21 +1926,20 @@ Pôvodný zámer ukázať únik pamäte nevyšiel. V dvoch prípadoch sa mi nepo
 \caption{Gatling Test teoretickej priepustnosti}
 \end{table}
 
+\newpage
 \item PerfCake
-
-
 
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{ | l | c | c | c | c |}
 		\hline
 		 \textbf{Iterácia testu} & \textbf{Počet vykonaných požiadaviek} & \textbf{Počet požiadaviek za sekundu} \\ \hline
-		 1. iterácia & 7700715 & 25669,050 \\ \hline
-		 2. iterácia & 7952500 & 26508,333 \\ \hline
-		 3. iterácia & 7922331 & 26407,770 \\ \hline
-		 4. iterácia & 7539454 & 25131,513 \\ \hline
-		 5. iterácia & 7714608 & 25715,360 \\ \hline
-		 Priemer & 7765921,6 & 25886,405 \\ \hline
+		 1. iterácia & 9562553 & 31875,177 \\ \hline
+		 2. iterácia & 9277840 & 30926,133 \\ \hline
+		 3. iterácia & 9155774 & 30519,247 \\ \hline
+		 4. iterácia & 9400507 & 31335,023 \\ \hline
+		 5. iterácia & 9323776 & 31079,253 \\ \hline
+		 Priemer & 9344090 & 31146,967 \\ \hline
 		 
 \end{tabular}
 \end{center}
@@ -1953,7 +1948,7 @@ Pôvodný zámer ukázať únik pamäte nevyšiel. V dvoch prípadoch sa mi nepo
 
 \item Vyhodnotenie
 
-Test teoretickej priepustnosti najlepšie zvládol Apache JMeter nasledovaný nástrojom Faban a PerfCake. Ako posledný skončil s veľkým odstupom nástroj Gatling. Apache JMeter dosiahol s ohľadom na počet požiadaviek najlepší výsledok aj pri porovnaní rozdielu vo výsledkoch. Nasleduje Faban, PerfCake a Gatling.
+Test teoretickej priepustnosti najlepšie zvládol Apache JMeter nasledovaný nástrojom PerfCake. Ako posledný skončil s~veľkým odstupom nástroj Gatling. Apache JMeter dosiahol s~ohľadom na počet požiadaviek najlepší výsledok aj pri porovnaní rozdielu vo výsledkoch. Nasleduje PerfCake, Faban a nakoniec Gatling.
 
 \begin{table}[H]
 \begin{center}
@@ -1963,7 +1958,7 @@ Test teoretickej priepustnosti najlepšie zvládol Apache JMeter nasledovaný n�
 		 Apache JMeter & 13344157 & 319854 \\ \hline
 		 Faban & 8681056 & 425014 \\ \hline
 		 Gatling & 2978919 & 198117 \\ \hline
-		 PerfCake & 7765922 & 413046 \\ \hline
+		 PerfCake & 9344090 & 406779 \\ \hline
 \end{tabular}
 \end{center}
 \caption{Test teoretickej priepustnosti}
@@ -1989,7 +1984,7 @@ Víťazmi kategórie sa stávajú Apache JMeter, Gatling a PerfCake. Práca s~ni
 Nebyť problému s~JMS testami, víťazom by bol Gatling. Jeho dokumentácia je najprehľadnejšia a najlepšie sa v~nej orientuje. Problém s~nastavením JMS Gatling posunul za Apache JMeter a PerfCake, ktoré sa umiestnili na spoločnom prvom mieste. Dokumentácia oboch nástrojov dostačovala k~riešeniu všetkých problémov a orientovalo sa v~nej rovnako dobre. Posledný skončil Faban. Jeho dokumentácia je najmenej prehľadná. 
 
 \item \textbf{Vývojové prostredia}\\
-Kategóriu použiteľnosti vo vývojových prostrediach vyhráva Apache JMeter spolu s PerfCake. Apache JMeter poskytuje doplnok pre NetBeans, IntelliJ IDEA a Maven. PerfCake má podporou pre Eclipse Kepler, IntelliJ IDEA a Maven. Nasleduje Gatling s~podporou pre Maven a nakoniec Faban neposkytujúci žiadnu podporu pre vývojové prostredia.
+Kategóriu použiteľnosti vo vývojových prostrediach vyhráva Apache JMeter spolu s~PerfCake. Apache JMeter poskytuje doplnok pre NetBeans, IntelliJ IDEA a Maven. PerfCake má podporou pre Eclipse Kepler, IntelliJ IDEA a Maven. Nasleduje Gatling s~podporou pre Maven a nakoniec Faban neposkytujúci žiadnu podporu pre vývojové prostredia.
 
 \item \textbf{Generovanie výsledkov}\\
 Generovanie výsledkov Gatlingu a PerfCake prebieha v~scenároch, je jednoduché a rýchle. JMeter výpis výsledkov je nutné nastaviť v~grafickom užívateľskom rozhraní a dokumentácia nepopisuje nastavenie v~scenároch, čo je jednoduchšia, ale hlavne rýchlejšia cesta. Najhoršie skončil Faban, v~ktorom nie je možné zmeniť východiskový adresár pre ukladanie výsledkov a tým vzniká problém, ktorý som musel riešiť pomocou skriptov.
@@ -1998,19 +1993,19 @@ Generovanie výsledkov Gatlingu a PerfCake prebieha v~scenároch, je jednoduché
 PerfCake testy sa tvoria najjednoduchšie a najrýchlejšie. Nasleduje Gatling s~jazykom Scala, na ktorý som si musel chvíľu zvykať. Apache JMeter testy som musel vytvárať v~grafickom užívateľskom prostredí, ktoré nie je také rýchle, ako písanie a upravovanie testov v~textovom editore. Posledným je Faban, pre ktorý som musel vytvoriť Driver, profil testu a nakoniec samotný scenár.
 
 \item \textbf{JMS testy}\\
-V JMS testoch najlepšie obstál PerfCake, ktorý vykonal približne rovnaké množstvo požiadaviek, ako Apache JMeter, ale počas testu sa neobjavili problémy, ako v prípade nástroja Apache JMeter. Najhoršiu možnú známku obdržali Gatling a Faban, pretože u nich nebolo možné nastaviť JMS testy.
+V~JMS testoch najlepšie obstál PerfCake, ktorý vykonal približne rovnaké množstvo požiadaviek, ako Apache JMeter, ale počas testu sa neobjavili problémy, ako v~prípade nástroja Apache JMeter. Najhoršiu možnú známku obdržali Gatling a Faban, pretože u~nich nebolo možné nastaviť JMS testy.
 
 \item \textbf{Monitorovanie pamäte}\\
-Víťazmi tejto kategórie sa stávajú Apache JMeter a PerfCake, pretože u nich bolo možné nastaviť monitorovanie pamäte a počas testov monitorovanie aj prebiehalo. V prípade Apache JMeter bola síce monitorovaná pamäť na klientskom stroji, ale to súvisí so zlým nastavením monitorovania. Faban a Gatling hodnotím najhoršou známkou, pretože u nich nebolo možné nastaviť monitorovanie pamäte.
+Víťazom tejto kategórie sa stáva PerfCake, ktorý ako jediný správne nameral výsledky spotreby pamäte na serveri. Nasleduje Apache JMeter, ktorý monitoroval pamäť na strane klienta. Faban a Gatling hodnotím najhoršou známkou, pretože u~nich nebolo možné nastaviť monitorovanie pamäte.
 
 \item \textbf{Výsledky testov}\\
-Žiadny nástroj nedosiahol počas testov bezchybné výsledky. Spomedzi všetkých nástrojov najlepšie výsledky dosahoval Apache JMeter. Ako druhý najlepší hodnotím nástroj PerfCake, ktorý síce kvôli zlému nastaveniu neposkytol relevantné výsledky pri testoch s veľkými správami, ale vo všetkých zvyšných testoch dosahoval veľmi dobré výsledky. Na druhom mieste mohol skončiť aj Faban, nebyť zlyhania niektorých iterácií testov. V počte vykonaných požiadaviek výrazne zaostával len v testoch s nízkym počtom klientov. Na poslednom mieste sa umiestnil Gatling, ktorý mal vo vačšine testov najmenej vykonaných požiadaviek.
+Spomedzi všetkých nástrojov najlepšie výsledky dosahoval Apache JMeter. Ako druhý najlepší hodnotím nástroj PerfCake. Tretiu priečku obsadil Faban, ktorý výrazne zaostával v testoch s nízkym počtom kientov. Na poslednom mieste sa umiestnil Gatling, ktorý mal vo vačšine testov najmenej vykonaných požiadaviek.
 
 \item \textbf{Spoľahlivosť výsledkov}\\
-Spoľahlivosť výsledkov nie je možné zhodnotiť jednoznačne. Výsledky testov ukázali, že rozdiel vo výsledkoch nerastie s množstvom vykonaných požiadaviek lineárne, ale skôr polynomiálne. Napriek tomu usudzujem, že najvyššiu spoľahlivosť výsledkov dosiahol Faban nasledovaný Apache JMeter a na treťom mieste PerfCake. Oba nástroje zaznamenali počas testov výrazné výkyvy v niektorých iteráciách, ale v absolútnych číslach mal Apache JMeter lepšiu spoľahlivosť výsledkov ako PerfCake. S prihliadnutím na nízky počet vykonaných požiadaviek na posledné miesto posúvam Gatling.
+Spoľahlivosť výsledkov nie je možné zhodnotiť jednoznačne. Výsledky testov ukázali, že rozdiel vo výsledkoch nerastie s~množstvom vykonaných požiadaviek lineárne, ale skôr polynomiálne. Preto je dôležité posudzovať spoľahlivosť výsledkov na základe testov, ktoré mali podobný počet vykonaných požiadaviek. Napriek tomu, že vo vačšine testov dosiahol najspoľahlivejšie výsledky Faban, ako veľký problém vidím iterácie, ktoré zlyhali kvôli chybe. To výrazne znížilo spoľahlivosť výsledkov a preto Faban hodnotím ako nástroj s najnižšou spoľahlivosťou výsledkov. Najlepšie hodnotenie získava PerfCake, ktorý nezaznamenal výrazný rozdiel v spoľahlivosti, alebo zlyhanie iterácie. Druhé miesto získava Gatling a tretie Apache JMeter, ktorý zaznamenal v niektorých iteráciách veľmi veľký rozdiel vo výsledkoch. Veľmi nízku spoľahlivosť dosiahol najmä v prvých dvoch modifikáciách druhého a tretieho testu.
 
 \item \textbf{Teoretická priepustnosť}\\
-Test teoretickej priepustnosti suverénne vyhral Apache JMeter nasledovaný nástrojom Faban a Perfcake. Na poslednom mieste skončil s výrazným odstupom Gatling.
+Test teoretickej priepustnosti suverénne vyhral Apache JMeter nasledovaný nástrojom Perfcake. Na predposlednom mieste skončil Faban a na poslednom s~výrazným odstupom Gatling.
 
 \item \textbf{Priemer}\\
 Priemer je vypočítaný ako súčet všetkých známok vydelený počtom hodnotiacich kategórií. Tým získam priemernú známku a na jej základe určujem najlepší nástroj.
@@ -2030,18 +2025,18 @@ Priemer je vypočítaný ako súčet všetkých známok vydelený počtom hodnot
 		 Generovanie výsledkov & 2 & 3 & 1 & 1 \\ \hline
 		 Tvorba testov & 3 & 4 & 2 & 1 \\ \hline
  		 JMS testy & 2 & 4 & 4 & 1 \\ \hline
-		 Monitorovanie pamäte & 1 & 4 & 4 & 1 \\ \hline
+		 Monitorovanie pamäte & 2 & 4 & 4 & 1 \\ \hline
 		 Výsledky testov & 1 & 3 & 4 & 2 \\ \hline
-		 Spoľahlivosť výsledkov & 2 & 1 & 4 & 3 \\ \hline
-		 Teoretická priepustnosť & 1 & 2 & 4 & 3 \\ \hline
-		 Priemer & 1,45 & 3 & 2,82 & 1,45 \\ \hline
+		 Spoľahlivosť výsledkov & 3 & 4 & 2 & 1 \\ \hline
+		 Teoretická priepustnosť & 1 & 3 & 4 & 2 \\ \hline
+		 Priemer & 1,64 & 3,36 & 2,63 & 1,18 \\ \hline
 		 
 \end{tabular}
 \end{center}
 \caption{Hodnotiaca tabuľka}
 \end{table}
 
-Z hodnotiacej tabuľky vyplýva, že najlepšími nástrojmi sú Apache JMeter a PerfCake, nasleduje Gatling a posledný je Faban. Napriek tomu hodnotím ako najlepší nástroj Apache JMeter. Perfcake získal veľmi dobré hodnotenie v kategóriách, ktoré sa priamo nedotýkali testov. V samotných testoch sa potom umiestnil až na treťom mieste za prvým Apache JMeter a druhým Faban. Kategóriám, ktoré sa týkajú testov prikladám vyššiu váhu, ako zvyšným kategóriám. Na druhej strane výsledky testov s veľkými správami ukázali, že na výbere nástroja nezáleží pokiaľ je výrazne zaťažený server a prenosová sústava. Konečný výber nástroja závisí od preferencií užívateľa.
+V hodnotiacej tabuľke dosiahol najlepšiu známku PerfCake nasledovaný nástrojom Apache JMeter, Gatling a ako posledný skončil Faban. PerfCake dosiahol veľmi dobré známky vo všetkých kategóriách, vrátane testov, ktoré považujem za najdôležitejšie kategórie. Na druhej strane výsledky testov s~veľkými správami ukázali, že na výbere nástroja nezáleží pokiaľ je výrazne zaťažený server a prenosová sústava. Konečný výber nástroja závisí od preferencií užívateľa.
 
 \bibliographystyle{unsrt}
 \bibliography{bibliography}
@@ -2056,11 +2051,11 @@ Súčasťou tejto práce je aj CD obsahujúce všetky materiály, ktoré boli vy
 .1 /.
 .2 Aplikácia\DTcomment{Adresár obsahujúci zdrojové kódy testovanej Aplikácie}.
 .3 build.sh\DTcomment{Skript na zostavenie aplikácie}.
-.2 Bakalárska práca\DTcomment{Adresár s bakalárskou prácou}.
+.2 Bakalárska práca\DTcomment{Adresár s~bakalárskou prácou}.
 .3 bibliografie.bib\DTcomment{Bibliografická databáza práce}.
 .3 bp.tex\DTcomment{Zdrojový kód práce}.
 .3 bp.pdf\DTcomment{Hotová práca}.
-.2 Grafy\DTcomment{Adresár obsahujúci grafy s výsledkami testov}.
+.2 Grafy\DTcomment{Adresár obsahujúci grafy s~výsledkami testov}.
 .2 klient.zip\DTcomment{Archív obsahujúci klientskú časť testov}.
 .3 1, 2, 3, 4, 5, 6, 7\DTcomment{Adresáre s~testami}.
 .3 Nastroje\DTcomment{Adresár obsahujúci nástroje}.

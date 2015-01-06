@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.1)  5 JAN 2015 13:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.1)  6 JAN 2015 02:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -459,24 +459,28 @@ Package: dirtree 2012/12/11 v0.32 package wrapper for dirtree
 \DT@baselineskip=\dimen121
 )
 File: dirtree.tex 2012/12/11 v0.32 `dirtree' (jcc)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/nowidow/nowidow.sty
+Package: nowidow 2011/09/20 1.0 Easily prevent widows and orphans
+Package: nowidow 
 ) (./bp.aux)
 \openout1 = `bp.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Try loading font information for OT1+ppl on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 28.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
@@ -519,7 +523,7 @@ File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 130.
 )
-Package hyperref Info: Link coloring ON on input line 27.
+Package hyperref Info: Link coloring ON on input line 28.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -529,40 +533,29 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count113
 )
-LaTeX Info: Redefining \ref on input line 27.
-LaTeX Info: Redefining \pageref on input line 27.
-LaTeX Info: Redefining \nameref on input line 27.
+LaTeX Info: Redefining \ref on input line 28.
+LaTeX Info: Redefining \pageref on input line 28.
+LaTeX Info: Redefining \nameref on input line 28.
 
 (./bp.out) (./bp.out)
 \@outlinefile=\write3
 \openout3 = `bp.out'.
 
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 31.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 32.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 31.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 32.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 35.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 36.
 
 [2
 
 ] [3
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 45--48
-
- []
-
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 50.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsppl.fd
-File: omsppl.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 50.
- [4
+] [4
 
 ] [5
 
@@ -573,8 +566,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 2.
-
-[6
+ [6
 
 ])
 \tf@toc=\write4
@@ -583,7 +575,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [7]
 Kapitola 1.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 66.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 57.
 [1
 
 
@@ -592,7 +584,7 @@ Kapitola 2.
 
 Package hyperref Warning: Composite letter `\textasciicaron+t'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 91.
+(hyperref)                removing `\textasciicaron' on input line 82.
 
 [2
 
@@ -600,15 +592,15 @@ Package hyperref Warning: Composite letter `\textasciicaron+t'
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 100.
+(hyperref)                removing `\textasciicaron' on input line 91.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 103.
+(hyperref)                removing `\textasciicaron' on input line 94.
 
 
-Underfull \hbox (badness 4899) in paragraph at lines 104--105
+Underfull \hbox (badness 4899) in paragraph at lines 95--96
 \OT1/ppl/m/n/12 Izola[]cn[]e testy pom[]ahaj[]u od-ha-lit[] chybn[]e kom-po-nen
 ty opa-ko-van[]ym sp[]u[]st[]an[]^^Pm
  []
@@ -616,18 +608,18 @@ ty opa-ko-van[]ym sp[]u[]st[]an[]^^Pm
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 106.
+(hyperref)                removing `\textasciicaron' on input line 97.
 
 [3]
 Kapitola 3.
 
-Underfull \hbox (badness 1584) in paragraph at lines 113--114
+Underfull \hbox (badness 1584) in paragraph at lines 104--105
 \OT1/ppl/m/n/12 V na-sle-duj[]ucom zo-zname po-pi-su-jem po-stup pr[]ace a de-f
 i-nu-jem ka-teg[]orie, ktor[]e
  []
 
 
-Underfull \hbox (badness 1147) in paragraph at lines 117--118
+Underfull \hbox (badness 1147) in paragraph at lines 108--109
 []\OT1/ppl/m/n/12 In[]stal[]acia, obozn[]amenie sa s n[]astrojmi, []studovanie 
 do-ku-ment[]acie, in[]stal[]acia
  []
@@ -636,7 +628,7 @@ do-ku-ment[]acie, in[]stal[]acia
 
 ]
 Kapitola 4.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 134.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 125.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
@@ -646,72 +638,72 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 
 Package hyperref Warning: Composite letter `\textasciicaron+l'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 145.
+(hyperref)                removing `\textasciicaron' on input line 136.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+t'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 145.
+(hyperref)                removing `\textasciicaron' on input line 136.
 
 
-Underfull \hbox (badness 3838) in paragraph at lines 146--150
+Underfull \hbox (badness 3838) in paragraph at lines 137--141
 \OT1/ppl/m/n/12 N[]avod [][]$\OT1/pcr/m/n/12 http : / / wiki . apache . org / j
 meter / JMeterAndEclipseHowTo$[][] \OT1/ppl/m/n/12 z wiki
  []
 
 
-Underfull \hbox (badness 5726) in paragraph at lines 146--150
+Underfull \hbox (badness 5726) in paragraph at lines 137--141
 \OT1/pcr/m/n/12 org / []mkostrze / jmeter-[]eclipse / jmeter-[]eclipse . html$[
 ][]\OT1/ppl/m/n/12 , ktor[]a bola na-po-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 146--150
+Underfull \hbox (badness 10000) in paragraph at lines 137--141
 
  []
 
 
-Underfull \hbox (badness 1308) in paragraph at lines 151--155
+Underfull \hbox (badness 1308) in paragraph at lines 142--146
 \OT1/ppl/m/n/12 vznikne nov[]a slu[]zba Ge-ner[]atory z[]at[]a[]ze (Load Ge-ne-
 ra-tors) ob-sa-huj[]uca ge-ner[]ator
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--155
+Underfull \hbox (badness 10000) in paragraph at lines 142--146
 
  []
 
 
-Underfull \hbox (badness 3482) in paragraph at lines 156--160
+Underfull \hbox (badness 3482) in paragraph at lines 147--151
 \OT1/ppl/m/n/12 Doplnok pre In-tel-liJ IDEA je nutn[]e stia-hnut[] zo str[]anky
  [][]$\OT1/pcr/m/n/12 https : / / plugins .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--160
+Underfull \hbox (badness 10000) in paragraph at lines 147--151
 
  []
 
 [6] [7]
-Underfull \hbox (badness 2213) in paragraph at lines 179--180
+Underfull \hbox (badness 2213) in paragraph at lines 170--171
 \OT1/ppl/m/n/12 Stru[]cn[]y n[]avod po-pi-suj[]uci in[]stal[]aciu a spus-te-nie
  prv[]ych tes-tov je do-stupn[]y na
  []
 
 
-Underfull \hbox (badness 5446) in paragraph at lines 179--180
+Underfull \hbox (badness 5446) in paragraph at lines 170--171
 \OT1/ppl/m/n/12 str[]anke [][]$\OT1/pcr/m/n/12 http : / / faban . org / docs / 
 QuickStartTutorial . html$[][]\OT1/ppl/m/n/12 . N[]avod po-pi-
  []
 
 
-Underfull \hbox (badness 1199) in paragraph at lines 179--180
+Underfull \hbox (badness 1199) in paragraph at lines 170--171
 \OT1/ppl/m/n/12 suj[]uci vytv[]ara-nie z[]at[]a[]ze je k dis-poz[]^^Pcii na str
 []anke [][]$\OT1/pcr/m/n/12 http : / / faban . org / docs /
  []
 
 
-Underfull \hbox (badness 1622) in paragraph at lines 179--180
+Underfull \hbox (badness 1622) in paragraph at lines 170--171
 \OT1/pcr/m/n/12 CreatingWorkloadTutorial . html$[][]\OT1/ppl/m/n/12 . []Dal[]si
 e n[]avody s[]u k dis-poz[]^^Pcii na str[]anke
  []
@@ -719,15 +711,15 @@ e n[]avody s[]u k dis-poz[]^^Pcii na str[]anke
 
 Package hyperref Warning: Composite letter `\textasciicaron+l'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 181.
+(hyperref)                removing `\textasciicaron' on input line 172.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+t'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 181.
+(hyperref)                removing `\textasciicaron' on input line 172.
 
 [8] [9]
-Underfull \hbox (badness 2626) in paragraph at lines 192--193
+Underfull \hbox (badness 2626) in paragraph at lines 183--184
 \OT1/ppl/m/n/12 Star[]e ver-zie prog-ramu sa nach[]adzaj[]u na str[]anke [][]$\
 OT1/pcr/m/n/12 www . github . com / excilys /
  []
@@ -735,60 +727,60 @@ OT1/pcr/m/n/12 www . github . com / excilys /
 
 Package hyperref Warning: Composite letter `\textasciicaron+l'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 201.
+(hyperref)                removing `\textasciicaron' on input line 192.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+t'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 201.
+(hyperref)                removing `\textasciicaron' on input line 192.
 
 
-Underfull \hbox (badness 4132) in paragraph at lines 202--205
+Underfull \hbox (badness 4132) in paragraph at lines 193--196
 \OT1/ppl/m/n/12 Gatling ne-pos-ky-tuje pod-poru po-mo-cou sa-mos-tatn[]ych do-p
 l-n-kov pre jed-not-liv[]e
  []
 
 
-Underfull \hbox (badness 1221) in paragraph at lines 202--205
+Underfull \hbox (badness 1221) in paragraph at lines 193--196
 \OT1/ppl/m/n/12 v[]yvojov[]e pro-stre-dia. In-tegr[]acia Gat-lingu je re-a-li-z
 o-van[]a po-mo-cou Apa-che Ma-ven
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--205
+Underfull \hbox (badness 10000) in paragraph at lines 193--196
 
  []
 
 [10]
-Underfull \hbox (badness 1845) in paragraph at lines 209--212
+Underfull \hbox (badness 1845) in paragraph at lines 200--203
 \OT1/ppl/m/n/12 ako aj Ne-tBe-ans. Pri na-sta-vo-van[]^^P Ma-ven kon-fi-gura[]c
 n[]eho s[]uboru podl[]a str[]anky
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 209--212
+Underfull \hbox (badness 10000) in paragraph at lines 200--203
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 209--212
+Underfull \hbox (badness 10000) in paragraph at lines 200--203
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--214
+Underfull \hbox (badness 10000) in paragraph at lines 203--205
 
  []
 
 [11]
-Underfull \hbox (badness 1107) in paragraph at lines 220--221
+Underfull \hbox (badness 1107) in paragraph at lines 211--212
 \OT1/ppl/m/n/12 pro-jektu: [][]$\OT1/pcr/m/n/12 www . perfcake . org$[][]\OT1/p
 pl/m/n/12 . Git-hub: [][]$\OT1/pcr/m/n/12 www . github . com / PerfCake / PerfC
 ake$[][]\OT1/ppl/m/n/12 .
  []
 
 
-Underfull \hbox (badness 2521) in paragraph at lines 229--230
+Underfull \hbox (badness 2521) in paragraph at lines 220--221
 \OT1/ppl/m/n/12 U[]z[]^^Pvatel[]sk[]a do-ku-ment[]acia sa nach[]adza na str[]an
 ke [][]$\OT1/pcr/m/n/12 www . perfcake . org / docs /
  []
@@ -796,31 +788,31 @@ ke [][]$\OT1/pcr/m/n/12 www . perfcake . org / docs /
 
 Package hyperref Warning: Composite letter `\textasciicaron+l'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 231.
+(hyperref)                removing `\textasciicaron' on input line 222.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+t'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 231.
+(hyperref)                removing `\textasciicaron' on input line 222.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 232--234
+Underfull \hbox (badness 10000) in paragraph at lines 223--225
 
  []
 
 
-Underfull \hbox (badness 1043) in paragraph at lines 235--237
+Underfull \hbox (badness 1043) in paragraph at lines 226--228
 [][]$\OT1/pcr/m/n/12 http : / / download . jetbrains . com / idea / ideaIU-[]14
  . 0 . 2 . zip$[][] \OT1/ppl/m/n/12 do Ma-ven re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--237
+Underfull \hbox (badness 10000) in paragraph at lines 226--228
 
  []
 
 [12]
-Underfull \hbox (badness 6592) in paragraph at lines 238--240
+Underfull \hbox (badness 6592) in paragraph at lines 229--231
 \OT1/pcr/m/n/12 / / github . com / PerfCake / PerfCakeMavenPlugin$[][]\OT1/ppl/
 m/n/12 . Ma-ven do-pl-nok nahr[]adza
  []
@@ -830,91 +822,98 @@ Kapitola 5.
 [14
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 258--260
+Underfull \hbox (badness 10000) in paragraph at lines 249--251
 
  []
 
 
-Underfull \hbox (badness 1048) in paragraph at lines 263--267
+Underfull \hbox (badness 1048) in paragraph at lines 254--258
 \OT1/ppl/m/n/12 kli-en-tom, pri[]com je vy-kon[]avan[]y po dobu pia-tich min[]u
 t. Na z[]aklade tohto
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--267
+Underfull \hbox (badness 10000) in paragraph at lines 254--258
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--272
+Underfull \hbox (badness 10000) in paragraph at lines 259--263
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 273--277
+Underfull \hbox (badness 10000) in paragraph at lines 264--268
 
  []
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 278--282
+Underfull \hbox (badness 10000) in paragraph at lines 269--273
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 283--287
+Underfull \hbox (badness 10000) in paragraph at lines 274--278
 \OT1/ppl/m/n/12 Naj[]castej[]sie pou[]z[]^^Pvan[]y typ tes-tov v[]ykonu je re-p
 re-zen-to-van[]y po-mo-cou
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 283--287
+Underfull \hbox (badness 10000) in paragraph at lines 274--278
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 288--292
+Underfull \hbox (badness 10000) in paragraph at lines 279--283
 
  []
 
 [16]
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 298.
+
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsppl.fd
+File: omsppl.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 298.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <12> not available
-(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 307.
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 298.
  [17]
-Underfull \hbox (badness 1688) in paragraph at lines 324--327
+Underfull \hbox (badness 1688) in paragraph at lines 315--318
 \OT1/ppl/m/n/12 s[]ubory. V pr[]^^Ppade n[]astroja Apa-che JMe-ter s[]u to s[]u
 bory s pr[]^^Pponou ".jtl"
  []
 
 [18]
-Underfull \hbox (badness 1648) in paragraph at lines 344--347
+Underfull \hbox (badness 1648) in paragraph at lines 335--338
 \OT1/ppl/m/n/12 Skripty sp[]u[]st[]aj[]uce testy na strane kli-enta re[]startuj
 []u JBoss AS ser-ver pred
  []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 368--370
+Underfull \hbox (badness 10000) in paragraph at lines 362--364
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 372--374
+Underfull \hbox (badness 10000) in paragraph at lines 366--368
 
  []
 
 
-Underfull \hbox (badness 1082) in paragraph at lines 382--384
+Underfull \hbox (badness 1082) in paragraph at lines 376--378
 \OT1/ppl/m/n/12 Dokument[]acia ob-sa-huje n[]avod, po-mo-cou ktor[]eho je mo[]z
 n[]e na-sta-vit[] za-zna-
  []
 
 
-Underfull \hbox (badness 2237) in paragraph at lines 382--384
+Underfull \hbox (badness 2237) in paragraph at lines 376--378
 \OT1/ppl/m/n/12 men[]avanie vyu[]zitia opera[]cnej pam[]ate. Na-priek vel[]kej 
 snahe sa mi podl[]a
  []
 
 [20]
-Underfull \hbox (badness 3514) in paragraph at lines 416--417
+Underfull \hbox (badness 3514) in paragraph at lines 410--411
 []\OT1/ppl/m/n/12 V[]set[]ych p[]at[] iter[]aci[]^^P prv[]eho testu pre-behlo b
 ez probl[]emov. Zauj[]^^Pmav[]a je
  []
@@ -924,33 +923,30 @@ ez probl[]emov. Zauj[]^^Pmav[]a je
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.456 
-      pdfTeX warning (ext4): destination with the same identifier (name{table.5
-.2}) has been already used, duplicate ignored
+l.449 \end{table}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{table.5.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.456 
-      ]
-Underfull \vbox (badness 2790) has occurred while \output is active []
-
- [22pdfTeX warning (ext4): destination with the same identifier (name{table.5.3
-}) has been already used, duplicate ignored
+l.449 \end{table}
+                 ] [22pdfTeX warning (ext4): destination with the same identifi
+er (name{table.5.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.496 
+l.490 
       pdfTeX warning (ext4): destination with the same identifier (name{table.5
 .4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.496 
+l.490 
       ]
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 500.
+(hyperref)                removing `\textasciicaron' on input line 494.
 
 
 Underfull \vbox (badness 8170) has occurred while \output is active []
@@ -960,33 +956,33 @@ Underfull \vbox (badness 8170) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.548 
+l.542 
       pdfTeX warning (ext4): destination with the same identifier (name{table.5
 .6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.548 
+l.542 
       ] [24pdfTeX warning (ext4): destination with the same identifier (name{ta
 ble.5.7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.596 P
+l.590 P
        osledný druh testu dosiahol porovnateľné výsledky, ako test so 15...
 pdfTeX warning (ext4): destination with the same identifier (name{table.5.8}) h
 as been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.596 P
+l.590 P
        osledný druh testu dosiahol porovnateľné výsledky, ako test so 15...
 pdfTeX warning (ext4): destination with the same identifier (name{table.5.9}) h
 as been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.596 P
+l.590 P
        osledný druh testu dosiahol porovnateľné výsledky, ako test so 15...
 ]
 Underfull \vbox (badness 1360) has occurred while \output is active []
@@ -996,21 +992,21 @@ Underfull \vbox (badness 1360) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.658 
+l.652 
       pdfTeX warning (ext4): destination with the same identifier (name{table.5
 .11}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.658 
+l.652 
       ]
-Underfull \hbox (badness 10000) in paragraph at lines 663--664
+Underfull \hbox (badness 10000) in paragraph at lines 657--658
 []\OT1/ppl/m/n/12 V 5. iter[]acii testu sa ob-ja-vila chyba Er-ror ini-tia-li-z
 ing dri-ver ob-ject.
  []
 
 
-Underfull \hbox (badness 3780) in paragraph at lines 663--664
+Underfull \hbox (badness 3780) in paragraph at lines 657--658
 \OT1/ppl/m/n/12 com.sun.faban.dri-ver.ConfigurationException: Only sin-gle host
 :port cur-ren-
  []
@@ -1023,99 +1019,99 @@ Underfull \vbox (badness 4899) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.704 
+l.698 
       pdfTeX warning (ext4): destination with the same identifier (name{table.5
 .13}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.704 
+l.698 
       ] [27pdfTeX warning (ext4): destination with the same identifier (name{ta
 ble.5.14}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.753 N
-       ajhorší výsledok v teste s 50 klientmi zaznamenal Gatling. Na rozd...
+l.747 N
+       ajhorší výsledok v~teste s~50 klientmi zaznamenal Gatling. Na rozd...
 pdfTeX warning (ext4): destination with the same identifier (name{table.5.15}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.753 N
-       ajhorší výsledok v teste s 50 klientmi zaznamenal Gatling. Na rozd...
+l.747 N
+       ajhorší výsledok v~teste s~50 klientmi zaznamenal Gatling. Na rozd...
 pdfTeX warning (ext4): destination with the same identifier (name{table.5.16}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.753 N
-       ajhorší výsledok v teste s 50 klientmi zaznamenal Gatling. Na rozd...
+l.747 N
+       ajhorší výsledok v~teste s~50 klientmi zaznamenal Gatling. Na rozd...
 ] [28pdfTeX warning (ext4): destination with the same identifier (name{table.5.
 17}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.815 
+l.809 
       pdfTeX warning (ext4): destination with the same identifier (name{table.5
 .18}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.815 
+l.809 
       ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [29pdfTeX warning (ext4): destination with the same identifier (name{table.5.1
-9}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.861 
-      pdfTeX warning (ext4): destination with the same identifier (name{table.5
-.20}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.861 
-      ]
-Underfull \hbox (badness 2875) in paragraph at lines 887--888
-[]\OT1/ppl/m/n/12 Oproti predch[]adzaj[]ucej mo-di-fik[]acii do-sia-hol Perf-Ca
-ke v[]yrazn[]y pre-pad vo
+Underfull \hbox (badness 1496) in paragraph at lines 835--836
+[]\OT1/ppl/m/n/12 Najlep[]s[]^^P v[]ysledok testu s 10 kli-entmi do-sia-hol Per
+f-Cake a vy-sok[]a bola aj
  []
 
+[29pdfTeX warning (ext4): destination with the same identifier (name{table.5.19
+}) has been already used, duplicate ignored
 
-Underfull \hbox (badness 1769) in paragraph at lines 909--910
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.836 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{table.5.20}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.836 \newpage
+              ] [30pdfTeX warning (ext4): destination with the same identifier 
+(name{table.5.21}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.902 V
+       ~štvrtej modifikácii PerfCake zaznamenal mierne zníženie výkonu ...
+pdfTeX warning (ext4): destination with the same identifier (name{table.5.22}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.902 V
+       ~štvrtej modifikácii PerfCake zaznamenal mierne zníženie výkonu ...
+pdfTeX warning (ext4): destination with the same identifier (name{table.5.23}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.902 V
+       ~štvrtej modifikácii PerfCake zaznamenal mierne zníženie výkonu ...
+]
+Underfull \hbox (badness 1769) in paragraph at lines 902--903
 []\OT1/ppl/m/n/12 V []stvrtej mo-di-fik[]acii Perf-Cake za-zna-me-nal mierne zn
 []^^P[]zenie v[]ykonu oproti
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 909--910
-\OT1/ppl/m/n/12 predch[]adzaj[]ucej mo-di-fik[]acii, ale z[]arove[]n do[]slo k 
-v[]yrazn[]emu zlep[]seniu
+Underfull \hbox (badness 3568) in paragraph at lines 923--924
+[]\OT1/ppl/m/n/12 Posledn[]a mo-di-fik[]acia za-zna-me-nala v[]yraznej[]sie zn[
+]^^P[]zenie v[]ysledkov, ako v
  []
 
-[30pdfTeX warning (ext4): destination with the same identifier (name{table.5.21
-}) has been already used, duplicate ignored
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.910 
-      pdfTeX warning (ext4): destination with the same identifier (name{table.5
-.22}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.910 
-      pdfTeX warning (ext4): destination with the same identifier (name{table.5
-.23}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.910 
-      ]
-Underfull \hbox (badness 2326) in paragraph at lines 967--967
+Underfull \hbox (badness 2326) in paragraph at lines 961--961
 []\OT1/ppl/m/n/12 Tabul[]ka 5.26: []Test s rast[]ucim po[]ctom kli-en-tov -- pr
 ie-mern[]y po[]cet vy-ko-nan[]ych
  []
@@ -1125,32 +1121,32 @@ ie-mern[]y po[]cet vy-ko-nan[]ych
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.969 
+l.963 
       pdfTeX warning (ext4): destination with the same identifier (name{table.5
 .25}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.969 
+l.963 
       ]
 
 Package hyperref Warning: Composite letter `\textasciicaron+l'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 991.
+(hyperref)                removing `\textasciicaron' on input line 986.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+t'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 991.
+(hyperref)                removing `\textasciicaron' on input line 986.
 
 
-Underfull \hbox (badness 3068) in paragraph at lines 997--998
+Underfull \hbox (badness 3068) in paragraph at lines 992--993
 \OT1/ppl/m/n/12 vel[]kost[]ou spr[]avy do-sia-hol Apa-che JMe-ter. Vzhl[]adom k
  vy-sok[]emu po[]ctu
  []
 
 
-Underfull \hbox (badness 1701) in paragraph at lines 997--998
+Underfull \hbox (badness 1701) in paragraph at lines 992--993
 \OT1/ppl/m/n/12 po[]ziadaviek mal aj dobr[]y v[]ysledok roz-dielu me-dzi naj-le
 p[]sou a naj-hor[]sou
  []
@@ -1160,87 +1156,89 @@ p[]sou a naj-hor[]sou
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1017 
-       pdfTeX warning (ext4): destination with the same identifier (name{table.
-5.27}) has been already used, duplicate ignored
+l.993 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{table.5.27}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1017 
-       ]
-Underfull \hbox (badness 4132) in paragraph at lines 1021--1022
+l.993 \newpage
+              ]
+Underfull \hbox (badness 4132) in paragraph at lines 1016--1017
 []\OT1/ppl/m/n/12 S n[]arastom vel[]kosti spr[]avy sa lo-gicky zn[]^^P[]zilo aj
  mno[]zstvo vy-ko-nan[]ych
  []
 
 
-Underfull \vbox (badness 7963) has occurred while \output is active []
+Underfull \vbox (badness 1675) has occurred while \output is active []
 
  [33pdfTeX warning (ext4): destination with the same identifier (name{table.5.2
 8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1061 
+l.1056 
        pdfTeX warning (ext4): destination with the same identifier (name{table.
 5.29}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1061 
+l.1056 
        ] [34pdfTeX warning (ext4): destination with the same identifier (name{t
 able.5.30}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1108 \textbf{Prvý test -- 5 znaková správa}
+l.1103 \textbf{Prvý test -- 5 znaková správa}
                                                 pdfTeX warning (ext4): destinat
 ion with the same identifier (name{table.5.31}) has been already used, duplicat
 e ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1108 \textbf{Prvý test -- 5 znaková správa}
+l.1103 \textbf{Prvý test -- 5 znaková správa}
                                                 pdfTeX warning (ext4): destinat
 ion with the same identifier (name{table.5.32}) has been already used, duplicat
 e ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1108 \textbf{Prvý test -- 5 znaková správa}
+l.1103 \textbf{Prvý test -- 5 znaková správa}
                                                 ] [35pdfTeX warning (ext4): des
 tination with the same identifier (name{table.5.33}) has been already used, dup
 licate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1173 
+l.1168 
        pdfTeX warning (ext4): destination with the same identifier (name{table.
 5.34}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1173 
+l.1168 
        ] [36pdfTeX warning (ext4): destination with the same identifier (name{t
 able.5.35}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1222 
-       pdfTeX warning (ext4): destination with the same identifier (name{table.
-5.36}) has been already used, duplicate ignored
+l.1218 \textbf{Prvý test -- 5 znaková správa}
+                                                pdfTeX warning (ext4): destinat
+ion with the same identifier (name{table.5.36}) has been already used, duplicat
+e ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1222 
-       pdfTeX warning (ext4): destination with the same identifier (name{table.
-5.37}) has been already used, duplicate ignored
+l.1218 \textbf{Prvý test -- 5 znaková správa}
+                                                pdfTeX warning (ext4): destinat
+ion with the same identifier (name{table.5.37}) has been already used, duplicat
+e ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1222 
-       ]
-Underfull \hbox (badness 2326) in paragraph at lines 1245--1246
+l.1218 \textbf{Prvý test -- 5 znaková správa}
+                                                ]
+Underfull \hbox (badness 2326) in paragraph at lines 1240--1241
 []\OT1/ppl/m/n/12 Po[]cet vy-ko-nan[]ych po[]ziadaviek kle-sol po-dobne ako u z
 vy[]sn[]ych n[]astrojov.
  []
@@ -1253,293 +1251,255 @@ Underfull \vbox (badness 2343) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1285 
+l.1280 
        pdfTeX warning (ext4): destination with the same identifier (name{table.
 5.39}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1285 
+l.1280 
        ] [38pdfTeX warning (ext4): destination with the same identifier (name{t
 able.5.40}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1335 D
-        ruhý najlepší výsledok v prvej modifikácii testu s rastúcou ve...
+l.1330 D
+        ruhý najlepší výsledok v~prvej modifikácii testu s~rastúcou ve...
 pdfTeX warning (ext4): destination with the same identifier (name{table.5.41}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1335 D
-        ruhý najlepší výsledok v prvej modifikácii testu s rastúcou ve...
+l.1330 D
+        ruhý najlepší výsledok v~prvej modifikácii testu s~rastúcou ve...
 pdfTeX warning (ext4): destination with the same identifier (name{table.5.42}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1335 D
-        ruhý najlepší výsledok v prvej modifikácii testu s rastúcou ve...
+l.1330 D
+        ruhý najlepší výsledok v~prvej modifikácii testu s~rastúcou ve...
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1379--1380
-[]\OT1/ppl/m/n/12 Aj v tre-tej mo-di-fik[]acii do-sia-hol Perf-Cake po-dobn[]e 
-v[]ysledky, ako v
- []
-
-
-Underfull \hbox (badness 4441) in paragraph at lines 1379--1380
-\OT1/ppl/m/n/12 predch[]adzaj[]ucich mo-di-fik[]aciach. Roz-diel vo v[]ysledkoc
-h znova st[]upol na
- []
-
-
-Underfull \vbox (badness 2080) has occurred while \output is active []
+Underfull \vbox (badness 3333) has occurred while \output is active []
 
  [39pdfTeX warning (ext4): destination with the same identifier (name{table.5.4
 3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1397 
+l.1392 
        pdfTeX warning (ext4): destination with the same identifier (name{table.
 5.44}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1397 
+l.1392 
        ] [40pdfTeX warning (ext4): destination with the same identifier (name{t
 able.5.45}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1447 \par
-            Najväčšie rozdiely medzi nástrojmi sú v prípade správy s ...
+l.1442 N
+        ajväčšie rozdiely medzi nástrojmi sú v~prípade správy s~veľk...
 pdfTeX warning (ext4): destination with the same identifier (name{table.5.46}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1447 \par
-            Najväčšie rozdiely medzi nástrojmi sú v prípade správy s ...
+l.1442 N
+        ajväčšie rozdiely medzi nástrojmi sú v~prípade správy s~veľk...
 pdfTeX warning (ext4): destination with the same identifier (name{table.5.47}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1447 \par
-            Najväčšie rozdiely medzi nástrojmi sú v prípade správy s ...
+l.1442 N
+        ajväčšie rozdiely medzi nástrojmi sú v~prípade správy s~veľk...
 ]
-Underfull \hbox (badness 2495) in paragraph at lines 1463--1463
+Underfull \hbox (badness 2495) in paragraph at lines 1458--1458
 []\OT1/ppl/m/n/12 Tabul[]ka 5.48: []Test s rast[]ucou vel[]kost[]ou spr[]av -- 
 prie-mern[]y po[]cet vy-ko-nan[]ych
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [41pdfTeX warning (ext4): destination with the same identifier (name{table.5.4
-8}) has been already used, duplicate ignored
+[41pdfTeX warning (ext4): destination with the same identifier (name{table.5.48
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1484 
-       ] [42pdfTeX warning (ext4): destination with the same identifier (name{t
-able.5.49}) has been already used, duplicate ignored
+l.1489 V
+        ýsledky Apache JMeter obsahovali chybu: JVM should have exitted but...
+pdfTeX warning (ext4): destination with the same identifier (name{table.5.49}) 
+has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1519 
-       pdfTeX warning (ext4): destination with the same identifier (name{table.
-5.50}) has been already used, duplicate ignored
+l.1489 V
+        ýsledky Apache JMeter obsahovali chybu: JVM should have exitted but...
+] [42pdfTeX warning (ext4): destination with the same identifier (name{table.5.
+50}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1519 
+l.1536 
        ] [43pdfTeX warning (ext4): destination with the same identifier (name{t
 able.5.51}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1585 
-       pdfTeX warning (ext4): destination with the same identifier (name{table.
-5.52}) has been already used, duplicate ignored
+l.1602 \end{table}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{table.5.52}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1585 
-       ] [44pdfTeX warning (ext4): destination with the same identifier (name{t
-able.5.53}) has been already used, duplicate ignored
+l.1602 \end{table}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{table.5.53}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1634 
-       pdfTeX warning (ext4): destination with the same identifier (name{table.
-5.54}) has been already used, duplicate ignored
+l.1602 \end{table}
+                  ] [44pdfTeX warning (ext4): destination with the same identif
+ier (name{table.5.54}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1634 
-       pdfTeX warning (ext4): destination with the same identifier (name{table.
-5.55}) has been already used, duplicate ignored
+l.1650 V
+        šetky porovnávané nástroje dosiahli podobné výsledky, ktoré s...
+pdfTeX warning (ext4): destination with the same identifier (name{table.5.55}) 
+has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1634 
-       ] [45pdfTeX warning (ext4): destination with the same identifier (name{t
-able.5.56}) has been already used, duplicate ignored
+l.1650 V
+        šetky porovnávané nástroje dosiahli podobné výsledky, ktoré s...
+pdfTeX warning (ext4): destination with the same identifier (name{table.5.56}) 
+has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1696 
-       pdfTeX warning (ext4): destination with the same identifier (name{table.
-5.57}) has been already used, duplicate ignored
+l.1650 V
+        šetky porovnávané nástroje dosiahli podobné výsledky, ktoré s...
+] [45pdfTeX warning (ext4): destination with the same identifier (name{table.5.
+57}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1696 
-       ] [46pdfTeX warning (ext4): destination with the same identifier (name{t
-able.5.58}) has been already used, duplicate ignored
+l.1693 \newpage
+               pdfTeX warning (ext4): destination with the same identifier (nam
+e{table.5.58}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1753 
-       pdfTeX warning (ext4): destination with the same identifier (name{table.
-5.59}) has been already used, duplicate ignored
+l.1693 \newpage
+               ] [46pdfTeX warning (ext4): destination with the same identifier
+ (name{table.5.59}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1753 
-       pdfTeX warning (ext4): destination with the same identifier (name{table.
-5.60}) has been already used, duplicate ignored
+l.1771 \end{table}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{table.5.60}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1753 
-       ] [47pdfTeX warning (ext4): destination with the same identifier (name{t
-able.5.61}) has been already used, duplicate ignored
+l.1771 \end{table}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{table.5.61}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1799 \textbf{Bez úniku pamäte}
-                                  pdfTeX warning (ext4): destination with the s
-ame identifier (name{table.5.62}) has been already used, duplicate ignored
+l.1771 \end{table}
+                  ] [47pdfTeX warning (ext4): destination with the same identif
+ier (name{table.5.62}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1799 \textbf{Bez úniku pamäte}
-                                  pdfTeX warning (ext4): destination with the s
-ame identifier (name{table.5.63}) has been already used, duplicate ignored
+l.1810 \newpage
+               pdfTeX warning (ext4): destination with the same identifier (nam
+e{table.5.63}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1799 \textbf{Bez úniku pamäte}
-                                  ]
-Underfull \hbox (badness 10000) in paragraph at lines 1838--1839
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1854--1855
-
- []
-
-[48pdfTeX warning (ext4): destination with the same identifier (name{table.5.64
-}) has been already used, duplicate ignored
+l.1810 \newpage
+               pdfTeX warning (ext4): destination with the same identifier (nam
+e{table.5.64}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1868 
-       pdfTeX warning (ext4): destination with the same identifier (name{table.
-5.65}) has been already used, duplicate ignored
+l.1810 \newpage
+               ] [48pdfTeX warning (ext4): destination with the same identifier
+ (name{table.5.65}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1868 
-       pdfTeX warning (ext4): destination with the same identifier (name{table.
-5.66}) has been already used, duplicate ignored
+l.1866 \newpage
+               pdfTeX warning (ext4): destination with the same identifier (nam
+e{table.5.66}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1868 
-       ] [49pdfTeX warning (ext4): destination with the same identifier (name{t
-able.5.67}) has been already used, duplicate ignored
+l.1866 \newpage
+               pdfTeX warning (ext4): destination with the same identifier (nam
+e{table.5.67}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1932 
-       pdfTeX warning (ext4): destination with the same identifier (name{table.
-5.68}) has been already used, duplicate ignored
+l.1866 \newpage
+               ] [49pdfTeX warning (ext4): destination with the same identifier
+ (name{table.5.68}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1932 
-       pdfTeX warning (ext4): destination with the same identifier (name{table.
-5.69}) has been already used, duplicate ignored
+l.1929 \newpage
+               pdfTeX warning (ext4): destination with the same identifier (nam
+e{table.5.69}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1932 
-       ]
-Underfull \hbox (badness 1902) in paragraph at lines 1956--1957
+l.1929 \newpage
+               pdfTeX warning (ext4): destination with the same identifier (nam
+e{table.5.70}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1929 \newpage
+               ]
+Underfull \hbox (badness 1902) in paragraph at lines 1951--1952
 []\OT1/ppl/m/n/12 Test te-ore-tic-kej prie-pust-nosti naj-lep[]sie zvl[]adol Ap
 a-che JMe-ter na-sle-do-van[]y
  []
 
-
-Underfull \hbox (badness 1348) in paragraph at lines 1956--1957
-\OT1/ppl/m/n/12 Gat-ling. Apa-che JMe-ter do-sia-hol s ohl[]adom na po[]cet po[
-]ziadaviek naj-lep[]s[]^^P
- []
-
-[50pdfTeX warning (ext4): destination with the same identifier (name{table.5.70
+[50pdfTeX warning (ext4): destination with the same identifier (name{table.5.71
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1975 \chapter
-               {Záver}pdfTeX warning (ext4): destination with the same identif
-ier (name{table.5.71}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1975 \chapter
+l.1970 \chapter
                {Záver}pdfTeX warning (ext4): destination with the same identif
 ier (name{table.5.72}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1975 \chapter
+l.1970 \chapter
                {Záver}]
 Kapitola 6.
 [51
 
 ]
-Underfull \hbox (badness 1895) in paragraph at lines 2000--2002
+Underfull \hbox (badness 1895) in paragraph at lines 1995--1997
 \OT1/ppl/m/n/12 V JMS tes-toch naj-lep[]sie obst[]al Perf-Cake, ktor[]y vy-ko-n
 al pri-bli[]zne rov-nak[]e
  []
 
 
-Underfull \hbox (badness 1226) in paragraph at lines 2009--2011
-\OT1/ppl/m/n/12 Spol[]ahlivost[] v[]ysledkov nie je mo[]zn[]e zhod-no-tit[] jed
--no-zna[]cne. V[]ysledky tes-
- []
-
-
-Underfull \hbox (badness 2318) in paragraph at lines 2009--2011
-\OT1/ppl/m/n/12 tov uk[]azali, []ze roz-diel vo v[]ysledkoch ne-ras-tie s mno[]
-zstvom vy-ko-nan[]ych
- []
-
-
-Underfull \hbox (badness 1314) in paragraph at lines 2009--2011
-\OT1/ppl/m/n/12 po[]ziadaviek line[]arne, ale sk[]or po-ly-nomi[]alne. Na-priek
- tomu usu-dzu-jem, []ze
+Underfull \hbox (badness 1796) in paragraph at lines 2004--2006
+\OT1/ppl/m/n/12 line[]arne, ale sk[]or po-ly-nomi[]alne. Preto je d[]ole[]zit[]
+e po-su-dzo-vat[] spol[]ahlivost[]
  []
 
 [52]
-Underfull \hbox (badness 1365) in paragraph at lines 2012--2014
+Underfull \hbox (badness 1365) in paragraph at lines 2007--2009
 \OT1/ppl/m/n/12 Test te-ore-tic-kej prie-pust-nosti su-ver[]enne vy-hral Apa-ch
 e JMe-ter na-sle-do-van[]y
  []
@@ -1578,27 +1538,27 @@ n _ asynchronous$[][]\OT1/ppl/m/n/12 .
 
 ]
 Dodatok A.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2085.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2080.
 [55
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2085.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2080.
  (./bp.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2085.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2085.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2080.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2080.
 
 Package rerunfilecheck Info: File `bp.out' has not changed.
 (rerunfilecheck)             Checksum: CEE01C469F295F3D8F4E3052C635C33D;4039.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2085.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2080.
  ) 
 Here is how much of TeX's memory you used:
- 6679 strings out of 493304
- 95114 string characters out of 6139871
- 192902 words of memory out of 5000000
- 9797 multiletter control sequences out of 15000+600000
+ 6708 strings out of 493304
+ 95651 string characters out of 6139871
+ 192125 words of memory out of 5000000
+ 9822 multiletter control sequences out of 15000+600000
  20791 words of font info for 52 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 34i,9n,31p,1346b,424s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,10n,31p,1346b,431s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} <./fi-logo.514pk>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive
@@ -1607,7 +1567,7 @@ fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatin
 o/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pf
 b>
-Output written on bp.pdf (62 pages, 316344 bytes).
+Output written on bp.pdf (62 pages, 314861 bytes).
 PDF statistics:
  912 PDF objects out of 1000 (max. 8388607)
  781 compressed objects within 8 object streams
